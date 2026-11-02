@@ -15,4 +15,4 @@ Il suo comportamento emerge dall'equilibrio di quattro principi:
 
 ---
 
-Ideato da **Valerio Falzone**, 2026. Licenza Apache-2.0.
+Ideato da **Valerio Falzone**, 2026. © 2026 Valerio Falzone — Tutti i diritti riservati.
