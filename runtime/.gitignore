@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+*.egg-info/
+*.db
+*.db-shm
+*.db-wal
+dist/
+build/
+.venv/
+.testdata/
+
+# Local model databases and training byproducts
+*.db
+*.db-wal
+*.db-shm
+__pycache__/
+
+venv/
+node_modules/
+validation/
+.env
+.env.*
+!.env.example
+.worldcore/

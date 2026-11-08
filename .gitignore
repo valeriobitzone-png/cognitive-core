@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+node_modules/
+.DS_Store
+.env
+.env.*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+runtime/training-artifacts/*runner*.json
+runtime/training-artifacts/*runner*.logs/

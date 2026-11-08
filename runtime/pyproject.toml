@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worldcore-cognitive-layer"
+version = "1.4.0rc3"
+description = "Local-first, host-agnostic cognitive layer for agentic systems"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{name="WorldCore contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.30,<2"]
+test = ["pytest>=8,<10", "coverage>=7,<9", "psutil>=7,<8"]
+benchmark = ["numpy>=2,<3", "scikit-learn>=1.5,<2", "pillow>=11,<14", "opencv-python-headless>=4,<6", "statsmodels>=0.14,<1"]
+
+[project.scripts]
+worldcore = "worldcore.cli:main"
+worldcore-worker = "worldcore.bridge:worker_main"
+worldcore-mcp = "worldcore.mcp_server:main"
+cognitive-core = "cognitive_core.cli:main"
+cognitive-worker = "cognitive_core.worker:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.setuptools.package-data]
+worldcore = ["data/*.json"]
+cognitive_core = ["LICENSE"]

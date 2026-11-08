@@ -1,0 +1,497 @@
+[
+  {
+    "repo": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "domain": "agents",
+    "original_capability_summary": "Agente operativo con strumenti, memoria, hook e provider configurabili",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "openclaw/openclaw",
+    "url": "https://github.com/openclaw/openclaw",
+    "domain": "agents",
+    "original_capability_summary": "Gateway agentico multicanale con plugin, memoria, trigger e automazioni",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "sailing-lab/sira",
+    "url": "https://github.com/sailing-lab/sira",
+    "domain": "agents",
+    "original_capability_summary": "Pianificazione tramite world model, simulazione delle conseguenze e scelta critica",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "Cveinnt/kepler",
+    "url": "https://github.com/Cveinnt/kepler",
+    "domain": "agents",
+    "original_capability_summary": "World model verificato contro transizioni reali con controesempi e backtest",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "QwenLM/Qwen-AgentWorld",
+    "url": "https://github.com/QwenLM/Qwen-AgentWorld",
+    "domain": "agents",
+    "original_capability_summary": "Modello di dinamiche apprese per transizioni in ambienti software",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "url": "https://github.com/getzep/graphiti",
+    "domain": "agents",
+    "original_capability_summary": "Grafo di conoscenza temporale per agenti con aggiornamento di relazioni",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "url": "https://github.com/mem0ai/mem0",
+    "domain": "agents",
+    "original_capability_summary": "Memoria applicativa personalizzata con acquisizione e recupero di informazioni",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "langchain-ai/langgraph",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "domain": "agents",
+    "original_capability_summary": "Orchestrazione di stato, checkpoint, iterazioni e workflow agentici",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "letta-ai/letta",
+    "url": "https://github.com/letta-ai/letta",
+    "domain": "agents",
+    "original_capability_summary": "Agenti persistenti e gestione esplicita delle memorie",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "freqtrade/freqtrade",
+    "url": "https://github.com/freqtrade/freqtrade",
+    "domain": "finance",
+    "original_capability_summary": "Trading algoritmico crypto, backtesting e gestione delle strategie",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "ccxt/ccxt",
+    "url": "https://github.com/ccxt/ccxt",
+    "domain": "finance",
+    "original_capability_summary": "Interfacce multi-exchange per dati e ordini di criptovalute",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "polakowo/vectorbt",
+    "url": "https://github.com/polakowo/vectorbt",
+    "domain": "finance",
+    "original_capability_summary": "Ricerca quantitativa e backtesting vettorializzato",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "AI4Finance-Foundation/FinRL",
+    "url": "https://github.com/AI4Finance-Foundation/FinRL",
+    "domain": "finance",
+    "original_capability_summary": "Reinforcement learning applicato a simulazioni di trading",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "statsmodels/statsmodels",
+    "url": "https://github.com/statsmodels/statsmodels",
+    "domain": "finance",
+    "original_capability_summary": "Inferenza statistica e serie temporali econometriche",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "pandas-dev/pandas",
+    "url": "https://github.com/pandas-dev/pandas",
+    "domain": "science",
+    "original_capability_summary": "Trasformazione e validazione di dati tabellari e temporali",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "scikit-learn/scikit-learn",
+    "url": "https://github.com/scikit-learn/scikit-learn",
+    "domain": "science",
+    "original_capability_summary": "Modelli supervisionati classici, pipeline e valutazione",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "pydata/xarray",
+    "url": "https://github.com/pydata/xarray",
+    "domain": "science",
+    "original_capability_summary": "Strutture dati multidimensionali etichettate per scienza e clima",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "pytorch/pytorch",
+    "url": "https://github.com/pytorch/pytorch",
+    "domain": "science",
+    "original_capability_summary": "Calcolo tensoriale e apprendimento automatico differenziabile",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "biopython/biopython",
+    "url": "https://github.com/biopython/biopython",
+    "domain": "science",
+    "original_capability_summary": "Bioinformatica e rappresentazione di dati biologici",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "rdkit/rdkit",
+    "url": "https://github.com/rdkit/rdkit",
+    "domain": "science",
+    "original_capability_summary": "Cheminformatica e rappresentazione di strutture molecolari",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "openmm/openmm",
+    "url": "https://github.com/openmm/openmm",
+    "domain": "science",
+    "original_capability_summary": "Simulazione numerica molecolare",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "Project-MONAI/MONAI",
+    "url": "https://github.com/Project-MONAI/MONAI",
+    "domain": "medicine",
+    "original_capability_summary": "Framework di ricerca per imaging medico; non è un dispositivo diagnostico",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "mne-tools/mne-python",
+    "url": "https://github.com/mne-tools/mne-python",
+    "domain": "medicine",
+    "original_capability_summary": "Analisi scientifica di segnali EEG e MEG",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "psychopy/psychopy",
+    "url": "https://github.com/psychopy/psychopy",
+    "domain": "psychology",
+    "original_capability_summary": "Progettazione e misurazione di esperimenti comportamentali",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "simbody/simbody",
+    "url": "https://github.com/simbody/simbody",
+    "domain": "psychology",
+    "original_capability_summary": "Simulazione dei sistemi multibody articolati",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "opensim-org/opensim-core",
+    "url": "https://github.com/opensim-org/opensim-core",
+    "domain": "sports_science",
+    "original_capability_summary": "Biomeccanica muscoloscheletrica e simulazione del movimento",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "pyomeca/pyomeca",
+    "url": "https://github.com/pyomeca/pyomeca",
+    "domain": "sports_science",
+    "original_capability_summary": "Analisi scientifica di dati biomeccanici e cinetici",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "PySport/kloppy",
+    "url": "https://github.com/PySport/kloppy",
+    "domain": "sports_analytics",
+    "original_capability_summary": "Normalizzazione di dati eventi e tracking calcistici tra fornitori",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "hudl/statsbombpy",
+    "url": "https://github.com/hudl/statsbombpy",
+    "domain": "sports_analytics",
+    "original_capability_summary": "Accesso e elaborazione dei dati calcistici StatsBomb",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "hudl/open-data",
+    "url": "https://github.com/hudl/open-data",
+    "domain": "sports_analytics",
+    "original_capability_summary": "Dataset pubblici di eventi calcistici con propri termini di utilizzo",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "wikimedia/wikidata-query-rdf",
+    "url": "https://github.com/wikimedia/wikidata-query-rdf",
+    "domain": "history",
+    "original_capability_summary": "Accesso a knowledge graph RDF e query SPARQL Wikidata",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "QGIS/QGIS",
+    "url": "https://github.com/QGIS/QGIS",
+    "domain": "maps",
+    "original_capability_summary": "GIS desktop e strumenti di analisi cartografica",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "gboeing/osmnx",
+    "url": "https://github.com/gboeing/osmnx",
+    "domain": "maps",
+    "original_capability_summary": "Reti stradali OpenStreetMap e analisi di grafi spaziali",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "geopandas/geopandas",
+    "url": "https://github.com/geopandas/geopandas",
+    "domain": "maps",
+    "original_capability_summary": "Analisi di geometrie spaziali e tabelle geografiche",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "organicmaps/organicmaps",
+    "url": "https://github.com/organicmaps/organicmaps",
+    "domain": "maps",
+    "original_capability_summary": "Mappe e navigazione offline",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "Project-OSRM/osrm-backend",
+    "url": "https://github.com/Project-OSRM/osrm-backend",
+    "domain": "maps",
+    "original_capability_summary": "Routing stradale ad alte prestazioni",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "valhalla/valhalla",
+    "url": "https://github.com/valhalla/valhalla",
+    "domain": "maps",
+    "original_capability_summary": "Motore open source per il calcolo di itinerari",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "FreeCAD/FreeCAD",
+    "url": "https://github.com/FreeCAD/FreeCAD",
+    "domain": "architecture",
+    "original_capability_summary": "Modellazione CAD parametrica e produzione tecnica",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "IfcOpenShell/IfcOpenShell",
+    "url": "https://github.com/IfcOpenShell/IfcOpenShell",
+    "domain": "architecture",
+    "original_capability_summary": "Lettura, generazione e gestione di dati BIM IFC",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "blender/blender",
+    "url": "https://github.com/blender/blender",
+    "domain": "3d_modeling",
+    "original_capability_summary": "Modellazione, animazione, rendering e pipeline 3D",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "mikedh/trimesh",
+    "url": "https://github.com/mikedh/trimesh",
+    "domain": "3d_modeling",
+    "original_capability_summary": "Analisi e trasformazione geometrica delle mesh 3D",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "godotengine/godot",
+    "url": "https://github.com/godotengine/godot",
+    "domain": "3d_modeling",
+    "original_capability_summary": "Motore per mondi interattivi, simulazioni e videogiochi",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "alicevision/Meshroom",
+    "url": "https://github.com/alicevision/Meshroom",
+    "domain": "3d_modeling",
+    "original_capability_summary": "Ricostruzione tridimensionale da fotografie",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "Ultimaker/Cura",
+    "url": "https://github.com/Ultimaker/Cura",
+    "domain": "3d_printing",
+    "original_capability_summary": "Slicing e preparazione dei lavori per stampa 3D",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "prusa3d/PrusaSlicer",
+    "url": "https://github.com/prusa3d/PrusaSlicer",
+    "domain": "3d_printing",
+    "original_capability_summary": "Preparazione G-code e slicing per stampa FDM",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "bambulab/BambuStudio",
+    "url": "https://github.com/bambulab/BambuStudio",
+    "domain": "3d_printing",
+    "original_capability_summary": "Slicer e workflow di stampa 3D Bambu",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "ros2/ros2",
+    "url": "https://github.com/ros2/ros2",
+    "domain": "robotics",
+    "original_capability_summary": "Middleware e interoperabilità dei sistemi robotici",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "google-deepmind/mujoco",
+    "url": "https://github.com/google-deepmind/mujoco",
+    "domain": "robotics",
+    "original_capability_summary": "Simulazione di dinamiche fisiche e robotica",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "huggingface/lerobot",
+    "url": "https://github.com/huggingface/lerobot",
+    "domain": "robotics",
+    "original_capability_summary": "Dati, modelli e workflow di apprendimento robotico",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "n8n-io/n8n",
+    "url": "https://github.com/n8n-io/n8n",
+    "domain": "marketing",
+    "original_capability_summary": "Automazione di workflow e integrazione di sistemi esterni",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "activepieces/activepieces",
+    "url": "https://github.com/activepieces/activepieces",
+    "domain": "marketing",
+    "original_capability_summary": "Automazione self-hosted con connettori applicativi",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "mautic/mautic",
+    "url": "https://github.com/mautic/mautic",
+    "domain": "marketing",
+    "original_capability_summary": "Gestione di campagne e automazioni di marketing",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "plausible/analytics",
+    "url": "https://github.com/plausible/analytics",
+    "domain": "marketing",
+    "original_capability_summary": "Analisi web orientata alla privacy",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "matomo-org/matomo",
+    "url": "https://github.com/matomo-org/matomo",
+    "domain": "marketing",
+    "original_capability_summary": "Web analytics e misurazione delle campagne",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  },
+  {
+    "repo": "gitroomhq/postiz-app",
+    "url": "https://github.com/gitroomhq/postiz-app",
+    "domain": "marketing",
+    "original_capability_summary": "Programmazione editoriale, pubblicazione e analytics social",
+    "verified": "README fetched in connected GitHub research 2026-10-30",
+    "license_review": "NOT VERIFIED",
+    "code_quality_review": "NOT YET PERFORMED"
+  }
+]

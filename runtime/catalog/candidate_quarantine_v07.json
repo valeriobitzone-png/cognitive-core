@@ -1,0 +1,1724 @@
+[
+  {
+    "repo": "alicevision/Meshroom",
+    "domain": "3d_modeling",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "blender/blender",
+    "domain": "3d_modeling",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "godotengine/godot",
+    "domain": "3d_modeling",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mikedh/trimesh",
+    "domain": "3d_modeling",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "bambulab/BambuStudio",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "cdcseacave/openMVS",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "cnr-isti-vclab/meshlab",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "DLR-RM/BlenderProc",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Donkie/Spoolman",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "facebookresearch/map-anything",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "huxingyi/dust3d",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "MarlinFirmware/Marlin",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "maziggy/bambuddy",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "nerfstudio-project/nerfstudio",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "NVlabs/instant-ngp",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "openMVG/openMVG",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "OrcaSlicer/OrcaSlicer",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "prusa3d/PrusaSlicer",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "slic3r/Slic3r",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Ultimaker/Cura",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "VAST-AI-Research/TripoSR",
+    "domain": "3d_printing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "agentscope-ai/agentscope",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "browser-use/browser-use",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Cveinnt/kepler",
+    "domain": "agents",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "deepset-ai/haystack",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "getzep/graphiti",
+    "domain": "agents",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "gptme/gptme",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "HKUDS/nanobot",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "langchain-ai/langgraph",
+    "domain": "agents",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "langgenius/dify",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "langroid/langroid",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "letta-ai/letta",
+    "domain": "agents",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "microsoft/agent-framework",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "microsoft/autogen",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "MiroMindAI/MiroThinker",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "NousResearch/hermes-agent",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "openclaw/openclaw",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "pydantic/pydantic-ai",
+    "domain": "agents",
+    "audit_status": "source_screened_not_approved",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "QwenLM/Qwen-AgentWorld",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "sailing-lab/sira",
+    "domain": "agents",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "strands-agents/harness-sdk",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "The-Pocket/PocketFlow",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Upsonic/Upsonic",
+    "domain": "agents",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Arize-ai/phoenix",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "comet-ml/opik",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "confident-ai/deepeval",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "facebookresearch/fastText",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Giskard-AI/giskard-oss",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Helicone/helicone",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "microsoft/agent-governance-toolkit",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mlflow/mlflow",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "NVIDIA/garak",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "oumi-ai/oumi",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "promptfoo/promptfoo",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Tencent/AI-Infra-Guard",
+    "domain": "ai_eval_security",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "FreeCAD/FreeCAD",
+    "domain": "architecture",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "IfcOpenShell/IfcOpenShell",
+    "domain": "architecture",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "DynamoDS/Dynamo",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "gumyr/build123d",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "iTwin/itwinjs-core",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mingrammer/diagrams",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "openscad/openscad",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "opensourceBIM/BIMserver",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ThatOpen/web-ifc-three",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ThatOpen/web-ifc-viewer",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "xBimTeam/XbimEssentials",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "xeokit/xeokit-bim-viewer",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "xeokit/xeokit-sdk",
+    "domain": "architecture_bim",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "matplotlib/matplotlib",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mckinsey/causalnex",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "pgmpy/pgmpy",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "py-why/causal-learn",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "py-why/dowhy",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "py-why/EconML",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "scipy/scipy",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "uber/causalml",
+    "domain": "causal_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "AI4Finance-Foundation/FinRL",
+    "domain": "finance",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ccxt/ccxt",
+    "domain": "finance",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "freqtrade/freqtrade",
+    "domain": "finance",
+    "audit_status": "copyleft_manual_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "polakowo/vectorbt",
+    "domain": "finance",
+    "audit_status": "restricted_license_manual_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "statsmodels/statsmodels",
+    "domain": "finance",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "AI4Finance-Foundation/FinGPT",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Fincept-Corporation/FinceptTerminal",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "firmai/financial-machine-learning",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "hummingbot/hummingbot",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "jesse-ai/jesse",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "kernc/backtesting.py",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "microsoft/qlib",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "openbq-org/OpenBB",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "PyPortfolio/PyPortfolioOpt",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "quantopian/zipline",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "questdb/questdb",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ranaroussi/quantstats",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "stefan-jansen/machine-learning-for-trading",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "StockSharp/StockSharp",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Superalgos/Superalgos",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "TA-Lib/ta-lib-python",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "wilsonfreitas/awesome-quant",
+    "domain": "finance_crypto",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "wikimedia/wikidata-query-rdf",
+    "domain": "history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "EleutherAI/lm-evaluation-harness",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "EvolvingLMMs-Lab/lmms-eval",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "explosion/spaCy",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "google-research/bert",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "hankcs/HanLP",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "huggingface/datasets",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "huggingface/transformers",
+    "domain": "llm_nlp",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "huggingface/trl",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "langchain-ai/langchain",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "lm-sys/FastChat",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "open-webui/open-webui",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "QwenLM/Qwen",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "RasaHQ/rasa",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "rasbt/LLMs-from-scratch",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "vllm-project/vllm",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "vllm-project/vllm-omni",
+    "domain": "llm_nlp",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "gboeing/osmnx",
+    "domain": "maps",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "geopandas/geopandas",
+    "domain": "maps",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "organicmaps/organicmaps",
+    "domain": "maps",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Project-OSRM/osrm-backend",
+    "domain": "maps",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "QGIS/QGIS",
+    "domain": "maps",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "valhalla/valhalla",
+    "domain": "maps",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "CesiumGS/cesium",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "graphhopper/graphhopper",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "hyperknot/openfreemap",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "keplergl/kepler.gl",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mapillary/OpenSfM",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "opengeos/GeoLibre",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "tidwall/tile38",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Turfjs/turf",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "uber/h3",
+    "domain": "maps_geospatial",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "activepieces/activepieces",
+    "domain": "marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "gitroomhq/postiz-app",
+    "domain": "marketing",
+    "audit_status": "copyleft_manual_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "matomo-org/matomo",
+    "domain": "marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mautic/mautic",
+    "domain": "marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "n8n-io/n8n",
+    "domain": "marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "plausible/analytics",
+    "domain": "marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "modelcontextprotocol/modelcontextprotocol",
+    "domain": "mcp_api",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "modelcontextprotocol/python-sdk",
+    "domain": "mcp_api",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "modelcontextprotocol/typescript-sdk",
+    "domain": "mcp_api",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "mne-tools/mne-python",
+    "domain": "medicine",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Project-MONAI/MONAI",
+    "domain": "medicine",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "AIM-Harvard/pyradiomics",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "broadinstitute/gatk",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "cornerstonejs/cornerstone",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "facebookresearch/fastMRI",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "google/deepvariant",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "InsightSoftwareConsortium/ITK",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "lh3/minimap2",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "nextflow-io/nextflow",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "OHIF/Viewers",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "OpenGene/fastp",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "rordenlab/dcm2niix",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "scverse/scanpy",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Slicer/Slicer",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "soedinglab/MMseqs2",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "sokrypton/ColabFold",
+    "domain": "medicine_biology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "allenai/scispacy",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "AllenInstitute/open-instruct",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "codelucas/newspaper",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "dgraph-io/dgraph",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "fhamborg/news-please",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Graphify-Labs/graphify",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "HKUDS/DeepCode",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "HKUDS/LightRAG",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "JustAnotherArchivist/snscrape",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "koala73/worldmonitor",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "langfuse/langfuse",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "newsnext/newsnow",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "sansan0/TrendRadar",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Thysrael/Horizon",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "topoteretes/cognee",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "vesoft-inc/nebula",
+    "domain": "news_history",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "psychopy/psychopy",
+    "domain": "psychology",
+    "audit_status": "copyleft_manual_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "simbody/simbody",
+    "domain": "psychology",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "braindecode/braindecode",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "brainflow-dev/brainflow",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "brian-team/brian2",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "crsh/papaja",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "FelixHenninger/lab.js",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "fieldtrip/fieldtrip",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "jeshraghian/snntorch",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "jspsych/jsPsych",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "nengo/nengo",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "NeuromatchAcademy/course-content",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "neuropsychology/NeuroKit.py",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "NeuroTechX/moabb",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "simonarvin/eyeloop",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "SpikeInterface/spikeinterface",
+    "domain": "psychology_neuro",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "google-deepmind/mujoco",
+    "domain": "robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "huggingface/lerobot",
+    "domain": "robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ros2/ros2",
+    "domain": "robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "biopython/biopython",
+    "domain": "science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "openmm/openmm",
+    "domain": "science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "pandas-dev/pandas",
+    "domain": "science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "pydata/xarray",
+    "domain": "science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "pytorch/pytorch",
+    "domain": "science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "rdkit/rdkit",
+    "domain": "science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "scikit-learn/scikit-learn",
+    "domain": "science",
+    "audit_status": "incomplete_source_quality_review",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "growchief/growchief",
+    "domain": "social_marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "leaperone/MultiPost-Extension",
+    "domain": "social_marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "news-please/news-please",
+    "domain": "social_marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "qeeqbox/social-analyzer",
+    "domain": "social_marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ScrapeCreators/social-media-research-skills",
+    "domain": "social_marketing",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "AtomScott/SportsLabKit",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "davidpagnon/Sports2D",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "eddwebster/football_analytics",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ML-KULeuven/socceraction",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "nflverse/nflfastR",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "pnxenopoulos/awpy",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "roboflow/sports",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "SoccerNet/sn-gamestate",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "UnravelSports/unravelsports",
+    "domain": "sports",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "hudl/open-data",
+    "domain": "sports_analytics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "hudl/statsbombpy",
+    "domain": "sports_analytics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "PySport/kloppy",
+    "domain": "sports_analytics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "opensim-org/opensim-core",
+    "domain": "sports_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "pyomeca/pyomeca",
+    "domain": "sports_science",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ArduPilot/ardupilot",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "AtsushiSakai/PythonRobotics",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "bulletphysics/bullet3",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "CMU-Perceptual-Computing-Lab/openpose",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "commaai/openpilot",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "google-ai-edge/mediapipe",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "graphdeco-inria/gaussian-splatting",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "HumanSignal/label-studio",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "kornia/kornia",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "nasa-jpl/open-source-rover",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "opencv/opencv",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "rerun-io/rerun",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "roboflow/supervision",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "ultralytics/ultralytics",
+    "domain": "vision_robotics",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "danijar/dreamerv3",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "galilai-group/stable-worldmodel",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "inclusionAI/AWorld",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "nicklashansen/tdmpc2",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "nv-tlabs/lyra",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "OpenDriveLab/Vista",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "PKU-YuanGroup/Helios",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "SkyworkAI/Matrix-Game",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Tencent-Hunyuan/HunyuanWorld-1.0",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Tencent-Hunyuan/HunyuanWorld-Mirror",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Tencent-Hunyuan/HunyuanWorld-Voyager",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "Tencent-Hunyuan/HY-WorldPlay",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "thu-ml/Causal-Forcing",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  },
+  {
+    "repo": "thu-ml/Motus",
+    "domain": "world_models",
+    "audit_status": "not_audited",
+    "can_install": false,
+    "may_be_used_as_verified_skill": false
+  }
+]

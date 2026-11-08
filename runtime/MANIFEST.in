@@ -1,0 +1,15 @@
+include SECURITY.md CONTRIBUTING.md CHANGELOG.md
+include README_V12_IT.md
+recursive-include third_party *.md LICENSE
+recursive-include examples *.json *.jsonl
+recursive-include scripts *.py *.sh
+recursive-include adapters *.py *.yaml *.json *.js *.md
+recursive-include benchmarks *.py *.mjs *.json *.html
+recursive-include tests *.py *.mjs
+recursive-include docs *.md
+recursive-include fixtures *.json
+recursive-include catalog *.json *.md *.csv
+recursive-include training-artifacts *.json *.txt *.db *.db-wal *.db-shm
+prune adapters/opencode/v2/node_modules
+exclude adapters/opencode/v2/package-lock.json
+global-exclude *.pyc

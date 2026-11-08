@@ -1,0 +1,15 @@
+{
+  "event": "2026-10-29 US 2026Q3 GDP advance estimate",
+  "event_at": "2026-10-29T08:30:00-04:00",
+  "reported_growth_saar": 3.4,
+  "market_observations": [
+    {"instrument": "S&P 500", "window": "full session Oct 29 (not a 1-hour event window)", "return_percent": -0.3, "source": "https://apnews.com/article/2c26b0b1bbc3bfab9f3f4b902172f458"},
+    {"instrument": "Bitcoin", "window": "intraday high; price point only, no clean return", "price_usd": 81547, "source": "https://cointelegraph.com/markets/bitcoin-reaction-to-pce-data"}
+  ],
+  "macro_source": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026",
+  "confounders": ["Alphabet earnings news", "same-day PCE inflation release", "broader rates and Fed expectations", "different market windows"],
+  "finding": "Contemporaneous observations; cannot attribute Bitcoin price or stock index moves to GDP causally.",
+  "causal_status": "NOT_ESTABLISHED",
+  "model_training": false,
+  "requirements_to_train": ["multiple timestamp-aligned GDP surprises vs expectations", "intraday tradeable prices at pre-registered horizons", "matched non-event windows", "confounder controls", "multiple-testing correction", "walk-forward validation"]
+}

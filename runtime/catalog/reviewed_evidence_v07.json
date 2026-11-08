@@ -1,0 +1,389 @@
+{
+  "as_of": "2026-10-30",
+  "records": [
+    {
+      "repo": "sailing-lab/sira",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "url": "https://github.com/sailing-lab/sira/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "pyproject.toml",
+          "sha": "eb3630c07aa8bcdcaa701c3edc56f746b5c09e47",
+          "url": "https://github.com/sailing-lab/sira/blob/main/pyproject.toml"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "Cveinnt/kepler",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "d200e3420deaf83839ba6c79fcf52ad79b6a284f",
+          "url": "https://github.com/Cveinnt/kepler/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "harness/ws_tools/commit.py",
+          "sha": "077c8af9ca1335d4d92860b0162dbcab88296188",
+          "url": "https://github.com/Cveinnt/kepler/blob/main/harness/ws_tools/commit.py"
+        },
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "sha": "bfde051d510a67f7f37532fccdbc39932835b404",
+          "url": "https://github.com/Cveinnt/kepler/blob/main/.github/workflows/ci.yml"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "getzep/graphiti",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "5feb0d9d299a1107adfa8331306b13cc0eff2d78",
+          "url": "https://github.com/getzep/graphiti/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "graphiti_core/graphiti.py",
+          "sha": "bd46a19e5f9ee129fb20df43dced053416c7e9f4",
+          "url": "https://github.com/getzep/graphiti/blob/main/graphiti_core/graphiti.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "langchain-ai/langgraph",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "fc0602feecdd6748623c852ab534e1ca612673c7",
+          "url": "https://github.com/langchain-ai/langgraph/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "libs/langgraph/langgraph/graph/state.py",
+          "sha": "9a87f16fa91a794b2e9be09352c1cb03ae89a90d",
+          "url": "https://github.com/langchain-ai/langgraph/blob/main/libs/langgraph/langgraph/graph/state.py"
+        },
+        "tests": {
+          "path": "libs/langgraph/tests/test_pregel.py",
+          "sha": "0079b2a577be9bb6c8734c9a20472d9f2ef97eba",
+          "url": "https://github.com/langchain-ai/langgraph/blob/main/libs/langgraph/tests/test_pregel.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "pydantic/pydantic-ai",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "1bf1f55e6d1736b499ded961ec6b94bfebb17aec",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "pydantic_ai_slim/pydantic_ai/agent/abstract.py",
+          "sha": "343781240096a78abc5ce2fdf2a1af00829bf519",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/pydantic_ai_slim/pydantic_ai/agent/abstract.py"
+        },
+        "tests": {
+          "path": "tests/test_agent.py",
+          "sha": "1058eae300beb303b9bed0b7710f67a0d211f55f",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/tests/test_agent.py"
+        },
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "sha": "66dd7d6a650e197797d12730e790d6b89fcd8e64",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/.github/workflows/ci.yml"
+        }
+      },
+      "screen_status": "source_screened_not_approved",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "letta-ai/letta",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "f75c3422907f55d71685ae59afdc28498cde5a40",
+          "url": "https://github.com/letta-ai/letta/blob/main/LICENSE"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "license_detected": "GPL-3.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "9cecc1d4669ee8af2ca727a5d8cde10cd8b2d7cc",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/LICENSE"
+        },
+        "source": {
+          "path": "freqtrade/freqtradebot.py",
+          "sha": "1087e90854d4b3233e05f23c9b80098538626b57",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/freqtrade/freqtradebot.py"
+        },
+        "tests": {
+          "path": "tests/test_main.py",
+          "sha": "0551def2d6bf9019a09966f9e2661e1ea16385ae",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/tests/test_main.py"
+        },
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "sha": "1becb2ae7dacfc8c5f608508c2f762756cc72d16",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/.github/workflows/ci.yml"
+        }
+      },
+      "screen_status": "copyleft_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "polakowo/vectorbt",
+      "license_detected": "Apache-2.0-with-Commons-Clause",
+      "evidence": {
+        "license": {
+          "path": "LICENSE.md",
+          "sha": "1ecf7675862c3caede8c26bed7150c6c41036d45",
+          "url": "https://github.com/polakowo/vectorbt/blob/master/LICENSE.md"
+        },
+        "source": {
+          "path": "vectorbt/portfolio/base.py",
+          "sha": "3cca3df3e097109c42f1294f852134f8476aadf5",
+          "url": "https://github.com/polakowo/vectorbt/blob/master/vectorbt/portfolio/base.py"
+        }
+      },
+      "screen_status": "restricted_license_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "gboeing/osmnx",
+      "license_detected": "UNKNOWN_LICENSE",
+      "evidence": {
+        "source": {
+          "path": "osmnx/graph.py",
+          "sha": "3233e85983999bd8348757b8ac690455c5b3bc4e",
+          "url": "https://github.com/gboeing/osmnx/blob/main/osmnx/graph.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "geopandas/geopandas",
+      "license_detected": "BSD-3-Clause",
+      "evidence": {
+        "license": {
+          "path": "LICENSE.txt",
+          "sha": "028603be2080134aa4817ed691fec3f449ffa609",
+          "url": "https://github.com/geopandas/geopandas/blob/main/LICENSE.txt"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "Project-MONAI/MONAI",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "url": "https://github.com/Project-MONAI/MONAI/blob/dev/LICENSE"
+        },
+        "source": {
+          "path": "monai/networks/nets/unet.py",
+          "sha": "a4995ef7018f0d37f9c7d7bd23ad3c4db177daac",
+          "url": "https://github.com/Project-MONAI/MONAI/blob/dev/monai/networks/nets/unet.py"
+        },
+        "tests": {
+          "path": "tests/integration/test_integration_unet_2d.py",
+          "sha": "706b0e0afbcc5af15d6f3f11c8746f7fcd5d6630",
+          "url": "https://github.com/Project-MONAI/MONAI/blob/dev/tests/integration/test_integration_unet_2d.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "psychopy/psychopy",
+      "license_detected": "GPL-3.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+          "url": "https://github.com/psychopy/psychopy/blob/dev/LICENSE"
+        },
+        "source": {
+          "path": "psychopy/visual/window.py",
+          "sha": "c601a6a4d8ffe575a3db7b793a397640b5c794c2",
+          "url": "https://github.com/psychopy/psychopy/blob/dev/psychopy/visual/window.py"
+        }
+      },
+      "screen_status": "copyleft_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "mne-tools/mne-python",
+      "license_detected": "BSD-3-Clause",
+      "evidence": {
+        "license": {
+          "path": "LICENSE.txt",
+          "sha": "8e4a81bec1eb1d1c38bef305216fae3323a3ffbf",
+          "url": "https://github.com/mne-tools/mne-python/blob/main/LICENSE.txt"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "huggingface/transformers",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "68b7d66c97d66c58de883ed0c451af2b3183e6f3",
+          "url": "https://github.com/huggingface/transformers/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "src/transformers/models/bert/modeling_bert.py",
+          "sha": "ec4bb968fe0cc232bd83e78303594e31abcc6f71",
+          "url": "https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "scikit-learn/scikit-learn",
+      "license_detected": "BSD-3-Clause",
+      "evidence": {
+        "license": {
+          "path": "COPYING",
+          "sha": "3d7ee432c15b685eaa654b6abe8f8e3ea8126a8d",
+          "url": "https://github.com/scikit-learn/scikit-learn/blob/main/COPYING"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    },
+    {
+      "repo": "gitroomhq/postiz-app",
+      "license_detected": "AGPL-3.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "24fd22792bf887200be9e1388c7b9d4782c6b3b2",
+          "url": "https://github.com/gitroomhq/postiz-app/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "apps/backend/src/main.ts",
+          "sha": "7f5523bde2575ffc4aca41f24fef37052cbe0209",
+          "url": "https://github.com/gitroomhq/postiz-app/blob/main/apps/backend/src/main.ts"
+        },
+        "ci": {
+          "path": ".github/workflows/build.yml",
+          "sha": "4738b6307920bff7ce3442345ac959e098f08fa9",
+          "url": "https://github.com/gitroomhq/postiz-app/blob/main/.github/workflows/build.yml"
+        }
+      },
+      "screen_status": "copyleft_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false
+    }
+  ],
+  "warning": "All 246 candidates remain quarantined for code execution; screening does not authorize integration."
+}
