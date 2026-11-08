@@ -1,0 +1,16 @@
+{"event":{"kind":"message","text":"ciao"},"expected":"WAIT"}
+{"event":{"kind":"message","text":"hi!"},"expected":"WAIT"}
+{"event":{"kind":"message","text":"grazie"},"expected":"WAIT"}
+{"event":{"kind":"message","text":"bene"},"expected":"WAIT"}
+{"event":{"kind":"message","text":"ok"},"expected":"WAIT"}
+{"event":{"kind":"message","text":"va bene"},"expected":"WAIT"}
+{"event":{"kind":"message","text":"ho finito"},"expected":"WAIT"}
+{"event":{"kind":"session_end","title":"filamenti","open_questions":["Quale filament compatibile?"]},"expected":"PREPARE_SILENTLY"}
+{"event":{"kind":"question_open","question":"Quali sono le schede tecniche?"},"expected":"PREPARE_SILENTLY"}
+{"event":{"kind":"research_requested","question":"Confronta i modelli locali disponibili"},"expected":"PREPARE_SILENTLY"}
+{"event":{"kind":"external_action","text":"buy hardware"},"expected":"REQUEST_APPROVAL"}
+{"event":{"kind":"message","text":"Preferisco imparare a usare Blender in modo più rapido"},"expected":"STORE_ONLY"}
+{"event":{"kind":"message","text":"Sto cercando informazioni sulle proprietà del PLA"},"expected":"STORE_ONLY"}
+{"event":{"kind":"message","text":"?"},"expected":"WAIT"}
+{"event":{"kind":"message","text":"Abbandoniamo questa ricerca definitivamente"},"expected":"STORE_ONLY"}
+{"event":{"kind":"message","text":"Ho fatto una lunga ricerca ma manca il grafico finale"},"expected":"STORE_ONLY"}

@@ -1,0 +1,36 @@
+{
+  "scope": "synthetic contract fixture, not a real 24-hour intelligence feed or human relevance benchmark",
+  "events": 12,
+  "selected": [
+    "budget",
+    "calendar",
+    "drift",
+    "memory",
+    "runner"
+  ],
+  "expected": [
+    "budget",
+    "calendar",
+    "drift",
+    "memory",
+    "runner"
+  ],
+  "precision_at_5": 1.0,
+  "recall_at_5": 1.0,
+  "duplicates": 1,
+  "future_observations_rejected": 1,
+  "temporal_projection_checked": true,
+  "whatif_run_id": "84417d21eb6044b9888ad0f7c5a2c5cd",
+  "state_unchanged": true,
+  "capacity_gated": true,
+  "prepared_jobs": 1,
+  "feedback": {
+    "recorded": true,
+    "source": "operator_reported",
+    "automatically_verified": false,
+    "model_updated": false
+  },
+  "model_calls": 0,
+  "web_requests": 0,
+  "limitation": "lexical synthetic contract; useful unsolicited findings require independent human evaluation"
+}

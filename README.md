@@ -2,7 +2,7 @@
 
 > *Un'intelligenza che non aspetta soltanto di essere utilizzata, ma impara a diventare utile prima che nasca il bisogno.*
 
-**Stato:** documentazione pubblica dell'idea e dell'architettura del prototipo **v0.1** (novembre 2026). Questo repository resta **descrittivo**: non pubblica codice sorgente né istruzioni di esecuzione.
+**Stato:** documentazione e runtime sperimentale **1.4.0rc2** (novembre 2026). Il codice unifica Cognitive Core e WorldCore ed è pubblicato in [`runtime/`](runtime/), con le licenze originali indicate in [LICENSING.md](LICENSING.md). La descrizione v0.1 più sotto resta il riferimento storico dell'idea.
 
 Cognitive Core (già presentato come Cognitive Drive) è un substrate cognitivo indipendente da qualsiasi singolo modello o fornitore di intelligenza artificiale. L'obiettivo è conservare conoscenza ed esperienza, continuare ricerche sospese, individuare lacune, prevedere, simulare alternative, decidere quando agire o tacere, verificare gli esiti e migliorare le proprie capacità senza consumo automatico di API commerciali.
 
@@ -12,6 +12,27 @@ Il comportamento previsto emerge dall'equilibrio di quattro principi:
 - **Decision Model** — Scegliere e rispettare i limiti. Valutare benefici, rischi, costi, autorizzazioni e momento opportuno.
 - **Boredom / Curiosity** — Scoprire e prepararsi. Utilizzare le capacità disponibili per migliorare conoscenze e competenze potenzialmente utili, anche senza una richiesta esplicita.
 - **Experience Learning** — Correggersi. Confrontare sistematicamente previsioni e risultati, migliorando solo dove esistono evidenze sufficienti.
+
+---
+
+## Runtime e Intelligence Feed
+
+```sh
+python3 -m pip install ./runtime
+cognitive-core --home ./dati observe '{"text":"ciao"}'
+cognitive-worker --home ./dati --owner local --namespace demo
+```
+
+Il [primo esempio Intelligence Feed](docs/INTELLIGENCE_FEED.md) tratta il
+briefing come proiezione di stimoli e opportunità. Il runtime registra il
+contesto dei progetti, deduplica le fonti, costruisce proposte, collega WHAT IF
+espliciti e prepara ricerche entro i limiti dell'host. I punteggi sono euristici,
+non probabilità calibrate. Non viene avviato alcun briefing periodico.
+
+Le prove e i limiti della versione eseguibile sono riportati nello
+[stato delle verifiche](docs/STATO_VERIFICHE_V1_4.md). I modelli locali citati
+nella roadmap, il RAG semantico e l'utilità reale delle proposte restano da
+valutare; non sono dedotti dal benchmark sintetico incluso.
 
 ---
 

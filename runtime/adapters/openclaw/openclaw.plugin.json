@@ -1,0 +1,39 @@
+{
+  "id": "worldcore",
+  "name": "WorldCore",
+  "description": "WorldCore portable predictive memory and consented personal planning",
+  "version": "1.0.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "owner": {
+        "type": "string"
+      },
+      "space": {
+        "type": "string"
+      },
+      "python": {
+        "type": "string"
+      },
+      "dbPath": {
+        "type": "string"
+      }
+    }
+  },
+  "contracts": {
+    "tools": [
+      "worldcore_personal_advice"
+    ]
+  },
+  "categories": [
+    "memory"
+  ],
+  "toolMetadata": {
+    "worldcore_personal_advice": {
+      "optional": true,
+      "replaySafe": true,
+      "sideEffecting": false
+    }
+  }
+}

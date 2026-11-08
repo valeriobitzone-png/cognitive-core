@@ -1,0 +1,189 @@
+{
+  "scope": "synthetic contract fixture, not a real 24-hour intelligence feed or human relevance benchmark",
+  "as_of": "2026-11-01T12:00:00Z",
+  "projects": [
+    {
+      "id": "core",
+      "title": "Cognitive Core",
+      "keywords": [
+        "runner",
+        "checkpoint",
+        "recovery",
+        "local",
+        "budget",
+        "memory",
+        "embeddings"
+      ],
+      "importance": 1
+    },
+    {
+      "id": "personal",
+      "title": "Personal agent",
+      "keywords": [
+        "calendar",
+        "mail",
+        "commute"
+      ],
+      "importance": 0.9
+    },
+    {
+      "id": "world",
+      "title": "World model",
+      "keywords": [
+        "forecast",
+        "drift",
+        "calibration"
+      ],
+      "importance": 0.9
+    }
+  ],
+  "events": [
+    {
+      "id": "runner",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": true,
+      "event": {
+        "source_kind": "github",
+        "source_ref": "https://example.org/runner",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Runner checkpoint recovery",
+        "summary": "A fictional candidate worth testing for resilient local workers"
+      }
+    },
+    {
+      "id": "budget",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": true,
+      "event": {
+        "source_kind": "github",
+        "source_ref": "https://example.org/budget",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Local budget control",
+        "summary": "A fictional local-first design may reduce resource usage"
+      }
+    },
+    {
+      "id": "memory",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": true,
+      "event": {
+        "source_kind": "github",
+        "source_ref": "https://example.org/memory",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Memory embeddings indexing",
+        "summary": "A fictional lexical and semantic retrieval comparison"
+      }
+    },
+    {
+      "id": "calendar",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": true,
+      "event": {
+        "source_kind": "news",
+        "source_ref": "https://example.org/calendar",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Calendar mail commute",
+        "summary": "A fictional personal agent source adapter proposal"
+      }
+    },
+    {
+      "id": "drift",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": true,
+      "event": {
+        "source_kind": "forecast",
+        "source_ref": "https://example.org/drift",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Forecast drift calibration",
+        "summary": "A fictional test plan for erroneous predictions"
+      }
+    },
+    {
+      "id": "dismissed",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": false,
+      "event": {
+        "source_kind": "github",
+        "source_ref": "https://example.org/dismissed",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Runner recovery checkpoint dismissed",
+        "summary": "Fictional candidate explicitly rejected by the operator"
+      },
+      "dismiss": true
+    },
+    {
+      "id": "noise",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": false,
+      "event": {
+        "source_kind": "news",
+        "source_ref": "https://example.org/noise",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Celebrity premiere",
+        "summary": "Unrelated fictional entertainment coverage"
+      }
+    },
+    {
+      "id": "noise2",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": false,
+      "event": {
+        "source_kind": "news",
+        "source_ref": "https://example.org/noise2",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Sports results",
+        "summary": "Unrelated fictional match report"
+      }
+    },
+    {
+      "id": "late",
+      "received_at": "2026-11-01T13:00:00Z",
+      "expected_selected": false,
+      "event": {
+        "source_kind": "github",
+        "source_ref": "https://example.org/late",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Local memory embeddings late arrival",
+        "summary": "Fictional later information"
+      }
+    },
+    {
+      "id": "old",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": false,
+      "event": {
+        "source_kind": "github",
+        "source_ref": "https://example.org/old",
+        "occurred_at": "2026-10-28T11:00:00Z",
+        "title": "Runner old checkpoint",
+        "summary": "Fictional old information"
+      }
+    },
+    {
+      "id": "duplicate",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": false,
+      "event": {
+        "source_kind": "news",
+        "source_ref": "https://example.org/duplicate",
+        "occurred_at": "2026-11-01T11:00:00Z",
+        "title": "Runner checkpoint recovery",
+        "summary": "A fictional candidate worth testing for resilient local workers"
+      },
+      "duplicate_of": "runner"
+    },
+    {
+      "id": "future",
+      "received_at": "2026-11-01T11:30:00Z",
+      "expected_selected": false,
+      "event": {
+        "source_kind": "github",
+        "source_ref": "https://example.org/future",
+        "occurred_at": "2026-11-02T11:00:00Z",
+        "title": "Runner future checkpoint",
+        "summary": "Future-dated observation must be rejected"
+      },
+      "expect_error": true
+    }
+  ]
+}
