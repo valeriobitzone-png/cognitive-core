@@ -24,8 +24,15 @@ Il Core non ha raccolto nuove informazioni personali né chiamato modelli.
 I [risultati sintetici](../validation/benchmark.json), la
 [prova sul repository](../validation/public_repo_event.json) e il
 [riepilogo](../validation/summary.json) sono pubblicati senza database personali
-o log grezzi dei provider. La CI Linux Python 3.11/3.14 è configurata nella PR;
-lo stato remoto va letto nei suoi check e non è dedotto dalle prove locali.
+o log grezzi dei provider. La configurazione CI Linux Python 3.11/3.14 è pronta in
+[`ci/github-actions.yml.example`](../ci/github-actions.yml.example). La sua
+attivazione è bloccata: le credenziali Git locali non hanno scope `workflow` e
+il collegamento GitHub dell’app rifiuta la scrittura con HTTP 403. Nessun check
+remoto è dichiarato superato. Per attivarla occorre installare quel file come
+`.github/workflows/ci.yml` con un accesso autorizzato ai workflow.
+
+La wheel è stata inoltre installata senza dipendenze aggiuntive: 51 file sono
+identici tra sorgenti, installazione e archivio sorgente.
 
 Il runtime 1.4.0rc1 di partenza aveva già una prova di raccolta pubblica della
 pagina Python JSON, con due richieste HTTP, e un'installazione senza dipendenze
