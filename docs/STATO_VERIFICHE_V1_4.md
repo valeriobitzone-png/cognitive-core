@@ -1,10 +1,10 @@
 # Verifiche runtime 1.4.0rc2 — 8 novembre 2026
 
-La serie locale macOS/Python 3.14 ha superato **432 test Python e 12 Node**,
+La serie locale macOS/Python 3.14 ha superato **433 test Python e 12 Node**,
 con 2 test facoltativi browser/desktop saltati. Il supervisore ha completato
 42/42 gruppi, incluso un timeout intenzionale per verificare il watchdog.
 
-Il test aggiunge al runtime unificato 23 casi del Cognitive Drive: contesto,
+Il test aggiunge al runtime unificato 24 casi del Cognitive Drive: contesto,
 provenienza, duplicati, scarto persistente, isolamento owner/namespace,
 concorrenza, rollback, capacità, budget, WHAT IF, proiezione temporale, CLI e
 trasporto stdio. Le altre regressioni WorldCore restano presenti.

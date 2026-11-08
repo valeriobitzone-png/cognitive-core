@@ -202,3 +202,14 @@ def test_cli_and_bound_worker_use_same_feed(tmp_path):
     assert rows[0]['result']['duplicate']
     assert len(rows[1]['result']['opportunities'])==1
     assert rows[2]['result']['items']==[]  # old observation outside the current window
+
+
+def test_closed_topic_cannot_permanently_starve_next_opportunity(core):
+    first=core.drive.ingest(event(),now=EARLY)
+    item=core.drive.opportunities()[0]
+    topic=core.vault.topic('Previously declined',item['hypothesis'],status='discarded')
+    other=core.drive.ingest(event(title='Runner alternative',summary='Another candidate source'),now=EARLY)
+    assert core.drive.prepare(.8,limit=1)['jobs']==[]
+    assert core.drive._get(first['opportunity_id'])['status']=='dismissed'
+    assert core.vault.get_topic(topic)['status']=='discarded'
+    assert core.drive.prepare(.8,limit=1)['jobs'][0]['opportunity_id']==other['opportunity_id']

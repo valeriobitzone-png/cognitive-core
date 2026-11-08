@@ -198,7 +198,11 @@ class CognitiveDrive:
                 urls=[r['source_ref'] for r in origins if urlsplit(r['source_ref']).scheme=='https'][:3]
                 if not urls:continue  # No installed read adapter for local/mobile source references.
                 topic=self.v.topic(row['title'],row['hypothesis'],importance=row['priority'],trigger='intelligence_feed')
-                if self.v.get_topic(topic)['status']!='open':continue
+                if self.v.get_topic(topic)['status']!='open':
+                    self.v.db.execute("UPDATE drive_opportunities SET status='dismissed' WHERE namespace=? AND id=?",
+                                      (self.v.ns,row['id']))
+                    self._decision(row['id'],'dismissed','related topic is closed; prior operator choice retained',instant())
+                    continue
                 if not self.v.reserve_budget('initiatives_prepared',self.core.s.max_jobs_per_day):break
                 job=self.v.job(topic,plan={'question':row['hypothesis'],'seed_urls':urls,'require_review':True})
                 self.v.db.execute("UPDATE drive_opportunities SET status='prepared',topic_id=?,job_id=? WHERE namespace=? AND id=?",
