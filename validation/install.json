@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0rc2",
+  "version": "1.4.0rc3",
   "source_installed_and_sdist_files_identical": 51,
   "files": [
     "worldcore/calibrated.py",

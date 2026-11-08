@@ -1,4 +1,4 @@
-# Cognitive Core + WorldCore 1.4.0rc2
+# Cognitive Core + WorldCore 1.4.0rc3
 
 This distribution combines the supplied Cognitive Core 0.1 (MIT) with the
 existing WorldCore 1.3.0rc3 engine (Apache-2.0). Both notices are retained.
@@ -31,7 +31,7 @@ still be opened directly with `WorldCore(path)`. They are not imported silently.
 Python 3.11+; no mandatory runtime dependencies:
 
 ```sh
-python3 -m pip install worldcore_cognitive_layer-1.4.0rc2-py3-none-any.whl
+python3 -m pip install worldcore_cognitive_layer-1.4.0rc3-py3-none-any.whl
 cognitive-core --home ./local-data observe '{"text":"ciao"}'
 cognitive-worker --home ./local-data --owner local --namespace demo
 ```

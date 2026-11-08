@@ -206,23 +206,17 @@ class Vault:
         """Atomic lease; crashed jobs can resume after expiry."""
         if type(lease_seconds) is not int or not 1<=lease_seconds<=3600:raise ValueError('invalid lease duration')
         now=ts()
-        self.db.execute('BEGIN IMMEDIATE')
-        try:
+        with self.transaction():
             row=self.db.execute("""
                 SELECT j.* FROM jobs j JOIN topics t ON t.id=j.topic_id AND t.namespace=j.namespace
                 WHERE j.namespace=? AND t.status='open'
                 AND (j.status='pending' OR (j.status='running' AND j.lease_until < ?))
                 ORDER BY j.created LIMIT 1""", (self.ns,now)).fetchone()
             if not row:
-                self.db.execute('COMMIT')
                 return None
             self.db.execute("UPDATE jobs SET status='running',lease_until=?,lease_token=?,attempts=attempts+1,updated=? WHERE id=?",
                             (now+lease_seconds,uid('lease'),now,row['id']))
-            self.db.execute('COMMIT')
             return self.get_job(row['id'])
-        except Exception:
-            self.db.execute('ROLLBACK')
-            raise
 
     def update_job(self, ident, *, status, checkpoint=None, lease_token=None):
         if status not in ('pending','running','done','blocked','failed','cancelled'):

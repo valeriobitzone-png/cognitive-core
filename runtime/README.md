@@ -1,6 +1,6 @@
 # Cognitive Core + WorldCore runtime
 
-Technical release candidate 1.4.0rc2. Python 3.11+, no mandatory runtime
+Technical release candidate 1.4.0rc3. Python 3.11+, no mandatory runtime
 packages. WorldCore APIs are retained; Cognitive Core adds zero-model
 admission, persistent research topics, a fenced job queue and an Intelligence
 Feed / Opportunity Pool.

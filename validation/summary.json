@@ -1,11 +1,14 @@
 {
-  "version": "1.4.0rc2",
-  "python_passed": 433,
+  "version": "1.4.0rc3",
+  "python_passed": 439,
   "python_skipped": 2,
   "node_passed": 12,
-  "groups_passed": 42,
-  "groups_total": 42,
+  "groups_passed": 43,
+  "groups_total": 43,
   "model_calls": 0,
+  "recovery_regressions": 6,
+  "reproduced_before_failures": 5,
+  "live_public_feed": "passed",
   "raw_private_databases_published": false,
-  "scope": "local macOS regression; remote CI blocked by missing workflow permission"
+  "scope": "local macOS regression; GitHub workflow authorization pending"
 }

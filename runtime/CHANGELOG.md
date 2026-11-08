@@ -1,3 +1,11 @@
+# 1.4.0rc3 — Durable research recovery
+
+Preserves checkpoints when policy blocks recovery, freezes discovered source
+URLs across attempts, rolls back interrupted lease acquisition, finalizes
+already-collected jobs without new network quota, and atomically commits final
+status with its experience entry. Adds a real-process kill/recovery regression
+and an opt-in public-source end-to-end verifier.
+
 # 1.4.0rc2 — Intelligence Feed
 
 Adds unified structured stimuli, trusted project context, provenance-preserving

@@ -33,12 +33,18 @@ jobs:
         run: python -B scripts/benchmark_intelligence_feed.py --output /tmp/feed-benchmark.json
       - name: Build installable artifacts
         run: python -m build
+      - name: Smoke test wheel without optional dependencies
+        run: |
+          python -m venv /tmp/runtime-clean
+          /tmp/runtime-clean/bin/python -m pip install --no-index --no-deps dist/*.whl
+          /tmp/runtime-clean/bin/python scripts/validate_unified.py --output /tmp/clean-smoke.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: 'validation-${{ matrix.python }}'
           path: |
             /tmp/test-report.json
-            /tmp/test-report.logs/
+            /tmp/test-report_logs/
             /tmp/feed-benchmark.json
+            /tmp/clean-smoke.json
             runtime/dist/

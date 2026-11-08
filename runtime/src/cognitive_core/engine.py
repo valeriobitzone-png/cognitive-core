@@ -148,21 +148,22 @@ class CognitiveCore:
         if not topic or topic['status']!='open':
             self.vault.update_job(job['id'],lease_token=job['lease_token'],status='cancelled')
             return {'status':'cancelled'}
-        block=self._govern(job)
-        if block:
-            self.vault.update_job(job['id'],lease_token=job['lease_token'],status='blocked',checkpoint={'blocker':block})
-            return {'status':'blocked','reason':block,'job_id':job['id']}
         plan=json.loads(job['plan'])
         checkpoint=json.loads(job['checkpoint'])
         completed=set(checkpoint.get('completed',[]))
+        urls=checkpoint.get('source_urls') or plan.get('seed_urls',[])
+        collected_all=bool(urls) and all(url in completed for url in urls[:self.s.max_web_requests_per_job])
+        block=None if collected_all else self._govern(job)
+        if block:
+            self.vault.update_job(job['id'],lease_token=job['lease_token'],status='blocked',checkpoint={**checkpoint,'blocker':block})
+            return {'status':'blocked','reason':block,'job_id':job['id']}
         failures=checkpoint.get('errors',[])
         sources=checkpoint.get('documents',[])
         imgs=checkpoint.get('images',[])
-        urls=plan.get('seed_urls',[])
         requests_reserved=checkpoint.get('requests_reserved',0)
         def checkpoint_state():
             return {'completed':sorted(completed),'errors':failures,'documents':sources,
-                    'images':imgs,'requests_reserved':requests_reserved}
+                    'images':imgs,'requests_reserved':requests_reserved,'source_urls':urls}
         def reserve_request():
             nonlocal requests_reserved
             if requests_reserved>=self.s.max_web_requests_per_job:
@@ -192,7 +193,7 @@ class CognitiveCore:
         if not urls:
             self.vault.update_job(job['id'],lease_token=job['lease_token'],status='blocked',checkpoint={**checkpoint_state(),'blocker':'no research source URLs; configure SearXNG or seed_urls'})
             return {'status':'blocked','reason':'no sources','errors':failures,'job_id':job['id']}
-        if not self.vault.reserve_budget('jobs_run',self.s.max_jobs_per_day):
+        if not collected_all and not self.vault.reserve_budget('jobs_run',self.s.max_jobs_per_day):
             self.vault.update_job(job['id'],lease_token=job['lease_token'],status='blocked',checkpoint={**checkpoint_state(),'blocker':'daily jobs quota'})
             return {'status':'blocked','reason':'daily jobs quota'}
         for url in urls[:self.s.max_web_requests_per_job]:
@@ -219,14 +220,15 @@ class CognitiveCore:
             self.vault.update_job(job['id'],lease_token=job['lease_token'],status='running',checkpoint=checkpoint_state())
         # Durable checkpoint; content is source material, NOT automatically accepted factual claims.
         final_status='done' if sources else 'failed'
-        self.vault.update_job(job['id'],lease_token=job['lease_token'],status=final_status,checkpoint={
-            **checkpoint_state(),
-            'verification':'pending_human_or_tool_review',
-            'note':'Research evidence not asserted as verified truth'})
-        self.vault.experience(job['topic_id'],'source_research',
-                              'collect inspectable candidate sources',
-                              f'{len(sources)} source documents; {len(failures)} failures',
-                              ','.join(sources))
+        with self.vault.transaction():
+            self.vault.update_job(job['id'],lease_token=job['lease_token'],status=final_status,checkpoint={
+                **checkpoint_state(),
+                'verification':'pending_human_or_tool_review',
+                'note':'Research evidence not asserted as verified truth'})
+            self.vault.experience(job['topic_id'],'source_research',
+                                  'collect inspectable candidate sources',
+                                  f'{len(sources)} source documents; {len(failures)} failures',
+                                  ','.join(sources))
         return {'status':final_status,'job_id':job['id'],'sources':sources,
                 'images_discovered':len(imgs),'errors':failures,'verified_claims':0}
 

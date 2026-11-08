@@ -1,8 +1,8 @@
-# Verifiche runtime 1.4.0rc2 — 8 novembre 2026
+# Verifiche runtime 1.4.0rc3 — 8 novembre 2026
 
-La serie locale macOS/Python 3.14 ha superato **433 test Python e 12 Node**,
+La serie locale macOS/Python 3.14 ha superato **439 test Python e 12 Node**,
 con 2 test facoltativi browser/desktop saltati. Il supervisore ha completato
-42/42 gruppi, incluso un timeout intenzionale per verificare il watchdog.
+43/43 gruppi, incluso un timeout intenzionale per verificare il watchdog.
 
 Il test aggiunge al runtime unificato 24 casi del Cognitive Drive: contesto,
 provenienza, duplicati, scarto persistente, isolamento owner/namespace,
@@ -44,3 +44,5 @@ I modelli locali, il RAG semantico, i sensori desktop/mobile e la qualità reale
 delle opportunità restano da valutare. Il feedback è marcato
 `operator_reported`; non diventa automaticamente una verifica indipendente o
 un addestramento. Il briefing non viene attivato a un orario prestabilito.
+
+La revisione rc3 aggiunge sei [prove di ripresa durevole](RECOVERY_V1_4_RC3.md): cinque difetti riprodotti prima della correzione, più un processo worker realmente terminato. Il ciclo completo Feed → raccolta pubblica → registro → riconciliazione WHAT IF ha inoltre superato la prova reale senza LLM.

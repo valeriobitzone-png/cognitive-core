@@ -2,7 +2,7 @@
 
 All optional model and web dependencies are OFF by default.
 """
-__version__ = "1.4.0rc2"
+__version__ = "1.4.0rc3"
 
 from .config import Settings
 from .engine import CognitiveCore

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "worldcore-cognitive-layer"
-version = "1.4.0rc2"
+version = "1.4.0rc3"
 description = "Local-first, host-agnostic cognitive layer for agentic systems"
 requires-python = ">=3.11"
 license = "Apache-2.0"

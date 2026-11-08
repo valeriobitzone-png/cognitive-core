@@ -2,7 +2,7 @@
 
 > *Un'intelligenza che non aspetta soltanto di essere utilizzata, ma impara a diventare utile prima che nasca il bisogno.*
 
-**Stato:** documentazione e runtime sperimentale **1.4.0rc2** (novembre 2026). Il codice unifica Cognitive Core e WorldCore ed è pubblicato in [`runtime/`](runtime/), con le licenze originali indicate in [LICENSING.md](LICENSING.md). La descrizione v0.1 più sotto resta il riferimento storico dell'idea.
+**Stato:** documentazione e runtime sperimentale **1.4.0rc3** (novembre 2026). Il codice unifica Cognitive Core e WorldCore ed è pubblicato in [`runtime/`](runtime/), con le licenze originali indicate in [LICENSING.md](LICENSING.md). La descrizione v0.1 più sotto resta il riferimento storico dell'idea.
 
 Cognitive Core (già presentato come Cognitive Drive) è un substrate cognitivo indipendente da qualsiasi singolo modello o fornitore di intelligenza artificiale. L'obiettivo è conservare conoscenza ed esperienza, continuare ricerche sospese, individuare lacune, prevedere, simulare alternative, decidere quando agire o tacere, verificare gli esiti e migliorare le proprie capacità senza consumo automatico di API commerciali.
 
