@@ -1,0 +1,16 @@
+{
+  "kill_restart": {
+    "actual_parent_sigkill_of_own_child": true,
+    "returncode": -9,
+    "cycle_resumed": "done",
+    "skill_catalog_preserved": true,
+    "duplicate_notes": false
+  },
+  "modality_ledger": {
+    "observations_stored_in_temporary_vault": 10,
+    "verified_claims": 0,
+    "scope_isolation": true,
+    "network_or_external_actions_authorized": false,
+    "original_archive_modified": false
+  }
+}

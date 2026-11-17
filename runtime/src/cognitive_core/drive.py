@@ -78,6 +78,8 @@ class CognitiveDrive:
 
     def upsert_project(self,project_id,title,keywords,importance=.5):
         """Trusted host context, not fields asserted by an external source."""
+        from .experimental import require_interactive
+        require_interactive(self.core)
         project_id=text(project_id,'project id',128);title=text(title,'title',300)
         if not isinstance(keywords,list) or not 1<=len(keywords)<=30:raise ValueError('need 1..30 keywords')
         words=sorted({w for k in keywords for w in tokens(text(k,'keyword',100)) if len(w)>=3})
@@ -168,6 +170,8 @@ class CognitiveDrive:
         return result
 
     def review(self,ident,status,reason,*,now=None):
+        from .experimental import require_interactive
+        require_interactive(self.core)
         if status not in ('dismissed','suggested'):raise ValueError('review status must be dismissed or suggested')
         reason=text(reason,'reason',500);at=instant(now)
         with self.v.transaction():
@@ -238,6 +242,8 @@ class CognitiveDrive:
                 'ranking_basis':'heuristic_priority_not_probability','model_calls':0}
 
     def record_outcome(self,ident,useful,evidence_ref):
+        from .experimental import require_interactive
+        require_interactive(self.core)
         if type(useful) is not bool:raise ValueError('useful must be boolean')
         evidence_ref=text(evidence_ref,'outcome evidence',2000)
         with self.v.transaction():

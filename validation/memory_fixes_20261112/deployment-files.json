@@ -1,0 +1,11 @@
+[
+  "runtime/src/cognitive_core/memory.py",
+  "runtime/src/cognitive_core/dream.py",
+  "runtime/src/cognitive_core/vault.py",
+  "runtime/src/cognitive_core/portable.py",
+  "runtime/src/cognitive_core/engine.py",
+  "runtime/src/cognitive_core/curiosity.py",
+  "runtime/tests/test_memory_dream.py",
+  "runtime/tests/test_memory_audit_regressions.py",
+  "runtime/docs/MEMORY_AUDIT_FIXES_20261112_IT.md"
+]

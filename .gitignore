@@ -15,3 +15,7 @@ node_modules/
 *.db-*
 runtime/training-artifacts/*runner*.json
 runtime/training-artifacts/*runner*.logs/
+
+# artefatti pesanti e rigenerabili (restano su disco, fuori dalla storia git)
+*.safetensors
+validation/**/portable-export*/

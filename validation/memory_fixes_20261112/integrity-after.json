@@ -1,0 +1,71 @@
+{
+  "protected_files": [
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_real_v2.db",
+      "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_public_ai.db",
+      "sha256": "f3f0d4293fda8afd0ce8c626ecccc870b3152d28e1a93aa6ec37e51d3637a42f",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_real_v3.db",
+      "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_enriched_anticipation.db",
+      "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_real.db",
+      "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_scale_next_event.db",
+      "sha256": "d4c2c0c2e0584d42bc0f18a9f0f64dd6503db1baebec1d7b49b58f7630b379e6",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/runner.py",
+      "sha256": "0dde9b2361b68eb7b77329a3a4f9978d4e7ca3debde456ccc58112ca4fe0e8f9",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/tasks.py",
+      "sha256": "bfca72a31c49037977730d74507ca4a86d70e4b176110352abf254fea710bef7",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/core_eval.py",
+      "sha256": "5b0c9127c94c58e4cbe89cccb8face794c7f4bedef3d1e272d3f2546b3556e10",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/stato.sh",
+      "sha256": "083a7e07550c2fb02cda66aeaf5f88795a08ac77387b28ef1d8e8cb4880120e7",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/avvia.sh",
+      "sha256": "ccf753c7c0097d2018f851fa7e0955a326d126f8f90c03282dfa0c16bc27e909",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/ferma.sh",
+      "sha256": "f3ff4e6e7e5585c5b567885a79fb2f1e2793dfd3b3f49f115949b81a16a2d175",
+      "matches_pre_unification": true
+    },
+    {
+      "path": "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/com.valerio.cognitivecore.local.plist",
+      "sha256": "ef445d3182eb319130515177bf76db4abd54fddab3466bc513649a96ff690911",
+      "matches_pre_unification": true
+    }
+  ],
+  "runner": "32703 02-18:38:56 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/runner.py --loop",
+  "runner_check_error": ""
+}

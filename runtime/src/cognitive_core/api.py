@@ -59,7 +59,9 @@ def serve(core: CognitiveCore,port=8731):
                     self.write(413,{'error':'invalid request size'});return
                 from worldcore.bridge import _decode_request
                 payload=_decode_request(self.rfile.read(n))
-                if self.path=='/v1/events':
+                if self.path=='/v1/run':
+                    result=core.run(payload)
+                elif self.path=='/v1/events':
                     result=core.observe(payload)
                 elif self.path=='/v1/topics/resume':
                     result={'job_id':core.resume(payload['topic_id'],payload.get('seed_urls'))}

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "matrix",
+    "exit_code": 0,
+    "seconds": 72.48556358402129
+  },
+  {
+    "name": "introspection",
+    "exit_code": 1,
+    "seconds": 1.2610121249745134
+  },
+  {
+    "name": "voice",
+    "exit_code": 0,
+    "seconds": 27.825346375000663
+  },
+  {
+    "name": "rizzo4-v1-test",
+    "exit_code": 0,
+    "seconds": 449.8925653329934
+  },
+  {
+    "name": "rizzo4-v1-fresh",
+    "exit_code": 0,
+    "seconds": 660.8375191660016
+  }
+]

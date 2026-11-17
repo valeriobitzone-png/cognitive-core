@@ -1,0 +1,14 @@
+✔ OpenCode V1 observes real bridge transaction, no secret args (71.0055ms)
+✔ OpenCode V2 registers event hook and records failure safely (22.216333ms)
+✔ Invalid tool names are rejected before subprocess execution (24.288125ms)
+✔ Failed interpreter does not block V2 host (23.284542ms)
+✔ V2 default entry is a loadable definition with lifecycle cleanup (0.152542ms)
+✔ V2 Code Mode error metadata is not reported as successful telemetry (23.29075ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 216.803083

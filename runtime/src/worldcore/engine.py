@@ -25,6 +25,8 @@ from .ensemble import EnsembleMixin
 from .intelligence import IntelligenceMixin
 from .worldmodel import WorldModelMixin
 from .dynamics import DynamicsMixin
+from .next_event import NextEventMixin
+from .anticipation_mixin import AnticipationMixin
 from .state_lens import StateLensMixin
 from .hybrid_world import HybridWorldMixin
 from .events_lab import EventsLabMixin
@@ -94,7 +96,7 @@ def _load(row):
     return dict(row) if row is not None else None
 
 
-class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlannerMixin, SemanticFusionMixin, ActionGatewayMixin, HybridWorldMixin, StateLensMixin, DynamicsMixin, LearningMixin, KnowledgeMixin, EnsembleMixin, IntelligenceMixin, WorldModelMixin, EventsLabMixin, CapabilitiesMixin, SocialLabMixin, LanguageMixin):
+class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlannerMixin, SemanticFusionMixin, ActionGatewayMixin, HybridWorldMixin, StateLensMixin, DynamicsMixin, LearningMixin, KnowledgeMixin, EnsembleMixin, IntelligenceMixin, WorldModelMixin, EventsLabMixin, CapabilitiesMixin, SocialLabMixin, LanguageMixin, NextEventMixin, AnticipationMixin):
     """Portable, synchronous embedded engine. Each call uses SQLite transactions."""
 
     def __init__(self, path: str | Path | None = None):

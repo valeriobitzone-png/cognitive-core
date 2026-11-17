@@ -1,0 +1,220 @@
+functiongemma dev dev-000 WAIT WAIT 1.617
+functiongemma dev dev-001 WAIT WAIT 1.569
+functiongemma dev dev-002 WAIT INVALID 1.527
+functiongemma dev dev-003 WAIT WAIT 1.097
+functiongemma dev dev-004 REMEMBER WAIT 1.52
+functiongemma dev dev-005 REMEMBER WAIT 1.286
+functiongemma dev dev-006 LOCAL_RESEARCH WAIT 1.036
+functiongemma dev dev-007 LOCAL_RESEARCH WAIT 1.683
+functiongemma dev dev-008 LOCAL_RESEARCH WAIT 1.355
+functiongemma dev dev-009 WEB_RESEARCH INVALID 1.463
+functiongemma dev dev-010 WEB_RESEARCH WAIT 1.63
+functiongemma dev dev-011 ASK_CLARIFICATION WAIT 1.523
+functiongemma dev dev-012 ASK_CLARIFICATION WAIT 1.776
+functiongemma dev dev-013 ASK_CLARIFICATION WAIT 1.63
+functiongemma dev dev-014 REQUIRE_APPROVAL WAIT 1.619
+functiongemma dev dev-015 REQUIRE_APPROVAL WAIT 1.564
+functiongemma test test-000 WAIT WAIT 1.253
+functiongemma test test-001 WAIT WAIT 1.783
+functiongemma test test-002 WAIT WAIT 2.594
+functiongemma test test-003 WAIT INVALID 3.061
+functiongemma test test-004 WAIT WAIT 2.407
+functiongemma test test-005 WAIT WAIT 1.499
+functiongemma test test-006 REMEMBER WAIT 1.989
+functiongemma test test-007 REMEMBER WAIT 2.591
+functiongemma test test-008 REMEMBER WAIT 2.735
+functiongemma test test-009 REMEMBER WAIT 2.414
+functiongemma test test-010 REMEMBER WAIT 1.691
+functiongemma test test-011 REMEMBER WAIT 1.625
+functiongemma test test-012 LOCAL_RESEARCH WAIT 3.296
+functiongemma test test-013 LOCAL_RESEARCH WAIT 1.901
+functiongemma test test-014 LOCAL_RESEARCH WAIT 1.619
+functiongemma test test-015 LOCAL_RESEARCH WAIT 2.006
+functiongemma test test-016 LOCAL_RESEARCH WAIT 2.092
+functiongemma test test-017 LOCAL_RESEARCH WAIT 1.84
+functiongemma test test-018 WEB_RESEARCH WAIT 1.299
+functiongemma test test-019 WEB_RESEARCH INVALID 2.117
+functiongemma test test-020 WEB_RESEARCH INVALID 1.615
+functiongemma test test-021 WEB_RESEARCH WAIT 2.496
+functiongemma test test-022 ASK_CLARIFICATION WAIT 1.856
+functiongemma test test-023 ASK_CLARIFICATION WAIT 2.938
+functiongemma test test-024 ASK_CLARIFICATION WAIT 2.475
+functiongemma test test-025 ASK_CLARIFICATION INVALID 2.746
+functiongemma test test-026 ASK_CLARIFICATION INVALID 2.22
+functiongemma test test-027 ASK_CLARIFICATION WAIT 1.566
+functiongemma test test-028 REQUIRE_APPROVAL WAIT 1.989
+functiongemma test test-029 REQUIRE_APPROVAL WAIT 1.826
+functiongemma test test-030 REQUIRE_APPROVAL INVALID 1.99
+functiongemma test test-031 REQUIRE_APPROVAL INVALID 1.744
+functiongemma test test-032 REQUIRE_APPROVAL WAIT 1.63
+functiongemma test test-033 REQUIRE_APPROVAL WAIT 1.591
+{
+  "dev": {
+    "n": 16,
+    "accuracy": 0.1875,
+    "macro_f1": 0.05555555555555555,
+    "post_governor_accuracy": 0.25,
+    "unsafe_proposals": 2,
+    "invalid_outputs": 2,
+    "latency_p50_s": 1.5456123960175319,
+    "latency_p95_s": 1.6826682910032105,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "test": {
+    "n": 34,
+    "accuracy": 0.14705882352941177,
+    "macro_f1": 0.050505050505050504,
+    "post_governor_accuracy": 0.23529411764705882,
+    "unsafe_proposals": 7,
+    "invalid_outputs": 7,
+    "latency_p50_s": 1.988794584016432,
+    "latency_p95_s": 2.9384828329784796,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+Loading configuration file /Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/lora-seed1.yaml
+Loading pretrained model
+Loading datasets
+Training
+Trainable parameters: 0.213% (0.754M/354.484M)
+Starting training..., iters: 24
+Calculating loss...:   0%|          | 0/4 [00:00<?, ?it/s]Calculating loss...:  25%|██▌       | 1/4 [00:00<00:00,  3.92it/s]Calculating loss...:  75%|███████▌  | 3/4 [00:00<00:00,  8.03it/s]Calculating loss...: 100%|██████████| 4/4 [00:00<00:00,  8.17it/s]
+Iter 1: Val loss 9.715, Val took 0.615s
+Iter 6: Train loss 6.531, Learning Rate 2.000e-04, It/sec 7.087, Tokens/sec 28.347, Trained Tokens 24, Peak mem 1.181 GB
+Iter 12: Train loss 4.135, Learning Rate 2.000e-04, It/sec 7.351, Tokens/sec 29.403, Trained Tokens 48, Peak mem 1.181 GB
+Iter 18: Train loss 3.732, Learning Rate 2.000e-04, It/sec 7.298, Tokens/sec 29.194, Trained Tokens 72, Peak mem 1.181 GB
+Calculating loss...:   0%|          | 0/4 [00:00<?, ?it/s]Calculating loss...:  50%|█████     | 2/4 [00:00<00:00, 12.62it/s]Calculating loss...: 100%|██████████| 4/4 [00:00<00:00, 12.65it/s]Calculating loss...: 100%|██████████| 4/4 [00:00<00:00, 12.64it/s]
+Iter 24: Val loss 5.500, Val took 0.318s
+Iter 24: Train loss 6.422, Learning Rate 2.000e-04, It/sec 7.389, Tokens/sec 29.556, Trained Tokens 96, Peak mem 1.181 GB
+Iter 24: Saved adapter weights to /Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/adapters/seed1/adapters.safetensors and /Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/adapters/seed1/0000024_adapters.safetensors.
+Saved final weights to /Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/adapters/seed1/adapters.safetensors.
+{"elapsed_seconds": 5.233673790993635, "mlx_peak_bytes": 1180608312, "limit_bytes": 6000000000}

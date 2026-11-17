@@ -84,11 +84,18 @@ class Vault:
             CREATE TABLE IF NOT EXISTS audit(
                 id TEXT PRIMARY KEY, namespace TEXT NOT NULL, event TEXT NOT NULL,
                 detail TEXT NOT NULL, created INTEGER NOT NULL);
+            CREATE INDEX IF NOT EXISTS idx_events_ns_kind ON events(namespace,kind,created);
             CREATE INDEX IF NOT EXISTS idx_topics_ns_status ON topics(namespace,status,importance);
             CREATE INDEX IF NOT EXISTS idx_jobs_ns_status ON jobs(namespace,status,created);
             CREATE INDEX IF NOT EXISTS idx_documents_ns_url ON documents(namespace,source_url);
         """)
+        from .experimental import initialize
         with self.transaction():
+            initialize(self.db)
+            from .curiosity import initialize as initialize_curiosity
+            initialize_curiosity(self.db)
+            from .memory import initialize as initialize_memory
+            initialize_memory(self.db)
             if 'lease_token' not in {r['name'] for r in self.db.execute('PRAGMA table_info(jobs)')}:
                 self.db.execute("ALTER TABLE jobs ADD COLUMN lease_token TEXT NOT NULL DEFAULT ''")
             if 'question_key' not in {r['name'] for r in self.db.execute('PRAGMA table_info(topics)')}:
@@ -290,8 +297,13 @@ class Vault:
             raise ValueError('invalid stance')
         with self.transaction():
             claim=self.db.execute('SELECT id FROM claims WHERE id=? AND namespace=?',(claim_id,self.ns)).fetchone()
-            if not claim or not self.get_document(document_id):
+            document=self.get_document(document_id)
+            if not claim or not document:
                 raise KeyError('claim or document')
+            if not isinstance(excerpt,str) or not excerpt.strip() or len(excerpt)>1500:
+                raise ValueError('evidence requires a nonempty excerpt of at most 1500 characters')
+            if excerpt not in document['text']:
+                raise ValueError('excerpt is not present in the source document')
             ident=uid('evidence')
             self.db.execute('INSERT INTO evidence VALUES(?,?,?,?,?,?,?,?)',
                             (ident,self.ns,claim_id,document_id,excerpt[:1500],stance,verifier[:80],ts()))
@@ -373,9 +385,12 @@ class Vault:
                 f"# {r['title']}\n\n{r['text']}\n")
             (output/(r['id']+'.md')).write_text(md,encoding='utf-8')
             count+=1
-        for name,table in [('topics','topics'),('claims','claims'),('evidence','evidence'),
-                           ('predictions','predictions'),('experiences','experiences'),
-                           ('graph','graph_edges'),('jobs','jobs')]:
-            content=[dict(row) for row in self.db.execute(f'SELECT * FROM {table} WHERE namespace=?',(self.ns,))]
+        from .experimental import export_lab_markdown
+        count+=export_lab_markdown(self,output)
+        tables=[r['name'] for r in self.db.execute("SELECT name FROM sqlite_master WHERE type='table'")
+                if 'namespace' in {c['name'] for c in self.db.execute('PRAGMA table_info("'+r['name'].replace('"','""')+'")')}]
+        for table in tables:
+            name='graph' if table=='graph_edges' else table
+            content=[dict(row) for row in self.db.execute('SELECT * FROM "'+table.replace('"','""')+'" WHERE namespace=?',(self.ns,))]
             (output/(name+'.json')).write_text(json.dumps(content,ensure_ascii=False,indent=2),encoding='utf-8')
         return count

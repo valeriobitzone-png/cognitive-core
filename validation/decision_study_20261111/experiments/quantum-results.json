@@ -1,0 +1,431 @@
+{
+  "epistemic": "SIMULATED",
+  "elapsed_seconds": 0.2926072499831207,
+  "seeds": 10,
+  "summary": {
+    "projective_2d": {
+      "quantum_2params": 1.1039791006252888,
+      "classical_equivalent_2params": 1.1039791006252888,
+      "classical_dynamic_3params": 1.1046011044773256,
+      "classical_static_2params": 1.333746317082252,
+      "q_minus_dynamic_seed_bootstrap95": [
+        -0.0022201768790566746,
+        0.000798410639188194
+      ]
+    },
+    "classical_dynamic": {
+      "quantum_2params": 1.0308463163956358,
+      "classical_equivalent_2params": 1.0308463163956358,
+      "classical_dynamic_3params": 1.0280858425698152,
+      "classical_static_2params": 1.3645303046971242,
+      "q_minus_dynamic_seed_bootstrap95": [
+        -0.001576366843885984,
+        0.0073747969691824854
+      ]
+    },
+    "independent": {
+      "quantum_2params": 1.6659913979015204,
+      "classical_equivalent_2params": 1.6659913979015204,
+      "classical_dynamic_3params": 1.3971282401737888,
+      "classical_static_2params": 1.3927193357886412,
+      "q_minus_dynamic_seed_bootstrap95": [
+        0.2602023982254816,
+        0.27904397291340577
+      ]
+    }
+  },
+  "runs": [
+    {
+      "generator": "projective_2d",
+      "seed": 0,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0632257108529501,
+        "classical_equivalent_2params": 1.0632257108529501,
+        "classical_dynamic_3params": 1.0638588711139993,
+        "classical_static_2params": 1.3131104357433128
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 1,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.114524671146357,
+        "classical_equivalent_2params": 1.114524671146357,
+        "classical_dynamic_3params": 1.1185437157325728,
+        "classical_static_2params": 1.3325989837011687
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 2,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.1259764315005225,
+        "classical_equivalent_2params": 1.1259764315005225,
+        "classical_dynamic_3params": 1.1244257454511282,
+        "classical_static_2params": 1.3257092680973317
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 3,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0969396328473557,
+        "classical_equivalent_2params": 1.0969396328473557,
+        "classical_dynamic_3params": 1.1023852183108824,
+        "classical_static_2params": 1.3140735627710938
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 4,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0993124046146108,
+        "classical_equivalent_2params": 1.0993124046146108,
+        "classical_dynamic_3params": 1.0998398702378127,
+        "classical_static_2params": 1.330086215196544
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 5,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0965547562604678,
+        "classical_equivalent_2params": 1.0965547562604678,
+        "classical_dynamic_3params": 1.0963141706151078,
+        "classical_static_2params": 1.3498229414466723
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 6,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.1275169923185338,
+        "classical_equivalent_2params": 1.1275169923185338,
+        "classical_dynamic_3params": 1.1249197116910938,
+        "classical_static_2params": 1.3388069714056678
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 7,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0684519332435787,
+        "classical_equivalent_2params": 1.0684519332435787,
+        "classical_dynamic_3params": 1.07118694110866,
+        "classical_static_2params": 1.3292663254388755
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 8,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.1491543160858826,
+        "classical_equivalent_2params": 1.1491543160858826,
+        "classical_dynamic_3params": 1.1480778530275426,
+        "classical_static_2params": 1.3700849793238683
+      }
+    },
+    {
+      "generator": "projective_2d",
+      "seed": 9,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.09813415738263,
+        "classical_equivalent_2params": 1.09813415738263,
+        "classical_dynamic_3params": 1.0964589474844573,
+        "classical_static_2params": 1.3339034876979867
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 0,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 0.9803954236214956,
+        "classical_equivalent_2params": 0.9803954236214956,
+        "classical_dynamic_3params": 0.9632309580603717,
+        "classical_static_2params": 1.3559471047784137
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 1,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0389472100665802,
+        "classical_equivalent_2params": 1.0389472100665802,
+        "classical_dynamic_3params": 1.037242029578212,
+        "classical_static_2params": 1.345435150559406
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 2,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0595844398446508,
+        "classical_equivalent_2params": 1.0595844398446508,
+        "classical_dynamic_3params": 1.0614693205746968,
+        "classical_static_2params": 1.3584762295437522
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 3,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0516869534357134,
+        "classical_equivalent_2params": 1.0516869534357134,
+        "classical_dynamic_3params": 1.0578087716485476,
+        "classical_static_2params": 1.363827564272724
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 4,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.055033702431873,
+        "classical_equivalent_2params": 1.055033702431873,
+        "classical_dynamic_3params": 1.0510975675165029,
+        "classical_static_2params": 1.3620072921720077
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 5,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0210401891580312,
+        "classical_equivalent_2params": 1.0210401891580312,
+        "classical_dynamic_3params": 1.014504338768068,
+        "classical_static_2params": 1.3688390094806846
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 6,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0441671854223968,
+        "classical_equivalent_2params": 1.0441671854223968,
+        "classical_dynamic_3params": 1.0388366098543402,
+        "classical_static_2params": 1.3587475479937878
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 7,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0142454112838195,
+        "classical_equivalent_2params": 1.0142454112838195,
+        "classical_dynamic_3params": 1.0223725425730361,
+        "classical_static_2params": 1.3769603848653122
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 8,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0360351672428962,
+        "classical_equivalent_2params": 1.0360351672428962,
+        "classical_dynamic_3params": 1.0335015327321377,
+        "classical_static_2params": 1.379286083159883
+      }
+    },
+    {
+      "generator": "classical_dynamic",
+      "seed": 9,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.0073274814489026,
+        "classical_equivalent_2params": 1.0073274814489026,
+        "classical_dynamic_3params": 1.0007947543922382,
+        "classical_static_2params": 1.3757766801452709
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 0,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6704546594874248,
+        "classical_equivalent_2params": 1.6704546594874248,
+        "classical_dynamic_3params": 1.395624182518903,
+        "classical_static_2params": 1.3827918841563933
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 1,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6556077489179402,
+        "classical_equivalent_2params": 1.6556077489179402,
+        "classical_dynamic_3params": 1.3990487385926214,
+        "classical_static_2params": 1.4198039043636532
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 2,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6532821909707758,
+        "classical_equivalent_2params": 1.6532821909707758,
+        "classical_dynamic_3params": 1.392320311531428,
+        "classical_static_2params": 1.3894538192539772
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 3,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6610314370972474,
+        "classical_equivalent_2params": 1.6610314370972474,
+        "classical_dynamic_3params": 1.3941659894118588,
+        "classical_static_2params": 1.3946772941355186
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 4,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6366536285899798,
+        "classical_equivalent_2params": 1.6366536285899798,
+        "classical_dynamic_3params": 1.3868715155133982,
+        "classical_static_2params": 1.3953711292139683
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 5,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.7066829878358498,
+        "classical_equivalent_2params": 1.7066829878358498,
+        "classical_dynamic_3params": 1.405459664824575,
+        "classical_static_2params": 1.3863701554191727
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 6,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.656004922634242,
+        "classical_equivalent_2params": 1.656004922634242,
+        "classical_dynamic_3params": 1.4024816203674004,
+        "classical_static_2params": 1.3920885397913798
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 7,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6659002395845726,
+        "classical_equivalent_2params": 1.6659002395845726,
+        "classical_dynamic_3params": 1.3929084086710057,
+        "classical_static_2params": 1.3879216101856502
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 8,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6965301707325928,
+        "classical_equivalent_2params": 1.6965301707325928,
+        "classical_dynamic_3params": 1.4077607152843792,
+        "classical_static_2params": 1.3892302212939511
+      }
+    },
+    {
+      "generator": "independent",
+      "seed": 9,
+      "train": 160,
+      "valid": 80,
+      "test": 400,
+      "holdout_joint_nll": {
+        "quantum_2params": 1.6577659931645798,
+        "classical_equivalent_2params": 1.6577659931645798,
+        "classical_dynamic_3params": 1.394641255022317,
+        "classical_static_2params": 1.3894848000727473
+      }
+    }
+  ],
+  "conclusion": "No advantage over the matched classical dynamical representation; order effects do not identify a physical quantum mechanism.",
+  "limitations": "Toy two-question projective model; synthetic generators; intervals over ten seeds, not independent real-world replications."
+}

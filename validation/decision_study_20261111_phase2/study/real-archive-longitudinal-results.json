@@ -1,0 +1,3452 @@
+{
+  "source_manifest": [
+    {
+      "source": "/Volumes/AMBRO/projects/CognitiveCore/realtest/data/ensemble/connection_graph.json",
+      "copy": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/real-archive-snapshot/connection_graph.json",
+      "sha256": "c7958e280863468e77aad7cfeb078069727acce7fcdf6289d51b70cc3f958ce3",
+      "bytes": 1322744
+    },
+    {
+      "source": "/Volumes/AMBRO/projects/CognitiveCore/realtest/data/ensemble/HYPOTHESIS_QUEUE.json",
+      "copy": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/real-archive-snapshot/HYPOTHESIS_QUEUE.json",
+      "sha256": "f10d575ccc673ac251f35130b1d17df3213b59a99522a71f03e0330c342e179e",
+      "bytes": 93430
+    }
+  ],
+  "originals_unchanged": true,
+  "runs": [
+    {
+      "policy": "C",
+      "seed": 0,
+      "n": 21,
+      "correct": 18,
+      "cost_units": 24,
+      "correct_per_cost": 0.75,
+      "skills": [
+        "degree"
+      ],
+      "seconds": 0.22014741599559784,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": null,
+          "verified_output": 1,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 0.00010187498992308974,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "graph_nodes",
+          "family": "structure",
+          "output": 197,
+          "verified_output": 240,
+          "correct": false,
+          "cost_total": 2,
+          "acquired": false,
+          "skills": [],
+          "seconds": 1.6249832697212696e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0094009579916019,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009053042012965307,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007711082987952977,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008327374991495162,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007616124988999218,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007962416973896325,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00887066699215211,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "A_finance_wf",
+          "family": "degree",
+          "output": 11,
+          "verified_output": 11,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007295541989151388,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "queue_count",
+          "family": "queue",
+          "output": 262,
+          "verified_output": 262,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 2.1249870769679546e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007728541997494176,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 1.4579854905605316e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007521958992583677,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007312708999961615,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007771582982968539,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0073205830121878535,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0071317080000881106,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 18,
+          "task": "L_volume",
+          "family": "degree",
+          "output": 5,
+          "verified_output": 5,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007398584013571963,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 19,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00838241699966602,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 4,
+          "step": 20,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007733125006780028,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "C",
+      "seed": 1,
+      "n": 18,
+      "correct": 16,
+      "cost_units": 24,
+      "correct_per_cost": 0.6666666666666666,
+      "skills": [
+        "degree",
+        "structure"
+      ],
+      "seconds": 0.15316687498125248,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": null,
+          "verified_output": 1,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 9.604200022295117e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00752499999362044,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009156874992186204,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007271291018696502,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007392833009362221,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007246083987411112,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007067417027428746,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007237083016661927,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007336167007451877,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007470750017091632,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "graph_nodes",
+          "family": "structure",
+          "output": 197,
+          "verified_output": 240,
+          "correct": false,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 3.2919924706220627e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0074834999977611005,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "graph_edges",
+          "family": "structure",
+          "output": 924,
+          "verified_output": 924,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": true,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.006912459008162841,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.007492250006180257,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.007319833006476983,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.007394207990728319,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.007371332991169766,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.008338416984770447,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "C",
+      "seed": 2,
+      "n": 21,
+      "correct": 18,
+      "cost_units": 24,
+      "correct_per_cost": 0.75,
+      "skills": [
+        "degree"
+      ],
+      "seconds": 0.18036050000227988,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "L_volume",
+          "family": "degree",
+          "output": null,
+          "verified_output": 5,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 0.0001018750190269202,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008132125018164515,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "graph_nodes",
+          "family": "structure",
+          "output": 197,
+          "verified_output": 240,
+          "correct": false,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 1.8750142771750689e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007577125012176111,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007797666999977082,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 2.4579931050539017e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "A_finance_wf",
+          "family": "degree",
+          "output": 11,
+          "verified_output": 11,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007777291990350932,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007597999996505678,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008317291009007022,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007663915981538594,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00757099999464117,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007409916986944154,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007414915977278724,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0073637079913169146,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007494041987229139,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007868707994930446,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007529333001002669,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007499375002225861,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 18,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007382709009107202,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 19,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009175292012514547,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 4,
+          "step": 20,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007439375011017546,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "C",
+      "seed": 3,
+      "n": 18,
+      "correct": 15,
+      "cost_units": 24,
+      "correct_per_cost": 0.625,
+      "skills": [
+        "degree",
+        "structure"
+      ],
+      "seconds": 0.20251354199717753,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": null,
+          "verified_output": 1,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 7.46249861549586e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007207125017885119,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007223249995149672,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007129542005714029,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "graph_edges",
+          "family": "structure",
+          "output": 602,
+          "verified_output": 924,
+          "correct": false,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 5.249981768429279e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007438250002451241,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007234749995404854,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007270833011716604,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007218084007035941,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007151957979658619,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00773529100115411,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007223666005302221,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 2.167013008147478e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.03033620899077505,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.022472542012110353,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.015089042019098997,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "graph_nodes",
+          "family": "structure",
+          "output": 240,
+          "verified_output": 240,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": true,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.015645625011529773,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "queue_count",
+          "family": "queue",
+          "output": 262,
+          "verified_output": 262,
+          "correct": true,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 5.209003575146198e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "C",
+      "seed": 4,
+      "n": 18,
+      "correct": 16,
+      "cost_units": 24,
+      "correct_per_cost": 0.6666666666666666,
+      "skills": [
+        "degree",
+        "structure"
+      ],
+      "seconds": 0.16097466700011864,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "T_companion",
+          "family": "degree",
+          "output": null,
+          "verified_output": 9,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 9.74999857135117e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007785041001625359,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007320833014091477,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007258040976012126,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007185333000961691,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "graph_edges",
+          "family": "structure",
+          "output": 602,
+          "verified_output": 924,
+          "correct": false,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 3.4999975468963385e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007621916010975838,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007970000006025657,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008078000013483688,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008216499991249293,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00787737499922514,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0074667919834610075,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007796166988555342,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.019074333977187052,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009407540987012908,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "graph_nodes",
+          "family": "structure",
+          "output": 240,
+          "verified_output": 240,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": true,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.00878170900978148,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 0.008264917007181793,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "queue_count",
+          "family": "queue",
+          "output": 262,
+          "verified_output": 262,
+          "correct": true,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree",
+            "structure"
+          ],
+          "seconds": 2.082990249618888e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 0,
+      "n": 21,
+      "correct": 19,
+      "cost_units": 24,
+      "correct_per_cost": 0.7916666666666666,
+      "skills": [
+        "degree"
+      ],
+      "seconds": 0.1922154589847196,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "A_finance_wf",
+          "family": "degree",
+          "output": null,
+          "verified_output": 11,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 9.4832998001948e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00787120801396668,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008046000002650544,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007764374982798472,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007883042009780183,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007920500007458031,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007794999983161688,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007526125002186745,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007592500012833625,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007778541999869049,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00792804200318642,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "L_volume",
+          "family": "degree",
+          "output": 5,
+          "verified_output": 5,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007795708981575444,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008233833010308444,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007812750001903623,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.010796582995681092,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008149041997967288,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00770075002219528,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007614041009219363,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 18,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007540541002526879,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 19,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007991833001142368,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 4,
+          "step": 20,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 2.4589826352894306e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 1,
+      "n": 21,
+      "correct": 19,
+      "cost_units": 24,
+      "correct_per_cost": 0.7916666666666666,
+      "skills": [
+        "degree"
+      ],
+      "seconds": 0.18685779202496633,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "A_finance_wf",
+          "family": "degree",
+          "output": null,
+          "verified_output": 11,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 9.566600783728063e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009841750026680529,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00796316599007696,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009372457978315651,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007748708012513816,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00823983401642181,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00763383400044404,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007898666022811085,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007547790999524295,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0076962919847574085,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007671125000342727,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "L_volume",
+          "family": "degree",
+          "output": 5,
+          "verified_output": 5,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007648083003005013,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007466375012882054,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007632833003299311,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008820041985018179,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007862124999519438,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007926666992716491,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007727958000032231,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 18,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007911666994914412,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 19,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007565165986306965,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 4,
+          "step": 20,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 2.040993422269821e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 2,
+      "n": 21,
+      "correct": 19,
+      "cost_units": 24,
+      "correct_per_cost": 0.7916666666666666,
+      "skills": [
+        "degree"
+      ],
+      "seconds": 0.17609491699840873,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "A_finance_wf",
+          "family": "degree",
+          "output": null,
+          "verified_output": 11,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 9.47499938774854e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007536374992923811,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007465207978384569,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007438041007844731,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007158207998145372,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007428290991811082,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007267917011631653,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007364041986875236,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00775116600561887,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0076887080213055015,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008033708989387378,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "L_volume",
+          "family": "degree",
+          "output": 5,
+          "verified_output": 5,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0077107910183258355,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007574082992505282,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007519708975451067,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007377125002676621,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007464541995432228,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0072757079906295985,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007550957991043106,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 18,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007171542005380616,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 19,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007664584001759067,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 4,
+          "step": 20,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 1.9580184016376734e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 3,
+      "n": 21,
+      "correct": 19,
+      "cost_units": 24,
+      "correct_per_cost": 0.7916666666666666,
+      "skills": [
+        "degree"
+      ],
+      "seconds": 0.17650716699426994,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "A_finance_wf",
+          "family": "degree",
+          "output": null,
+          "verified_output": 11,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 9.279200457967818e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007787749986164272,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007585459010442719,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008484750025672838,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007433332997607067,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007531416980782524,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007499583007302135,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007187292008893564,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0073238750046584755,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007231959025375545,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0074819999863393605,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "L_volume",
+          "family": "degree",
+          "output": 5,
+          "verified_output": 5,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007455000013578683,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007390457991277799,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007967375015141442,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007693292020121589,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007565458014141768,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007378041016636416,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007307416992262006,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 18,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007194874982815236,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 19,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007177499996032566,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 4,
+          "step": 20,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 1.7500133253633976e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 4,
+      "n": 21,
+      "correct": 19,
+      "cost_units": 24,
+      "correct_per_cost": 0.7916666666666666,
+      "skills": [
+        "degree"
+      ],
+      "seconds": 0.1984746670059394,
+      "rows": [
+        {
+          "session": 0,
+          "step": 0,
+          "task": "A_finance_wf",
+          "family": "degree",
+          "output": null,
+          "verified_output": 11,
+          "correct": false,
+          "cost_total": 1,
+          "acquired": false,
+          "skills": [],
+          "seconds": 9.841599967330694e-05,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 1,
+          "task": "B_ai_research",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 5,
+          "acquired": true,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0074027919908985496,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 2,
+          "task": "C_physics_stat",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 6,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007350125000812113,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 3,
+          "task": "D_social_hype",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 7,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007175042002927512,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 0,
+          "step": 4,
+          "task": "E_people_inst",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 8,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.0072771660052239895,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 1,
+          "step": 5,
+          "task": "F_clairic",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 9,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007709666999289766,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 6,
+          "task": "G_extract",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 10,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007564125000499189,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 7,
+          "task": "H_brnrt",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 11,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008052999997744337,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 8,
+          "task": "I_psych",
+          "family": "degree",
+          "output": 7,
+          "verified_output": 7,
+          "correct": true,
+          "cost_total": 12,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007436500018229708,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 1,
+          "step": 9,
+          "task": "J_machiavelli",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 13,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007675417000427842,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 2,
+          "step": 10,
+          "task": "K_ta_quant",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 14,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00791583300451748,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 11,
+          "task": "L_volume",
+          "family": "degree",
+          "output": 5,
+          "verified_output": 5,
+          "correct": true,
+          "cost_total": 15,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008006082993233576,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 12,
+          "task": "M_fund_flows",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 16,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.008253750012954697,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 13,
+          "task": "N_cot",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 17,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007667666010092944,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 2,
+          "step": 14,
+          "task": "O_micro",
+          "family": "degree",
+          "output": 2,
+          "verified_output": 2,
+          "correct": true,
+          "cost_total": 18,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.00771137498668395,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 3,
+          "step": 15,
+          "task": "P_13f",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 19,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009559124999213964,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 16,
+          "task": "Q_insider",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 20,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.011383375007426366,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 17,
+          "task": "R_news",
+          "family": "degree",
+          "output": 3,
+          "verified_output": 3,
+          "correct": true,
+          "cost_total": 21,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.010795125010190532,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 18,
+          "task": "S_insider_news",
+          "family": "degree",
+          "output": 1,
+          "verified_output": 1,
+          "correct": true,
+          "cost_total": 22,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.007914000016171485,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        },
+        {
+          "session": 3,
+          "step": 19,
+          "task": "T_companion",
+          "family": "degree",
+          "output": 9,
+          "verified_output": 9,
+          "correct": true,
+          "cost_total": 23,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 0.009078292001504451,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified",
+          "core_cycle": "done",
+          "restart_verified": true
+        },
+        {
+          "session": 4,
+          "step": 20,
+          "task": "excluded_count",
+          "family": "queue",
+          "output": null,
+          "verified_output": 21,
+          "correct": false,
+          "cost_total": 24,
+          "acquired": false,
+          "skills": [
+            "degree"
+          ],
+          "seconds": 3.2919924706220627e-06,
+          "epistemic": "OBSERVED structural audit only; source scientific claims remain unverified"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "C": {
+      "correct_mean": 16.6,
+      "correct_per_cost": 0.6916666666666667
+    },
+    "D": {
+      "correct_mean": 19.0,
+      "correct_per_cost": 0.7916666666666666
+    }
+  },
+  "limits": "Real archive data and actual structural queries, bounded accelerated sequential sessions, not weeks of unattended deployment. Explicit procedural skill acquisition from verified catalog, not neural weight training. Some initial archived counts are stale: exact array scans correct metadata only, never promote graph hypotheses to facts. Same24-unit budget and same24-item backlog per run."
+}

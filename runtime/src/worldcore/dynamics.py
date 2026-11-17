@@ -1,7 +1,8 @@
 """Portable numeric dynamics learned from observed trajectories, not LLM weights.
 
 Ridge-regression models share action-conditioned laws across *explicitly same-family*
-environments. Splits by environment ID before fitting; no fabricated training data.
+environments. Supports environment-group holdout (default) or temporal holdout by observed_at;
+optional per-environment learners. No fabricated training data.
 Refuses deployment unless held-out improvement beats state-persistence baseline.
 No automatic execution, causal inference, or universal physics claims.
 """
@@ -59,12 +60,20 @@ def _errors(model,rows):
     return [statistics.fmean(abs(_predict(model,r['before'])[k]-r['after'][k]) for k in model['keys']) for r in rows]
 
 
-def train_family_dynamics(samples,*,min_train=20,min_holdout=8):
-    """Train using observation records: environment, action, before, after, source.
+def _parse_observed_at(value):
+    """Accept unix seconds or ISO-8601; return float epoch seconds or None."""
+    if value is None:return None
+    if type(value) in (int,float) and math.isfinite(value):return float(value)
+    if isinstance(value,str) and value:
+        try:
+            raw=value.replace('Z','+00:00')
+            return datetime.fromisoformat(raw).timestamp()
+        except ValueError:
+            return None
+    return None
 
-    Hold out COMPLETE environments, not shuffled transitions. Deploy only actions
-    validated on distinct environments with identical feature schema.
-    """
+
+def _clean_dynamics_samples(samples, *, require_time=False):
     if not isinstance(samples,list) or len(samples)>120000:raise ValueError('invalid sample list')
     clean=[]
     for r in samples:
@@ -78,32 +87,148 @@ def train_family_dynamics(samples,*,min_train=20,min_holdout=8):
             continue
         before=_numeric_state(r.get('before'));after=_numeric_state(r.get('after'))
         if before.keys()!=after.keys():continue
-        clean.append({'environment':env,'action':action,'before':before,'after':after})
+        at=_parse_observed_at(r.get('observed_at', r.get('at')))
+        if require_time and at is None:continue
+        row={'environment':env,'action':action,'before':before,'after':after}
+        if at is not None:row['observed_at']=at
+        clean.append(row)
+    return clean
+
+
+def _evaluate_split(train, test, *, holdout_meta):
+    keys=sorted(train[0]['before']) if train else []
+    train=[r for r in train if sorted(r['before'])==keys]
+    test=[r for r in test if sorted(r['before'])==keys]
+    if not train or not test:
+        return None, train, test
+    model=_fit(train,keys)
+    error=_errors(model,test);mae=statistics.fmean(error)
+    baseline=statistics.fmean(statistics.fmean(abs(r['before'][k]-r['after'][k]) for k in keys) for r in test)
+    improvement=1-mae/max(baseline,1e-12)
+    accepted=baseline>1e-8 and improvement>=.10
+    model.update({'heldout_count':len(test),'heldout_mae':mae,
+                  'persistence_mae':baseline,'improvement_vs_persistence':improvement,
+                  'holdout_p90_error':sorted(error)[math.ceil(.90*len(error))-1],
+                  **holdout_meta})
+    status='validated' if accepted else 'rejected_no_baseline_gain'
+    return {'status':status,'model':model}, train, test
+
+
+def _temporal_cut(rows, min_train, min_holdout):
+    """Deterministic time split: earlier observations train, later hold out."""
+    ordered=sorted(rows, key=lambda r:(r['observed_at'], r['environment']))
+    if len(ordered) < min_train + min_holdout:
+        return None, None
+    cut=max(min_train, int(len(ordered)*0.70))
+    if len(ordered)-cut < min_holdout:
+        cut=len(ordered)-min_holdout
+    if cut < min_train:
+        return None, None
+    return ordered[:cut], ordered[cut:]
+
+
+def train_family_dynamics(samples,*,min_train=20,min_holdout=8,min_environments=3,
+                          holdout_mode='environment'):
+    """Train using observation records: environment, action, before, after, source.
+
+    holdout_mode:
+      - 'environment' (default): hold out ONE complete environment (alphabetical last).
+        Preserves prior behaviour for existing tests.
+      - 'temporal': hold out the chronologically later fraction (requires observed_at/at).
+
+    Thresholds are configurable; defaults stay 20 / 8 / 3 for compatibility.
+    """
+    if holdout_mode not in ('environment','temporal'):
+        raise ValueError('holdout_mode must be environment or temporal')
+    if not isinstance(min_train,int) or min_train<1:raise ValueError('invalid min_train')
+    if not isinstance(min_holdout,int) or min_holdout<1:raise ValueError('invalid min_holdout')
+    if not isinstance(min_environments,int) or min_environments<1:raise ValueError('invalid min_environments')
+    clean=_clean_dynamics_samples(samples, require_time=(holdout_mode=='temporal'))
     actions=sorted({r['action'] for r in clean})
     results={}
     for action in actions:
-        rows=[r for r in clean if r['action']==action];envs=sorted({r['environment'] for r in rows})
-        if len(envs)<3:
-            results[action]={'status':'abstain','reason':'need_3_independent_environments'};continue
-        # Deterministic group holdout, resistant to input-order leakage.
-        held_env=envs[-1];train=[r for r in rows if r['environment']!=held_env];test=[r for r in rows if r['environment']==held_env]
-        keys=sorted(train[0]['before']) if train else []
-        train=[r for r in train if sorted(r['before'])==keys];test=[r for r in test if sorted(r['before'])==keys]
-        if len(train)<min_train or len(test)<min_holdout:
-            results[action]={'status':'abstain','reason':'insufficient_disjoint_train_test','train':len(train),'test':len(test)};continue
-        model=_fit(train,keys)
-        error=_errors(model,test);mae=statistics.fmean(error)
-        baseline=statistics.fmean(statistics.fmean(abs(r['before'][k]-r['after'][k]) for k in keys) for r in test)
-        improvement=1-mae/max(baseline,1e-12)
-        # Unchanged state: a trivial baseline is perfect, do not claim learning.
-        accepted=baseline>1e-8 and improvement>=.10
-        model.update({'holdout_environment':held_env,'heldout_count':len(test),'heldout_mae':mae,
-                      'persistence_mae':baseline,'improvement_vs_persistence':improvement,
-                      'holdout_p90_error':sorted(error)[math.ceil(.90*len(error))-1]})
-        results[action]={'status':'validated' if accepted else 'rejected_no_baseline_gain','model':model,
-                         'note':'Held-out environment differs from training environments; shared dynamics only'}
-    return {'actions':results,'count_observed':len(clean),'validation':'group_holdout_by_environment',
+        rows=[r for r in clean if r['action']==action]
+        envs=sorted({r['environment'] for r in rows})
+        if len(envs)<min_environments:
+            reason=('need_3_independent_environments' if min_environments==3 else 'need_independent_environments')
+            results[action]={'status':'abstain','reason':reason,
+                             'environments':len(envs),'min_environments':min_environments};continue
+        if holdout_mode=='environment':
+            # Deterministic group holdout, resistant to input-order leakage.
+            held_env=envs[-1]
+            train=[r for r in rows if r['environment']!=held_env]
+            test=[r for r in rows if r['environment']==held_env]
+            if len(train)<min_train or len(test)<min_holdout:
+                results[action]={'status':'abstain','reason':'insufficient_disjoint_train_test',
+                                 'train':len(train),'test':len(test)};continue
+            evaluated,train,test=_evaluate_split(train,test,holdout_meta={
+                'holdout_environment':held_env,'holdout_mode':'environment'})
+            if evaluated is None:
+                results[action]={'status':'abstain','reason':'insufficient_disjoint_train_test',
+                                 'train':len(train),'test':len(test)};continue
+            evaluated['note']='Held-out environment differs from training environments; shared dynamics only'
+            results[action]=evaluated
+        else:
+            train,test=_temporal_cut(rows, min_train, min_holdout)
+            if train is None:
+                results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
+                                 'n':len(rows)};continue
+            evaluated,train,test=_evaluate_split(train,test,holdout_meta={
+                'holdout_mode':'temporal',
+                'holdout_from':test[0]['observed_at'],'holdout_to':test[-1]['observed_at'],
+                'train_from':train[0]['observed_at'],'train_to':train[-1]['observed_at']})
+            if evaluated is None:
+                results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
+                                 'train':len(train),'test':len(test)};continue
+            evaluated['note']='Temporal holdout: later observations never enter training'
+            results[action]=evaluated
+    validation=('group_holdout_by_environment' if holdout_mode=='environment'
+                else 'temporal_holdout_by_observed_at')
+    return {'actions':results,'count_observed':len(clean),'validation':validation,
+            'holdout_mode':holdout_mode,'min_train':min_train,'min_holdout':min_holdout,
+            'min_environments':min_environments,
             'note':'Not an open-world universal simulator; only numeric dynamics from explicitly similar environments'}
+
+
+def train_environment_dynamics(samples,*,min_train=20,min_holdout=8,holdout_mode='temporal'):
+    """Fit one action-conditioned model per environment (no cross-repo sharing).
+
+    Default holdout is temporal within that environment. Environment-group holdout
+    is unavailable here because a single environment cannot be held out from itself;
+    pass holdout_mode='environment' only to receive an explicit abstain reason.
+    """
+    if holdout_mode not in ('environment','temporal'):
+        raise ValueError('holdout_mode must be environment or temporal')
+    if not isinstance(min_train,int) or min_train<1:raise ValueError('invalid min_train')
+    if not isinstance(min_holdout,int) or min_holdout<1:raise ValueError('invalid min_holdout')
+    if holdout_mode=='environment':
+        return {'environments':{},'count_observed':0,'validation':'unsupported_for_per_environment',
+                'note':'Per-environment learner needs temporal holdout inside the same repository'}
+    clean=_clean_dynamics_samples(samples, require_time=True)
+    by_env={}
+    for env in sorted({r['environment'] for r in clean}):
+        env_rows=[r for r in clean if r['environment']==env]
+        actions=sorted({r['action'] for r in env_rows})
+        action_results={}
+        for action in actions:
+            rows=[r for r in env_rows if r['action']==action]
+            train,test=_temporal_cut(rows, min_train, min_holdout)
+            if train is None:
+                action_results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
+                                        'n':len(rows)};continue
+            evaluated,train,test=_evaluate_split(train,test,holdout_meta={
+                'holdout_mode':'temporal','holdout_environment':env,
+                'holdout_from':test[0]['observed_at'],'holdout_to':test[-1]['observed_at'],
+                'train_from':train[0]['observed_at'],'train_to':train[-1]['observed_at']})
+            if evaluated is None:
+                action_results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
+                                        'train':len(train),'test':len(test)};continue
+            evaluated['note']='Per-environment temporal holdout; not shared across repositories'
+            action_results[action]=evaluated
+        by_env[env]={'actions':action_results,'count_observed':len(env_rows)}
+    return {'environments':by_env,'count_observed':len(clean),'validation':'per_environment_temporal_holdout',
+            'holdout_mode':'temporal','min_train':min_train,'min_holdout':min_holdout,
+            'note':'Models are scoped to one environment; do not transfer weights across repositories'}
 
 
 class DynamicsMixin:
@@ -133,9 +258,12 @@ class DynamicsMixin:
           mae REAL NOT NULL,observed_at TEXT NOT NULL,PRIMARY KEY(owner,space,family,prediction_id));
         ''')
 
-    def train_shared_dynamics(self,owner,family,samples,*,space='default'):
+    def train_shared_dynamics(self,owner,family,samples,*,space='default',
+                              min_train=20,min_holdout=8,min_environments=3,
+                              holdout_mode='environment'):
         owner,space,family=[_valid_atom(x,'identifier') for x in (owner,space,family)]
-        result=train_family_dynamics(samples)
+        result=train_family_dynamics(samples,min_train=min_train,min_holdout=min_holdout,
+                                     min_environments=min_environments,holdout_mode=holdout_mode)
         if not any(a['status']=='validated' for a in result['actions'].values()):
             return {'status':'rejected','validation':result}
         stamp=datetime.now(timezone.utc).isoformat()
@@ -146,6 +274,37 @@ class DynamicsMixin:
                             (owner,space,family,v,json.dumps(result,sort_keys=True,allow_nan=False),stamp))
         return {'status':'trained','version':v,'actions':{k:a['status'] for k,a in result['actions'].items()},
                 'validation':result}
+
+    def train_per_environment_dynamics(self,owner,family,samples,*,space='default',
+                                       min_train=20,min_holdout=8,holdout_mode='temporal'):
+        """Persist per-repository models under family keys family@environment."""
+        owner,space,family=[_valid_atom(x,'identifier') for x in (owner,space,family)]
+        result=train_environment_dynamics(samples,min_train=min_train,min_holdout=min_holdout,
+                                          holdout_mode=holdout_mode)
+        trained={}
+        stamp=datetime.now(timezone.utc).isoformat()
+        with self._transaction():
+            for env,bundle in result.get('environments',{}).items():
+                if not any(a.get('status')=='validated' for a in bundle.get('actions',{}).values()):
+                    trained[env]={'status':'rejected'}
+                    continue
+                fam=_valid_atom(f'{family}@{env}','identifier')
+                row=self.db.execute('SELECT COALESCE(MAX(version),0) v FROM learned_dynamics WHERE owner=? AND space=? AND family=?',
+                                    (owner,space,fam)).fetchone()
+                v=row['v']+1
+                payload={'actions':bundle['actions'],'count_observed':bundle['count_observed'],
+                         'validation':result['validation'],'environment':env,
+                         'note':result.get('note')}
+                self.db.execute('INSERT INTO learned_dynamics VALUES (?,?,?,?,?,?)',
+                                (owner,space,fam,v,json.dumps(payload,sort_keys=True,allow_nan=False),stamp))
+                trained[env]={'status':'trained','version':v,
+                              'actions':{k:a['status'] for k,a in bundle['actions'].items()}}
+        overall='trained' if any(v.get('status')=='trained' for v in trained.values()) else 'rejected'
+        return {'status':overall,'environments':trained,'validation':result}
+
+    def predict_environment_dynamics(self,owner,family,environment,before,action,*,space='default',max_z=3.5):
+        fam=_valid_atom(f'{family}@{environment}','identifier')
+        return self.predict_shared_dynamics(owner,fam,before,action,space=space,max_z=max_z)
 
     def train_dynamics_from_world_log(self,owner,family,environments,*,space='default'):
         """Fit only from persisted observed transitions selected by host.

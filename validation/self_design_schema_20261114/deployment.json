@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "runtime/src/cognitive_core/models.py",
+      "before_sha256": "06cfbc7488deb524166dd7b1ed7128f4b6e4f45484c1d4d6cd0d83d7bb10166a",
+      "after_sha256": "488ff51d015c8f2226cc146e1cb3a222c96da843c8e81ffc9a02e75a4c7d04fd"
+    },
+    {
+      "path": "runtime/src/cognitive_core/program.py",
+      "before_sha256": "46d47aef0640c86b064972d74749b9b88fc63debd64372ee3659810c3f706a07",
+      "after_sha256": "03675b772ff9905cd52e05ed5380028dfe180f9a06579348774e1298fbbed732"
+    },
+    {
+      "path": "runtime/src/cognitive_core/__init__.py",
+      "before_sha256": "cb5dd22e90b2fbe96d61ac21b98f5739edc6fdd8aa3b9f666f964c0b718cfc91",
+      "after_sha256": "4c550cd12cf6dac97b1713910b0c32d967ffd0a9f6715d96da921dec06057a98"
+    },
+    {
+      "path": "runtime/src/worldcore/__init__.py",
+      "before_sha256": "6ff2e37b6d81b0ece0ed31e92fe7181e3fba2cd5104976e148e9e37ba83fcad1",
+      "after_sha256": "f03fa62f10cfc6e4d41973676dbbd70f07f833f409f771128e3b8015fd2c24be"
+    },
+    {
+      "path": "runtime/pyproject.toml",
+      "before_sha256": "126bd0f866d275397bbe9a8a391c321e2282bb183d5b19f90a3ea6476ec17942",
+      "after_sha256": "8dc2e79e4bdb5a216995055fb1088da2ea09b256b1f7dbf4bf5e0ce76cf53500"
+    },
+    {
+      "path": "runtime/tests/test_model_response_schema.py",
+      "before_sha256": null,
+      "after_sha256": "4a10c105e5214f84e9d91755fa5e306778b20b400910a33a2dceb721319436db"
+    }
+  ]
+}

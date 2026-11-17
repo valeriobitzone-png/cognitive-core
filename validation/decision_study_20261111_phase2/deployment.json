@@ -1,0 +1,43 @@
+{
+  "runtime": "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime",
+  "files": [
+    {
+      "path": "src/cognitive_core/config.py",
+      "before_sha256": "0c7ec0fb89352dbf845f60083ef5fb64a11ca1885dd2638bd3651d1c848a4746",
+      "after_sha256": "fac282981b5bdaae3adf3f1e4e52e524751e91553a8053134ea490bc3dc24dc9"
+    },
+    {
+      "path": "src/cognitive_core/ondemand.py",
+      "before_sha256": "a5fe48ef6f6696e967a7cf86adb3708592c4b972e1561c2801a61472018d4fbd",
+      "after_sha256": "ec1db987701b918657b547a7ebce39e9f184f9d410177d8875fb61ea955ff8af"
+    },
+    {
+      "path": "src/cognitive_core/selfmodel.py",
+      "before_sha256": "024d13d311973bcd6e1bb4c7019cee898b986c844aea80139ed8eb6854ce0d86",
+      "after_sha256": "f7204ab07fd0f1b7b7f13b25b1c3ef56eb4395972c1be6dda34f48f5a3fe7675"
+    },
+    {
+      "path": "src/cognitive_core/advisor.py",
+      "before_sha256": "ca3c9c0afe6dc7b1bc644ef4370d8110dfe3312452a7ade9d88ae27fa7d680e7",
+      "after_sha256": "166fd9d67d01ce08f966e3015cbc94291b8fcc3e6019822e4c8ea0afef1f3061"
+    },
+    {
+      "path": "src/cognitive_core/cli.py",
+      "before_sha256": "1ffafe3ca28dbda965d1d93b73526c5d44ba4d3becd18ad3dd0b0f7dcb206ed5",
+      "after_sha256": "a3d57a7e3b370e69a49ac8f3183e7d123e77ce763976ecc3204ed5d0c5ce60dc"
+    },
+    {
+      "path": "tests/test_local_advisor.py",
+      "before_sha256": "f38e7742820df62a6a87924bdd7dde7e7562d6ad1289b1e2c3721f3956d6867f",
+      "after_sha256": "c4567f18056569f66526c238d5283279a818c3336853b4e39f3cb11f075ed91a"
+    },
+    {
+      "path": "docs/LOCAL_DECISION_ON_DEMAND_IT.md",
+      "before_sha256": "18c33818530903f550ee94368404cffe41233707de5776d4bcca7fb489721beb",
+      "after_sha256": "84ea325bb869f89df64b7e591206f5ffa5ec0e2a57593cf5142f20738a32c7db"
+    }
+  ],
+  "production_model_enabled": false,
+  "selected_candidate": "Rizzo Flow4B, optional relevance advice",
+  "large_weights_copied": false
+}

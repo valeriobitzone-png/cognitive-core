@@ -17,8 +17,30 @@ def main(argv=None):
     p.add_argument('--searxng-url',default='',help='Optional SearXNG JSON endpoint')
     p.add_argument('--local-model',action='store_true',help='Enable OPTIONAL locally hosted model')
     p.add_argument('--local-model-url',default='http://127.0.0.1:8080/v1/chat/completions')
+    p.add_argument('--model-gguf',default='',help='Local weights; one-shot inference, no server')
+    p.add_argument('--model-binary',default='llama-completion')
+    p.add_argument('--model-jinja',action='store_true',help='Use the GGUF chat template with Jinja')
+    p.add_argument('--model-max-bytes',type=int,default=1_000_000_000)
+    p.add_argument('--model-timeout',type=float,default=12)
+    p.add_argument('--cycle-seconds',type=float,default=10)
+    p.add_argument('--curiosity-policy',choices=['legacy','observe','information_only'],default='information_only')
+    p.add_argument('--curiosity-units',type=int,default=24)
+    p.add_argument('--decision-state',default='',help='Sidecar directory outside archive')
+    p.add_argument('--authority',choices=['interactive','autonomous'],default=None)
+    p.add_argument('--autonomous-web-opt-in',action='store_true')
+    p.add_argument('--autonomous-model-opt-in',action='store_true')
+    p.add_argument('--generation-tokens',type=int,default=256)
     sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('status')
+    x=sub.add_parser('run',help='Unified bounded program request');x.add_argument('request_json')
+    sub.add_parser('console',help='One interactive Core; models remain optional')
+    sub.add_parser('curiosity-status')
+    x=sub.add_parser('curiosity-probe');x.add_argument('topic_id')
+    x=sub.add_parser('decide-local');x.add_argument('event_json');x.add_argument('--archive',required=True)
+    x=sub.add_parser('import-lab');x.add_argument('root');x.add_argument('--source',default='realtest')
+    x=sub.add_parser('rollback-lab');x.add_argument('batch_id')
+    x=sub.add_parser('cycle');x.add_argument('--topic-id',default=None)
+    x=sub.add_parser('cycle-run');x.add_argument('--ticks',type=int,default=12)
     sub.add_parser('tick',help='Process up to one research job; blocked without web permission')
     sub.add_parser('dry-run')
     x=sub.add_parser('daemon',help='Run low-activity scheduler loop');x.add_argument('--interval',type=float,default=20.0)
@@ -30,6 +52,7 @@ def main(argv=None):
     x=sub.add_parser('remember');x.add_argument('title');x.add_argument('text');x.add_argument('--source',default='')
     x=sub.add_parser('search');x.add_argument('query')
     x=sub.add_parser('export');x.add_argument('folder')
+    x=sub.add_parser('restore',help='Restore scoped state into a new --home; grants are revoked');x.add_argument('folder')
     x=sub.add_parser('benchmark');x.add_argument('cases',default='examples/decision_eval.jsonl')
     x=sub.add_parser('import-markdown');x.add_argument('folder')
     x=sub.add_parser('vision');x.add_argument('image_file');x.add_argument('--question',default='Describe the image and any uncertainty')
@@ -47,12 +70,47 @@ def main(argv=None):
     x=sub.add_parser('opportunity-whatif');x.add_argument('opportunity_id');x.add_argument('payload_json')
     x=sub.add_parser('outcome');x.add_argument('opportunity_id');x.add_argument('useful',choices=['yes','no']);x.add_argument('evidence_ref')
     args=p.parse_args(argv)
-    s=Settings(home=Path(args.home),namespace=args.namespace,owner=args.owner,enable_web=args.web,
+    authority=args.authority or ('autonomous' if args.command in ('cycle','cycle-run','daemon') else 'interactive')
+    s=Settings(autonomous_model_opt_in=args.autonomous_model_opt_in,max_generation_tokens=args.generation_tokens,execution_mode=authority,autonomous_web_opt_in=args.autonomous_web_opt_in,home=Path(args.home),namespace=args.namespace,owner=args.owner,enable_web=args.web,
                domain_allowlist=tuple(args.allow_domain),searxng_url=args.searxng_url,
-               enable_local_model=args.local_model,local_model_url=args.local_model_url)
+               enable_local_model=args.local_model,local_model_url=args.local_model_url,
+               curiosity_policy=args.curiosity_policy,max_curiosity_units_per_day=args.curiosity_units,local_model_gguf=args.model_gguf,local_model_jinja=args.model_jinja,max_model_file_bytes=args.model_max_bytes,
+               model_timeout_seconds=args.model_timeout,max_cycle_seconds=args.cycle_seconds,local_model_binary=args.model_binary,local_decision_state=args.decision_state)
     core=CognitiveCore(s)
     try:
-        if args.command=='status': out=core.status()
+        if authority=='autonomous' and args.command not in {
+                'run','console','status','dry-run','tick','daemon','observe','topics','search','opportunities',
+                'briefing','feed','cycle','cycle-run','curiosity-status','curiosity-probe','decide-local','whatif','opportunity-whatif','compare','pause','discard'}:
+            raise PermissionError('command requires interactive authority')
+        if args.command=='run':
+            from worldcore.bridge import _decode_request
+            if args.request_json.startswith('@'):
+                with Path(args.request_json[1:]).open('rb') as stream:raw=stream.read(64001)
+            else:raw=args.request_json.encode()
+            out=core.run(_decode_request(raw))
+        elif args.command=='console':
+            console(core)
+            return
+        elif args.command=='status': out=core.status()
+        elif args.command=='curiosity-status':
+            out={'policy':s.curiosity_policy,'reserved_units':core.vault.usage('curiosity_units'),'daily_limit':s.max_curiosity_units_per_day,'trials':core.curiosity.journal()}
+        elif args.command=='curiosity-probe':
+            plan=core.curiosity.plan(args.topic_id)
+            out=plan if plan['status']=='blocked' else {'plan':plan,'verification':core.curiosity.run(plan['id'])}
+        elif args.command=='decide-local':
+            out=core.assess_local(json.loads(args.event_json),args.archive)
+        elif args.command=='import-lab':out=core.import_lab(args.root,source=args.source)
+        elif args.command=='rollback-lab':out=core.rollback_lab(args.batch_id)
+        elif args.command=='cycle':out=core.cycle_once(args.topic_id)
+        elif args.command=='cycle-run':
+            import time
+            if not 1<=args.ticks<=100:raise ValueError('ticks must be 1..100')
+            began=time.monotonic();results=[]
+            for _ in range(args.ticks):
+                if time.monotonic()-began>=s.max_cycle_seconds:break
+                result=core.cycle_once();results.append(result)
+                if result['status'] in ('idle','blocked'):break
+            out={'ticks':results,'paid_api_calls':0}
         elif args.command=='dry-run':out=core.work_once(dry_run=True)
         elif args.command=='tick':out=core.work_once()
         elif args.command=='daemon':
@@ -62,6 +120,8 @@ def main(argv=None):
             print('Cognitive Core scheduler active (CTRL+C to stop)',flush=True)
             try:
                 while True:
+                    cycle=core.cycle_once()
+                    if cycle['status']!='idle':print(json.dumps(cycle,ensure_ascii=False),flush=True)
                     pending=core.vault.pending_jobs()
                     if pending:
                         print(json.dumps(core.work_once(),ensure_ascii=False),flush=True)
@@ -78,7 +138,10 @@ def main(argv=None):
         elif args.command=='resume':out={'job_id':core.resume(args.topic_id,args.seed_url)}
         elif args.command=='remember':out={'document_id':core.vault.document(args.title,args.text,args.source)}
         elif args.command=='search':out=core.memory_search(args.query)
-        elif args.command=='export':out={'exported_documents':core.vault.export_markdown(Path(args.folder)),'path':args.folder}
+        elif args.command=='export':out=core.export_state(Path(args.folder))
+        elif args.command=='restore':
+            from .portable import restore_state
+            out=restore_state(args.folder,args.home)
         elif args.command=='benchmark':
             from .benchmark import evaluate
             out=evaluate(Path(args.cases),s)
@@ -123,5 +186,29 @@ def main(argv=None):
         print(json.dumps(out,ensure_ascii=False,indent=2,allow_nan=False))
     finally:
         core.close()
+
+def console(core):
+    """Foreground text interface; JSONL worker remains the machine connector."""
+    print('Cognitive Core. /status /stop /start /exit; /json {request}. Models: '+('enabled' if core.s.enable_local_model else 'disabled'),flush=True)
+    try:
+        while True:
+            if sys.stdin.isatty():print('> ',end='',flush=True)
+            line=sys.stdin.readline(64001)
+            if not line:return
+            if len(line.encode())>64000:raise ValueError('console request exceeds byte budget')
+            line=line.strip()
+            if not line:continue
+            if line=='/exit':return
+            try:
+                if line in ('/status','/stop','/start'):request={'op':line[1:]}
+                elif line.startswith('/json '):
+                    from worldcore.bridge import _decode_request
+                    request=_decode_request(line[6:].encode())
+                else:request={'op':'turn','text':line,'use_model':core.s.enable_local_model}
+                print(json.dumps(core.run(request),ensure_ascii=False,allow_nan=False),flush=True)
+            except (ValueError,KeyError,TypeError,OSError) as exc:
+                print(json.dumps({'status':'rejected','error':type(exc).__name__,'message':str(exc)[:200]}),flush=True)
+    except KeyboardInterrupt:return
+
 
 if __name__=='__main__':main()

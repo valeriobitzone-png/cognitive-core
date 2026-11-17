@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "path": "Avvia_Cognitive_Core.command",
+      "before_sha256": null,
+      "after_sha256": "391d186ff090789fa2b92357b866b46ee4afb8fdffd1c0b8c214a7ed1c9b35f7"
+    },
+    {
+      "path": "runtime/docs/PROGRAMMA_UNICO_IT.md",
+      "before_sha256": null,
+      "after_sha256": "9e4f5c9e627f5ba63d2aa082baa57fd6bfe0152f6314186bf9a1a6d12b4fe7a1"
+    },
+    {
+      "path": "runtime/src/cognitive_core/api.py",
+      "before_sha256": "553bf1c6f323d88ffc6134cc28c1f4a65029b5dff7b71c174cb2bf1b187247e3",
+      "after_sha256": "f4ae54e9a6eff8c7fedc748694e18297a0f2592c6e40191969b2daab1e5e2b74"
+    },
+    {
+      "path": "runtime/src/cognitive_core/cli.py",
+      "before_sha256": "e62f5eae9fd4521921e1c95a97fcc3141bc45fb94357a49aa1f1769117f4e5ba",
+      "after_sha256": "e39a54e1b19eff35f6b03bfd6ade3f94554397b6000df77d492f57b90f3d5283"
+    },
+    {
+      "path": "runtime/src/cognitive_core/config.py",
+      "before_sha256": "dbef97d7362cbea4fd346c218c750b891c5680e6809998db206d2548d124d829",
+      "after_sha256": "119014d66eed838ba9e0c59ed10e67640cb56857b116cc506583e4492aab0c94"
+    },
+    {
+      "path": "runtime/src/cognitive_core/cycle.py",
+      "before_sha256": "43301b22636f58154f6066633b42ee5587d72402893b48b4c81d10ba0506b37f",
+      "after_sha256": "62777187dd10170719b5d89b44d8c70b42f2e834bdeed4ed81ab88da0d373372"
+    },
+    {
+      "path": "runtime/src/cognitive_core/engine.py",
+      "before_sha256": "374db144c5d977d32cf2e87bf61f29e4e48f965d6ecd968a7e0b02297e76c807",
+      "after_sha256": "622297fac2ebda001f104662edf537aa3a2da12a2b129f44db28635efead8e30"
+    },
+    {
+      "path": "runtime/src/cognitive_core/models.py",
+      "before_sha256": null,
+      "after_sha256": "06cfbc7488deb524166dd7b1ed7128f4b6e4f45484c1d4d6cd0d83d7bb10166a"
+    },
+    {
+      "path": "runtime/src/cognitive_core/ondemand.py",
+      "before_sha256": "ec1db987701b918657b547a7ebce39e9f184f9d410177d8875fb61ea955ff8af",
+      "after_sha256": "bd9f247651d32886824ed3a78f4b426a5a05248a79bc8eacbf5b5e0548b7f43c"
+    },
+    {
+      "path": "runtime/src/cognitive_core/portable.py",
+      "before_sha256": "5b6cc1462e4cde7e75dbfc9a2a552e1ba92f444b1364b5d6ea19ff4f793a75d9",
+      "after_sha256": "a79de0fca469c26ed10e9603557fc1178019c45d1b8976931a44e131d64255a8"
+    },
+    {
+      "path": "runtime/src/cognitive_core/program.py",
+      "before_sha256": null,
+      "after_sha256": "46d47aef0640c86b064972d74749b9b88fc63debd64372ee3659810c3f706a07"
+    },
+    {
+      "path": "runtime/src/cognitive_core/skills.py",
+      "before_sha256": null,
+      "after_sha256": "2a2888d26f9591073a253a13edbaa3517009eb9d16c5b0c77392baa30c7c836f"
+    },
+    {
+      "path": "runtime/src/cognitive_core/vault.py",
+      "before_sha256": "fef429099e6ea04b85aaad2426bbf4590baa9694346cf1b19579570cb6b61b05",
+      "after_sha256": "39673327c0097c5500faa30aa2709f73544159836ea74824abf336b6eeb54371"
+    },
+    {
+      "path": "runtime/src/cognitive_core/worker.py",
+      "before_sha256": "75056f2bb370d230a63b562bac92bbc38f78b6495da1f938dffdafb4527f6afc",
+      "after_sha256": "5ce71041462f9ac43cf6a921970cb351e9257bd27f3061dfa937a733d13364b5"
+    },
+    {
+      "path": "runtime/tests/test_unified_program.py",
+      "before_sha256": null,
+      "after_sha256": "8263bacd030029bb161243d4ec4be1e5fd05c8617306e80db5bcbc836524ab28"
+    }
+  ],
+  "new_data_home": "/Volumes/AMBRO/projects/CognitiveCore/dati-programma",
+  "existing_databases_modified": false,
+  "branch": "feature/intelligence-feed-runtime"
+}

@@ -1,0 +1,562 @@
+{
+  "name": "seed0",
+  "adapter": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/adapters/seed0",
+  "epistemic": "SIMULATED",
+  "protocol": "single-token conditional classification; not generated JSON",
+  "summary": {
+    "lora": {
+      "n": 34,
+      "accuracy": 0.17647058823529413,
+      "macro_f1": 0.049999999999999996
+    }
+  },
+  "rows": [
+    {
+      "id": "test-000",
+      "expected": "WAIT",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.591071334900334e-05,
+        7.591071334900334e-05,
+        0.0012275318149477243,
+        4.0461603134644974e-07,
+        0.00019689739565365016,
+        0.9984233379364014
+      ],
+      "prompt_tokens": 274,
+      "seconds": 0.20428279199404642
+    },
+    {
+      "id": "test-001",
+      "expected": "WAIT",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.590265886392444e-05,
+        7.831205584807321e-05,
+        0.0013116762274876237,
+        4.3066569332950166e-07,
+        0.00021622658823616803,
+        0.9983174800872803
+      ],
+      "prompt_tokens": 275,
+      "seconds": 0.08894145902013406
+    },
+    {
+      "id": "test-002",
+      "expected": "WAIT",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.710107456659898e-05,
+        7.590573659399524e-05,
+        0.0012688909191638231,
+        4.3068317268080136e-07,
+        0.00021964055486023426,
+        0.9983579516410828
+      ],
+      "prompt_tokens": 278,
+      "seconds": 0.07410687499213964
+    },
+    {
+      "id": "test-003",
+      "expected": "WAIT",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.95498417573981e-05,
+        7.831654511392117e-05,
+        0.0012541287578642368,
+        4.17439508737516e-07,
+        0.00021288653078954667,
+        0.9983747005462646
+      ],
+      "prompt_tokens": 275,
+      "seconds": 0.07357720800791867
+    },
+    {
+      "id": "test-004",
+      "expected": "WAIT",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.292417674558237e-05,
+        6.594395381398499e-05,
+        0.0013794702244922519,
+        4.4432687218431965e-07,
+        0.000195340282516554,
+        0.9982959628105164
+      ],
+      "prompt_tokens": 281,
+      "seconds": 0.07769970799563453
+    },
+    {
+      "id": "test-005",
+      "expected": "WAIT",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        9.300056990468875e-05,
+        8.874172635842115e-05,
+        0.0012590015539899468,
+        4.1742748635442695e-07,
+        0.00021288040443323553,
+        0.9983459711074829
+      ],
+      "prompt_tokens": 271,
+      "seconds": 0.07583899999735877
+    },
+    {
+      "id": "test-006",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        4.8238009185297415e-05,
+        4.8238009185297415e-05,
+        0.0015911950031295419,
+        5.034090122535417e-07,
+        0.00017371168360114098,
+        0.9981380701065063
+      ],
+      "prompt_tokens": 292,
+      "seconds": 0.07758562499657273
+    },
+    {
+      "id": "test-007",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.292614853009582e-05,
+        6.594602018594742e-05,
+        0.001352666295133531,
+        4.443407704002311e-07,
+        0.00019082115613855422,
+        0.9983271956443787
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.07374933399842121
+    },
+    {
+      "id": "test-008",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        5.2977084123995155e-05,
+        5.4658783483318985e-05,
+        0.0015942467143759131,
+        4.879020139014756e-07,
+        0.00019683378923218697,
+        0.9981008172035217
+      ],
+      "prompt_tokens": 288,
+      "seconds": 0.07666720799170434
+    },
+    {
+      "id": "test-009",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.911253149155527e-05,
+        7.242934225359932e-05,
+        0.001286350772716105,
+        4.443517696017807e-07,
+        0.00021963923063594848,
+        0.9983519315719604
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07409995800117031
+    },
+    {
+      "id": "test-010",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        5.728579344577156e-05,
+        6.0034981288481504e-05,
+        0.0015006858156993985,
+        4.729229772237886e-07,
+        0.000212842584005557,
+        0.9981685876846313
+      ],
+      "prompt_tokens": 285,
+      "seconds": 0.0759758329950273
+    },
+    {
+      "id": "test-011",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        8.336872269865125e-05,
+        8.207622158806771e-05,
+        0.0012516997521743178,
+        4.046019626002817e-07,
+        0.00019383805920369923,
+        0.9983886480331421
+      ],
+      "prompt_tokens": 272,
+      "seconds": 0.07468037499347702
+    },
+    {
+      "id": "test-012",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        4.9768572353059426e-05,
+        4.9768572353059426e-05,
+        0.0015974020352587104,
+        5.034022478866973e-07,
+        0.00017782878421712667,
+        0.9981246590614319
+      ],
+      "prompt_tokens": 289,
+      "seconds": 0.07812704099342227
+    },
+    {
+      "id": "test-013",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.130708399927244e-05,
+        7.357060530921444e-05,
+        0.0012738609220832586,
+        4.4435583390622924e-07,
+        0.00021964123880025,
+        0.9983610510826111
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07377029198687524
+    },
+    {
+      "id": "test-014",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        5.551938011194579e-05,
+        5.639367736876011e-05,
+        0.001584928366355598,
+        5.033888328398461e-07,
+        0.00020467421563807875,
+        0.9980980753898621
+      ],
+      "prompt_tokens": 288,
+      "seconds": 0.07343700001365505
+    },
+    {
+      "id": "test-015",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.130610174499452e-05,
+        7.242900755954906e-05,
+        0.0012989680981263518,
+        4.4434969481699227e-07,
+        0.00020958029199391603,
+        0.998347282409668
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.07383229199331254
+    },
+    {
+      "id": "test-016",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.291968747973442e-05,
+        6.291968747973442e-05,
+        0.0014457459328696132,
+        4.729496083655249e-07,
+        0.0002031071635428816,
+        0.9982247948646545
+      ],
+      "prompt_tokens": 283,
+      "seconds": 0.07460629200795665
+    },
+    {
+      "id": "test-017",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        5.819103171234019e-05,
+        6.098366065998562e-05,
+        0.001450337702408433,
+        4.729483862320194e-07,
+        0.00020792319264728576,
+        0.9982221722602844
+      ],
+      "prompt_tokens": 284,
+      "seconds": 0.07770883402554318
+    },
+    {
+      "id": "test-018",
+      "expected": "WEB_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        5.054927532910369e-05,
+        5.380944276112132e-05,
+        0.0016224600840359926,
+        5.033720640312822e-07,
+        0.00020789042173419148,
+        0.9980648159980774
+      ],
+      "prompt_tokens": 287,
+      "seconds": 0.07492208399344236
+    },
+    {
+      "id": "test-019",
+      "expected": "WEB_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.020081102382392e-05,
+        7.242926221806556e-05,
+        0.001286349375732243,
+        4.306801031361829e-07,
+        0.00021963899780530483,
+        0.9983508586883545
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07536083401646465
+    },
+    {
+      "id": "test-020",
+      "expected": "WEB_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.0036618378944695e-05,
+        6.291786121437326e-05,
+        0.0014760185731574893,
+        4.879484549746849e-07,
+        0.00020469426817726344,
+        0.9981958270072937
+      ],
+      "prompt_tokens": 283,
+      "seconds": 0.0767439579940401
+    },
+    {
+      "id": "test-021",
+      "expected": "WEB_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.391879287548363e-05,
+        6.69863002258353e-05,
+        0.0013117239577695727,
+        4.443526222530636e-07,
+        0.00020313341519795358,
+        0.9983538389205933
+      ],
+      "prompt_tokens": 278,
+      "seconds": 0.07547083401004784
+    },
+    {
+      "id": "test-022",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.49251596769318e-05,
+        6.80409575579688e-05,
+        0.001322008203715086,
+        4.30680046292764e-07,
+        0.0001938307104865089,
+        0.9983507394790649
+      ],
+      "prompt_tokens": 280,
+      "seconds": 0.07380158398882486
+    },
+    {
+      "id": "test-023",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.356685819104314e-05,
+        7.590210589114577e-05,
+        0.0013168001314625144,
+        4.306625669414643e-07,
+        0.00022308870393317193,
+        0.9983102083206177
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07413399999495596
+    },
+    {
+      "id": "test-024",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.472049765055999e-05,
+        6.910513911861926e-05,
+        0.00138395419344306,
+        4.729593001684407e-07,
+        0.00022658708621747792,
+        0.9982452392578125
+      ],
+      "prompt_tokens": 285,
+      "seconds": 0.07634529200731777
+    },
+    {
+      "id": "test-025",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.803894939366728e-05,
+        7.019873009994626e-05,
+        0.0013401666656136513,
+        4.174171408521943e-07,
+        0.00019997759955003858,
+        0.9983212351799011
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.0744364160054829
+    },
+    {
+      "id": "test-026",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.020002522040159e-05,
+        7.356902642641217e-05,
+        0.0012964233756065369,
+        4.4434631263357005e-07,
+        0.000219636523979716,
+        0.9983396530151367
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07466508299694397
+    },
+    {
+      "id": "test-027",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        8.336932660313323e-05,
+        8.207681094063446e-05,
+        0.001244395854882896,
+        4.0460489003635303e-07,
+        0.00019383947073947638,
+        0.9983958601951599
+      ],
+      "prompt_tokens": 273,
+      "seconds": 0.0760625829861965
+    },
+    {
+      "id": "test-028",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.194373418111354e-05,
+        6.491646490758285e-05,
+        0.0014376388862729073,
+        4.879588004769175e-07,
+        0.0002179004659410566,
+        0.9982170462608337
+      ],
+      "prompt_tokens": 284,
+      "seconds": 0.0740273330011405
+    },
+    {
+      "id": "test-029",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.020004704827443e-05,
+        7.130558515200391e-05,
+        0.0013117057969793677,
+        4.3067541355412686e-07,
+        0.00020632942323572934,
+        0.9983400106430054
+      ],
+      "prompt_tokens": 281,
+      "seconds": 0.0751484590000473
+    },
+    {
+      "id": "test-030",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.242734136525542e-05,
+        7.472641300410032e-05,
+        0.0013014771975576878,
+        4.306686491872824e-07,
+        0.0002266050287289545,
+        0.9983243346214294
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.0739653329947032
+    },
+    {
+      "id": "test-031",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        7.130726589821279e-05,
+        7.35707872081548e-05,
+        0.0012713790638372302,
+        4.3068558852610295e-07,
+        0.00021964179177302867,
+        0.9983635544776917
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.075310249987524
+    },
+    {
+      "id": "test-032",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.911314994795248e-05,
+        7.020152406767011e-05,
+        0.0012863624142482877,
+        4.1743373913050164e-07,
+        0.00021288359130267054,
+        0.9983609318733215
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07472004200099036
+    },
+    {
+      "id": "test-033",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "lora",
+      "candidate_probabilities": [
+        6.911118543939665e-05,
+        7.242793799377978e-05,
+        0.0012989490060135722,
+        4.3067220190096123e-07,
+        0.00022660690592601895,
+        0.9983325600624084
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07580316599342041
+    }
+  ],
+  "elapsed_seconds": 2.758164416998625,
+  "mlx_peak_bytes": 1067054324,
+  "note": "Warm MLX evaluation. Do not compare latency directly to CPU cold-process GGUF measurements."
+}

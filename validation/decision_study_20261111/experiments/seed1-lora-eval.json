@@ -1,0 +1,562 @@
+{
+  "name": "seed1",
+  "adapter": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/adapters/seed1",
+  "epistemic": "SIMULATED",
+  "protocol": "single-token conditional classification; not generated JSON",
+  "summary": {
+    "lora": {
+      "n": 34,
+      "accuracy": 0.17647058823529413,
+      "macro_f1": 0.049999999999999996
+    }
+  },
+  "rows": [
+    {
+      "id": "test-000",
+      "expected": "WAIT",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023833833984099329,
+        0.00034678028896450996,
+        0.00034678028896450996,
+        0.10895510762929916,
+        0.7104764580726624,
+        0.17963659763336182
+      ],
+      "prompt_tokens": 274,
+      "seconds": 0.2783132089825813
+    },
+    {
+      "id": "test-001",
+      "expected": "WAIT",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 275,
+      "seconds": 0.08907649997854605
+    },
+    {
+      "id": "test-002",
+      "expected": "WAIT",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023834803141653538,
+        0.0003060449380427599,
+        0.0003467944043222815,
+        0.10895954072475433,
+        0.7105053663253784,
+        0.179643914103508
+      ],
+      "prompt_tokens": 278,
+      "seconds": 0.07589012500829995
+    },
+    {
+      "id": "test-003",
+      "expected": "WAIT",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023276035790331662,
+        0.00033866436569951475,
+        0.0003837569965980947,
+        0.10640516132116318,
+        0.693848729133606,
+        0.1987909972667694
+      ],
+      "prompt_tokens": 275,
+      "seconds": 0.07265604200074449
+    },
+    {
+      "id": "test-004",
+      "expected": "WAIT",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019444158533588052,
+        0.0002829108852893114,
+        0.00032058003125712276,
+        0.08888793736696243,
+        0.7442495822906494,
+        0.1660645455121994
+      ],
+      "prompt_tokens": 281,
+      "seconds": 0.07490179198794067
+    },
+    {
+      "id": "test-005",
+      "expected": "WAIT",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023491945466957986,
+        0.0003418058331590146,
+        0.0003873167443089187,
+        0.1216912716627121,
+        0.7002848982810974,
+        0.17705976963043213
+      ],
+      "prompt_tokens": 271,
+      "seconds": 0.07514604201423936
+    },
+    {
+      "id": "test-006",
+      "expected": "REMEMBER",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019216006330680102,
+        0.00031681841937825084,
+        0.00031681841937825084,
+        0.09954138100147247,
+        0.7355167865753174,
+        0.1641159951686859
+      ],
+      "prompt_tokens": 292,
+      "seconds": 0.07664024998666719
+    },
+    {
+      "id": "test-007",
+      "expected": "REMEMBER",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019831124518532306,
+        0.0002885411959141493,
+        0.00032696002745069563,
+        0.09065693616867065,
+        0.7590612173080444,
+        0.14946801960468292
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.07408495800336823
+    },
+    {
+      "id": "test-008",
+      "expected": "REMEMBER",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019215195789001882,
+        0.00031680508982390165,
+        0.0003589872212614864,
+        0.0995371863245964,
+        0.7354857921600342,
+        0.16410908102989197
+      ],
+      "prompt_tokens": 288,
+      "seconds": 0.07474708399968222
+    },
+    {
+      "id": "test-009",
+      "expected": "REMEMBER",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07423475000541657
+    },
+    {
+      "id": "test-010",
+      "expected": "REMEMBER",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019443425117060542,
+        0.00032056792406365275,
+        0.00032056792406365275,
+        0.08888458460569382,
+        0.7442215085029602,
+        0.16605828702449799
+      ],
+      "prompt_tokens": 285,
+      "seconds": 0.0746215840044897
+    },
+    {
+      "id": "test-011",
+      "expected": "REMEMBER",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 272,
+      "seconds": 0.07417129198438488
+    },
+    {
+      "id": "test-012",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019215195789001882,
+        0.00031680508982390165,
+        0.0003589872212614864,
+        0.0995371863245964,
+        0.7354857921600342,
+        0.16410908102989197
+      ],
+      "prompt_tokens": 289,
+      "seconds": 0.07742983399657533
+    },
+    {
+      "id": "test-013",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023276035790331662,
+        0.00033866436569951475,
+        0.0003837569965980947,
+        0.10640516132116318,
+        0.693848729133606,
+        0.1987909972667694
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07461616702494211
+    },
+    {
+      "id": "test-014",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019215910288039595,
+        0.000279589876299724,
+        0.0003590005508158356,
+        0.09954088181257248,
+        0.7355130910873413,
+        0.16411517560482025
+      ],
+      "prompt_tokens": 288,
+      "seconds": 0.07456658300361596
+    },
+    {
+      "id": "test-015",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00022950874699745327,
+        0.00033393330522812903,
+        0.00037839601282030344,
+        0.11888845264911652,
+        0.6841558218002319,
+        0.1960139274597168
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.07400904200039804
+    },
+    {
+      "id": "test-016",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019444158533588052,
+        0.0002829108852893114,
+        0.00032058003125712276,
+        0.08888793736696243,
+        0.7442495822906494,
+        0.1660645455121994
+      ],
+      "prompt_tokens": 283,
+      "seconds": 0.07804837499861605
+    },
+    {
+      "id": "test-017",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019216006330680102,
+        0.00031681841937825084,
+        0.00031681841937825084,
+        0.09954138100147247,
+        0.7355167865753174,
+        0.1641159951686859
+      ],
+      "prompt_tokens": 284,
+      "seconds": 0.07583616700139828
+    },
+    {
+      "id": "test-018",
+      "expected": "WEB_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002130753855453804,
+        0.0003100228786934167,
+        0.0003513020055834204,
+        0.0974062904715538,
+        0.7197404503822327,
+        0.18197891116142273
+      ],
+      "prompt_tokens": 287,
+      "seconds": 0.07511183302267455
+    },
+    {
+      "id": "test-019",
+      "expected": "WEB_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07445266700233333
+    },
+    {
+      "id": "test-020",
+      "expected": "WEB_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019444158533588052,
+        0.0002829108852893114,
+        0.00032058003125712276,
+        0.08888793736696243,
+        0.7442495822906494,
+        0.1660645455121994
+      ],
+      "prompt_tokens": 283,
+      "seconds": 0.07439808300114237
+    },
+    {
+      "id": "test-021",
+      "expected": "WEB_RESEARCH",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 278,
+      "seconds": 0.07806487500783987
+    },
+    {
+      "id": "test-022",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 280,
+      "seconds": 0.07620945901726373
+    },
+    {
+      "id": "test-023",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023833704472053796,
+        0.0003060308226849884,
+        0.00039295139140449464,
+        0.10895451158285141,
+        0.710472583770752,
+        0.17963561415672302
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07512616598978639
+    },
+    {
+      "id": "test-024",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002054240758297965,
+        0.0002988903142977506,
+        0.00038378278259187937,
+        0.10641231387853622,
+        0.6938953399658203,
+        0.1988043487071991
+      ],
+      "prompt_tokens": 285,
+      "seconds": 0.07568116698530503
+    },
+    {
+      "id": "test-025",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023276035790331662,
+        0.00033866436569951475,
+        0.0003837569965980947,
+        0.10640516132116318,
+        0.693848729133606,
+        0.1987909972667694
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.07433825000771321
+    },
+    {
+      "id": "test-026",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07288325001718476
+    },
+    {
+      "id": "test-027",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019831124518532306,
+        0.0002885411959141493,
+        0.00032696002745069563,
+        0.09065693616867065,
+        0.7590612173080444,
+        0.14946801960468292
+      ],
+      "prompt_tokens": 273,
+      "seconds": 0.07401224999921396
+    },
+    {
+      "id": "test-028",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00019443425117060542,
+        0.00032056792406365275,
+        0.00032056792406365275,
+        0.08888458460569382,
+        0.7442215085029602,
+        0.16605828702449799
+      ],
+      "prompt_tokens": 284,
+      "seconds": 0.07401220899191685
+    },
+    {
+      "id": "test-029",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023276035790331662,
+        0.00033866436569951475,
+        0.0003837569965980947,
+        0.10640516132116318,
+        0.693848729133606,
+        0.1987909972667694
+      ],
+      "prompt_tokens": 281,
+      "seconds": 0.0733384589839261
+    },
+    {
+      "id": "test-030",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.00023833704472053796,
+        0.0003060308226849884,
+        0.00039295139140449464,
+        0.10895451158285141,
+        0.710472583770752,
+        0.17963561415672302
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07333504199050367
+    },
+    {
+      "id": "test-031",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07528612497844733
+    },
+    {
+      "id": "test-032",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07545174998813309
+    },
+    {
+      "id": "test-033",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "lora",
+      "candidate_probabilities": [
+        0.0002383273240411654,
+        0.0003467642527539283,
+        0.00039293538429774344,
+        0.10895007103681564,
+        0.7104436159133911,
+        0.17962829768657684
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07522270799381658
+    }
+  ],
+  "elapsed_seconds": 2.822752957988996,
+  "mlx_peak_bytes": 1067054324,
+  "note": "Warm MLX evaluation. Do not compare latency directly to CPU cold-process GGUF measurements."
+}

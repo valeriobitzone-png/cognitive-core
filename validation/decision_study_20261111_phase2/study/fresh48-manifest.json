@@ -1,0 +1,6 @@
+{
+  "sha256": "c77750bbf1f337871353b6c0bf52a01fd608901e2fb2d674f9bf041adf96e36a",
+  "n": 48,
+  "source": "new manually specified synthetic tasks; frozen before phase2 dev comparisons",
+  "balanced_classes": true
+}

@@ -14,6 +14,11 @@ from worldcore.bridge import dispatch as world_dispatch
 
 
 def dispatch(payload, core):
+    autonomous_ops={'cognitive_run','health','cognitive_cycle','cognitive_observe','cognitive_status','cognitive_topics',
+        'cognitive_search','cognitive_dry_run','cognitive_feed_ingest','cognitive_opportunities',
+        'cognitive_briefing','recall','context','alerts','whatif_history','whatif_replay','forecast_stats'}
+    if core.s.execution_mode=='autonomous' and payload.get('op') not in autonomous_ops:
+        raise PermissionError('operation requires interactive authority')
     payload=_bind_scope(payload,core.s.owner,core.s.namespace)
     op=payload.get('op')
     if not isinstance(op,str):raise ValueError('operation must be text')
@@ -21,6 +26,8 @@ def dispatch(payload, core):
         from . import __version__
         return {'status':'ready','version':__version__,'protocol':'worldcore-jsonl-v1',
                 'components':['cognitive_core','worldcore'],'network_enabled':False}
+    if op=='cognitive_run':return core.run(payload['request'])
+    if op=='cognitive_cycle':return core.cycle_once(payload.get('topic_id'))
     if op=='cognitive_observe':return core.observe(payload['event'])
     if op=='cognitive_status':return core.status()
     if op=='cognitive_topics':return {'topics':core.vault.list_topics(payload.get('status'))}
@@ -38,8 +45,9 @@ def main():
     parser.add_argument('--home',default=None)
     parser.add_argument('--owner',default='local')
     parser.add_argument('--namespace',default='default')
+    parser.add_argument('--authority',choices=['interactive','autonomous'],default='interactive')
     args=parser.parse_args()
-    settings={'owner':args.owner,'namespace':args.namespace}
+    settings={'owner':args.owner,'namespace':args.namespace,'execution_mode':args.authority}
     if args.home is not None:settings['home']=args.home
     core=CognitiveCore(Settings(**settings))
     try:

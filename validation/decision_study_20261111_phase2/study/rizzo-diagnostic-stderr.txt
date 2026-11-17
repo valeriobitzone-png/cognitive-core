@@ -1,0 +1,16 @@
+0.00.035.540 I llama_completion: llama backend init
+0.00.035.543 I llama_completion: load the model and apply lora adapter, if any
+0.01.311.483 I cmn          init: llama threadpool init, n_threads = 2
+WARNING: Using native backtrace. Set GGML_BACKTRACE_LLDB for more info.
+WARNING: GGML_BACKTRACE_LLDB may cause native MacOS Terminal.app to crash.
+See: https://github.com/ggml-org/llama.cpp/pull/17869
+0   libggml-base.0.26.0.dylib           0x0000000100741818 ggml_print_backtrace + 276
+1   libggml-base.0.26.0.dylib           0x0000000100750de4 _ZL23ggml_uncaught_exceptionv + 12
+2   libc++abi.dylib                     0x0000000180c8f75c _ZSt11__terminatePFvvE + 16
+3   libc++abi.dylib                     0x0000000180c91be4 __cxa_get_exception_ptr + 0
+4   libc++abi.dylib                     0x0000000180c7e09c __cxa_get_globals + 0
+5   libllama-common.0.6.0.dylib         0x0000000100f95a08 _Z27common_chat_templates_applyPK21common_chat_templatesRK28common_chat_templates_inputs + 1608
+6   libllama-common.0.6.0.dylib         0x0000000100f99478 _Z26common_chat_format_examplePK21common_chat_templatesbRKNSt3__13mapINS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEES9_NS2_4lessIS9_EENS7_INS2_4pairIKS9_S9_EEEEEE + 272
+7   libllama-completion-impl.dylib      0x000000010068e7f0 _Z16llama_completioniPPc + 1320
+8   dyld                                0x00000001809104e4 start + 6992
+libc++abi: terminating due to uncaught exception of type std::runtime_error: this custom template is not supported, try using --jinja

@@ -1,0 +1,12 @@
+{
+  "elapsed_seconds": 21.971893917012494,
+  "cache_no_new_calls": true,
+  "archive_unchanged": true,
+  "inference_processes": 1,
+  "remaining_processes": 0,
+  "peak_child_rss_bytes": 5422661632,
+  "network_calls": 0,
+  "paid_calls": 0,
+  "production_model_enabled": false,
+  "note": "Real one-shot integration smoke; relevance schema, not the six-action routing accuracy benchmark."
+}

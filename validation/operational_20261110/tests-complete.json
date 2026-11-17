@@ -1,0 +1,2514 @@
+{
+  "passed": 48,
+  "total": 48,
+  "failed": [],
+  "complete": true,
+  "runner": "disk-log-process-watchdog-v12",
+  "tests": [
+    {
+      "outcome": "timeout",
+      "exit_code": null,
+      "output": "",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/00_watchdog_selftest.log",
+      "output_bytes": 0,
+      "duration_seconds": 0.304,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "watchdog_selftest",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "............                                                             [100%]\n12 passed in 0.20s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/01_test_adaptation.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.425,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_adaptation.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....                                                                     [100%]\n4 passed in 0.10s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/02_test_anticipation_enrich_v14.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.261,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_anticipation_enrich_v14.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...................                                                      [100%]\n19 passed in 0.55s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/03_test_audit_regressions.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.709,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_audit_regressions.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.01s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/04_test_audit_v09.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.176,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_audit_v09.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...............                                                          [100%]\n15 passed in 0.13s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/05_test_calibrated_v12.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.314,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_calibrated_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..                                                                       [100%]\n2 passed in 0.08s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/06_test_claude_hook_v11.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.263,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_claude_hook_v11.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "........................                                                 [100%]\n24 passed in 0.71s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/07_test_cognitive_drive.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.897,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_drive.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".......................                                                  [100%]\n23 passed in 0.26s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/08_test_cognitive_integration.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.451,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_integration.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......................                                                   [100%]\n22 passed in 0.12s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/09_test_cognitive_original.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.309,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_original.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.16s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/10_test_cognitive_recovery.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.343,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_recovery.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..................                                                       [100%]\n18 passed in 1.21s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/11_test_cognitive_transport.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.394,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_transport.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..........                                                               [100%]\n10 passed in 0.09s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/12_test_dynamics_holdout_v14.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.22,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_dynamics_holdout_v14.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....................................................                     [100%]\n52 passed in 1.71s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/13_test_engine.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.876,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_engine.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....                                                                     [100%]\n4 passed in 0.08s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/14_test_ensemble.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.227,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_ensemble.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.45s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/15_test_evaluation.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.591,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_evaluation.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "............                                                             [100%]\n12 passed in 0.81s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/16_test_hardening.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.938,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hardening.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..                                                                       [100%]\n2 passed in 0.09s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/17_test_hermes.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.236,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hermes.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...........                                                              [100%]\n11 passed in 0.02s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/18_test_hermes_certificate.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.172,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hermes_certificate.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.08s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/19_test_hermes_parity_v09.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.233,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hermes_parity_v09.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...............                                                          [100%]\n15 passed in 0.01s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/20_test_host_certificate.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.177,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_host_certificate.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".....                                                                    [100%]\n5 passed in 0.29s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/21_test_initialization_v12.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.424,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_initialization_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "........................................                                 [100%]\n40 passed in 0.13s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/22_test_intelligence.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.282,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_intelligence.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "........                                                                 [100%]\n8 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/23_test_knowledge.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.292,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_knowledge.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "................                                                         [100%]\n16 passed in 0.84s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/24_test_learning.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.978,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_learning.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.07s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/25_test_mcp_mock.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.231,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_mcp_mock.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.71s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/26_test_mcp_real_v12.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.888,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_mcp_real_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.09s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/27_test_next_event_v14.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.222,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_next_event_v14.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...............................                                          [100%]\n31 passed in 1.13s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/28_test_operational_cycle.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.279,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_operational_cycle.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...........                                                              [100%]\n11 passed in 0.92s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/29_test_runner_v12.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.05,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_runner_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "................                                                         [100%]\n16 passed in 0.10s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/30_test_simulated_workspaces.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.233,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_simulated_workspaces.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..                                                                       [100%]\n2 passed in 0.08s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/31_test_storage_permissions.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.203,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_storage_permissions.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".....................                                                    [100%]\n21 passed in 0.13s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/32_test_v06.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.296,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v06.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".........................                                                [100%]\n25 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/33_test_v07.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.287,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v07.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "........                                                                 [100%]\n8 passed in 1.33s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/34_test_v08.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 1.569,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v08.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...........                                                              [100%]\n11 passed in 1.23s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/35_test_v09.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.482,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v09.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "s..                                                                      [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_v10_browser.py:27: playwright not installed, browser evaluation unavailable\n2 passed, 1 skipped in 0.09s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/36_test_v10_browser.py.log",
+      "output_bytes": 289,
+      "duration_seconds": 0.259,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_browser.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "s                                                                        [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_v10_desktop.py:10: no Xvfb\n1 skipped in 0.04s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/37_test_v10_desktop.py.log",
+      "output_bytes": 230,
+      "duration_seconds": 0.168,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_desktop.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....                                                                     [100%]\n4 passed in 0.07s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/38_test_v10_imports.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.2,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_imports.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.05s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/39_test_v10_native_tools.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.174,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_native_tools.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".......                                                                  [100%]\n7 passed in 0.13s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/40_test_v10_personal.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.256,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_personal.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...                                                                      [100%]\n3 passed in 0.42s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/41_test_v10_runner.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.552,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_runner.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...                                                                      [100%]\n3 passed in 0.21s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/42_test_whatif_host_v11.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.357,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_whatif_host_v11.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "............                                                             [100%]\n12 passed in 0.19s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/43_test_whatif_v11.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.35,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_whatif_v11.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...........                                                              [100%]\n11 passed in 0.90s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/44_test_worker_transport.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.036,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_worker_transport.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "✔ OpenClaw exposes read-only WorldCore personal advice (83.070708ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 128.529875\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/45_openclaw.personal.test.mjs.log",
+      "output_bytes": 186,
+      "duration_seconds": 0.173,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "openclaw.personal.test.mjs",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "✔ OpenClaw native hook registration and context recall (76.98525ms)\n✔ OpenClaw observes metadata, never raw result (95.823084ms)\n✔ OpenClaw bridge fail-open for missing interpreter (2.214333ms)\n✔ OpenClaw concurrent requests are correlated and not interchanged (15.549ms)\n✔ OpenClaw gateway_stop cleans persistent child and future startup works (71.268042ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 306.051375\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/46_openclaw.test.mjs.log",
+      "output_bytes": 484,
+      "duration_seconds": 0.344,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "openclaw.test.mjs",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "✔ OpenCode V1 observes real bridge transaction, no secret args (114.864375ms)\n✔ OpenCode V2 registers event hook and records failure safely (50.207084ms)\n✔ Invalid tool names are rejected before subprocess execution (21.813542ms)\n✔ Failed interpreter does not block V2 host (22.435667ms)\n✔ V2 default entry is a loadable definition with lifecycle cleanup (0.135833ms)\n✔ V2 Code Mode error metadata is not reported as successful telemetry (21.423916ms)\nℹ tests 6\nℹ suites 0\nℹ pass 6\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 278.498792\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/tests-complete_logs/47_opencode.test.mjs.log",
+      "output_bytes": 579,
+      "duration_seconds": 0.336,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "opencode.test.mjs",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,1817 @@
+{
+  "sha": "b9ba007ee4d2928bbab5b1d8bfe9009c3696b6de",
+  "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/b9ba007ee4d2928bbab5b1d8bfe9009c3696b6de",
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb127f1518df255152ff777dd3375fd7169d19dd",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/eb127f1518df255152ff777dd3375fd7169d19dd"
+    },
+    {
+      "path": ".claude/launch.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "666195746dad6feed92f00003e5aef6443be19a9",
+      "size": 681,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/666195746dad6feed92f00003e5aef6443be19a9"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c436fb1a15ff28950a1c01e11f08e29cf353c32d",
+      "size": 4997,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/c436fb1a15ff28950a1c01e11f08e29cf353c32d"
+    },
+    {
+      "path": ".python-version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4fba2183587225f216eeada4c78dfab6b2e65f5",
+      "size": 5,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e4fba2183587225f216eeada4c78dfab6b2e65f5"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd948434af72778dbdb999cd589afabc6c7636eb",
+      "size": 32972,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/dd948434af72778dbdb999cd589afabc6c7636eb"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac4613f4f8ecde1c4d221029871c14cb013e351f",
+      "size": 11364,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ac4613f4f8ecde1c4d221029871c14cb013e351f"
+    },
+    {
+      "path": "NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05c30a3368bd2ca2512b2548fec0e4c53a3c36f",
+      "size": 989,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/d05c30a3368bd2ca2512b2548fec0e4c53a3c36f"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcbee9f97bb84a225ac23a44a194cb130ddc4da2",
+      "size": 48515,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/bcbee9f97bb84a225ac23a44a194cb130ddc4da2"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "513e0175da43cf8f9b070c85d3b4ad05c2c0918e",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/513e0175da43cf8f9b070c85d3b4ad05c2c0918e"
+    },
+    {
+      "path": "assets/playground.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c04ec49d0efc670bf2273a225c716dfd6a8fb35",
+      "size": 299278,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1c04ec49d0efc670bf2273a225c716dfd6a8fb35"
+    },
+    {
+      "path": "assets/rizzo_flow_logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bd28f7b5098cd1004453feab64ec56d58c6ad70",
+      "size": 1062982,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8bd28f7b5098cd1004453feab64ec56d58c6ad70"
+    },
+    {
+      "path": "assets/snake_run.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dc7167e792383ecfbf9b393d043a3c2d23ac73b",
+      "size": 2619370,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4dc7167e792383ecfbf9b393d043a3c2d23ac73b"
+    },
+    {
+      "path": "assets/training_charts.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7159fa1e34ea9d446d5f60b91ad53687663bff4",
+      "size": 59453,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/d7159fa1e34ea9d446d5f60b91ad53687663bff4"
+    },
+    {
+      "path": "benchmarks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73d8850dae271051db29ae32fe0db760fc6e2b8a",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/73d8850dae271051db29ae32fe0db760fc6e2b8a"
+    },
+    {
+      "path": "benchmarks/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cf6737920da0a49edd082942cd7d74c79ac44c7",
+      "size": 1606,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7cf6737920da0a49edd082942cd7d74c79ac44c7"
+    },
+    {
+      "path": "benchmarks/perturbations-v1.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bae8d124fe89a6dc36b708cc1f89cd9bcf20a28",
+      "size": 4409,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/3bae8d124fe89a6dc36b708cc1f89cd9bcf20a28"
+    },
+    {
+      "path": "benchmarks/perturbations.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cf99dc1ebc75193f073b9dc35e81ab88489cefc",
+      "size": 4454,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/5cf99dc1ebc75193f073b9dc35e81ab88489cefc"
+    },
+    {
+      "path": "benchmarks/smoke-v1.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed48795035844cdbb7aad3903dc630f5f6ca9377",
+      "size": 10299,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ed48795035844cdbb7aad3903dc630f5f6ca9377"
+    },
+    {
+      "path": "benchmarks/smoke.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4dd2d00cb4a83a54f606166ddd6f43301116754",
+      "size": 10344,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/a4dd2d00cb4a83a54f606166ddd6f43301116754"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "131fe24c919344567236f4916809f39eb4642004",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/131fe24c919344567236f4916809f39eb4642004"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/README.it.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "661d1ee263fdd0af8b1e2f78605eb02142caf579",
+      "size": 23541,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/661d1ee263fdd0af8b1e2f78605eb02142caf579"
+    },
+    {
+      "path": "docs/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4afa92bbd917a52bb79e24ed26715020c1d31f9b",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/4afa92bbd917a52bb79e24ed26715020c1d31f9b"
+    },
+    {
+      "path": "docs/assets/icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "615e059ff1e1eeff1b7b88cd46daa4d4e82169bc",
+      "size": 81908,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/615e059ff1e1eeff1b7b88cd46daa4d4e82169bc"
+    },
+    {
+      "path": "docs/assets/logo.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3aba5752b3718417bda331e37cb43ef77fc9674",
+      "size": 62608,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/a3aba5752b3718417bda331e37cb43ef77fc9674"
+    },
+    {
+      "path": "docs/assets/playground.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c04ec49d0efc670bf2273a225c716dfd6a8fb35",
+      "size": 299278,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1c04ec49d0efc670bf2273a225c716dfd6a8fb35"
+    },
+    {
+      "path": "docs/assets/snake_run.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dc7167e792383ecfbf9b393d043a3c2d23ac73b",
+      "size": 2619370,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4dc7167e792383ecfbf9b393d043a3c2d23ac73b"
+    },
+    {
+      "path": "docs/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a8edac675337e2817c443b112e1502ea2e680a3",
+      "size": 44688,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4a8edac675337e2817c443b112e1502ea2e680a3"
+    },
+    {
+      "path": "docs/prompt-lab.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a4aaf163a7f30f44b3205437f836b6c35a484cf",
+      "size": 11157,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/3a4aaf163a7f30f44b3205437f836b6c35a484cf"
+    },
+    {
+      "path": "docs/training.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca5eeb6c6c11b76d11462a3dd2603a63ee0a1bd2",
+      "size": 25751,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ca5eeb6c6c11b76d11462a3dd2603a63ee0a1bd2"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73909ef4a198d0f15dfadb5ac6c14264116440f1",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/73909ef4a198d0f15dfadb5ac6c14264116440f1"
+    },
+    {
+      "path": "examples/house.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b95735b89e7ad2d57e26c77efdf4556486a754c",
+      "size": 975,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/9b95735b89e7ad2d57e26c77efdf4556486a754c"
+    },
+    {
+      "path": "examples/numeric.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b8f4b282cc5bc886e96d2365de73d481149c38c",
+      "size": 715,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/5b8f4b282cc5bc886e96d2365de73d481149c38c"
+    },
+    {
+      "path": "examples/ticket.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c993cfb0e6aee31a8f46a7449c8600c38f1b3845",
+      "size": 1612,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/c993cfb0e6aee31a8f46a7449c8600c38f1b3845"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca5e3af93f8ffab3f865e66e9fc7dbbf7168790",
+      "size": 2110,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1ca5e3af93f8ffab3f865e66e9fc7dbbf7168790"
+    },
+    {
+      "path": "request.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9acdb4699aa2ddc08ae8c196704e7ad2b52a5e1b",
+      "size": 6762,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/9acdb4699aa2ddc08ae8c196704e7ad2b52a5e1b"
+    },
+    {
+      "path": "response.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42b18515fa4eac57a02aa3a7a11e8f69796c3612",
+      "size": 14798,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/42b18515fa4eac57a02aa3a7a11e8f69796c3612"
+    },
+    {
+      "path": "results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c1e41623ccd67cd75052ec572580d620053f6ca",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/8c1e41623ccd67cd75052ec572580d620053f6ca"
+    },
+    {
+      "path": "results/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb551c4ba83bd3c45d99cf4ea73fff3d7ab6c9ed",
+      "size": 21084,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/eb551c4ba83bd3c45d99cf4ea73fff3d7ab6c9ed"
+    },
+    {
+      "path": "results/SHA256SUMS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "450571bf2b2c3acded53d7035073b454f270330a",
+      "size": 3685,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/450571bf2b2c3acded53d7035073b454f270330a"
+    },
+    {
+      "path": "results/llama-q8_0-cuda-validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e16fd9845a540e1ddd2138c4e5da4bd564e17a25",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/e16fd9845a540e1ddd2138c4e5da4bd564e17a25"
+    },
+    {
+      "path": "results/llama-q8_0-cuda-validation/api-example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "829ff94ef4a402a505caf074ea3d0a8726ec732c",
+      "size": 7698,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/829ff94ef4a402a505caf074ea3d0a8726ec732c"
+    },
+    {
+      "path": "results/llama-q8_0-cuda-validation/long-state.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a254bc842922080545e7e892e19696126fba462d",
+      "size": 19934,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/a254bc842922080545e7e892e19696126fba462d"
+    },
+    {
+      "path": "results/llama-q8_0-cuda-validation/perturbations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eed912a3443c378c2cf1c79dca8cba3cbdfc77f",
+      "size": 62432,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4eed912a3443c378c2cf1c79dca8cba3cbdfc77f"
+    },
+    {
+      "path": "results/llama-q8_0-cuda-validation/smoke.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17805330305d8e30db8952f85ef3bad80e0a8038",
+      "size": 151309,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/17805330305d8e30db8952f85ef3bad80e0a8038"
+    },
+    {
+      "path": "results/llama-q8_0-cuda-validation/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b4bf52707d20affec7b5668a9e9733c03520e21",
+      "size": 4695,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1b4bf52707d20affec7b5668a9e9733c03520e21"
+    },
+    {
+      "path": "results/precision-comparison.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa700902ebc638c34dc57a12e5e76a44e1976de",
+      "size": 14139,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ffa700902ebc638c34dc57a12e5e76a44e1976de"
+    },
+    {
+      "path": "results/prompt-lab",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e7424c9f40b1c06d2fbf7048e43140b3c840319",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/0e7424c9f40b1c06d2fbf7048e43140b3c840319"
+    },
+    {
+      "path": "results/prompt-lab/dev-round1-q8.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e601021ded02811bae0a109db3b64264c0b22be",
+      "size": 3057,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7e601021ded02811bae0a109db3b64264c0b22be"
+    },
+    {
+      "path": "results/prompt-lab/dev-round2-q8.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30d0f87ac2879b67f7f3512f506ca4dae26a75bb",
+      "size": 2059,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/30d0f87ac2879b67f7f3512f506ca4dae26a75bb"
+    },
+    {
+      "path": "results/q8-stability.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bee127957a25567172d701fae9a4d60baa85e40",
+      "size": 5633,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/2bee127957a25567172d701fae9a4d60baa85e40"
+    },
+    {
+      "path": "results/semif-compare",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8302bbfb822f7568816534f17a39a55c01e1fc6a",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/8302bbfb822f7568816534f17a39a55c01e1fc6a"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda-full",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32ebb42a0f9c7ad8964066f34157ed3a616a0c00",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/32ebb42a0f9c7ad8964066f34157ed3a616a0c00"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda-full/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "823235623102ebee0ea5fe5b8c2c300264617dd9",
+      "size": 27289,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/823235623102ebee0ea5fe5b8c2c300264617dd9"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda-full/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd4ded2f618d33252e254a10f306425068cd2b64",
+      "size": 20429,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/bd4ded2f618d33252e254a10f306425068cd2b64"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda-full/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "060d499084914ee5a183ec72f4555e7e0c420b2c",
+      "size": 9137,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/060d499084914ee5a183ec72f4555e7e0c420b2c"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda-full/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2615f4c06ab11c807a5244be3052572f1abad776",
+      "size": 110221,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/2615f4c06ab11c807a5244be3052572f1abad776"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda-full/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba080c043efcf76e4f2d6fc398b9dd3150a247ce",
+      "size": 110256,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ba080c043efcf76e4f2d6fc398b9dd3150a247ce"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0f9950715141953163db762c32b4b1aa5ffa055",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/c0f9950715141953163db762c32b4b1aa5ffa055"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "823235623102ebee0ea5fe5b8c2c300264617dd9",
+      "size": 27289,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/823235623102ebee0ea5fe5b8c2c300264617dd9"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd4ded2f618d33252e254a10f306425068cd2b64",
+      "size": 20429,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/bd4ded2f618d33252e254a10f306425068cd2b64"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-bf16-v3-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9eae2dda81d0ef50af8a5b88c2910f548e05156",
+      "size": 8140,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b9eae2dda81d0ef50af8a5b88c2910f548e05156"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8-v3-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e1f0cd51088562d08d15b525f9e0813ad42f577",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/9e1f0cd51088562d08d15b525f9e0813ad42f577"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8-v3-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06a07926b1f19b05ad7e404485c1f61202e02ba",
+      "size": 27298,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b06a07926b1f19b05ad7e404485c1f61202e02ba"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8-v3-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba9a2b1100ebc2a818b34e1afb4fd5995f36eb52",
+      "size": 20425,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ba9a2b1100ebc2a818b34e1afb4fd5995f36eb52"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8-v3-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f57f8de48743f7ae670aa3d6cfded6fd45336f4c",
+      "size": 9229,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/f57f8de48743f7ae670aa3d6cfded6fd45336f4c"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8-v3-cuda/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d0c9c293a1ccb64391ddb870a04ac331e55b8d5",
+      "size": 110265,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/5d0c9c293a1ccb64391ddb870a04ac331e55b8d5"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8-v3-cuda/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16642eaad001cd90bc77f15ca7214342f30a4b40",
+      "size": 110236,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/16642eaad001cd90bc77f15ca7214342f30a4b40"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8_0-v3-llama-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62c838e47b90fef0778a97ac7655204d75158840",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/62c838e47b90fef0778a97ac7655204d75158840"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8_0-v3-llama-cuda/analysis.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bde75b1c8c6cc3d430ea16a9fd151928352fad3",
+      "size": 2611,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7bde75b1c8c6cc3d430ea16a9fd151928352fad3"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8_0-v3-llama-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33c501fd13aa9b4b7aa68d73358e1cd0cde5b1c4",
+      "size": 27297,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/33c501fd13aa9b4b7aa68d73358e1cd0cde5b1c4"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8_0-v3-llama-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc6a7964c344dc2aa8c0efd2ac041f3c568ea3c2",
+      "size": 20442,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/dc6a7964c344dc2aa8c0efd2ac041f3c568ea3c2"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8_0-v3-llama-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "721c5acdbc3ca8648b436d9af57a41a545aa4093",
+      "size": 8855,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/721c5acdbc3ca8648b436d9af57a41a545aa4093"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8_0-v3-llama-cuda/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db37f7bdb4d442e611de2bde049ead6078a22fe2",
+      "size": 110236,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/db37f7bdb4d442e611de2bde049ead6078a22fe2"
+    },
+    {
+      "path": "results/semif-compare/rizzo-1.7b-q8_0-v3-llama-cuda/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06f7e3011880dab65781ea86040e550f41744a5e",
+      "size": 110231,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/06f7e3011880dab65781ea86040e550f41744a5e"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda-full",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b8229eedf9b90ef71e37d200e23397177b8790b",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/2b8229eedf9b90ef71e37d200e23397177b8790b"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda-full/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef55c2416acb3a28b3d5d5e1ee0680c67b6673e2",
+      "size": 27422,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ef55c2416acb3a28b3d5d5e1ee0680c67b6673e2"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda-full/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8883a83e0218b631ea2248ca6d91ca36c6aece81",
+      "size": 20522,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8883a83e0218b631ea2248ca6d91ca36c6aece81"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda-full/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f09fff714655723a03cccb065beaecceaeb89a02",
+      "size": 8886,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/f09fff714655723a03cccb065beaecceaeb89a02"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda-full/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bb5da93f637b6bb7a767e40af62305c22d5180e",
+      "size": 111315,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8bb5da93f637b6bb7a767e40af62305c22d5180e"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda-full/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96af130410e8975080125354c57f67a25eb63376",
+      "size": 111330,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/96af130410e8975080125354c57f67a25eb63376"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa2445a757cad1655b9cb5ac3e39e6c81d5aebfd",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/fa2445a757cad1655b9cb5ac3e39e6c81d5aebfd"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef55c2416acb3a28b3d5d5e1ee0680c67b6673e2",
+      "size": 27422,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ef55c2416acb3a28b3d5d5e1ee0680c67b6673e2"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8883a83e0218b631ea2248ca6d91ca36c6aece81",
+      "size": 20522,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8883a83e0218b631ea2248ca6d91ca36c6aece81"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80b08358658a2037bad304af46586aa74d67966c",
+      "size": 7884,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/80b08358658a2037bad304af46586aa74d67966c"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-llama-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de500142e1a3713a5055aa6f6cf17bfa46ddc2ed",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/de500142e1a3713a5055aa6f6cf17bfa46ddc2ed"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-llama-cuda/analysis.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e4f75cc09231a47caad910577dbe0002d1a011b",
+      "size": 3763,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/0e4f75cc09231a47caad910577dbe0002d1a011b"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-llama-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e999aca621c945463d721ba391494d04af6fa00",
+      "size": 27430,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7e999aca621c945463d721ba391494d04af6fa00"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-llama-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0013be12e2afb264355a42b3495ea2a64cb76f4",
+      "size": 20519,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e0013be12e2afb264355a42b3495ea2a64cb76f4"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-llama-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43476663b6279660f3e4d98d814172ec7df166f0",
+      "size": 8253,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/43476663b6279660f3e4d98d814172ec7df166f0"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-llama-cuda/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "717908cd9c3d4061930996cf260942c528ecef8c",
+      "size": 111299,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/717908cd9c3d4061930996cf260942c528ecef8c"
+    },
+    {
+      "path": "results/semif-compare/rizzo-bf16-v3-llama-cuda/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f54531c45d24e3a801a9e2ff08f160f5411564c",
+      "size": 111310,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1f54531c45d24e3a801a9e2ff08f160f5411564c"
+    },
+    {
+      "path": "results/semif-compare/rizzo-flow-q8_0-v3-llama-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7be798364bb60930e217972b795eb1a08bc8c8fd",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/7be798364bb60930e217972b795eb1a08bc8c8fd"
+    },
+    {
+      "path": "results/semif-compare/rizzo-flow-q8_0-v3-llama-cuda/analysis.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49b4a84b3c748f9051e143882f1376b023efd025",
+      "size": 2611,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/49b4a84b3c748f9051e143882f1376b023efd025"
+    },
+    {
+      "path": "results/semif-compare/rizzo-flow-q8_0-v3-llama-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29d29484f77492f0c84471fced338800fdfb166e",
+      "size": 27062,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/29d29484f77492f0c84471fced338800fdfb166e"
+    },
+    {
+      "path": "results/semif-compare/rizzo-flow-q8_0-v3-llama-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37fe5276f9738c75ac78cf04f6c97bafa719425e",
+      "size": 20355,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/37fe5276f9738c75ac78cf04f6c97bafa719425e"
+    },
+    {
+      "path": "results/semif-compare/rizzo-flow-q8_0-v3-llama-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e91b2faffb05397fdc8366521193361d61a306e",
+      "size": 8013,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7e91b2faffb05397fdc8366521193361d61a306e"
+    },
+    {
+      "path": "results/semif-compare/rizzo-flow-q8_0-v3-llama-cuda/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "325e7ccfa00bdf95175281e8455916bb24e03331",
+      "size": 8957,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/325e7ccfa00bdf95175281e8455916bb24e03331"
+    },
+    {
+      "path": "results/semif-compare/rizzo-flow-q8_0-v3-llama-cuda/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a5a1d9206bfbc60c5a3d07eff533b22c57a4052",
+      "size": 110366,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1a5a1d9206bfbc60c5a3d07eff533b22c57a4052"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q4_k_m-v3-llama-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "393876b299fbc1ff9c916056945b8efd9f866d35",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/393876b299fbc1ff9c916056945b8efd9f866d35"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q4_k_m-v3-llama-cuda/analysis.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1f7532412a1deeb57babd6e2017aea095bef65d",
+      "size": 1401,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/c1f7532412a1deeb57babd6e2017aea095bef65d"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q4_k_m-v3-llama-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee9b04c855991556c289e686d8d1380bb4531677",
+      "size": 27410,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ee9b04c855991556c289e686d8d1380bb4531677"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q4_k_m-v3-llama-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17a47dbc7bee84917748407dda726fd0dee925a1",
+      "size": 20519,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/17a47dbc7bee84917748407dda726fd0dee925a1"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q4_k_m-v3-llama-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6488cf7204f043110aef155bedc8624a42cd8ed",
+      "size": 8314,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b6488cf7204f043110aef155bedc8624a42cd8ed"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q4_k_m-v3-llama-cuda/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12589d93ca086a30e35f8e7c1cb2892b1d7e8cdf",
+      "size": 9015,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/12589d93ca086a30e35f8e7c1cb2892b1d7e8cdf"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q4_k_m-v3-llama-cuda/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "886adc9b285235e04f84db63764f924687cfb1ed",
+      "size": 111239,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/886adc9b285235e04f84db63764f924687cfb1ed"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8-v3-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0a94027e30df98de9b0548061b7b871a398db8f8",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/0a94027e30df98de9b0548061b7b871a398db8f8"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8-v3-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e77e008532c5d230183638765d08f3d48faf0af1",
+      "size": 27422,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e77e008532c5d230183638765d08f3d48faf0af1"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8-v3-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1641b28c95b24b08e9149044ac931fb55bf2d859",
+      "size": 20543,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1641b28c95b24b08e9149044ac931fb55bf2d859"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8-v3-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8247343e4d9ebd918189556b5251d25127ced34",
+      "size": 8858,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/c8247343e4d9ebd918189556b5251d25127ced34"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8-v3-cuda/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f85636c68bec55bf0943983a39f4687add0a25ef",
+      "size": 111289,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/f85636c68bec55bf0943983a39f4687add0a25ef"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8-v3-cuda/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55ea608feb5119957ff8d73794835b13f105558d",
+      "size": 111295,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/55ea608feb5119957ff8d73794835b13f105558d"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e560917968778754476e61a988f9bd8540e894d",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/7e560917968778754476e61a988f9bd8540e894d"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fe19d02a2db3fb8addf98bbe5ac53278d6d786f",
+      "size": 27301,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1fe19d02a2db3fb8addf98bbe5ac53278d6d786f"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51a0e704db7f8735f857befe1ae799be6181773f",
+      "size": 20444,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/51a0e704db7f8735f857befe1ae799be6181773f"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35912e3ad4253e6e67631a112083540e573f0803",
+      "size": 7246,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/35912e3ad4253e6e67631a112083540e573f0803"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb19d7c5caeafadb93e59db37f6cfbb20af67237",
+      "size": 8978,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/bb19d7c5caeafadb93e59db37f6cfbb20af67237"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "726fe73ef0226132ab55e45da3b072c7c01e1fd5",
+      "size": 110922,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/726fe73ef0226132ab55e45da3b072c7c01e1fd5"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-cuda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90fe73647c9f5b785dc2e9d4e2678ea2b4910fa9",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/90fe73647c9f5b785dc2e9d4e2678ea2b4910fa9"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-cuda/analysis.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3302f9451cc02edc6afa22e78676618ab90db1e",
+      "size": 2558,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b3302f9451cc02edc6afa22e78676618ab90db1e"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-cuda/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f30ac144f44e22f281cbbec443347a4b68fee25",
+      "size": 27433,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/2f30ac144f44e22f281cbbec443347a4b68fee25"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-cuda/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16f783d140aa77d0bbd9ed8a9876e5ced1729ef7",
+      "size": 20514,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/16f783d140aa77d0bbd9ed8a9876e5ced1729ef7"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-cuda/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "204bacc048f94ab54bf692fe9d2cd12f9f895121",
+      "size": 8331,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/204bacc048f94ab54bf692fe9d2cd12f9f895121"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-cuda/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14af85244e0189a958d20f640a8533f629762809",
+      "size": 111302,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/14af85244e0189a958d20f640a8533f629762809"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-cuda/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16d3822e4142004ce9a372e9e01695892b6225e4",
+      "size": 111251,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/16d3822e4142004ce9a372e9e01695892b6225e4"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-vulkan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db23bee1aafab787a38ff7073cc55f672d97465f",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/db23bee1aafab787a38ff7073cc55f672d97465f"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-vulkan/analysis.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5204447527232f0afb8e1846d8ad0275c188a45",
+      "size": 1366,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b5204447527232f0afb8e1846d8ad0275c188a45"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-vulkan/authored144.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43f35b5694ea058dcbbf36d709bd0ed23fdb56bb",
+      "size": 27419,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/43f35b5694ea058dcbbf36d709bd0ed23fdb56bb"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-vulkan/perturbations108.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d2fc5aa1f006d16bab682802ceedab2e5de7cea",
+      "size": 20523,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1d2fc5aa1f006d16bab682802ceedab2e5de7cea"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-vulkan/report.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50174ace0014ba09003bebc7c1b356cf414867b2",
+      "size": 8280,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/50174ace0014ba09003bebc7c1b356cf414867b2"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-vulkan/shape777-direct.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26086d36ca6410b50176f3c91606b8cb418275b3",
+      "size": 9029,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/26086d36ca6410b50176f3c91606b8cb418275b3"
+    },
+    {
+      "path": "results/semif-compare/rizzo-q8_0-v3-llama-vulkan/shape777-shared.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "448577a4c2107948aa336afdb73acab0138d7e17",
+      "size": 111302,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/448577a4c2107948aa336afdb73acab0138d7e17"
+    },
+    {
+      "path": "results/spark-bf16-final",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "40aea39d07bc9709aa3b3e6ddcd26007ea0ef144",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/40aea39d07bc9709aa3b3e6ddcd26007ea0ef144"
+    },
+    {
+      "path": "results/spark-bf16-final/api-example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a668c00402ab614536eac9f3ba94ea8cd2825c9",
+      "size": 8128,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8a668c00402ab614536eac9f3ba94ea8cd2825c9"
+    },
+    {
+      "path": "results/spark-bf16-final/perturbations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b03aa189f71905f271b068ecf0526b92b3073d8d",
+      "size": 73878,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b03aa189f71905f271b068ecf0526b92b3073d8d"
+    },
+    {
+      "path": "results/spark-bf16-final/smoke.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df365273ec4709b51f457c746c307a22b8c3f153",
+      "size": 171842,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/df365273ec4709b51f457c746c307a22b8c3f153"
+    },
+    {
+      "path": "results/spark-bf16-final/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38f5b20dac89cb1ae6fef40641da420515df1698",
+      "size": 5189,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/38f5b20dac89cb1ae6fef40641da420515df1698"
+    },
+    {
+      "path": "results/spark-bf16-v2-validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88178d6311bc40529f0f1f6549ed5e9916bbe863",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/88178d6311bc40529f0f1f6549ed5e9916bbe863"
+    },
+    {
+      "path": "results/spark-bf16-v2-validation/api-example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84a9824326049100249b0fe167064584fcdf3104",
+      "size": 8113,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/84a9824326049100249b0fe167064584fcdf3104"
+    },
+    {
+      "path": "results/spark-bf16-v2-validation/long-state.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "685b9c6617b544901f19f16a4adfd5f476143c94",
+      "size": 20805,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/685b9c6617b544901f19f16a4adfd5f476143c94"
+    },
+    {
+      "path": "results/spark-bf16-v2-validation/perturbations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15d3c13f69df74e0d4e4b62d75c5b34600da189d",
+      "size": 73897,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/15d3c13f69df74e0d4e4b62d75c5b34600da189d"
+    },
+    {
+      "path": "results/spark-bf16-v2-validation/smoke.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30f91dd83eb811c9540ece10a0341d90efc37057",
+      "size": 171619,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/30f91dd83eb811c9540ece10a0341d90efc37057"
+    },
+    {
+      "path": "results/spark-bf16-v2-validation/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0fc40da1a59ff7685cbbac7f5f958fb142b209b",
+      "size": 5943,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/f0fc40da1a59ff7685cbbac7f5f958fb142b209b"
+    },
+    {
+      "path": "results/spark-bf16-validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6ea7cf7eb3f241f61ab53d02168bc0e250b5c67",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/c6ea7cf7eb3f241f61ab53d02168bc0e250b5c67"
+    },
+    {
+      "path": "results/spark-bf16-validation/api-example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e592b41c9c1f81ec62a98c7dd01c228e93a7e52",
+      "size": 7860,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8e592b41c9c1f81ec62a98c7dd01c228e93a7e52"
+    },
+    {
+      "path": "results/spark-bf16-validation/long-state.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "831b416912bdd0686ede5561c504c4daa853a360",
+      "size": 19743,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/831b416912bdd0686ede5561c504c4daa853a360"
+    },
+    {
+      "path": "results/spark-bf16-validation/perturbations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfd9408a27e1322596f3a5ed440ba801d07bc89c",
+      "size": 72639,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/cfd9408a27e1322596f3a5ed440ba801d07bc89c"
+    },
+    {
+      "path": "results/spark-bf16-validation/smoke.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6af499c51da6dcc0ed2bfa975984541ee6e03118",
+      "size": 168364,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/6af499c51da6dcc0ed2bfa975984541ee6e03118"
+    },
+    {
+      "path": "results/spark-bf16-validation/source",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e87d9c53dcb2d0bc702a076dcdc543f60496b5ab",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/e87d9c53dcb2d0bc702a076dcdc543f60496b5ab"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8fb3f63d131ec3f98fa59bde2f73813b962b953",
+      "size": 111,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e8fb3f63d131ec3f98fa59bde2f73813b962b953"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/api.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8c465f88b2b9c1dbe2a44c40e55f01a8ebd9650",
+      "size": 713,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e8c465f88b2b9c1dbe2a44c40e55f01a8ebd9650"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/backend.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23869a710aa949bea7cfdd288094d8306e2bb0a1",
+      "size": 8524,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/23869a710aa949bea7cfdd288094d8306e2bb0a1"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/calibration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7bbe08e4d295f84e4d21ced082bbfffa0b9a823",
+      "size": 2654,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e7bbe08e4d295f84e4d21ced082bbfffa0b9a823"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47c2fefc8d2eb80ab7263dc2c239d3367cfde00a",
+      "size": 4192,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/47c2fefc8d2eb80ab7263dc2c239d3367cfde00a"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dea45c3c0d4a596a5167d7e4eca02565d24ce31",
+      "size": 645,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/5dea45c3c0d4a596a5167d7e4eca02565d24ce31"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/decisions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c69df71d9276db65d57fb6b66158ee1ae2ef8666",
+      "size": 5943,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/c69df71d9276db65d57fb6b66158ee1ae2ef8666"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b61e575cbbf3d4e1ff67dec52bc6f9fff0e34e6",
+      "size": 2310,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7b61e575cbbf3d4e1ff67dec52bc6f9fff0e34e6"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/evaluation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "300192c2045e84258270889ca03a4e8453db75ab",
+      "size": 5279,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/300192c2045e84258270889ca03a4e8453db75ab"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/prompts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95e549509bdb62cc1b7a16f69788f7a997a182f6",
+      "size": 3669,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/95e549509bdb62cc1b7a16f69788f7a997a182f6"
+    },
+    {
+      "path": "results/spark-bf16-validation/source/schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b227c43e59a8cd43b87f6c4b3195ee8b978cf1e",
+      "size": 3262,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7b227c43e59a8cd43b87f6c4b3195ee8b978cf1e"
+    },
+    {
+      "path": "results/spark-bf16-validation/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b636a3478e21b81e1f648b28f382a211199dab3",
+      "size": 5246,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8b636a3478e21b81e1f648b28f382a211199dab3"
+    },
+    {
+      "path": "results/spark-q8-final",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f19ac3fd8ba9b789adb8069f35caaa20f423271",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/7f19ac3fd8ba9b789adb8069f35caaa20f423271"
+    },
+    {
+      "path": "results/spark-q8-final/api-example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "967e4381a78b398e210bf12891afa97f0e121e10",
+      "size": 8125,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/967e4381a78b398e210bf12891afa97f0e121e10"
+    },
+    {
+      "path": "results/spark-q8-final/perturbations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa258fb25be140ef5fcbf9e1c371ea5b9ca888e2",
+      "size": 73782,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/aa258fb25be140ef5fcbf9e1c371ea5b9ca888e2"
+    },
+    {
+      "path": "results/spark-q8-final/smoke.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0477326b8d016c82618a3d41b43c8f8d6f2d7306",
+      "size": 171746,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/0477326b8d016c82618a3d41b43c8f8d6f2d7306"
+    },
+    {
+      "path": "results/spark-q8-final/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3225d3a4f1c7b7ece55399c63bc4b9934c1d8363",
+      "size": 5156,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/3225d3a4f1c7b7ece55399c63bc4b9934c1d8363"
+    },
+    {
+      "path": "results/spark-q8-v2-validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2a4e77c40c0f349ce8713a13be00b8b8d7e8325",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/e2a4e77c40c0f349ce8713a13be00b8b8d7e8325"
+    },
+    {
+      "path": "results/spark-q8-v2-validation/api-example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4ddc103e7578b935210bf659c35d779b98dc8c2",
+      "size": 8112,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/f4ddc103e7578b935210bf659c35d779b98dc8c2"
+    },
+    {
+      "path": "results/spark-q8-v2-validation/long-state.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cf61103f0b53530dfd02f4e553cf8fca3468b0d",
+      "size": 20797,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4cf61103f0b53530dfd02f4e553cf8fca3468b0d"
+    },
+    {
+      "path": "results/spark-q8-v2-validation/perturbations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be53033c98cfe4134f01581b87f7bb2b4179e55",
+      "size": 73802,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4be53033c98cfe4134f01581b87f7bb2b4179e55"
+    },
+    {
+      "path": "results/spark-q8-v2-validation/smoke.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdac0ffe3b0ee8b2c37379ad88e8ac44c21fc628",
+      "size": 171483,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/fdac0ffe3b0ee8b2c37379ad88e8ac44c21fc628"
+    },
+    {
+      "path": "results/spark-q8-v2-validation/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a77329a2736f8e33e2b1bf9d8f50b8db619db8",
+      "size": 5934,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/d0a77329a2736f8e33e2b1bf9d8f50b8db619db8"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31579b8c3d860dcd8e793e9564153bfdc1fa4950",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/31579b8c3d860dcd8e793e9564153bfdc1fa4950"
+    },
+    {
+      "path": "scripts/compare_reports.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a393738a69fe928623a448551febe8a00bf72d84",
+      "size": 2390,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/a393738a69fe928623a448551febe8a00bf72d84"
+    },
+    {
+      "path": "scripts/prompt_lab.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a115f4d3903caa939657593a70095d103f90742",
+      "size": 8277,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1a115f4d3903caa939657593a70095d103f90742"
+    },
+    {
+      "path": "scripts/record_demo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dffeb648f8d1e71ca6c54a36ed6be8a6c8cb260",
+      "size": 4177,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/5dffeb648f8d1e71ca6c54a36ed6be8a6c8cb260"
+    },
+    {
+      "path": "scripts/semif_compare.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06980dc95d88030f9ed00023762f086941c48d66",
+      "size": 12734,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/06980dc95d88030f9ed00023762f086941c48d66"
+    },
+    {
+      "path": "scripts/semif_report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6382c484ec8a48863fe2cc4b602ed96386a18034",
+      "size": 3612,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/6382c484ec8a48863fe2cc4b602ed96386a18034"
+    },
+    {
+      "path": "scripts/typed_decisions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5161f90d3534751e77ba8791ec737c37448e405",
+      "size": 10889,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/e5161f90d3534751e77ba8791ec737c37448e405"
+    },
+    {
+      "path": "scripts/validate_checkpoint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "deb81c3a6d7db0fc01c9cb7de30b87ce00ef62b0",
+      "size": 4160,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/deb81c3a6d7db0fc01c9cb7de30b87ce00ef62b0"
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "321b793d68459103ba86ebbd980ad479f84e3b71",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/321b793d68459103ba86ebbd980ad479f84e3b71"
+    },
+    {
+      "path": "skills/rizzo-flow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17284c82562fea50fd393595fb7ae8497d7cb6b4",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/17284c82562fea50fd393595fb7ae8497d7cb6b4"
+    },
+    {
+      "path": "skills/rizzo-flow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67e68d46d75a60a28223f86806f0424f7c7d5bd4",
+      "size": 11467,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/67e68d46d75a60a28223f86806f0424f7c7d5bd4"
+    },
+    {
+      "path": "skills/rizzo-flow/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73af606fc2209a1a495a69fbdb685fe5c1013a9f",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/73af606fc2209a1a495a69fbdb685fe5c1013a9f"
+    },
+    {
+      "path": "skills/rizzo-flow/references/api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4606c554270b9a6aa7c1d048a485a3b25c1fb617",
+      "size": 7927,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4606c554270b9a6aa7c1d048a485a3b25c1fb617"
+    },
+    {
+      "path": "skills/rizzo-flow/references/use-cases.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b44779d4462f8d1bd4849c51ef6e638800679b1",
+      "size": 9510,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4b44779d4462f8d1bd4849c51ef6e638800679b1"
+    },
+    {
+      "path": "skills/rizzo-flow/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b68197900009c13bbef3231d9c80bf3e2af3d43",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/9b68197900009c13bbef3231d9c80bf3e2af3d43"
+    },
+    {
+      "path": "skills/rizzo-flow/scripts/rizzo_client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09859121cb8cdb78f0ba52915de7d32b17bb8307",
+      "size": 4080,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/09859121cb8cdb78f0ba52915de7d32b17bb8307"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d69b3f61c0702ab537f268f95c9db2316657fef",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/1d69b3f61c0702ab537f268f95c9db2316657fef"
+    },
+    {
+      "path": "src/rizzo_flow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a3ecc0193f2765de09658b0ebcc72cc4b6351c1",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/6a3ecc0193f2765de09658b0ebcc72cc4b6351c1"
+    },
+    {
+      "path": "src/rizzo_flow/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c1cd53fc718c1c2366783856a0c34fa2131d25b",
+      "size": 282,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1c1cd53fc718c1c2366783856a0c34fa2131d25b"
+    },
+    {
+      "path": "src/rizzo_flow/api.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b97a3af98d0118b14c9bba443579b6d68ba21ad",
+      "size": 4459,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4b97a3af98d0118b14c9bba443579b6d68ba21ad"
+    },
+    {
+      "path": "src/rizzo_flow/backend.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d6a8e5d69e505ee26f8a2e1be58dc202f236b34",
+      "size": 8975,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8d6a8e5d69e505ee26f8a2e1be58dc202f236b34"
+    },
+    {
+      "path": "src/rizzo_flow/backend_llama.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7b66af7af525e157d9406424797f84d9127c04d",
+      "size": 11603,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/a7b66af7af525e157d9406424797f84d9127c04d"
+    },
+    {
+      "path": "src/rizzo_flow/calibration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dc2fe08e52186ed701becb3d7fcc94d5b43e5ae",
+      "size": 2749,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/8dc2fe08e52186ed701becb3d7fcc94d5b43e5ae"
+    },
+    {
+      "path": "src/rizzo_flow/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f4d9e412bf663161d3fe29f76bbe86728d1cb4d",
+      "size": 9029,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/9f4d9e412bf663161d3fe29f76bbe86728d1cb4d"
+    },
+    {
+      "path": "src/rizzo_flow/compat.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b72ddb8097e3c597d992c749eff530f6b82843a9",
+      "size": 7582,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b72ddb8097e3c597d992c749eff530f6b82843a9"
+    },
+    {
+      "path": "src/rizzo_flow/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "181ae03469d0744ff04a8c2e6e1d8d150b2ebfa7",
+      "size": 10242,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/181ae03469d0744ff04a8c2e6e1d8d150b2ebfa7"
+    },
+    {
+      "path": "src/rizzo_flow/decisions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "671df54692508320cc9e87648f47d547293a7092",
+      "size": 5998,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/671df54692508320cc9e87648f47d547293a7092"
+    },
+    {
+      "path": "src/rizzo_flow/engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04fdc62b0af7cb7dcce6cf19dbffe84c36d5abec",
+      "size": 2812,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/04fdc62b0af7cb7dcce6cf19dbffe84c36d5abec"
+    },
+    {
+      "path": "src/rizzo_flow/evaluation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b340d1f0fd3e8724f38167f6d2d4094541ef8e2",
+      "size": 6336,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/6b340d1f0fd3e8724f38167f6d2d4094541ef8e2"
+    },
+    {
+      "path": "src/rizzo_flow/llama_cpp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "123b46d8a893f0d3c90b549cb025d3927a061543",
+      "size": 20817,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/123b46d8a893f0d3c90b549cb025d3927a061543"
+    },
+    {
+      "path": "src/rizzo_flow/llama_release.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "948f583de47419c712d46c6da79cf57d970c4012",
+      "size": 15218,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/948f583de47419c712d46c6da79cf57d970c4012"
+    },
+    {
+      "path": "src/rizzo_flow/loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "328dccd4cb8edc80c5bedfdf228b4e7821e3fac3",
+      "size": 3710,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/328dccd4cb8edc80c5bedfdf228b4e7821e3fac3"
+    },
+    {
+      "path": "src/rizzo_flow/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f7c7da31234e9edad246c4572bbe159c1d33873",
+      "size": 119586,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/3f7c7da31234e9edad246c4572bbe159c1d33873"
+    },
+    {
+      "path": "src/rizzo_flow/playground.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c99bdc0cba6bedbc461c3d6e365a31be06eb860",
+      "size": 36400,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/2c99bdc0cba6bedbc461c3d6e365a31be06eb860"
+    },
+    {
+      "path": "src/rizzo_flow/prompts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5e3d703645dcb2e6e28477450072a4ab0a5016c",
+      "size": 5030,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/b5e3d703645dcb2e6e28477450072a4ab0a5016c"
+    },
+    {
+      "path": "src/rizzo_flow/responses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7805c49e91b567b9191d3f703c40aef028f94427",
+      "size": 3091,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7805c49e91b567b9191d3f703c40aef028f94427"
+    },
+    {
+      "path": "src/rizzo_flow/runtime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7c599dd449de7bafcbe83a910af38b307646a06",
+      "size": 2757,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/a7c599dd449de7bafcbe83a910af38b307646a06"
+    },
+    {
+      "path": "src/rizzo_flow/schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7e82e5ff5c7c40ed78e1648f0a8dff2e1993ad0",
+      "size": 3904,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/c7e82e5ff5c7c40ed78e1648f0a8dff2e1993ad0"
+    },
+    {
+      "path": "src/rizzo_flow/snake.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c794229723457a09471b16a84e3b48c15c02565",
+      "size": 50901,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4c794229723457a09471b16a84e3b48c15c02565"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f5059ae64801a49115987b75aca5be4e257baad",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/4f5059ae64801a49115987b75aca5be4e257baad"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b91e9348a994267fc9337ab263afab62c305d9e",
+      "size": 283,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1b91e9348a994267fc9337ab263afab62c305d9e"
+    },
+    {
+      "path": "tests/test_backend_llama.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef5a527d4a6ab3eee5810e2aa605ce16afaf66cc",
+      "size": 12852,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/ef5a527d4a6ab3eee5810e2aa605ce16afaf66cc"
+    },
+    {
+      "path": "tests/test_compat.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1914dc6891a6a08c0e70f0371735cd14bca0bbc0",
+      "size": 6542,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1914dc6891a6a08c0e70f0371735cd14bca0bbc0"
+    },
+    {
+      "path": "tests/test_decisions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e3d379fb12019a07fc4aa29563bd9d4bd9611ad",
+      "size": 4127,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7e3d379fb12019a07fc4aa29563bd9d4bd9611ad"
+    },
+    {
+      "path": "tests/test_llama_real.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c3aad9983ef9cee4e883921ae5aea15539878fc",
+      "size": 4933,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/7c3aad9983ef9cee4e883921ae5aea15539878fc"
+    },
+    {
+      "path": "tests/test_llama_release.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1890beb3aa1042bccbcd30296d35b76dec8ecf13",
+      "size": 12694,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/1890beb3aa1042bccbcd30296d35b76dec8ecf13"
+    },
+    {
+      "path": "tests/test_mlx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ecaa3c441210e069a2fdf11154c797297cffe9f",
+      "size": 3213,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/6ecaa3c441210e069a2fdf11154c797297cffe9f"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63c08f93204f8154c4a487b9cbb3ac85d37eff5f",
+      "size": 1563,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/63c08f93204f8154c4a487b9cbb3ac85d37eff5f"
+    },
+    {
+      "path": "tests/test_service.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d5701e283c2bf1b90dce73fa33861eff7cfbadd",
+      "size": 4734,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/6d5701e283c2bf1b90dce73fa33861eff7cfbadd"
+    },
+    {
+      "path": "training",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c54cd3cda929e4a8bde7f92cd33fe46e67247a2",
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/trees/2c54cd3cda929e4a8bde7f92cd33fe46e67247a2"
+    },
+    {
+      "path": "training/build_data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3f22c5043cfe6a45b89c1de24379e17c861deb9",
+      "size": 11361,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/d3f22c5043cfe6a45b89c1de24379e17c861deb9"
+    },
+    {
+      "path": "training/check_batching.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f8916e4d83a828063cf350fea59597f798ac272",
+      "size": 1569,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4f8916e4d83a828063cf350fea59597f798ac272"
+    },
+    {
+      "path": "training/common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81a5dee5dfd315e8892309cc03acc35031ee950c",
+      "size": 5201,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/81a5dee5dfd315e8892309cc03acc35031ee950c"
+    },
+    {
+      "path": "training/download_data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c297379631454146ba29c7a98e39191914bfaff",
+      "size": 7530,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/5c297379631454146ba29c7a98e39191914bfaff"
+    },
+    {
+      "path": "training/export_gguf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "456f944cfb1a4a629ed82cefea396b7935678a66",
+      "size": 4257,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/456f944cfb1a4a629ed82cefea396b7935678a66"
+    },
+    {
+      "path": "training/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f01c46464faa970d3e4ee804f57238603c0606b1",
+      "size": 523,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/f01c46464faa970d3e4ee804f57238603c0606b1"
+    },
+    {
+      "path": "training/smoke_parity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4738d89c7d6438e8cbac68d3d351b799bac7b17a",
+      "size": 4719,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/4738d89c7d6438e8cbac68d3d351b799bac7b17a"
+    },
+    {
+      "path": "training/train_lora.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fda1cd45370b40634a9db70f74c83ec85badbb7",
+      "size": 14496,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/3fda1cd45370b40634a9db70f74c83ec85badbb7"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a827698d5242a2cf7252706e1edb396d3e81dcd6",
+      "size": 212763,
+      "url": "https://api.github.com/repos/Rizzo-AI-Academy/rizzo-flow/git/blobs/a827698d5242a2cf7252706e1edb396d3e81dcd6"
+    }
+  ],
+  "truncated": false
+}

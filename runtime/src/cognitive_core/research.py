@@ -119,7 +119,12 @@ class Researcher:
         self.s=s
         self.reserve_additional_request=reserve_additional_request
 
+    def _authority(self):
+        if self.s.execution_mode=='autonomous' and not self.s.autonomous_web_opt_in:
+            raise PermissionError('autonomous web requires separate host opt-in')
+
     def fetch(self,url):
+        self._authority()
         if not self.s.enable_web:
             raise PermissionError('network disabled')
         assert_public_https(url,self.s.domain_allowlist)
@@ -161,6 +166,7 @@ class Researcher:
 
     def search(self, query, limit=5):
         """SearXNG JSON, explicit opt-in. No automatic paid APIs."""
+        self._authority()
         if not self.s.enable_web or not self.s.searxng_url:
             raise PermissionError('search requires opt-in web + configured SearXNG')
         u=urllib.parse.urlsplit(self.s.searxng_url)

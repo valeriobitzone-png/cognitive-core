@@ -1,0 +1,9 @@
+{
+  "baseline_files": 147,
+  "changed_existing": 7,
+  "unexpected_changes": [],
+  "protected_lab_runner_files": 13,
+  "protected_mismatches": [],
+  "runtime_hashes_match": true,
+  "default_model_enabled": false
+}

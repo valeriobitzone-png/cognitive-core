@@ -1,0 +1,9 @@
+Processing ./.
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: worldcore-cognitive-layer
+  Building wheel for worldcore-cognitive-layer (pyproject.toml): started
+  Building wheel for worldcore-cognitive-layer (pyproject.toml): finished with status 'done'
+  Created wheel for worldcore-cognitive-layer: filename=worldcore_cognitive_layer-1.4.0rc3-py3-none-any.whl size=331538 sha256=ef5c0b705b253c84f95ebfa00a10211faa154087cb6271ebb8137c51eb924735
+  Stored in directory: /private/var/folders/3_/f8shjh7d3t9bb302qn9cbxbc0000gp/T/pip-ephem-wheel-cache-wruhyyhd/wheels/b9/18/a0/677c98c4d7f9e82d26eb863edf2f55176da0d94f3af164182c
+Successfully built worldcore-cognitive-layer

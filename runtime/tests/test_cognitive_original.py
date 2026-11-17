@@ -63,10 +63,10 @@ class CoreTests(unittest.TestCase):
         doc1=self.c.vault.document('Doc','Source content','https://example.org/1')
         doc2=self.c.vault.document('Doc2','Other source','https://example.org/2')
         claim=self.c.vault.claim(t,'A claim')
-        self.c.vault.add_evidence(claim,doc1,'Source text','supports')
+        self.c.vault.add_evidence(claim,doc1,'Source content','supports')
         r=self.c.vault.db.execute('SELECT status FROM claims WHERE id=?',(claim,)).fetchone()
         self.assertEqual(r['status'],'source_backed')
-        self.c.vault.add_evidence(claim,doc2,'Contrary text','contradicts')
+        self.c.vault.add_evidence(claim,doc2,'Other source','contradicts')
         r=self.c.vault.db.execute('SELECT status FROM claims WHERE id=?',(claim,)).fetchone()
         self.assertEqual(r['status'],'conflicted')
 

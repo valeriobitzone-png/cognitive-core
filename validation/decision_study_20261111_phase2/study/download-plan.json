@@ -1,0 +1,16 @@
+[
+  {
+    "repo": "LiquidAI/LFM2.5-1.2B-Instruct-GGUF",
+    "revision": "8ed288026e23958ad9dfa92d53ed773a8eee7125",
+    "name": "LFM2.5-1.2B-Instruct-Q6_K.gguf",
+    "bytes": 962843456,
+    "sha256": "c5e895c191a066f6b26a8f09f10e94cdb799e579216f87df61a7e27beacd9a2b"
+  },
+  {
+    "repo": "katanemo/Arch-Router-1.5B.gguf",
+    "revision": "bd9b1caf68e4b53aa9eee3ee949208f18a053c86",
+    "name": "Arch-Router-1.5B-Q4_K_M.gguf",
+    "bytes": 986047936,
+    "sha256": "b55666691f14089cf4422b443431e2b783033d99dce6c7df147565192b4deb76"
+  }
+]

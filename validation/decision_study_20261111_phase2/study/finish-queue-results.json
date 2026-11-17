@@ -1,0 +1,17 @@
+[
+  {
+    "name": "profile-smoke",
+    "exit_code": 0,
+    "seconds": 22.252693082991755
+  },
+  {
+    "name": "lfm12-v1-dev",
+    "exit_code": 0,
+    "seconds": 45.70462816700456
+  },
+  {
+    "name": "arch-native-dev",
+    "exit_code": 0,
+    "seconds": 114.14620824999292
+  }
+]

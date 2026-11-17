@@ -23,6 +23,17 @@ class CognitiveCore:
         self._vault=None
         self._worldcore=None
         self._drive=None
+        self._program=None
+
+    @property
+    def program(self):
+        if self._program is None:
+            from .program import UnifiedProgram
+            self._program=UnifiedProgram(self)
+        return self._program
+
+    def run(self,request):
+        return self.program.run(request)
 
     @property
     def drive(self):
@@ -30,6 +41,21 @@ class CognitiveCore:
             from .drive import CognitiveDrive
             self._drive=CognitiveDrive(self)
         return self._drive
+
+    @property
+    def memory(self):
+        from .memory import Memory
+        return Memory(self)
+
+    @property
+    def dream(self):
+        from .dream import Dreamer
+        return Dreamer(self)
+
+    @property
+    def curiosity(self):
+        from .curiosity import Curiosity
+        return Curiosity(self)
 
     @property
     def worldcore(self):
@@ -50,6 +76,7 @@ class CognitiveCore:
         return self._vault
 
     def close(self):
+        self._program=None
         self._drive=None
         if self._worldcore is not None:
             self._worldcore.close()
@@ -58,7 +85,7 @@ class CognitiveCore:
             self._vault.close()
             self._vault=None
 
-    def observe(self,event: dict):
+    def observe(self,event: dict,*,use_model=True):
         """Significant structured event, e.g. {kind:'session_end', title, open_questions:[...]}.
 
         For greeting, return before touching the database, model or network.
@@ -74,7 +101,8 @@ class CognitiveCore:
         first=self.decision.reflex.classify(event)
         if first.action=='WAIT':
             return {'action':'WAIT','cost':{'model_calls':0,'web_requests':0},'stored':False}
-        d=self.decision.decide(event)
+        if type(use_model) is not bool:raise ValueError('model choice must be boolean')
+        d=self.decision.decide(event) if use_model else first
         if first.action=='REQUEST_APPROVAL':
             return {'decision':d.asdict(),'stored':False,'approved':False}
         eid=self.vault.event(kind,event)
@@ -106,22 +134,67 @@ class CognitiveCore:
         return {'decision':d.asdict(),'event_id':eid,'topics':topic_ids,
                 'cost':{'model_calls':int(d.model_used),'web_requests':0},'stored':True}
 
+    def assess_local(self,event,archive,*,timeout_seconds=None):
+        from .advisor import assess
+        return assess(self,event,archive,timeout_seconds=timeout_seconds)
+
+    def cycle_once(self,topic_id=None,*,allow_model=True):
+        from .cycle import tick
+        if topic_id is None and self.s.curiosity_policy!='legacy':
+            topic_id=self.curiosity.next_topic()
+            if topic_id is None:return {'status':'idle'}
+        if topic_id is None:
+            row=self.vault.db.execute("""SELECT t.id FROM topics t LEFT JOIN cognitive_cycles c
+                ON c.namespace=t.namespace AND c.topic_id=t.id WHERE t.namespace=? AND t.status='open'
+                AND (c.stage IS NULL OR c.stage NOT IN ('done','abstained','stopped'))
+                ORDER BY t.importance DESC,t.created,t.id LIMIT 1""",(self.vault.ns,)).fetchone()
+            if not row:return {'status':'idle'}
+            topic_id=row['id']
+        if type(allow_model) is not bool:raise ValueError('model choice must be boolean')
+        return tick(self,topic_id,allow_model=allow_model)
+
+    def import_lab(self,root,*,source='realtest'):
+        from .experimental import import_lab
+        return import_lab(self,root,source=source)
+
+    def rollback_lab(self,batch_id):
+        from .experimental import rollback_lab
+        return rollback_lab(self,batch_id)
+
     def resume(self,topic_id,seed_urls=None):
-        t=self.vault.get_topic(topic_id)
-        if not t:
-            raise KeyError(topic_id)
-        if t['status']=='discarded':
-            raise PermissionError('discarded topics require explicit topic reactivation')
-        if t['status']!='open':
-            self.vault.set_topic_status(topic_id,'open')
-        return self.vault.job(topic_id,plan={'question':t['question'],
-                      'seed_urls':(seed_urls or [])[:10],'require_review':True})
+        from .experimental import require_interactive
+        require_interactive(self)
+        with self.vault.transaction():
+            t=self.vault.get_topic(topic_id)
+            if not t:
+                raise KeyError(topic_id)
+            if t['status']=='discarded':
+                raise PermissionError('discarded topics require explicit topic reactivation')
+            if t['status']!='open':
+                self.vault.set_topic_status(topic_id,'open')
+            existing=self.vault.db.execute("""SELECT * FROM jobs WHERE namespace=? AND topic_id=?
+                AND kind='research' AND (status IN ('pending','running','blocked')
+                    OR (status='cancelled' AND ?))
+                ORDER BY CASE WHEN status IN ('pending','running') THEN 0 ELSE 1 END,
+                    updated DESC,rowid DESC LIMIT 1""",
+                (self.vault.ns,topic_id,t['status']=='paused')).fetchone()
+            if existing:
+                if seed_urls and seed_urls[:10]!=json.loads(existing['plan']).get('seed_urls',[]):
+                    raise ValueError('cannot replace sources on an unfinished job')
+                if existing['status'] in ('blocked','cancelled'):
+                    self.vault.update_job(existing['id'],status='pending')
+                    self.vault.audit('resume',{'job_id':existing['id'],'checkpoint_preserved':True})
+                return existing['id']
+            return self.vault.job(topic_id,plan={'question':t['question'],
+                          'seed_urls':(seed_urls or [])[:10],'require_review':True})
 
     def _govern(self,job):
         if job['attempts'] > 3:
             return 'too many attempts'
         if not self.s.enable_web:
             return 'web is disabled in settings'
+        if self.s.execution_mode=='autonomous' and not self.s.autonomous_web_opt_in:
+            return 'autonomous web requires separate host opt-in'
         if not self.s.domain_allowlist:
             return 'web allowlist is empty'
         if self.vault.usage('jobs_run') >= self.s.max_jobs_per_day:
@@ -164,8 +237,13 @@ class CognitiveCore:
         def checkpoint_state():
             return {'completed':sorted(completed),'errors':failures,'documents':sources,
                     'images':imgs,'requests_reserved':requests_reserved,'source_urls':urls}
+        began=time.monotonic()
         def reserve_request():
             nonlocal requests_reserved
+            if time.monotonic()-began >= self.s.max_cycle_seconds:
+                raise BudgetExceeded('job time budget exhausted')
+            from .experimental import check_storage
+            check_storage(self,self.s.max_text_bytes*4+1_048_576)
             if requests_reserved>=self.s.max_web_requests_per_job:
                 raise BudgetExceeded('per-job HTTP request budget exhausted')
             if not self.vault.reserve_budget('web_requests',self.s.max_web_requests_per_day):
@@ -234,27 +312,46 @@ class CognitiveCore:
 
     def remember_claim(self,topic_id,statement,document_id,excerpt,stance='supports'):
         """Provenance: even with attached evidence, source-backed is NOT a tested truth."""
-        cid=self.vault.claim(topic_id,statement)
-        eid=self.vault.add_evidence(cid,document_id,excerpt,stance=stance)
-        return {'claim_id':cid,'evidence_id':eid,'status':'source_backed' if stance=='supports' else 'unverified'}
+        from .experimental import require_interactive
+        require_interactive(self)
+        with self.vault.transaction():
+            cid=self.vault.claim(topic_id,statement)
+            eid=self.vault.add_evidence(cid,document_id,excerpt,stance=stance)
+            return {'claim_id':cid,'evidence_id':eid,'status':'source_backed' if stance=='supports' else 'unverified'}
 
     def memory_search(self,query,limit=10):
         limit=min(50,max(1,int(limit)))
         documents=self.vault.search(query,limit)
+        from .experimental import search_lab
+        laboratory=search_lab(self,query,limit)
         memories=[]
+        knowledge=[]
         if self._worldcore is not None or self.s.worldcore_path.exists():
             memories=[{'id':m['id'],'title':m['fact_key'],'excerpt':m['value'][:500],
                        'source_url':'','kind':'worldcore_memory','source':m['source']}
                       for m in self.worldcore.recall(self.s.owner,query,space=self.s.namespace,limit=limit)]
-        # Alternate stores so a full page of documents cannot hide the first memory.
+            knowledge=[{**record,'id':record['document'],'kind':'worldcore_knowledge'}
+                       for record in self.worldcore.search_evidence(self.s.owner,query[:350],
+                           space=self.s.namespace,limit=min(limit,30))]
+        shared=[{'id':r['id'],'title':r['key'],'excerpt':r['text'][:500],'source_url':r['source'],
+                 'kind':'shared_memory','source_sha256':r['source_sha256'],'scope':r['scope'],
+                 'epistemic':'INFERRED','verified':False} for r in self.memory.search(query[:350],limit=min(limit,50))]
+        # Alternate stores so a full page cannot hide another backend's first result.
         result=[]
-        for i in range(max(len(documents),len(memories))):
-            if i<len(documents):result.append(documents[i])
-            if i<len(memories):result.append(memories[i])
+        for i in range(max(len(documents),len(memories),len(knowledge),len(laboratory),len(shared))):
+            for records in (documents,memories,knowledge,laboratory,shared):
+                if i<len(records):result.append(records[i])
         return result[:limit]
 
+    def export_state(self,output):
+        from .experimental import require_interactive
+        require_interactive(self)
+        from .portable import export_state
+        return export_state(self,output)
+
     def status(self):
-        return {'namespace':self.s.namespace,'local_model_enabled':self.s.enable_local_model,
+        return {'authority':self.s.execution_mode,'autonomous_web_opt_in':self.s.autonomous_web_opt_in,
+                'namespace':self.s.namespace,'local_model_enabled':self.s.enable_local_model,
                 'web_enabled':self.s.enable_web,'paid_api_calls_allowed':False,
                 'topics':len(self.vault.list_topics()),
                 'pending_jobs':len(self.vault.pending_jobs()),

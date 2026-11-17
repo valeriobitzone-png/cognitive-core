@@ -1,0 +1,63 @@
+{
+  "created": "2026-11-11T10:10:26.867940",
+  "runtime": "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime",
+  "default_model_enabled": false,
+  "selected_model": null,
+  "files": [
+    {
+      "path": "src/cognitive_core/config.py",
+      "before_sha256": "29d05c8439e96016a1d2eb7876a5177f9386c05e80370ea8ecb26bcc74251d94",
+      "after_sha256": "0c7ec0fb89352dbf845f60083ef5fb64a11ca1885dd2638bd3651d1c848a4746"
+    },
+    {
+      "path": "src/cognitive_core/decision.py",
+      "before_sha256": "eaa6779632e1b19bf39827160961b35b90dcaf8c3d39c3951d9f0fab5c81f3b1",
+      "after_sha256": "b94389c8e209f33e06bf109e8ff4bb1b80ae87549482fbb8c1a3306c7f7807ad"
+    },
+    {
+      "path": "src/cognitive_core/engine.py",
+      "before_sha256": "525ea1a25ff9444378052d0b7f10499aacf70a2fc85f5a1ecf52d318326143dd",
+      "after_sha256": "ba323f215e7a8c5fb297302a96c58b91a0455973835f6620ae8c7f98657d5d7f"
+    },
+    {
+      "path": "src/cognitive_core/cycle.py",
+      "before_sha256": "2e6e514d6ff8108e22c3d76cf213c71c011327814b12dd104f9b1070bdb96018",
+      "after_sha256": "80a35ca830669323354f4f9573daf2a83e1f484152e073664b753ca0186c1f29"
+    },
+    {
+      "path": "src/cognitive_core/cli.py",
+      "before_sha256": "535a0b5ed622c6849cd6aae4fd10e3cb32b3aa4fb5cdf8231bf418ca821cd6e3",
+      "after_sha256": "1ffafe3ca28dbda965d1d93b73526c5d44ba4d3becd18ad3dd0b0f7dcb206ed5"
+    },
+    {
+      "path": "src/cognitive_core/advisor.py",
+      "before_sha256": null,
+      "after_sha256": "ca3c9c0afe6dc7b1bc644ef4370d8110dfe3312452a7ade9d88ae27fa7d680e7"
+    },
+    {
+      "path": "src/cognitive_core/ondemand.py",
+      "before_sha256": null,
+      "after_sha256": "a5fe48ef6f6696e967a7cf86adb3708592c4b972e1561c2801a61472018d4fbd"
+    },
+    {
+      "path": "src/cognitive_core/selfmodel.py",
+      "before_sha256": null,
+      "after_sha256": "024d13d311973bcd6e1bb4c7019cee898b986c844aea80139ed8eb6854ce0d86"
+    },
+    {
+      "path": "tests/test_local_advisor.py",
+      "before_sha256": null,
+      "after_sha256": "f38e7742820df62a6a87924bdd7dde7e7562d6ad1289b1e2c3721f3956d6867f"
+    },
+    {
+      "path": "tests/test_functional_self.py",
+      "before_sha256": null,
+      "after_sha256": "b992e067639f29dbf9fea0acd95855a6218582bdf426b118cf0de1b122538f01"
+    },
+    {
+      "path": "docs/LOCAL_DECISION_ON_DEMAND_IT.md",
+      "before_sha256": null,
+      "after_sha256": "18c33818530903f550ee94368404cffe41233707de5776d4bcca7fb489721beb"
+    }
+  ]
+}

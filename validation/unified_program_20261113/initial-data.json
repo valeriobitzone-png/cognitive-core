@@ -1,0 +1,108 @@
+{
+  "imports": [
+    {
+      "source": "realtest",
+      "result": {
+        "batch_id": "0bc65684fdea88b5f3fedd5c1cd8ec629da9d38e8ed3408583894699d5bc12d7",
+        "status": "active",
+        "duplicate": false,
+        "records": 1695,
+        "bytes": 2665537,
+        "skipped": [],
+        "quarantined": [
+          {
+            "path": "data/ensemble/connection_graph.json#edges/485",
+            "reason": "nonfinite number"
+          },
+          {
+            "path": "data/ensemble/connection_graph.json#edges/522",
+            "reason": "nonfinite number"
+          },
+          {
+            "path": "data/ensemble/connection_graph.json#edges/583",
+            "reason": "nonfinite number"
+          },
+          {
+            "path": "data/ensemble/connection_graph.json#edges/627",
+            "reason": "nonfinite number"
+          },
+          {
+            "path": "data/ensemble/connection_graph.json#edges/789",
+            "reason": "nonfinite number"
+          }
+        ],
+        "verified_facts": 0
+      }
+    },
+    {
+      "source": "assistant-package",
+      "result": {
+        "batch_id": "3df125d4d4a9bc06c79afd4b0106264784a22812747c0606d4d3ac7bdfb5cef3",
+        "status": "active",
+        "duplicate": false,
+        "records": 105,
+        "bytes": 32892,
+        "skipped": [],
+        "quarantined": [],
+        "verified_facts": 0
+      }
+    }
+  ],
+  "lab_record_groups": [
+    [
+      "archive",
+      "OBSERVED",
+      6
+    ],
+    [
+      "edge",
+      "INFERRED",
+      887
+    ],
+    [
+      "excluded",
+      "INFERRED",
+      53
+    ],
+    [
+      "hypothesis",
+      "INFERRED",
+      262
+    ],
+    [
+      "hypothesis",
+      "SIMULATED",
+      15
+    ],
+    [
+      "metadata",
+      "OBSERVED",
+      6
+    ],
+    [
+      "node",
+      "OBSERVED",
+      240
+    ],
+    [
+      "node",
+      "SIMULATED",
+      69
+    ],
+    [
+      "note",
+      "OBSERVED",
+      257
+    ],
+    [
+      "quarantine",
+      "INFERRED",
+      5
+    ]
+  ],
+  "model_enabled": false,
+  "sessions": 0,
+  "production_databases_opened": false,
+  "default_owner": "local",
+  "default_namespace": "unified"
+}

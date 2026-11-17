@@ -1,0 +1,13 @@
+{
+  "design": "32 combinations: memory,self_state,progress_cost,lora,quantum each on/off; six named PDF arms are preselected subsets",
+  "base_model": "same immutable LFM2.5-350M checkpoint for all combinations; separate existing seed0 LoRA trained only on original train56",
+  "scope": "common six-action decision task; the LoRA remains exactly on its trained task, not reused as a different skill model",
+  "tasks": "12 fixed fresh48 cases:first and last per action",
+  "memory": "two nearest original train examples, Jaccard; no test answers in context",
+  "self_state": "V2: every arm receives the same observed user state. C adds a structured self-model summary derived only from that state; no new privilege or gold label. Initial unequal-information pilot retained separately, not used as proof of selfmodel benefit.",
+  "progress_cost": "order tasks by estimated benefit/cost from train-only error and prompt length; equal total action count; report fixed-prefix and full-corpus outcomes separately",
+  "quantum": "two-parameter pure-state sequential model fit on train label transition pairs; compare matched two-parameter classical equivalent and independently fit three-parameter Markov control, no physical claim",
+  "repeats": "2 deterministic order repeats; these are order controls, not independent stochastic model samples",
+  "measurement": "raw predicted action from six A-F conditional logits; correctness, policy violations, Brier, latency,tokens,peak memory; no tools executed in matrix task",
+  "limits": "small synthetic factorial pilot, not complete test of all cognitive faculties; full32 cells distinguish feature interactions; D real executable tasks evaluated separately"
+}

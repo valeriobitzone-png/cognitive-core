@@ -91,7 +91,8 @@ class DecisionPlane:
         first=self.reflex.classify(event)
         if first.action in ('WAIT','REQUEST_APPROVAL'):
             return first
-        if not self.s.enable_local_model:
+        # GGUF advice is deferred to the archive-backed, budgeted cycle/assess path.
+        if not self.s.enable_local_model or self.s.local_model_gguf:
             return first
         try:
             model=LocalDecisionModel(self.s).decide(event,memory_hint)

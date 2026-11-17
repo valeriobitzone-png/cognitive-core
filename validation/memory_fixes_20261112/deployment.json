@@ -1,0 +1,52 @@
+{
+  "files": [
+    {
+      "path": "runtime/src/cognitive_core/memory.py",
+      "before_sha256": "e084444cef8e051bc4f38c0e1f2bbf578767bbbc78ec6b656760ef95e889d936",
+      "after_sha256": "47c316d03c8855864947ce37ab3e53e96a503ee752d99c69dbdaf0e06cafab63"
+    },
+    {
+      "path": "runtime/src/cognitive_core/dream.py",
+      "before_sha256": "6b259fabec3f3fd7b7f08eb670d7db1c597fe5d36d2be597db105eac9179b5f6",
+      "after_sha256": "d7bfb89b70feb85fab6f75042fd3fe800854c7d29b39a576a4cd059c798ed533"
+    },
+    {
+      "path": "runtime/src/cognitive_core/vault.py",
+      "before_sha256": "464852ae8f9dd72ead76ec488888c7031b57aaef04bc56e5a04cb6fd42089381",
+      "after_sha256": "fef429099e6ea04b85aaad2426bbf4590baa9694346cf1b19579570cb6b61b05"
+    },
+    {
+      "path": "runtime/src/cognitive_core/portable.py",
+      "before_sha256": "57233e318cfb2b4bc13f62fc9c171e120368b05df138c9c556050a27b6915a3f",
+      "after_sha256": "5b6cc1462e4cde7e75dbfc9a2a552e1ba92f444b1364b5d6ea19ff4f793a75d9"
+    },
+    {
+      "path": "runtime/src/cognitive_core/engine.py",
+      "before_sha256": "c785d5990db9d013e369671d3cedfe935e13d1ca587d595319824b46dc964fa9",
+      "after_sha256": "374db144c5d977d32cf2e87bf61f29e4e48f965d6ecd968a7e0b02297e76c807"
+    },
+    {
+      "path": "runtime/src/cognitive_core/curiosity.py",
+      "before_sha256": "ab415b479454be1e359beaa5c24519aa0c1279568abfc2c2c11b5df216d83354",
+      "after_sha256": "b4a182fc61bc689ab9afcaf49b8ba5a7e436f6b57020adbcce227912d3b9017f"
+    },
+    {
+      "path": "runtime/tests/test_memory_dream.py",
+      "before_sha256": "2ba013ef00e0ebb0c4ca61ce46914c8f6182891a0bdf7deb036e64b92f277348",
+      "after_sha256": "ff07262204eea5de31b82732edb664381f58b4d5d36a4a1112fc01cbc4c3fe47"
+    },
+    {
+      "path": "runtime/tests/test_memory_audit_regressions.py",
+      "before_sha256": null,
+      "after_sha256": "cd2a6dd5a3341f99e9a291e9cd6e8eacf7b42911590fe6ef1af80191711dc31c"
+    },
+    {
+      "path": "runtime/docs/MEMORY_AUDIT_FIXES_20261112_IT.md",
+      "before_sha256": null,
+      "after_sha256": "a4019a26345e05f7166a90cb2ec98d4c9ccd55d22328e8e76a45203a213dbf4d"
+    }
+  ],
+  "branch": "feature/intelligence-feed-runtime",
+  "databases_opened": false,
+  "baseline_files": 362
+}

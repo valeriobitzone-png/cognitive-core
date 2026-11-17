@@ -1,0 +1,7 @@
+{
+  "B_memory_only": 0.24656751933372992,
+  "C_self_state": 0.14814909297052153,
+  "C_external_same_information": 0.14814909297052153,
+  "C_ablated_state": 0.25,
+  "C_irrelevant_perturbation": 0.14814909297052153
+}

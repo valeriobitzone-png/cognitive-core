@@ -1,0 +1,55 @@
+ M runtime/src/cognitive_core/api.py
+ M runtime/src/cognitive_core/cli.py
+ M runtime/src/cognitive_core/config.py
+ M runtime/src/cognitive_core/decision.py
+ M runtime/src/cognitive_core/drive.py
+ M runtime/src/cognitive_core/engine.py
+ M runtime/src/cognitive_core/research.py
+ M runtime/src/cognitive_core/vault.py
+ M runtime/src/cognitive_core/worker.py
+ M runtime/src/worldcore/dynamics.py
+ M runtime/src/worldcore/engine.py
+ M runtime/tests/test_cognitive_original.py
+?? Avvia_Cognitive_Core.command
+?? backup_pre_curiosity_11nov2026/
+?? runtime/docs/AUDIT_FIXES_20261110_IT.md
+?? runtime/docs/LOCAL_DECISION_ON_DEMAND_IT.md
+?? runtime/docs/MEMORY_AUDIT_FIXES_20261112_IT.md
+?? runtime/docs/OPERATIONAL_LOOP_IT.md
+?? runtime/docs/PROGRAMMA_UNICO_IT.md
+?? runtime/src/cognitive_core/advisor.py
+?? runtime/src/cognitive_core/curiosity.py
+?? runtime/src/cognitive_core/cycle.py
+?? runtime/src/cognitive_core/dream.py
+?? runtime/src/cognitive_core/experimental.py
+?? runtime/src/cognitive_core/information.py
+?? runtime/src/cognitive_core/memory.py
+?? runtime/src/cognitive_core/models.py
+?? runtime/src/cognitive_core/ondemand.py
+?? runtime/src/cognitive_core/portable.py
+?? runtime/src/cognitive_core/program.py
+?? runtime/src/cognitive_core/retrieval.py
+?? runtime/src/cognitive_core/selfmodel.py
+?? runtime/src/cognitive_core/skills.py
+?? runtime/src/worldcore/anticipation_mixin.py
+?? runtime/src/worldcore/area_forecast.py
+?? runtime/src/worldcore/next_event.py
+?? runtime/src/worldcore/pr_outcome.py
+?? runtime/tests/test_anticipation_enrich_v14.py
+?? runtime/tests/test_audit_regressions.py
+?? runtime/tests/test_curiosity_runtime.py
+?? runtime/tests/test_dynamics_holdout_v14.py
+?? runtime/tests/test_functional_self.py
+?? runtime/tests/test_local_advisor.py
+?? runtime/tests/test_memory_audit_regressions.py
+?? runtime/tests/test_memory_dream.py
+?? runtime/tests/test_next_event_v14.py
+?? runtime/tests/test_operational_cycle.py
+?? runtime/tests/test_unified_program.py
+?? runtime/training-artifacts/v12_test_runner_report_logs/
+?? validation/audit_fixes_20261110.json
+?? validation/decision_study_20261111/
+?? validation/decision_study_20261111_phase2/
+?? validation/memory_fixes_20261112/
+?? validation/operational_20261110/
+?? validation/unified_program_20261113/

@@ -1,0 +1,9 @@
+{
+  "installed_hashes": 15,
+  "protected_hashes_unchanged": 13,
+  "runner": "32703 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/runner.py --loop",
+  "git_diff_check": "passed",
+  "installed_regressions": "55 passed",
+  "launcher_on_copy": "passed",
+  "paid_calls": 0
+}

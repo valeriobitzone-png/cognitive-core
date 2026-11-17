@@ -1,0 +1,1 @@
+Nessun codice operativo installato. La prova di rollback usava checkout e backup su filesystem diversi, causando EXDEV sui nuovi file. Conservato il tentativo; la prova corretta copia entrambi nello stesso filesystem temporaneo.

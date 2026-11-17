@@ -1,0 +1,1111 @@
+{
+  "name": "base",
+  "adapter": null,
+  "epistemic": "SIMULATED",
+  "protocol": "single-token conditional classification; not generated JSON",
+  "summary": {
+    "prompt": {
+      "n": 34,
+      "accuracy": 0.23529411764705882,
+      "macro_f1": 0.1936614110527154
+    },
+    "memory": {
+      "n": 34,
+      "accuracy": 0.2647058823529412,
+      "macro_f1": 0.226007326007326
+    }
+  },
+  "rows": [
+    {
+      "id": "test-000",
+      "expected": "WAIT",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.050050072371959686,
+        0.011167681775987148,
+        0.36982277035713196,
+        0.47486183047294617,
+        0.0005918655660934746,
+        0.09350583702325821
+      ],
+      "prompt_tokens": 274,
+      "seconds": 0.29034245799994096
+    },
+    {
+      "id": "test-001",
+      "expected": "WAIT",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.030856609344482422,
+        0.006885041017085314,
+        0.2583591938018799,
+        0.6197714805603027,
+        0.0002507875033188611,
+        0.08387695997953415
+      ],
+      "prompt_tokens": 275,
+      "seconds": 0.08049816600396298
+    },
+    {
+      "id": "test-002",
+      "expected": "WAIT",
+      "actual": "WAIT",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.5138614773750305,
+        0.006468561012297869,
+        0.21420933306217194,
+        0.2427309900522232,
+        0.00015212598373182118,
+        0.022577499970793724
+      ],
+      "prompt_tokens": 278,
+      "seconds": 0.07206112498533912
+    },
+    {
+      "id": "test-003",
+      "expected": "WAIT",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.02014845609664917,
+        0.004495726898312569,
+        0.1488780379295349,
+        0.7560650706291199,
+        8.765273378230631e-05,
+        0.07032500952482224
+      ],
+      "prompt_tokens": 275,
+      "seconds": 0.07038033299613744
+    },
+    {
+      "id": "test-004",
+      "expected": "WAIT",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.06327544152736664,
+        0.004583657719194889,
+        0.2502592206001282,
+        0.5297987461090088,
+        0.0002930235059466213,
+        0.15178988873958588
+      ],
+      "prompt_tokens": 281,
+      "seconds": 0.06967958301538602
+    },
+    {
+      "id": "test-005",
+      "expected": "WAIT",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.03734191134572029,
+        0.005053677596151829,
+        0.14769011735916138,
+        0.6619011163711548,
+        0.0003230708825867623,
+        0.14769011735916138
+      ],
+      "prompt_tokens": 271,
+      "seconds": 0.06878129197866656
+    },
+    {
+      "id": "test-006",
+      "expected": "REMEMBER",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.03117991052567959,
+        0.0061396886594593525,
+        0.17942798137664795,
+        0.5526770353317261,
+        0.00018540251767262816,
+        0.2303900569677353
+      ],
+      "prompt_tokens": 292,
+      "seconds": 0.07112575002247468
+    },
+    {
+      "id": "test-007",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.01648716628551483,
+        0.0448167659342289,
+        0.3752461373806,
+        0.13804535567760468,
+        0.00019496837921906263,
+        0.42520958185195923
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.06849075001082383
+    },
+    {
+      "id": "test-008",
+      "expected": "REMEMBER",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.024052031338214874,
+        0.008848248980939388,
+        0.37623703479766846,
+        0.33202800154685974,
+        0.0002510054619051516,
+        0.2585836946964264
+      ],
+      "prompt_tokens": 288,
+      "seconds": 0.14908350000041537
+    },
+    {
+      "id": "test-009",
+      "expected": "REMEMBER",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.026895839720964432,
+        0.007705787196755409,
+        0.4207216799259186,
+        0.25518059730529785,
+        0.0003385685558896512,
+        0.289157509803772
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.06916095901397057
+    },
+    {
+      "id": "test-010",
+      "expected": "REMEMBER",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.03805546835064888,
+        0.008491321466863155,
+        0.5952876210212708,
+        0.03805546835064888,
+        0.0014755709562450647,
+        0.3186345100402832
+      ],
+      "prompt_tokens": 285,
+      "seconds": 0.06908033299259841
+    },
+    {
+      "id": "test-011",
+      "expected": "REMEMBER",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.0017832989105954766,
+        0.004277910105884075,
+        0.7194339036941528,
+        0.040587689727544785,
+        0.00035115238279104233,
+        0.233566015958786
+      ],
+      "prompt_tokens": 272,
+      "seconds": 0.06789845798630267
+    },
+    {
+      "id": "test-012",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.0023512716870754957,
+        0.009299458004534245,
+        0.017373675480484962,
+        0.022308241575956345,
+        9.704853437142447e-05,
+        0.9485703706741333
+      ],
+      "prompt_tokens": 289,
+      "seconds": 0.07010483398335055
+    },
+    {
+      "id": "test-013",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.10429447889328003,
+        0.009700898081064224,
+        0.15174758434295654,
+        0.60017329454422,
+        0.00016691323253326118,
+        0.13391678035259247
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.06765549999545328
+    },
+    {
+      "id": "test-014",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.015961576253175735,
+        0.006653774529695511,
+        0.6787033677101135,
+        0.19445177912712097,
+        0.00014700104657094926,
+        0.10408254712820053
+      ],
+      "prompt_tokens": 288,
+      "seconds": 0.06927083298796788
+    },
+    {
+      "id": "test-015",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.07924484461545944,
+        0.012152589857578278,
+        0.3551507294178009,
+        0.2765916585922241,
+        0.00026848571724258363,
+        0.2765916585922241
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.06934999997611158
+    },
+    {
+      "id": "test-016",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.014675557613372803,
+        0.004764455836266279,
+        0.33401408791542053,
+        0.5506961345672607,
+        0.00015315321797970682,
+        0.09569664299488068
+      ],
+      "prompt_tokens": 283,
+      "seconds": 0.07128583401208743
+    },
+    {
+      "id": "test-017",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.03424316644668579,
+        0.005950570106506348,
+        0.3681487441062927,
+        0.17390115559101105,
+        0.0005891864420846105,
+        0.41716718673706055
+      ],
+      "prompt_tokens": 284,
+      "seconds": 0.07053591698058881
+    },
+    {
+      "id": "test-018",
+      "expected": "WEB_RESEARCH",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.002690651686862111,
+        0.0034548654220998287,
+        0.18862923979759216,
+        0.45249804854393005,
+        0.00032135265064425766,
+        0.352405846118927
+      ],
+      "prompt_tokens": 287,
+      "seconds": 0.07174499999382533
+    },
+    {
+      "id": "test-019",
+      "expected": "WEB_RESEARCH",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.007190947886556387,
+        0.0018181565683335066,
+        0.032227590680122375,
+        0.8311604857444763,
+        0.00014020116941537708,
+        0.12746261060237885
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.07000791700556874
+    },
+    {
+      "id": "test-020",
+      "expected": "WEB_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.003392408834770322,
+        0.0023315665312111378,
+        0.18521924316883087,
+        0.3053749203681946,
+        0.00020372995641082525,
+        0.5034781098365784
+      ],
+      "prompt_tokens": 283,
+      "seconds": 0.07129100000020117
+    },
+    {
+      "id": "test-021",
+      "expected": "WEB_RESEARCH",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.0021479891147464514,
+        0.001302820979617536,
+        0.012360820546746254,
+        0.7647368907928467,
+        0.00035064946860074997,
+        0.21910078823566437
+      ],
+      "prompt_tokens": 278,
+      "seconds": 0.069926124997437
+    },
+    {
+      "id": "test-022",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.034871529787778854,
+        0.008816905319690704,
+        0.42482221126556396,
+        0.3749042749404907,
+        0.00030169798992574215,
+        0.15628336369991302
+      ],
+      "prompt_tokens": 280,
+      "seconds": 0.07260162499733269
+    },
+    {
+      "id": "test-023",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.030946534126996994,
+        0.006905104033648968,
+        0.3327065408229828,
+        0.4272036552429199,
+        0.0004414285358507186,
+        0.2017967253923416
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.06967895900015719
+    },
+    {
+      "id": "test-024",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.013311655260622501,
+        0.004321661312133074,
+        0.4408213794231415,
+        0.041002776473760605,
+        0.0010264843003824353,
+        0.4995160698890686
+      ],
+      "prompt_tokens": 285,
+      "seconds": 0.07157929200911894
+    },
+    {
+      "id": "test-025",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.004185270052403212,
+        0.001199099700897932,
+        0.039708733558654785,
+        0.7975711226463318,
+        0.00028481107437983155,
+        0.15705107152462006
+      ],
+      "prompt_tokens": 279,
+      "seconds": 0.06940183401457034
+    },
+    {
+      "id": "test-026",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.005891068372875452,
+        0.002167203463613987,
+        0.026401937007904053,
+        0.6009052395820618,
+        0.0001671167992753908,
+        0.36446744203567505
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.06890354098868556
+    },
+    {
+      "id": "test-027",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.008013145998120308,
+        0.003785142209380865,
+        0.12534670531749725,
+        0.5617648959159851,
+        0.0003989512042608112,
+        0.3006910979747772
+      ],
+      "prompt_tokens": 273,
+      "seconds": 0.07052700000349432
+    },
+    {
+      "id": "test-028",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.006159564014524221,
+        0.0019997181370854378,
+        0.20397676527500153,
+        0.2967844605445862,
+        0.0017647455679252744,
+        0.48931482434272766
+      ],
+      "prompt_tokens": 284,
+      "seconds": 0.07298279099632055
+    },
+    {
+      "id": "test-029",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.017976578325033188,
+        0.005836139898747206,
+        0.2481589913368225,
+        0.31864243745803833,
+        0.0002408862637821585,
+        0.4091449975967407
+      ],
+      "prompt_tokens": 281,
+      "seconds": 0.07043633400462568
+    },
+    {
+      "id": "test-030",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.021383093670010567,
+        0.0037158257327973843,
+        0.10859233140945435,
+        0.7081108689308167,
+        0.0001969315781025216,
+        0.1580009013414383
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.06986787499045022
+    },
+    {
+      "id": "test-031",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.1260809600353241,
+        0.01034935750067234,
+        0.26691338419914246,
+        0.38835668563842773,
+        0.00042716902680695057,
+        0.20787236094474792
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07050750000053085
+    },
+    {
+      "id": "test-032",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.06445186585187912,
+        0.011200054548680782,
+        0.3273135721683502,
+        0.3708948791027069,
+        0.00118047755677253,
+        0.2249591201543808
+      ],
+      "prompt_tokens": 276,
+      "seconds": 0.07002233300590888
+    },
+    {
+      "id": "test-033",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WEB_RESEARCH",
+      "mode": "prompt",
+      "candidate_probabilities": [
+        0.01859576813876629,
+        0.006840999703854322,
+        0.37350594997406006,
+        0.47959113121032715,
+        0.00020658034191001207,
+        0.1212596446275711
+      ],
+      "prompt_tokens": 277,
+      "seconds": 0.06967045800411142
+    },
+    {
+      "id": "test-000",
+      "expected": "WAIT",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.6821357011795044,
+        0.06344850361347198,
+        0.22145704925060272,
+        0.023341400548815727,
+        0.0020395489409565926,
+        0.007577844895422459
+      ],
+      "prompt_tokens": 454,
+      "seconds": 0.11320408299798146
+    },
+    {
+      "id": "test-001",
+      "expected": "WAIT",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9178719520568848,
+        0.021586284041404724,
+        0.05178280174732208,
+        0.007460019085556269,
+        0.0001548277650726959,
+        0.0011440312955528498
+      ],
+      "prompt_tokens": 455,
+      "seconds": 0.11295454201172106
+    },
+    {
+      "id": "test-002",
+      "expected": "WAIT",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9790945649147034,
+        0.004001336172223091,
+        0.005821908824145794,
+        0.010876760818064213,
+        5.036938455305062e-05,
+        0.00015514860569965094
+      ],
+      "prompt_tokens": 457,
+      "seconds": 0.12263841700041667
+    },
+    {
+      "id": "test-003",
+      "expected": "WAIT",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.14342302083969116,
+        0.002796304179355502,
+        0.02824166789650917,
+        0.0001787617802619934,
+        1.7699814634397626e-05,
+        0.8253425359725952
+      ],
+      "prompt_tokens": 455,
+      "seconds": 0.11067887500394136
+    },
+    {
+      "id": "test-004",
+      "expected": "WAIT",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9921931624412537,
+        0.004054867196828127,
+        0.0019153837347403169,
+        0.00033284377423115075,
+        1.2123829947086051e-05,
+        0.0014917021617293358
+      ],
+      "prompt_tokens": 463,
+      "seconds": 0.11094679200323299
+    },
+    {
+      "id": "test-005",
+      "expected": "WAIT",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9349406361579895,
+        0.0033719236962497234,
+        0.059768758714199066,
+        0.0018048604251816869,
+        4.809789243154228e-05,
+        6.574200961040333e-05
+      ],
+      "prompt_tokens": 449,
+      "seconds": 0.11283212498528883
+    },
+    {
+      "id": "test-006",
+      "expected": "REMEMBER",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.55210942029953,
+        0.05819191038608551,
+        0.010112238116562366,
+        9.913687244988978e-05,
+        2.840319211827591e-05,
+        0.3794589042663574
+      ],
+      "prompt_tokens": 487,
+      "seconds": 0.11064241698477417
+    },
+    {
+      "id": "test-007",
+      "expected": "REMEMBER",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.48969799280166626,
+        0.06627342104911804,
+        0.33656418323516846,
+        0.05161379277706146,
+        0.00423671817407012,
+        0.05161379277706146
+      ],
+      "prompt_tokens": 463,
+      "seconds": 0.11358541701338254
+    },
+    {
+      "id": "test-008",
+      "expected": "REMEMBER",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.36605173349380493,
+        0.01105380617082119,
+        0.5326021313667297,
+        0.0495397187769413,
+        0.0067044710740447044,
+        0.03404811769723892
+      ],
+      "prompt_tokens": 476,
+      "seconds": 0.11278874997515231
+    },
+    {
+      "id": "test-009",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.09271690994501114,
+        0.005927193444222212,
+        0.4155283570289612,
+        0.014218597672879696,
+        0.000753558415453881,
+        0.47085532546043396
+      ],
+      "prompt_tokens": 459,
+      "seconds": 0.11384912501671351
+    },
+    {
+      "id": "test-010",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.019451387226581573,
+        7.949338032631204e-05,
+        0.20912207663059235,
+        0.04117858409881592,
+        0.0002606486086733639,
+        0.729907751083374
+      ],
+      "prompt_tokens": 477,
+      "seconds": 0.11235758301336318
+    },
+    {
+      "id": "test-011",
+      "expected": "REMEMBER",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.00932141114026308,
+        0.00932141114026308,
+        0.3963564932346344,
+        0.007259521633386612,
+        0.001045833108946681,
+        0.5766952633857727
+      ],
+      "prompt_tokens": 459,
+      "seconds": 0.11108195799170062
+    },
+    {
+      "id": "test-012",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.7887417674064636,
+        0.1553124636411667,
+        0.0036525996401906013,
+        0.007732553407549858,
+        6.284642586251721e-05,
+        0.0444977730512619
+      ],
+      "prompt_tokens": 478,
+      "seconds": 0.11191999999573454
+    },
+    {
+      "id": "test-013",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.882526695728302,
+        0.09301763772964478,
+        0.0046310764737427235,
+        0.0015034901443868876,
+        4.785278179042507e-06,
+        0.01831625960767269
+      ],
+      "prompt_tokens": 460,
+      "seconds": 0.1113199999963399
+    },
+    {
+      "id": "test-014",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.009270209819078445,
+        0.14501047134399414,
+        0.5061362385749817,
+        0.06849809736013412,
+        0.00016978982603177428,
+        0.2709152102470398
+      ],
+      "prompt_tokens": 484,
+      "seconds": 0.11261429198202677
+    },
+    {
+      "id": "test-015",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.01071524154394865,
+        0.0023908945731818676,
+        0.8512171506881714,
+        0.005061522126197815,
+        7.68551544751972e-05,
+        0.13053838908672333
+      ],
+      "prompt_tokens": 456,
+      "seconds": 0.11011704200063832
+    },
+    {
+      "id": "test-016",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.8936406373977661,
+        0.05712854117155075,
+        0.008760945871472359,
+        0.0011856649070978165,
+        2.0400491848704405e-05,
+        0.039263833314180374
+      ],
+      "prompt_tokens": 472,
+      "seconds": 0.1113678750116378
+    },
+    {
+      "id": "test-017",
+      "expected": "LOCAL_RESEARCH",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.68845534324646,
+        0.08222426474094391,
+        0.0017065107822418213,
+        0.004093704745173454,
+        1.1498378626129124e-05,
+        0.22350874543190002
+      ],
+      "prompt_tokens": 473,
+      "seconds": 0.11215083301067352
+    },
+    {
+      "id": "test-018",
+      "expected": "WEB_RESEARCH",
+      "actual": "WEB_RESEARCH",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.11923222243785858,
+        0.17348185181617737,
+        0.28602322936058044,
+        0.41616132855415344,
+        0.0015009127091616392,
+        0.0036005014553666115
+      ],
+      "prompt_tokens": 466,
+      "seconds": 0.11305387498578057
+    },
+    {
+      "id": "test-019",
+      "expected": "WEB_RESEARCH",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.764313280582428,
+        0.055366676300764084,
+        0.00962128397077322,
+        0.00010688286420190707,
+        5.0487877160776407e-05,
+        0.17054136097431183
+      ],
+      "prompt_tokens": 458,
+      "seconds": 0.1131243749987334
+    },
+    {
+      "id": "test-020",
+      "expected": "WEB_RESEARCH",
+      "actual": "REQUIRE_APPROVAL",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.040651123970746994,
+        0.010278214700520039,
+        0.021758979186415672,
+        0.0003103751805610955,
+        0.0017860857769846916,
+        0.9252151846885681
+      ],
+      "prompt_tokens": 468,
+      "seconds": 0.11107558399089612
+    },
+    {
+      "id": "test-021",
+      "expected": "WEB_RESEARCH",
+      "actual": "REMEMBER",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.16865314543247223,
+        0.27806201577186584,
+        0.2165549099445343,
+        0.24538886547088623,
+        0.0010675265220925212,
+        0.09027352929115295
+      ],
+      "prompt_tokens": 458,
+      "seconds": 0.11125995800830424
+    },
+    {
+      "id": "test-022",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "ASK_CLARIFICATION",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.20118927955627441,
+        0.03496146202087402,
+        0.25833216309547424,
+        0.0041755507700145245,
+        0.4826280176639557,
+        0.01871352083981037
+      ],
+      "prompt_tokens": 460,
+      "seconds": 0.11064995900960639
+    },
+    {
+      "id": "test-023",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.7576809525489807,
+        0.042745441198349,
+        0.16906148195266724,
+        0.025926416739821434,
+        0.000609730719588697,
+        0.003975945990532637
+      ],
+      "prompt_tokens": 454,
+      "seconds": 0.11168341600568965
+    },
+    {
+      "id": "test-024",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WEB_RESEARCH",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.20941990613937378,
+        0.00031485018553212285,
+        0.0005190999363549054,
+        0.6450586915016174,
+        0.0007552860770374537,
+        0.1439320594072342
+      ],
+      "prompt_tokens": 477,
+      "seconds": 0.11201637500198558
+    },
+    {
+      "id": "test-025",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9108214378356934,
+        0.018903499469161034,
+        0.004217940848320723,
+        6.016569386702031e-05,
+        1.723776222206652e-05,
+        0.06597969681024551
+      ],
+      "prompt_tokens": 466,
+      "seconds": 0.1105084590089973
+    },
+    {
+      "id": "test-026",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9125321507453918,
+        0.04009386897087097,
+        0.04009386897087097,
+        0.0015546079957857728,
+        0.0019961565267294645,
+        0.003729310818016529
+      ],
+      "prompt_tokens": 456,
+      "seconds": 0.11031308400561102
+    },
+    {
+      "id": "test-027",
+      "expected": "ASK_CLARIFICATION",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.7613757252693176,
+        0.06249752640724182,
+        0.026052843779325485,
+        3.67957582056988e-05,
+        0.00011333889415254816,
+        0.14992377161979675
+      ],
+      "prompt_tokens": 454,
+      "seconds": 0.11181937498622574
+    },
+    {
+      "id": "test-028",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.6611942052841187,
+        0.015549800358712673,
+        0.24323976039886475,
+        0.04789675399661064,
+        0.00648212106898427,
+        0.02563728392124176
+      ],
+      "prompt_tokens": 463,
+      "seconds": 0.1133878749969881
+    },
+    {
+      "id": "test-029",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "LOCAL_RESEARCH",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.2306412309408188,
+        0.051463011652231216,
+        0.43089452385902405,
+        0.01670759543776512,
+        0.26135075092315674,
+        0.008942931890487671
+      ],
+      "prompt_tokens": 467,
+      "seconds": 0.11361900001065806
+    },
+    {
+      "id": "test-030",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9682443737983704,
+        0.00837695598602295,
+        0.02277093008160591,
+        0.0001850710978033021,
+        0.0002376360062044114,
+        0.0001850710978033021
+      ],
+      "prompt_tokens": 457,
+      "seconds": 0.11295204199268483
+    },
+    {
+      "id": "test-031",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.9043616056442261,
+        0.012900024652481079,
+        0.06551174074411392,
+        0.016563963145017624,
+        0.0001623873395146802,
+        0.0005001884419471025
+      ],
+      "prompt_tokens": 454,
+      "seconds": 0.11049187500611879
+    },
+    {
+      "id": "test-032",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WEB_RESEARCH",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.24833153188228607,
+        0.06278803944587708,
+        0.31886398792266846,
+        0.36132022738456726,
+        0.0035422593355178833,
+        0.005153955891728401
+      ],
+      "prompt_tokens": 459,
+      "seconds": 0.11268120800377801
+    },
+    {
+      "id": "test-033",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "WAIT",
+      "mode": "memory",
+      "candidate_probabilities": [
+        0.828062117099762,
+        0.041226789355278015,
+        0.09889791905879974,
+        0.030162161216139793,
+        0.0005524393054656684,
+        0.0010986565612256527
+      ],
+      "prompt_tokens": 455,
+      "seconds": 0.1105697920138482
+    }
+  ],
+  "elapsed_seconds": 6.61069737499929,
+  "mlx_peak_bytes": 1092664980,
+  "note": "Warm MLX evaluation. Do not compare latency directly to CPU cold-process GGUF measurements."
+}

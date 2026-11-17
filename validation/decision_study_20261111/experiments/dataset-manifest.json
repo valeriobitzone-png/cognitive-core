@@ -1,0 +1,11 @@
+{
+  "format": "cognitive-decision-pilot-v1",
+  "counts": {
+    "train": 56,
+    "dev": 16,
+    "test": 34
+  },
+  "sha256": "5b400cd1673f0423a48ed36b755649aee740287abd286c20bada7c97a3f1b5b8",
+  "epistemic": "SIMULATED",
+  "prompt_tuning": "Frozen before model comparison; earlier relevance-only smoke tests not included."
+}

@@ -1,0 +1,30 @@
+{
+  "chat_template.jinja": {
+    "bytes": 5487,
+    "sha256": "ba551d58630afa3190b1be3602e28301f3d2e9bbac978dfc49d6d825171648b6"
+  },
+  "config.json": {
+    "bytes": 1281,
+    "sha256": "720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8"
+  },
+  "generation_config.json": {
+    "bytes": 134,
+    "sha256": "0ec7d228c4de7e3453e98bf6910c7eb7841e87fede63ea11c0f75a5c64e1c3c3"
+  },
+  "tokenizer.json": {
+    "bytes": 4733389,
+    "sha256": "df1d8d5ec5d091b460562ffd545e4a5e91d17d4a0db7ebe733be34ed374377bd"
+  },
+  "tokenizer_config.json": {
+    "bytes": 595,
+    "sha256": "3701f370c70034d06e28947ff51c1063983393319f429e3ce58f06a45fae67cc"
+  },
+  "LICENSE": {
+    "bytes": 10574,
+    "sha256": "4d28ca14dedc0b3d0fcc2b3339f0e79931faa33874f3d24f522183a8fc70068c"
+  },
+  "README.md": {
+    "bytes": 14508,
+    "sha256": "a2bb9f40aca96e21d0e2c497af58f459a4b1f92c9d459dc0ece67ec63f7480b5"
+  }
+}

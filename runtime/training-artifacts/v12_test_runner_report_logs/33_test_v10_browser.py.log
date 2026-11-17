@@ -1,0 +1,4 @@
+s..                                                                      [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_v10_browser.py:27: playwright not installed, browser evaluation unavailable
+2 passed, 1 skipped in 0.03s

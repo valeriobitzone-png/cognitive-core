@@ -1,0 +1,13 @@
+✔ OpenClaw native hook registration and context recall (68.764292ms)
+✔ OpenClaw observes metadata, never raw result (89.034375ms)
+✔ OpenClaw bridge fail-open for missing interpreter (2.065167ms)
+✔ OpenClaw concurrent requests are correlated and not interchanged (4.645917ms)
+✔ OpenClaw gateway_stop cleans persistent child and future startup works (58.14425ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 261.671792

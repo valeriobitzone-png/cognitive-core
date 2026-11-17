@@ -1,0 +1,88 @@
+{
+  "code_root": "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core",
+  "home": "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/validation/operational_20261110/isolated-home",
+  "source": "hash-inventoried copy of realtest",
+  "import": {
+    "batch_id": "0bc65684fdea88b5f3fedd5c1cd8ec629da9d38e8ed3408583894699d5bc12d7",
+    "status": "active",
+    "duplicate": false,
+    "records": 1695,
+    "bytes": 2665537,
+    "skipped": [],
+    "quarantined": [
+      {
+        "path": "data/ensemble/connection_graph.json#edges/485",
+        "reason": "nonfinite number"
+      },
+      {
+        "path": "data/ensemble/connection_graph.json#edges/522",
+        "reason": "nonfinite number"
+      },
+      {
+        "path": "data/ensemble/connection_graph.json#edges/583",
+        "reason": "nonfinite number"
+      },
+      {
+        "path": "data/ensemble/connection_graph.json#edges/627",
+        "reason": "nonfinite number"
+      },
+      {
+        "path": "data/ensemble/connection_graph.json#edges/789",
+        "reason": "nonfinite number"
+      }
+    ],
+    "verified_facts": 0
+  },
+  "duplicate": {
+    "batch_id": "0bc65684fdea88b5f3fedd5c1cd8ec629da9d38e8ed3408583894699d5bc12d7",
+    "status": "active",
+    "duplicate": true,
+    "records": 0
+  },
+  "record_counts": {
+    "archive": 3,
+    "edge": 887,
+    "excluded": 53,
+    "hypothesis": 262,
+    "metadata": 3,
+    "node": 240,
+    "note": 242,
+    "quarantine": 5
+  },
+  "stages_with_restart": [
+    "research",
+    "whatif",
+    "decide",
+    "act",
+    "learn",
+    "done"
+  ],
+  "topic_id": "topic_e80a1ee0cd244322",
+  "blocked_web_job_preserved": true,
+  "learning": {
+    "epistemic": "OBSERVED",
+    "note_persisted": true,
+    "retrieved_sources": 5,
+    "truth_updates": 0,
+    "model_weight_updates": 0,
+    "usefulness": "unverified",
+    "observed_note_sha256": "23187bab15532ad0afe98bc9911ab6184ca5f0f280ce42347db3a0a115a6d8ea"
+  },
+  "export": {
+    "path": "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/validation/operational_20261110/portable-export-markdown",
+    "format": "cognitive-core-state-v1",
+    "exported_documents": 243,
+    "owner": "ambrogio",
+    "namespace": "realtest-bridge"
+  },
+  "rollback_on_restored_copy": {
+    "batch_id": "0bc65684fdea88b5f3fedd5c1cd8ec629da9d38e8ed3408583894699d5bc12d7",
+    "status": "rolled_back",
+    "history_retained": true
+  },
+  "production_databases_modified": false,
+  "network_calls": 0,
+  "paid_calls": 0,
+  "exported_original_markdown_notes": 242,
+  "wheel": "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/dist/operational-20261110-final/worldcore_cognitive_layer-1.4.0rc3-py3-none-any.whl"
+}

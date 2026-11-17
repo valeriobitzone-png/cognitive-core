@@ -1,0 +1,36 @@
+{
+  "layer_index": 8,
+  "hidden_units": 1024,
+  "intervention_rms": 0.5,
+  "weights_modified": false,
+  "sham_rms": 0,
+  "train_contexts": 12,
+  "test_contexts": 12,
+  "summary": {
+    "sham": {
+      "n": 12,
+      "self_yes_rate": 0.0,
+      "external_yes_rate": 0.0
+    },
+    "concept_injection": {
+      "n": 12,
+      "self_yes_rate": 0.0,
+      "external_yes_rate": 1.0
+    },
+    "random_injection": {
+      "n": 12,
+      "self_yes_rate": 1.0,
+      "external_yes_rate": 1.0
+    },
+    "external_cue": {
+      "n": 12,
+      "self_yes_rate": 0.0,
+      "external_yes_rate": 0.0
+    }
+  },
+  "self_test_accuracy": 0.75,
+  "external_test_accuracy": 1.0,
+  "mlx_peak_bytes": 811372540,
+  "seconds": 2.190771458001109,
+  "limits": "Actual activation intervention. Untrained self-report, tiny synthetic contexts and one layer/amplitude/direction. External probe sees activation projections; language readout does not get explicit projections, so this is an instrumentation control, NOT equal-information introspection superiority. No consciousness inference."
+}
