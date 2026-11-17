@@ -312,7 +312,70 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
             if old:
                 self.db.execute("UPDATE memories SET status='superseded' WHERE id=?", (old["id"],))
             self.db.execute("""INSERT INTO memories VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""", (mid,owner,space,key,value,kind,source,float(confidence),version,"active",now,expiry,old["id"] if old else None,_json(tags)))
+        if getattr(self, "_embedder", None):
+            try:
+                self._store_vectors([(mid, key, value)])
+            except Exception:  # l'embedder è codice dell'host: un suo guasto non deve impedire di ricordare; embed_missing recupera
+                pass
         return self.memory_by_id(owner, mid, space=space)
+
+    # ---------- ricerca per significato (opzionale) ----------
+    def set_embedder(self, fn, model: str, *, min_similarity: float = 0.81, relative_margin: float = 0.015) -> None:
+        """fn(testi: list[str], kind: 'query'|'passage') -> lista di vettori normalizzati (stessa dimensione).
+        Senza embedder il richiamo resta lessicale. Richiede numpy nell'host."""
+        import numpy  # noqa: F401  (errore chiaro se manca)
+        if not callable(fn):
+            raise WorldCoreError("embedder must be callable")
+        self._embedder = (fn, _check_id(model, "embedding model"))
+        self._min_similarity = float(min_similarity)
+        self._relative_margin = float(relative_margin)
+        self._vec_cache = {}
+        with self._transaction():
+            self.db.execute("""CREATE TABLE IF NOT EXISTS memory_vectors(
+                memory_id TEXT PRIMARY KEY, model TEXT NOT NULL, vec BLOB NOT NULL)""")
+
+    def _store_vectors(self, items):
+        import numpy as np
+        fn, model = self._embedder
+        vecs = np.asarray(fn([f"{k.replace('.', ' ')}: {v}" for _, k, v in items], "passage"), dtype=np.float32)
+        with self._transaction():
+            self.db.executemany("INSERT OR REPLACE INTO memory_vectors VALUES(?,?,?)",
+                                [(mid, model, vec.astype(np.float16).tobytes()) for (mid, _, _), vec in zip(items, vecs)])
+        self._vec_cache = {}
+
+    def embed_missing(self, *, limit: int = 20000) -> int:
+        """Calcola i vettori mancanti (fatti scritti prima dell'embedder o durante un suo guasto). Idempotente."""
+        if not getattr(self, "_embedder", None):
+            return 0
+        model = self._embedder[1]
+        with self.lock:
+            rows = self.db.execute("""SELECT m.id, m.fact_key, m.value FROM memories m LEFT JOIN memory_vectors v
+                ON v.memory_id=m.id AND v.model=? WHERE m.status='active' AND v.memory_id IS NULL LIMIT ?""",
+                (model, limit)).fetchall()
+        for i in range(0, len(rows), 64):
+            self._store_vectors([(r["id"], r["fact_key"], r["value"]) for r in rows[i:i + 64]])
+        return len(rows)
+
+    def _semantic(self, owner, space, query, min_confidence):
+        """{memory_id: similarità coseno} per i fatti attivi dell'ambito che hanno un vettore."""
+        import numpy as np
+        fn, model = self._embedder
+        with self.lock:
+            stamp = self.db.execute("SELECT count(*), max(rowid) FROM memory_vectors").fetchone()
+            key = (owner, space, model, tuple(stamp), min_confidence)
+            if key not in self._vec_cache:
+                rows = self.db.execute("""SELECT v.memory_id, v.vec FROM memory_vectors v JOIN memories m ON m.id=v.memory_id
+                    WHERE m.owner=? AND m.space=? AND m.status='active' AND v.model=? AND m.confidence>=?
+                    AND (m.valid_until IS NULL OR m.valid_until>?)""", (owner, space, model, min_confidence, utcnow())).fetchall()
+                ids = [r[0] for r in rows]
+                mat = (np.frombuffer(b"".join(r[1] for r in rows), dtype=np.float16).reshape(len(rows), -1).astype(np.float32)
+                       if rows else np.zeros((0, 1), np.float32))
+                self._vec_cache = {key: (ids, mat)}
+            ids, mat = self._vec_cache[key]
+        if not ids:
+            return {}
+        q = np.asarray(fn([query], "query")[0], dtype=np.float32)
+        return dict(zip(ids, (mat @ q).tolist()))
 
     @staticmethod
     def _mem(row) -> dict:
@@ -372,6 +435,33 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
             else:
                 score = 0
             scored.append((score * d["confidence"], d["created_at"], d))
+        if stems and getattr(self, "_embedder", None):
+            try:
+                sims = self._semantic(owner, space, query, min_confidence)
+            except Exception:  # embedder dell'host guasto: si resta sul richiamo lessicale
+                sims = {}
+            if sims:
+                lexical = {x[2]["id"]: x for x in scored}
+                best = max(sims.values())
+                # solo-significato: sopra la soglia assoluta E vicino al migliore (le similarità e5 sono compresse:
+                # una soglia fissa da sola lascia passare rumore)
+                floor = max(self._min_similarity, best - self._relative_margin)
+                extra = sorted((mid for mid, sim in sims.items() if mid not in lexical and sim >= floor),
+                               key=lambda m: -sims[m])[:limit * 5]
+                rows = {}
+                if extra:
+                    with self.lock:
+                        rows = {r["id"]: self._mem(r) for r in self.db.execute(
+                            f"SELECT * FROM memories WHERE id IN ({','.join('?' * len(extra))})", extra)}
+                fused = []
+                for mid in list(lexical) + extra:
+                    lex = lexical.get(mid)
+                    d = lex[2] if lex else rows.get(mid)
+                    if d is None:
+                        continue
+                    sim = sims.get(mid, floor - 0.05)  # fatto lessicale senza vettore: in coda ai semantici
+                    fused.append(((sim + 0.05 * (lex[0] if lex else 0.0)) * d["confidence"], d["created_at"], d))
+                scored = fused
         scored.sort(key=lambda x:(x[0],x[1]),reverse=True)
         return [x[2] for x in scored[:limit]]
 
