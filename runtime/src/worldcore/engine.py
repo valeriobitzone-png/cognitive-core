@@ -469,6 +469,17 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
         rows=self.db.execute("SELECT * FROM memories WHERE owner=? AND space=? AND fact_key=? ORDER BY version", (_check_id(owner),_check_id(space),_check_id(key))).fetchall()
         return [self._mem(r) for r in rows]
 
+    def facts(self, owner: str, prefix: str, *, space: str = "default", limit: int = 200) -> list[dict]:
+        """Fatti attivi la cui chiave inizia con prefix (es. "persona.agnese."), in ordine di chiave."""
+        owner, space = _check_id(owner), _check_id(space)
+        if not isinstance(prefix, str) or not prefix or len(prefix) > 200:
+            raise WorldCoreError("prefix must be 1..200 chars")
+        # intervallo di chiavi invece di LIKE: nessun carattere jolly, "_" e "%" restano letterali
+        rows = self.db.execute("SELECT * FROM memories WHERE owner=? AND space=? AND status='active' AND fact_key >= ? AND fact_key < ? "
+                               "AND (valid_until IS NULL OR valid_until > ?) ORDER BY fact_key LIMIT ?",
+                               (owner, space, prefix, prefix + "\U0010ffff", utcnow(), max(1, min(int(limit), 1000)))).fetchall()
+        return [self._mem(r) for r in rows]
+
     def forget(self, owner: str, key: str, *, space: str = "default") -> int:
         with self._transaction():
             cur=self.db.execute("DELETE FROM memories WHERE owner=? AND space=? AND fact_key=?",(_check_id(owner),_check_id(space),_check_id(key)))
