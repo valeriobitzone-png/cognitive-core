@@ -55,6 +55,37 @@ def _check_id(value: str, name: str = "identifier") -> str:
     return value
 
 
+def _check_tag(value: str) -> str:
+    """Etichette: lettere Unicode (accenti compresi), cifre e _.:@/- ; niente spazi."""
+    if not isinstance(value, str) or not re.fullmatch(r"[\w.:@/-]{1,128}", value):
+        raise WorldCoreError("invalid tag: use 1-128 letters, digits or _.:@/- without spaces")
+    return value
+
+
+# Richiamo in italiano: parole vuote e interrogative non sono indizi di contenuto.
+RECALL_STOPWORDS = frozenset("""
+a ad al allo alla ai agli alle anche c che chi ci come con cosa cui d da dal dallo dalla dai dagli dalle del dello della
+dei degli delle di dove e ed è era gli ha hai ho i il in io l la le lei li lo loro lui ma mi mia mie miei mio ne nel nello
+nella nei negli nelle no noi non o per perché più poi qual quale quali quando quanto quanta quanti quante quel quella
+quelle quelli questo questa queste questi se si sì sia sono su sul sullo sulla sui sugli sulle ti tra fra tu tua tue tuo
+tuoi un una uno vi voi
+the a an of to and or is are was what who when where how which
+""".split())
+
+
+def _recall_tokens(query: str) -> list[str]:
+    q = query.casefold().replace("’", "'")
+    words = re.findall(r"\w+", re.sub(r"\b(\w{1,3})'", r"\1 ", q))  # «dell'auto» → «dell auto»
+    return [w for w in words if w not in RECALL_STOPWORDS and len(w) > 1]
+
+
+def _stem(token: str) -> str:
+    """Radice grezza per l'italiano: toglie la vocale finale (preventivi/preventivo, fatture/fattura)."""
+    if len(token) > 4 and token[-1] in "aeiouàèéìòù":
+        return token[:-1]
+    return token
+
+
 def _text(value: str, name: str, maximum: int = 8000) -> str:
     if not isinstance(value, str) or not value.strip() or len(value) > maximum or "\x00" in value:
         raise WorldCoreError(f"{name} must be non-empty text <= {maximum} characters")
@@ -267,7 +298,7 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
         tags = tags or []
         if not isinstance(tags, list) or len(tags) > 30:
             raise WorldCoreError("tags must be a list of <= 30 strings")
-        tags = [_check_id(t, "tag") for t in tags]
+        tags = [_check_tag(t) for t in tags]
         expiry = _when(valid_until) if valid_until else None
         now = utcnow()
         if expiry and expiry <= now:
@@ -301,35 +332,46 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
             raise WorldCoreError("limit must be 1..50")
         if not isinstance(min_confidence,(int,float)) or not 0<=min_confidence<=1:
             raise WorldCoreError("invalid min_confidence")
-        tokens = re.findall(r"\w+", query.casefold())
-        # Search full scoped history with indexed FTS5 if available, never just
-        # the 1,000 newest memories. A broad recall without a query is bounded.
+        raw_tokens = re.findall(r"\w+", query.casefold())
+        tokens = _recall_tokens(query)
+        if raw_tokens and not tokens:
+            return []  # solo parole vuote («il», «di che cosa»): nessun indizio, nessun risultato
+        stems = sorted({_stem(t) for t in tokens})
         with self.lock:
-            if tokens and self.fts_enabled:
-                fts_query = " OR ".join('"'+tok.replace('"','')+'"' for tok in tokens[:25])
+            if stems and self.fts_enabled:
+                # radice con prefisso: «preventiv*» trova preventivo/preventivi; tutto lo storico dell'ambito, non solo i più recenti
+                fts_query = " OR ".join('"' + st.replace('"', '') + '"*' for st in stems[:25])
                 rows = self.db.execute("""SELECT m.* FROM memories_fts
                   JOIN memories m ON m.id=memories_fts.id WHERE memories_fts MATCH ?
                   AND m.owner=? AND m.space=? AND m.status='active'
                   AND (m.valid_until IS NULL OR m.valid_until>?) AND m.confidence>=?
                   ORDER BY bm25(memories_fts) LIMIT 5000""",
-                  (fts_query,owner,space,utcnow(),min_confidence)).fetchall()
+                  (fts_query, owner, space, utcnow(), min_confidence)).fetchall()
             else:
                 rows = self.db.execute("""SELECT * FROM memories WHERE owner=? AND space=?
                   AND status='active' AND (valid_until IS NULL OR valid_until>?)
                   AND confidence>=? ORDER BY created_at DESC LIMIT ?""",
-                  (owner,space,utcnow(),min_confidence,10000 if tokens else limit)).fetchall()
+                  (owner, space, utcnow(), min_confidence, 10000 if stems else limit)).fetchall()
         scored = []
         for r in rows:
-            d=self._mem(r)
-            hay=(d["fact_key"]+" "+d["value"]+" "+" ".join(d["tags"])).casefold()
-            if tokens:
-                hits=sum(1 for t in tokens if t in hay)
-                if not hits:
+            d = self._mem(r)
+            if stems:
+                key_parts = re.split(r"[._:@/-]", d["fact_key"].casefold())
+                words = re.findall(r"\w+", (d["value"] + " " + " ".join(d["tags"])).casefold())
+                score = 0.0
+                for st in stems:
+                    in_head = key_parts[0].startswith(st)            # il soggetto del fatto: «luca».ruolo
+                    in_key = any(p.startswith(st) for p in key_parts)
+                    in_text = any(w.startswith(st) for w in words)
+                    if not (in_key or in_text):
+                        continue
+                    score += 1.0 + (0.6 if in_head else 0.3 if in_key else 0.0)
+                if score == 0:
                     continue
-                score=hits/len(tokens) + (0.25 if d["fact_key"].casefold() in query.casefold() else 0)
+                score /= len(stems)
             else:
-                score=0
-            scored.append((score*d["confidence"],d["created_at"],d))
+                score = 0
+            scored.append((score * d["confidence"], d["created_at"], d))
         scored.sort(key=lambda x:(x[0],x[1]),reverse=True)
         return [x[2] for x in scored[:limit]]
 
