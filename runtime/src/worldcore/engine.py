@@ -243,6 +243,14 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
             action TEXT NOT NULL, args_sha256 TEXT NOT NULL, purpose TEXT NOT NULL,
             status TEXT NOT NULL DEFAULT 'pending', expires_at TEXT NOT NULL,
             created_at TEXT NOT NULL, decided_at TEXT, used_at TEXT);
+        CREATE TABLE IF NOT EXISTS schedules (
+            id TEXT PRIMARY KEY, owner TEXT NOT NULL, space TEXT NOT NULL,
+            kind TEXT NOT NULL, title TEXT NOT NULL, spec TEXT NOT NULL,
+            every_seconds INTEGER, next_run REAL NOT NULL, last_run REAL,
+            status TEXT NOT NULL DEFAULT 'active', lease_until REAL NOT NULL DEFAULT 0,
+            lease_token TEXT NOT NULL DEFAULT '', runs INTEGER NOT NULL DEFAULT 0,
+            last_outcome TEXT, created_at TEXT NOT NULL);
+        CREATE INDEX IF NOT EXISTS schedules_due ON schedules(owner,space,status,next_run);
         """)
         self._init_learning_schema()
         self._init_knowledge_schema()
@@ -662,6 +670,88 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
                 return False
             result=self.db.execute("UPDATE approvals SET status='consumed',used_at=? WHERE id=? AND status='approved'",(utcnow(),request_id))
             return result.rowcount==1
+
+    # ---------- attività programmate (orario, ricorrenza, lease) ----------
+    # Il Core decide COSA è dovuto e QUANDO; l'esecuzione resta all'host, che tiene il lease mentre lavora.
+    # Tempi in secondi epoch (float): l'host può passare `now` (orologio di test).
+    def schedule(self, owner: str, kind: str, title: str, next_run: float, *, space: str = "default",
+                 every_seconds: int | None = None, spec: dict | None = None, schedule_id: str | None = None) -> dict:
+        owner, space, kind = _check_id(owner), _check_id(space), _check_id(kind)
+        title = _text(title, "title", 200)
+        if not isinstance(next_run, (int, float)) or not math.isfinite(next_run):
+            raise WorldCoreError("next_run must be epoch seconds")
+        if every_seconds is not None and (type(every_seconds) is not int or not 60 <= every_seconds <= 366 * 86400):
+            raise WorldCoreError("every_seconds must be 60..31622400")
+        sid = _check_id(schedule_id) if schedule_id else "sch_" + uuid.uuid4().hex[:16]
+        with self._transaction():
+            self.db.execute("INSERT INTO schedules(id,owner,space,kind,title,spec,every_seconds,next_run,created_at) "
+                            "VALUES (?,?,?,?,?,?,?,?,?)", (sid, owner, space, kind, title, _json(spec or {}),
+                                                         every_seconds, float(next_run), utcnow()))
+        return self.get_schedule(owner, sid, space=space)
+
+    def get_schedule(self, owner: str, schedule_id: str, *, space: str = "default") -> dict | None:
+        r = self.db.execute("SELECT * FROM schedules WHERE owner=? AND space=? AND id=?",
+                            (_check_id(owner), _check_id(space), _check_id(schedule_id))).fetchone()
+        if not r:
+            return None
+        d = _load(r)
+        d["spec"] = json.loads(d["spec"])
+        return d
+
+    def schedules(self, owner: str, *, space: str = "default", include_finished: bool = False) -> list[dict]:
+        cond = "" if include_finished else " AND status='active'"
+        rows = self.db.execute(f"SELECT id FROM schedules WHERE owner=? AND space=?{cond} ORDER BY next_run",
+                               (_check_id(owner), _check_id(space))).fetchall()
+        return [self.get_schedule(owner, r["id"], space=space) for r in rows]
+
+    def cancel_schedule(self, owner: str, schedule_id: str, *, space: str = "default") -> bool:
+        with self._transaction():
+            cur = self.db.execute("UPDATE schedules SET status='cancelled', lease_token='' WHERE owner=? AND space=? AND id=? "
+                                  "AND status='active'", (_check_id(owner), _check_id(space), _check_id(schedule_id)))
+        return cur.rowcount == 1
+
+    def lease_due(self, owner: str, *, space: str = "default", now: float | None = None, lease_seconds: int = 300,
+                  limit: int = 20) -> list[dict]:
+        """Attività dovute, prese in carico in modo atomico. Un lease scaduto (host caduto) torna disponibile."""
+        owner, space = _check_id(owner), _check_id(space)
+        if type(lease_seconds) is not int or not 1 <= lease_seconds <= 6 * 3600:
+            raise WorldCoreError("invalid lease duration")
+        now = time.time() if now is None else float(now)
+        out = []
+        with self._transaction():
+            rows = self.db.execute("SELECT id FROM schedules WHERE owner=? AND space=? AND status='active' AND next_run<=? "
+                                   "AND lease_until<? ORDER BY next_run LIMIT ?",
+                                   (owner, space, now, now, max(1, min(int(limit), 200)))).fetchall()
+            for r in rows:
+                tok = uuid.uuid4().hex
+                self.db.execute("UPDATE schedules SET lease_until=?, lease_token=? WHERE id=?", (now + lease_seconds, tok, r["id"]))
+        for r in rows:
+            out.append(self.get_schedule(owner, r["id"], space=space))
+        return out
+
+    def complete_schedule(self, owner: str, schedule_id: str, lease_token: str, *, space: str = "default",
+                          now: float | None = None, outcome: str = "done") -> dict:
+        """Chiude un'esecuzione: le ricorrenti passano al prossimo orario futuro, le singole finiscono. Serve il lease."""
+        owner, space = _check_id(owner), _check_id(space)
+        outcome = _check_id(outcome, "outcome")
+        now = time.time() if now is None else float(now)
+        with self._transaction():
+            r = self.db.execute("SELECT * FROM schedules WHERE owner=? AND space=? AND id=?",
+                                (owner, space, _check_id(schedule_id))).fetchone()
+            if not r:
+                raise WorldCoreError("schedule not found")
+            if not lease_token or r["lease_token"] != lease_token or r["status"] != "active":
+                raise WorldCoreError("lease missing, expired or revoked")
+            if r["every_seconds"]:
+                nxt = r["next_run"]
+                while nxt <= now:
+                    nxt += r["every_seconds"]
+                self.db.execute("UPDATE schedules SET next_run=?, last_run=?, lease_until=0, lease_token='', runs=runs+1, "
+                                "last_outcome=? WHERE id=?", (nxt, now, outcome, r["id"]))
+            else:
+                self.db.execute("UPDATE schedules SET status='done', last_run=?, lease_until=0, lease_token='', runs=runs+1, "
+                                "last_outcome=? WHERE id=?", (now, outcome, r["id"]))
+        return self.get_schedule(owner, schedule_id, space=space)
 
     def context_for(self, owner: str, query: str, *, space: str="default", limit: int=5, max_chars: int=2500) -> str:
         """Host context combining explicitly saved memory and referenced public evidence.
