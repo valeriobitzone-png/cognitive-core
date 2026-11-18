@@ -1,0 +1,10 @@
+{
+  "C": {
+    "correct_mean": 16.6,
+    "correct_per_cost": 0.6916666666666667
+  },
+  "D": {
+    "correct_mean": 19.0,
+    "correct_per_cost": 0.7916666666666666
+  }
+}

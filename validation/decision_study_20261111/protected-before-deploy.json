@@ -1,0 +1,54 @@
+{
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_real_v2.db": {
+    "bytes": 565248,
+    "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_public_ai.db": {
+    "bytes": 741376,
+    "sha256": "f3f0d4293fda8afd0ce8c626ecccc870b3152d28e1a93aa6ec37e51d3637a42f"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_real_v3.db": {
+    "bytes": 565248,
+    "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_enriched_anticipation.db": {
+    "bytes": 565248,
+    "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_real.db": {
+    "bytes": 565248,
+    "sha256": "02bf846f1a4fa0fedd0f67bbeab38f7577035c6d0df0f97fc7420edcbf0808f6"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/dynamics_scale_next_event.db": {
+    "bytes": 3407872,
+    "sha256": "d4c2c0c2e0584d42bc0f18a9f0f64dd6503db1baebec1d7b49b58f7630b379e6"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/runner.py": {
+    "bytes": 11148,
+    "sha256": "0dde9b2361b68eb7b77329a3a4f9978d4e7ca3debde456ccc58112ca4fe0e8f9"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/tasks.py": {
+    "bytes": 11901,
+    "sha256": "bfca72a31c49037977730d74507ca4a86d70e4b176110352abf254fea710bef7"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/core_eval.py": {
+    "bytes": 3791,
+    "sha256": "5b0c9127c94c58e4cbe89cccb8face794c7f4bedef3d1e272d3f2546b3556e10"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/stato.sh": {
+    "bytes": 378,
+    "sha256": "083a7e07550c2fb02cda66aeaf5f88795a08ac77387b28ef1d8e8cb4880120e7"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/avvia.sh": {
+    "bytes": 377,
+    "sha256": "ccf753c7c0097d2018f851fa7e0955a326d126f8f90c03282dfa0c16bc27e909"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/ferma.sh": {
+    "bytes": 175,
+    "sha256": "f3ff4e6e7e5585c5b567885a79fb2f1e2793dfd3b3f49f115949b81a16a2d175"
+  },
+  "/Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/com.valerio.cognitivecore.local.plist": {
+    "bytes": 1313,
+    "sha256": "ef445d3182eb319130515177bf76db4abd54fddab3466bc513649a96ff690911"
+  }
+}

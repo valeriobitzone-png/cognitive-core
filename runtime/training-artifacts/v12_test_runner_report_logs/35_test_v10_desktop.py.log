@@ -1,0 +1,4 @@
+s                                                                        [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_v10_desktop.py:10: no Xvfb
+1 skipped in 0.02s

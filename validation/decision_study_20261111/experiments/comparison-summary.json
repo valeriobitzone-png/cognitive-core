@@ -1,0 +1,97 @@
+{
+  "rules": {
+    "protocol": "constrained_action_json",
+    "peak_child_rss_bytes": 0,
+    "original_test": {
+      "n": 34,
+      "accuracy": 0.9117647058823529,
+      "macro_f1": 0.9092574092574092,
+      "valid_policy_violations": 0,
+      "invalid_outputs": 0,
+      "p50_seconds": 6.062007742002606e-06,
+      "p95_seconds": 2.8253943310119197e-05,
+      "native_no_call": 0
+    }
+  },
+  "statistical": {
+    "protocol": "constrained_action_json",
+    "peak_child_rss_bytes": 0,
+    "original_test": {
+      "n": 34,
+      "accuracy": 0.5882352941176471,
+      "macro_f1": 0.6030691530691531,
+      "valid_policy_violations": 6,
+      "invalid_outputs": 0,
+      "p50_seconds": 0.00040360398998018354,
+      "p95_seconds": 0.0011353289533872156,
+      "native_no_call": 0
+    }
+  },
+  "qwen": {
+    "protocol": "constrained_action_json",
+    "peak_child_rss_bytes": 1834811392,
+    "original_test": {
+      "n": 34,
+      "accuracy": 0.29411764705882354,
+      "macro_f1": 0.23611111111111108,
+      "valid_policy_violations": 2,
+      "invalid_outputs": 0,
+      "p50_seconds": 2.2661376665055286,
+      "p95_seconds": 2.998343620948435,
+      "native_no_call": 0
+    }
+  },
+  "lfm": {
+    "protocol": "constrained_action_json",
+    "peak_child_rss_bytes": 859242496,
+    "original_test": {
+      "n": 34,
+      "accuracy": 0.4411764705882353,
+      "macro_f1": 0.3134920634920635,
+      "valid_policy_violations": 4,
+      "invalid_outputs": 0,
+      "p50_seconds": 0.8258670005016029,
+      "p95_seconds": 1.0055065393520635,
+      "native_no_call": 0
+    }
+  },
+  "granite": {
+    "protocol": "constrained_action_json",
+    "peak_child_rss_bytes": 900628480,
+    "original_test": {
+      "n": 34,
+      "accuracy": 0.3235294117647059,
+      "macro_f1": 0.3115079365079365,
+      "valid_policy_violations": 4,
+      "invalid_outputs": 0,
+      "p50_seconds": 1.0668795209930977,
+      "p95_seconds": 1.98329249760427,
+      "native_no_call": 0
+    }
+  },
+  "functiongemma": {
+    "protocol": "native_function_calling",
+    "peak_child_rss_bytes": 691257344,
+    "original_test": {
+      "n": 34,
+      "accuracy": 0.14705882352941177,
+      "macro_f1": 0.050505050505050504,
+      "valid_policy_violations": 0,
+      "invalid_outputs": 7,
+      "p50_seconds": 1.988794584016432,
+      "p95_seconds": 2.981370374532707,
+      "native_no_call": 27
+    },
+    "first_call_boundary_test": {
+      "n": 34,
+      "accuracy": 0.20588235294117646,
+      "macro_f1": 0.13383838383838384,
+      "valid_policy_violations": 4,
+      "invalid_outputs": 1,
+      "p50_seconds": 1.988794584016432,
+      "p95_seconds": 2.981370374532707,
+      "native_no_call": 27
+    },
+    "boundary_correction": "Parsing correction only, no weights/prompt changes or rerun; original raw output and initial scores retained. Latency is the original full-generation upper bound."
+  }
+}

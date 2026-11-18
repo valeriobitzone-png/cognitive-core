@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/models/LiquidAI/LFM2.5-350M-Q8_0.gguf",
+    "sha256": "be036a757295e550098b85e13f6af2735d0fa73b41e1156a40c7d8e8e32a5766",
+    "unchanged": true
+  },
+  {
+    "path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/models/ibm-granite/granite-4.0-350m-Q8_0.gguf",
+    "sha256": "9595dafb4ed15aa02512c8ea26188744192a6f09530eae0a2747bd3ada96cd36",
+    "unchanged": true
+  },
+  {
+    "path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/models/ggml-org/functiongemma-270m-it-q8_0.gguf",
+    "sha256": "83940d4dd9676710856f43523bed096164a595a96f6b34771610a03937de5270",
+    "unchanged": true
+  },
+  {
+    "path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/esperimenti-2026-11-11/models/lfm-hf/model.safetensors",
+    "sha256": "1c9c77a4471a7f590f85240f74ed1fc26df7fbde88c3006724e2f93ca993ea4e",
+    "unchanged": true
+  }
+]

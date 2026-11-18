@@ -1,0 +1,9 @@
+name: worldcore
+version: 0.2.0
+description: Bounded WorldCore recall, typed numeric WHAT IF and personal advice
+provides_tools:
+  - worldcore_whatif
+  - worldcore_personal_advice
+provides_hooks:
+  - pre_llm_call
+  - post_tool_call

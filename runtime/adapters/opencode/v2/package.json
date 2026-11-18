@@ -1,0 +1,6 @@
+{
+  "name": "worldcore-opencode-v2",
+  "version": "1.2.0",
+  "type": "module",
+  "exports": {".": "./index.js"}
+}

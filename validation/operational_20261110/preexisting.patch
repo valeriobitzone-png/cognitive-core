@@ -1,0 +1,448 @@
+diff --git a/runtime/src/cognitive_core/cli.py b/runtime/src/cognitive_core/cli.py
+index 8d12c27..755fc7c 100644
+--- a/runtime/src/cognitive_core/cli.py
++++ b/runtime/src/cognitive_core/cli.py
+@@ -30,6 +30,7 @@ def main(argv=None):
+     x=sub.add_parser('remember');x.add_argument('title');x.add_argument('text');x.add_argument('--source',default='')
+     x=sub.add_parser('search');x.add_argument('query')
+     x=sub.add_parser('export');x.add_argument('folder')
++    x=sub.add_parser('restore',help='Restore scoped state into a new --home; grants are revoked');x.add_argument('folder')
+     x=sub.add_parser('benchmark');x.add_argument('cases',default='examples/decision_eval.jsonl')
+     x=sub.add_parser('import-markdown');x.add_argument('folder')
+     x=sub.add_parser('vision');x.add_argument('image_file');x.add_argument('--question',default='Describe the image and any uncertainty')
+@@ -78,7 +79,10 @@ def main(argv=None):
+         elif args.command=='resume':out={'job_id':core.resume(args.topic_id,args.seed_url)}
+         elif args.command=='remember':out={'document_id':core.vault.document(args.title,args.text,args.source)}
+         elif args.command=='search':out=core.memory_search(args.query)
+-        elif args.command=='export':out={'exported_documents':core.vault.export_markdown(Path(args.folder)),'path':args.folder}
++        elif args.command=='export':out=core.export_state(Path(args.folder))
++        elif args.command=='restore':
++            from .portable import restore_state
++            out=restore_state(args.folder,args.home)
+         elif args.command=='benchmark':
+             from .benchmark import evaluate
+             out=evaluate(Path(args.cases),s)
+diff --git a/runtime/src/cognitive_core/engine.py b/runtime/src/cognitive_core/engine.py
+index fceaf00..a69ef68 100644
+--- a/runtime/src/cognitive_core/engine.py
++++ b/runtime/src/cognitive_core/engine.py
+@@ -107,15 +107,29 @@ class CognitiveCore:
+                 'cost':{'model_calls':int(d.model_used),'web_requests':0},'stored':True}
+ 
+     def resume(self,topic_id,seed_urls=None):
+-        t=self.vault.get_topic(topic_id)
+-        if not t:
+-            raise KeyError(topic_id)
+-        if t['status']=='discarded':
+-            raise PermissionError('discarded topics require explicit topic reactivation')
+-        if t['status']!='open':
+-            self.vault.set_topic_status(topic_id,'open')
+-        return self.vault.job(topic_id,plan={'question':t['question'],
+-                      'seed_urls':(seed_urls or [])[:10],'require_review':True})
++        with self.vault.transaction():
++            t=self.vault.get_topic(topic_id)
++            if not t:
++                raise KeyError(topic_id)
++            if t['status']=='discarded':
++                raise PermissionError('discarded topics require explicit topic reactivation')
++            if t['status']!='open':
++                self.vault.set_topic_status(topic_id,'open')
++            existing=self.vault.db.execute("""SELECT * FROM jobs WHERE namespace=? AND topic_id=?
++                AND kind='research' AND (status IN ('pending','running','blocked')
++                    OR (status='cancelled' AND ?))
++                ORDER BY CASE WHEN status IN ('pending','running') THEN 0 ELSE 1 END,
++                    updated DESC,rowid DESC LIMIT 1""",
++                (self.vault.ns,topic_id,t['status']=='paused')).fetchone()
++            if existing:
++                if seed_urls and seed_urls[:10]!=json.loads(existing['plan']).get('seed_urls',[]):
++                    raise ValueError('cannot replace sources on an unfinished job')
++                if existing['status'] in ('blocked','cancelled'):
++                    self.vault.update_job(existing['id'],status='pending')
++                    self.vault.audit('resume',{'job_id':existing['id'],'checkpoint_preserved':True})
++                return existing['id']
++            return self.vault.job(topic_id,plan={'question':t['question'],
++                          'seed_urls':(seed_urls or [])[:10],'require_review':True})
+ 
+     def _govern(self,job):
+         if job['attempts'] > 3:
+@@ -234,25 +248,34 @@ class CognitiveCore:
+ 
+     def remember_claim(self,topic_id,statement,document_id,excerpt,stance='supports'):
+         """Provenance: even with attached evidence, source-backed is NOT a tested truth."""
+-        cid=self.vault.claim(topic_id,statement)
+-        eid=self.vault.add_evidence(cid,document_id,excerpt,stance=stance)
+-        return {'claim_id':cid,'evidence_id':eid,'status':'source_backed' if stance=='supports' else 'unverified'}
++        with self.vault.transaction():
++            cid=self.vault.claim(topic_id,statement)
++            eid=self.vault.add_evidence(cid,document_id,excerpt,stance=stance)
++            return {'claim_id':cid,'evidence_id':eid,'status':'source_backed' if stance=='supports' else 'unverified'}
+ 
+     def memory_search(self,query,limit=10):
+         limit=min(50,max(1,int(limit)))
+         documents=self.vault.search(query,limit)
+         memories=[]
++        knowledge=[]
+         if self._worldcore is not None or self.s.worldcore_path.exists():
+             memories=[{'id':m['id'],'title':m['fact_key'],'excerpt':m['value'][:500],
+                        'source_url':'','kind':'worldcore_memory','source':m['source']}
+                       for m in self.worldcore.recall(self.s.owner,query,space=self.s.namespace,limit=limit)]
+-        # Alternate stores so a full page of documents cannot hide the first memory.
++            knowledge=[{**record,'id':record['document'],'kind':'worldcore_knowledge'}
++                       for record in self.worldcore.search_evidence(self.s.owner,query[:350],
++                           space=self.s.namespace,limit=min(limit,30))]
++        # Alternate stores so a full page cannot hide another backend's first result.
+         result=[]
+-        for i in range(max(len(documents),len(memories))):
+-            if i<len(documents):result.append(documents[i])
+-            if i<len(memories):result.append(memories[i])
++        for i in range(max(len(documents),len(memories),len(knowledge))):
++            for records in (documents,memories,knowledge):
++                if i<len(records):result.append(records[i])
+         return result[:limit]
+ 
++    def export_state(self,output):
++        from .portable import export_state
++        return export_state(self,output)
++
+     def status(self):
+         return {'namespace':self.s.namespace,'local_model_enabled':self.s.enable_local_model,
+                 'web_enabled':self.s.enable_web,'paid_api_calls_allowed':False,
+diff --git a/runtime/src/cognitive_core/vault.py b/runtime/src/cognitive_core/vault.py
+index c88c0fe..4dcc48f 100644
+--- a/runtime/src/cognitive_core/vault.py
++++ b/runtime/src/cognitive_core/vault.py
+@@ -290,8 +290,13 @@ class Vault:
+             raise ValueError('invalid stance')
+         with self.transaction():
+             claim=self.db.execute('SELECT id FROM claims WHERE id=? AND namespace=?',(claim_id,self.ns)).fetchone()
+-            if not claim or not self.get_document(document_id):
++            document=self.get_document(document_id)
++            if not claim or not document:
+                 raise KeyError('claim or document')
++            if not isinstance(excerpt,str) or not excerpt.strip() or len(excerpt)>1500:
++                raise ValueError('evidence requires a nonempty excerpt of at most 1500 characters')
++            if excerpt not in document['text']:
++                raise ValueError('excerpt is not present in the source document')
+             ident=uid('evidence')
+             self.db.execute('INSERT INTO evidence VALUES(?,?,?,?,?,?,?,?)',
+                             (ident,self.ns,claim_id,document_id,excerpt[:1500],stance,verifier[:80],ts()))
+@@ -373,9 +378,10 @@ class Vault:
+                 f"# {r['title']}\n\n{r['text']}\n")
+             (output/(r['id']+'.md')).write_text(md,encoding='utf-8')
+             count+=1
+-        for name,table in [('topics','topics'),('claims','claims'),('evidence','evidence'),
+-                           ('predictions','predictions'),('experiences','experiences'),
+-                           ('graph','graph_edges'),('jobs','jobs')]:
+-            content=[dict(row) for row in self.db.execute(f'SELECT * FROM {table} WHERE namespace=?',(self.ns,))]
++        tables=[r['name'] for r in self.db.execute("SELECT name FROM sqlite_master WHERE type='table'")
++                if 'namespace' in {c['name'] for c in self.db.execute('PRAGMA table_info("'+r['name'].replace('"','""')+'")')}]
++        for table in tables:
++            name='graph' if table=='graph_edges' else table
++            content=[dict(row) for row in self.db.execute('SELECT * FROM "'+table.replace('"','""')+'" WHERE namespace=?',(self.ns,))]
+             (output/(name+'.json')).write_text(json.dumps(content,ensure_ascii=False,indent=2),encoding='utf-8')
+         return count
+diff --git a/runtime/src/worldcore/dynamics.py b/runtime/src/worldcore/dynamics.py
+index 0c03884..541e883 100644
+--- a/runtime/src/worldcore/dynamics.py
++++ b/runtime/src/worldcore/dynamics.py
+@@ -1,7 +1,8 @@
+ """Portable numeric dynamics learned from observed trajectories, not LLM weights.
+ 
+ Ridge-regression models share action-conditioned laws across *explicitly same-family*
+-environments. Splits by environment ID before fitting; no fabricated training data.
++environments. Supports environment-group holdout (default) or temporal holdout by observed_at;
++optional per-environment learners. No fabricated training data.
+ Refuses deployment unless held-out improvement beats state-persistence baseline.
+ No automatic execution, causal inference, or universal physics claims.
+ """
+@@ -59,12 +60,20 @@ def _errors(model,rows):
+     return [statistics.fmean(abs(_predict(model,r['before'])[k]-r['after'][k]) for k in model['keys']) for r in rows]
+ 
+ 
+-def train_family_dynamics(samples,*,min_train=20,min_holdout=8):
+-    """Train using observation records: environment, action, before, after, source.
++def _parse_observed_at(value):
++    """Accept unix seconds or ISO-8601; return float epoch seconds or None."""
++    if value is None:return None
++    if type(value) in (int,float) and math.isfinite(value):return float(value)
++    if isinstance(value,str) and value:
++        try:
++            raw=value.replace('Z','+00:00')
++            return datetime.fromisoformat(raw).timestamp()
++        except ValueError:
++            return None
++    return None
+ 
+-    Hold out COMPLETE environments, not shuffled transitions. Deploy only actions
+-    validated on distinct environments with identical feature schema.
+-    """
++
++def _clean_dynamics_samples(samples, *, require_time=False):
+     if not isinstance(samples,list) or len(samples)>120000:raise ValueError('invalid sample list')
+     clean=[]
+     for r in samples:
+@@ -78,34 +87,150 @@ def train_family_dynamics(samples,*,min_train=20,min_holdout=8):
+             continue
+         before=_numeric_state(r.get('before'));after=_numeric_state(r.get('after'))
+         if before.keys()!=after.keys():continue
+-        clean.append({'environment':env,'action':action,'before':before,'after':after})
++        at=_parse_observed_at(r.get('observed_at', r.get('at')))
++        if require_time and at is None:continue
++        row={'environment':env,'action':action,'before':before,'after':after}
++        if at is not None:row['observed_at']=at
++        clean.append(row)
++    return clean
++
++
++def _evaluate_split(train, test, *, holdout_meta):
++    keys=sorted(train[0]['before']) if train else []
++    train=[r for r in train if sorted(r['before'])==keys]
++    test=[r for r in test if sorted(r['before'])==keys]
++    if not train or not test:
++        return None, train, test
++    model=_fit(train,keys)
++    error=_errors(model,test);mae=statistics.fmean(error)
++    baseline=statistics.fmean(statistics.fmean(abs(r['before'][k]-r['after'][k]) for k in keys) for r in test)
++    improvement=1-mae/max(baseline,1e-12)
++    accepted=baseline>1e-8 and improvement>=.10
++    model.update({'heldout_count':len(test),'heldout_mae':mae,
++                  'persistence_mae':baseline,'improvement_vs_persistence':improvement,
++                  'holdout_p90_error':sorted(error)[math.ceil(.90*len(error))-1],
++                  **holdout_meta})
++    status='validated' if accepted else 'rejected_no_baseline_gain'
++    return {'status':status,'model':model}, train, test
++
++
++def _temporal_cut(rows, min_train, min_holdout):
++    """Deterministic time split: earlier observations train, later hold out."""
++    ordered=sorted(rows, key=lambda r:(r['observed_at'], r['environment']))
++    if len(ordered) < min_train + min_holdout:
++        return None, None
++    cut=max(min_train, int(len(ordered)*0.70))
++    if len(ordered)-cut < min_holdout:
++        cut=len(ordered)-min_holdout
++    if cut < min_train:
++        return None, None
++    return ordered[:cut], ordered[cut:]
++
++
++def train_family_dynamics(samples,*,min_train=20,min_holdout=8,min_environments=3,
++                          holdout_mode='environment'):
++    """Train using observation records: environment, action, before, after, source.
++
++    holdout_mode:
++      - 'environment' (default): hold out ONE complete environment (alphabetical last).
++        Preserves prior behaviour for existing tests.
++      - 'temporal': hold out the chronologically later fraction (requires observed_at/at).
++
++    Thresholds are configurable; defaults stay 20 / 8 / 3 for compatibility.
++    """
++    if holdout_mode not in ('environment','temporal'):
++        raise ValueError('holdout_mode must be environment or temporal')
++    if not isinstance(min_train,int) or min_train<1:raise ValueError('invalid min_train')
++    if not isinstance(min_holdout,int) or min_holdout<1:raise ValueError('invalid min_holdout')
++    if not isinstance(min_environments,int) or min_environments<1:raise ValueError('invalid min_environments')
++    clean=_clean_dynamics_samples(samples, require_time=(holdout_mode=='temporal'))
+     actions=sorted({r['action'] for r in clean})
+     results={}
+     for action in actions:
+-        rows=[r for r in clean if r['action']==action];envs=sorted({r['environment'] for r in rows})
+-        if len(envs)<3:
+-            results[action]={'status':'abstain','reason':'need_3_independent_environments'};continue
+-        # Deterministic group holdout, resistant to input-order leakage.
+-        held_env=envs[-1];train=[r for r in rows if r['environment']!=held_env];test=[r for r in rows if r['environment']==held_env]
+-        keys=sorted(train[0]['before']) if train else []
+-        train=[r for r in train if sorted(r['before'])==keys];test=[r for r in test if sorted(r['before'])==keys]
+-        if len(train)<min_train or len(test)<min_holdout:
+-            results[action]={'status':'abstain','reason':'insufficient_disjoint_train_test','train':len(train),'test':len(test)};continue
+-        model=_fit(train,keys)
+-        error=_errors(model,test);mae=statistics.fmean(error)
+-        baseline=statistics.fmean(statistics.fmean(abs(r['before'][k]-r['after'][k]) for k in keys) for r in test)
+-        improvement=1-mae/max(baseline,1e-12)
+-        # Unchanged state: a trivial baseline is perfect, do not claim learning.
+-        accepted=baseline>1e-8 and improvement>=.10
+-        model.update({'holdout_environment':held_env,'heldout_count':len(test),'heldout_mae':mae,
+-                      'persistence_mae':baseline,'improvement_vs_persistence':improvement,
+-                      'holdout_p90_error':sorted(error)[math.ceil(.90*len(error))-1]})
+-        results[action]={'status':'validated' if accepted else 'rejected_no_baseline_gain','model':model,
+-                         'note':'Held-out environment differs from training environments; shared dynamics only'}
+-    return {'actions':results,'count_observed':len(clean),'validation':'group_holdout_by_environment',
++        rows=[r for r in clean if r['action']==action]
++        envs=sorted({r['environment'] for r in rows})
++        if len(envs)<min_environments:
++            reason=('need_3_independent_environments' if min_environments==3 else 'need_independent_environments')
++            results[action]={'status':'abstain','reason':reason,
++                             'environments':len(envs),'min_environments':min_environments};continue
++        if holdout_mode=='environment':
++            # Deterministic group holdout, resistant to input-order leakage.
++            held_env=envs[-1]
++            train=[r for r in rows if r['environment']!=held_env]
++            test=[r for r in rows if r['environment']==held_env]
++            if len(train)<min_train or len(test)<min_holdout:
++                results[action]={'status':'abstain','reason':'insufficient_disjoint_train_test',
++                                 'train':len(train),'test':len(test)};continue
++            evaluated,train,test=_evaluate_split(train,test,holdout_meta={
++                'holdout_environment':held_env,'holdout_mode':'environment'})
++            if evaluated is None:
++                results[action]={'status':'abstain','reason':'insufficient_disjoint_train_test',
++                                 'train':len(train),'test':len(test)};continue
++            evaluated['note']='Held-out environment differs from training environments; shared dynamics only'
++            results[action]=evaluated
++        else:
++            train,test=_temporal_cut(rows, min_train, min_holdout)
++            if train is None:
++                results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
++                                 'n':len(rows)};continue
++            evaluated,train,test=_evaluate_split(train,test,holdout_meta={
++                'holdout_mode':'temporal',
++                'holdout_from':test[0]['observed_at'],'holdout_to':test[-1]['observed_at'],
++                'train_from':train[0]['observed_at'],'train_to':train[-1]['observed_at']})
++            if evaluated is None:
++                results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
++                                 'train':len(train),'test':len(test)};continue
++            evaluated['note']='Temporal holdout: later observations never enter training'
++            results[action]=evaluated
++    validation=('group_holdout_by_environment' if holdout_mode=='environment'
++                else 'temporal_holdout_by_observed_at')
++    return {'actions':results,'count_observed':len(clean),'validation':validation,
++            'holdout_mode':holdout_mode,'min_train':min_train,'min_holdout':min_holdout,
++            'min_environments':min_environments,
+             'note':'Not an open-world universal simulator; only numeric dynamics from explicitly similar environments'}
+ 
+ 
++def train_environment_dynamics(samples,*,min_train=20,min_holdout=8,holdout_mode='temporal'):
++    """Fit one action-conditioned model per environment (no cross-repo sharing).
++
++    Default holdout is temporal within that environment. Environment-group holdout
++    is unavailable here because a single environment cannot be held out from itself;
++    pass holdout_mode='environment' only to receive an explicit abstain reason.
++    """
++    if holdout_mode not in ('environment','temporal'):
++        raise ValueError('holdout_mode must be environment or temporal')
++    if not isinstance(min_train,int) or min_train<1:raise ValueError('invalid min_train')
++    if not isinstance(min_holdout,int) or min_holdout<1:raise ValueError('invalid min_holdout')
++    if holdout_mode=='environment':
++        return {'environments':{},'count_observed':0,'validation':'unsupported_for_per_environment',
++                'note':'Per-environment learner needs temporal holdout inside the same repository'}
++    clean=_clean_dynamics_samples(samples, require_time=True)
++    by_env={}
++    for env in sorted({r['environment'] for r in clean}):
++        env_rows=[r for r in clean if r['environment']==env]
++        actions=sorted({r['action'] for r in env_rows})
++        action_results={}
++        for action in actions:
++            rows=[r for r in env_rows if r['action']==action]
++            train,test=_temporal_cut(rows, min_train, min_holdout)
++            if train is None:
++                action_results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
++                                        'n':len(rows)};continue
++            evaluated,train,test=_evaluate_split(train,test,holdout_meta={
++                'holdout_mode':'temporal','holdout_environment':env,
++                'holdout_from':test[0]['observed_at'],'holdout_to':test[-1]['observed_at'],
++                'train_from':train[0]['observed_at'],'train_to':train[-1]['observed_at']})
++            if evaluated is None:
++                action_results[action]={'status':'abstain','reason':'insufficient_temporal_train_test',
++                                        'train':len(train),'test':len(test)};continue
++            evaluated['note']='Per-environment temporal holdout; not shared across repositories'
++            action_results[action]=evaluated
++        by_env[env]={'actions':action_results,'count_observed':len(env_rows)}
++    return {'environments':by_env,'count_observed':len(clean),'validation':'per_environment_temporal_holdout',
++            'holdout_mode':'temporal','min_train':min_train,'min_holdout':min_holdout,
++            'note':'Models are scoped to one environment; do not transfer weights across repositories'}
++
++
+ class DynamicsMixin:
+     def _init_dynamic_schema(self):
+         self.db.executescript('''
+@@ -133,9 +258,12 @@ class DynamicsMixin:
+           mae REAL NOT NULL,observed_at TEXT NOT NULL,PRIMARY KEY(owner,space,family,prediction_id));
+         ''')
+ 
+-    def train_shared_dynamics(self,owner,family,samples,*,space='default'):
++    def train_shared_dynamics(self,owner,family,samples,*,space='default',
++                              min_train=20,min_holdout=8,min_environments=3,
++                              holdout_mode='environment'):
+         owner,space,family=[_valid_atom(x,'identifier') for x in (owner,space,family)]
+-        result=train_family_dynamics(samples)
++        result=train_family_dynamics(samples,min_train=min_train,min_holdout=min_holdout,
++                                     min_environments=min_environments,holdout_mode=holdout_mode)
+         if not any(a['status']=='validated' for a in result['actions'].values()):
+             return {'status':'rejected','validation':result}
+         stamp=datetime.now(timezone.utc).isoformat()
+@@ -147,6 +275,37 @@ class DynamicsMixin:
+         return {'status':'trained','version':v,'actions':{k:a['status'] for k,a in result['actions'].items()},
+                 'validation':result}
+ 
++    def train_per_environment_dynamics(self,owner,family,samples,*,space='default',
++                                       min_train=20,min_holdout=8,holdout_mode='temporal'):
++        """Persist per-repository models under family keys family@environment."""
++        owner,space,family=[_valid_atom(x,'identifier') for x in (owner,space,family)]
++        result=train_environment_dynamics(samples,min_train=min_train,min_holdout=min_holdout,
++                                          holdout_mode=holdout_mode)
++        trained={}
++        stamp=datetime.now(timezone.utc).isoformat()
++        with self._transaction():
++            for env,bundle in result.get('environments',{}).items():
++                if not any(a.get('status')=='validated' for a in bundle.get('actions',{}).values()):
++                    trained[env]={'status':'rejected'}
++                    continue
++                fam=_valid_atom(f'{family}@{env}','identifier')
++                row=self.db.execute('SELECT COALESCE(MAX(version),0) v FROM learned_dynamics WHERE owner=? AND space=? AND family=?',
++                                    (owner,space,fam)).fetchone()
++                v=row['v']+1
++                payload={'actions':bundle['actions'],'count_observed':bundle['count_observed'],
++                         'validation':result['validation'],'environment':env,
++                         'note':result.get('note')}
++                self.db.execute('INSERT INTO learned_dynamics VALUES (?,?,?,?,?,?)',
++                                (owner,space,fam,v,json.dumps(payload,sort_keys=True,allow_nan=False),stamp))
++                trained[env]={'status':'trained','version':v,
++                              'actions':{k:a['status'] for k,a in bundle['actions'].items()}}
++        overall='trained' if any(v.get('status')=='trained' for v in trained.values()) else 'rejected'
++        return {'status':overall,'environments':trained,'validation':result}
++
++    def predict_environment_dynamics(self,owner,family,environment,before,action,*,space='default',max_z=3.5):
++        fam=_valid_atom(f'{family}@{environment}','identifier')
++        return self.predict_shared_dynamics(owner,fam,before,action,space=space,max_z=max_z)
++
+     def train_dynamics_from_world_log(self,owner,family,environments,*,space='default'):
+         """Fit only from persisted observed transitions selected by host.
+ 
+diff --git a/runtime/src/worldcore/engine.py b/runtime/src/worldcore/engine.py
+index 6df634b..733302d 100644
+--- a/runtime/src/worldcore/engine.py
++++ b/runtime/src/worldcore/engine.py
+@@ -25,6 +25,8 @@ from .ensemble import EnsembleMixin
+ from .intelligence import IntelligenceMixin
+ from .worldmodel import WorldModelMixin
+ from .dynamics import DynamicsMixin
++from .next_event import NextEventMixin
++from .anticipation_mixin import AnticipationMixin
+ from .state_lens import StateLensMixin
+ from .hybrid_world import HybridWorldMixin
+ from .events_lab import EventsLabMixin
+@@ -94,7 +96,7 @@ def _load(row):
+     return dict(row) if row is not None else None
+ 
+ 
+-class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlannerMixin, SemanticFusionMixin, ActionGatewayMixin, HybridWorldMixin, StateLensMixin, DynamicsMixin, LearningMixin, KnowledgeMixin, EnsembleMixin, IntelligenceMixin, WorldModelMixin, EventsLabMixin, CapabilitiesMixin, SocialLabMixin, LanguageMixin):
++class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlannerMixin, SemanticFusionMixin, ActionGatewayMixin, HybridWorldMixin, StateLensMixin, DynamicsMixin, LearningMixin, KnowledgeMixin, EnsembleMixin, IntelligenceMixin, WorldModelMixin, EventsLabMixin, CapabilitiesMixin, SocialLabMixin, LanguageMixin, NextEventMixin, AnticipationMixin):
+     """Portable, synchronous embedded engine. Each call uses SQLite transactions."""
+ 
+     def __init__(self, path: str | Path | None = None):
+diff --git a/runtime/tests/test_cognitive_original.py b/runtime/tests/test_cognitive_original.py
+index e791aca..c2a0a55 100644
+--- a/runtime/tests/test_cognitive_original.py
++++ b/runtime/tests/test_cognitive_original.py
+@@ -63,10 +63,10 @@ class CoreTests(unittest.TestCase):
+         doc1=self.c.vault.document('Doc','Source content','https://example.org/1')
+         doc2=self.c.vault.document('Doc2','Other source','https://example.org/2')
+         claim=self.c.vault.claim(t,'A claim')
+-        self.c.vault.add_evidence(claim,doc1,'Source text','supports')
++        self.c.vault.add_evidence(claim,doc1,'Source content','supports')
+         r=self.c.vault.db.execute('SELECT status FROM claims WHERE id=?',(claim,)).fetchone()
+         self.assertEqual(r['status'],'source_backed')
+-        self.c.vault.add_evidence(claim,doc2,'Contrary text','contradicts')
++        self.c.vault.add_evidence(claim,doc2,'Other source','contradicts')
+         r=self.c.vault.db.execute('SELECT status FROM claims WHERE id=?',(claim,)).fetchone()
+         self.assertEqual(r['status'],'conflicted')
+ 

@@ -1,0 +1,66 @@
+{
+  "sources": [
+    {
+      "model": "FunctionGemma270M",
+      "url": "https://ai.google.dev/gemma/docs/functiongemma",
+      "focus": "native function calling; authors explicitly recommend task-specific fine-tuning"
+    },
+    {
+      "model": "FunctionGemma270M",
+      "url": "https://huggingface.co/google/functiongemma-270m-it",
+      "published_metrics": {
+        "BFCL_simple": 61.6,
+        "BFCL_live_simple": 36.2,
+        "BFCL_relevance": 61.1,
+        "BFCL_irrelevance": 73.7
+      },
+      "caveat": "Different subtasks, not comparable to a single BFCL aggregate. English-only safety evaluation; phone timings are not Mac timings."
+    },
+    {
+      "model": "LFM2.5-350M",
+      "url": "https://www.liquid.ai/blog/lfm2-5-350m-no-size-left-behind",
+      "published_metrics": {
+        "BFCLv3": 44.11,
+        "BFCLv4": 21.86,
+        "IFBench": 40.69
+      },
+      "caveat": "Author-reported evaluation; supported language list excludes Italian; not a universal decision model."
+    },
+    {
+      "model": "Granite4.0-350M",
+      "url": "https://huggingface.co/ibm-granite/granite-4.0-350m",
+      "focus": "Small enterprise/tool-use candidate, Apache2; evaluate installed-runtime support"
+    },
+    {
+      "model": "Qwen3.5-0.8B",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+      "focus": "Generic baseline, not a specialist decision model"
+    },
+    {
+      "model": "Encoder-based router",
+      "url": "https://www.liquid.ai/blog/lfm2-5-encoders",
+      "focus": "Needs a task-specific classification head or prototype rules; no generated tokens. Not benchmarked here as a downloaded encoder."
+    },
+    {
+      "model": "Multilingual MiniLM",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "focus": "Embedding baseline candidate, multilingual similarity is not policy competence"
+    },
+    {
+      "model": "Decision Transformer",
+      "url": "https://huggingface.co/docs/transformers/model_doc/decision_transformer",
+      "focus": "Requires environment-specific trajectories/states/actions/rewards; not a drop-in conversation controller."
+    },
+    {
+      "model": "LoRA framework",
+      "url": "https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/LORA.md",
+      "focus": "Local rank-restricted adapters; frozen original checkpoint"
+    }
+  ],
+  "selection": "None before local results. Cross-paper scores not a normalized leaderboard.",
+  "hardware": {
+    "chip": "Apple M4",
+    "unified_memory_bytes": 17179869184,
+    "source": "read-only sysctl observation"
+  }
+}

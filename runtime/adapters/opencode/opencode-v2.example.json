@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "worldcore": {
+        "type": "local",
+        "command": [
+          "python3",
+          "-m",
+          "worldcore.mcp_server"
+        ],
+        "environment": {
+          "WORLDCORE_OWNER": "local",
+          "WORLDCORE_SPACE": "default"
+        },
+        "disabled": false
+      }
+    }
+  },
+  "plugins": [
+    "./adapters/opencode/v2"
+  ]
+}

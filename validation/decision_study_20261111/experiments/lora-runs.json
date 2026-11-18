@@ -1,0 +1,32 @@
+[
+  {
+    "run": "train",
+    "seed": 1,
+    "exit_code": 0,
+    "seconds": 6.882172457990237
+  },
+  {
+    "run": "train",
+    "seed": 2,
+    "exit_code": 0,
+    "seconds": 6.473794916993938
+  },
+  {
+    "run": "eval",
+    "seed": 0,
+    "exit_code": 0,
+    "seconds": 5.066467416007072
+  },
+  {
+    "run": "eval",
+    "seed": 1,
+    "exit_code": 0,
+    "seconds": 4.9840602920157835
+  },
+  {
+    "run": "eval",
+    "seed": 2,
+    "exit_code": 0,
+    "seconds": 4.752430666005239
+  }
+]

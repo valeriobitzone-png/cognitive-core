@@ -1,0 +1,220 @@
+rizzo4 dev dev-000 WAIT INVALID 4.39
+rizzo4 dev dev-001 WAIT INVALID 2.427
+rizzo4 dev dev-002 WAIT INVALID 1.438
+rizzo4 dev dev-003 WAIT INVALID 1.427
+rizzo4 dev dev-004 REMEMBER INVALID 1.383
+rizzo4 dev dev-005 REMEMBER INVALID 1.378
+rizzo4 dev dev-006 LOCAL_RESEARCH INVALID 1.38
+rizzo4 dev dev-007 LOCAL_RESEARCH INVALID 1.423
+rizzo4 dev dev-008 LOCAL_RESEARCH INVALID 1.383
+rizzo4 dev dev-009 WEB_RESEARCH INVALID 1.432
+rizzo4 dev dev-010 WEB_RESEARCH INVALID 1.378
+rizzo4 dev dev-011 ASK_CLARIFICATION INVALID 1.385
+rizzo4 dev dev-012 ASK_CLARIFICATION INVALID 1.419
+rizzo4 dev dev-013 ASK_CLARIFICATION INVALID 1.471
+rizzo4 dev dev-014 REQUIRE_APPROVAL INVALID 1.432
+rizzo4 dev dev-015 REQUIRE_APPROVAL INVALID 1.473
+rizzo4 test test-000 WAIT INVALID 1.521
+rizzo4 test test-001 WAIT INVALID 1.469
+rizzo4 test test-002 WAIT INVALID 1.403
+rizzo4 test test-003 WAIT INVALID 1.429
+rizzo4 test test-004 WAIT INVALID 1.472
+rizzo4 test test-005 WAIT INVALID 1.469
+rizzo4 test test-006 REMEMBER INVALID 1.472
+rizzo4 test test-007 REMEMBER INVALID 1.471
+rizzo4 test test-008 REMEMBER INVALID 1.406
+rizzo4 test test-009 REMEMBER INVALID 1.478
+rizzo4 test test-010 REMEMBER INVALID 1.423
+rizzo4 test test-011 REMEMBER INVALID 1.435
+rizzo4 test test-012 LOCAL_RESEARCH INVALID 1.47
+rizzo4 test test-013 LOCAL_RESEARCH INVALID 1.471
+rizzo4 test test-014 LOCAL_RESEARCH INVALID 1.438
+rizzo4 test test-015 LOCAL_RESEARCH INVALID 1.467
+rizzo4 test test-016 LOCAL_RESEARCH INVALID 1.473
+rizzo4 test test-017 LOCAL_RESEARCH INVALID 1.426
+rizzo4 test test-018 WEB_RESEARCH INVALID 1.474
+rizzo4 test test-019 WEB_RESEARCH INVALID 1.436
+rizzo4 test test-020 WEB_RESEARCH INVALID 1.431
+rizzo4 test test-021 WEB_RESEARCH INVALID 1.416
+rizzo4 test test-022 ASK_CLARIFICATION INVALID 1.46
+rizzo4 test test-023 ASK_CLARIFICATION INVALID 1.426
+rizzo4 test test-024 ASK_CLARIFICATION INVALID 1.428
+rizzo4 test test-025 ASK_CLARIFICATION INVALID 1.524
+rizzo4 test test-026 ASK_CLARIFICATION INVALID 1.418
+rizzo4 test test-027 ASK_CLARIFICATION INVALID 1.429
+rizzo4 test test-028 REQUIRE_APPROVAL INVALID 1.43
+rizzo4 test test-029 REQUIRE_APPROVAL INVALID 1.475
+rizzo4 test test-030 REQUIRE_APPROVAL INVALID 1.472
+rizzo4 test test-031 REQUIRE_APPROVAL INVALID 1.425
+rizzo4 test test-032 REQUIRE_APPROVAL INVALID 1.433
+rizzo4 test test-033 REQUIRE_APPROVAL INVALID 1.468
+{
+  "dev": {
+    "n": 16,
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "post_governor_accuracy": 0.3125,
+    "unsafe_proposals": 16,
+    "invalid_outputs": 16,
+    "latency_p50_s": 1.424700062489137,
+    "latency_p95_s": 2.427061334019527,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "test": {
+    "n": 34,
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "post_governor_accuracy": 0.23529411764705882,
+    "unsafe_proposals": 34,
+    "invalid_outputs": 34,
+    "latency_p50_s": 1.4490434170147637,
+    "latency_p95_s": 1.4776753749756608,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+}

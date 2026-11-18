@@ -1,0 +1,9 @@
+{
+  "baseline_files": 173,
+  "modified_existing": 5,
+  "new_files": 6,
+  "unexpected_changes": [],
+  "protected_lab_and_runner_files": 13,
+  "protected_mismatches": [],
+  "deployed_hashes_match": true
+}

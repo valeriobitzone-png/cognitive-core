@@ -1,0 +1,13 @@
+START matrix
+END matrix 0 72
+START introspection
+END introspection 1 1
+START voice
+END voice 0 28
+START rizzo4-v1-test
+END rizzo4-v1-test 0 450
+START rizzo4-v1-fresh
+END rizzo4-v1-fresh 0 661
+DOWNLOAD_UNAVAILABLE lfm12
+DOWNLOAD_UNAVAILABLE arch
+COMPLETE

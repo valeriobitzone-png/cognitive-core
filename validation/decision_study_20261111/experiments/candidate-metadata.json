@@ -1,0 +1,1158 @@
+{
+  "LiquidAI/LFM2.5-350M-GGUF": {
+    "_id": "69c34c5c65cdc3c19680c5ba",
+    "id": "LiquidAI/LFM2.5-350M-GGUF",
+    "private": false,
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "safetensors",
+      "gguf",
+      "liquid",
+      "lfm2",
+      "edge",
+      "llama.cpp",
+      "text-generation",
+      "en",
+      "ar",
+      "zh",
+      "fr",
+      "de",
+      "ja",
+      "ko",
+      "es",
+      "base_model:LiquidAI/LFM2.5-350M",
+      "base_model:quantized:LiquidAI/LFM2.5-350M",
+      "license:other",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "downloads": 169628,
+    "likes": 111,
+    "modelId": "LiquidAI/LFM2.5-350M-GGUF",
+    "author": "LiquidAI",
+    "sha": "657e078c94084481950a2d555a941481f715536b",
+    "lastModified": "2026-09-22T20:41:28.000Z",
+    "gated": false,
+    "disabled": false,
+    "widgetData": [
+      {
+        "text": "Hi, what can you help me with?"
+      },
+      {
+        "text": "What is 84 * 3 / 2?"
+      },
+      {
+        "text": "Tell me an interesting fact about the universe!"
+      },
+      {
+        "text": "Explain quantum computing in simple terms."
+      }
+    ],
+    "model-index": null,
+    "config": {},
+    "cardData": {
+      "license": "other",
+      "license_name": "lfm1.0",
+      "license_link": "LICENSE",
+      "language": [
+        "en",
+        "ar",
+        "zh",
+        "fr",
+        "de",
+        "ja",
+        "ko",
+        "es"
+      ],
+      "pipeline_tag": "text-generation",
+      "tags": [
+        "liquid",
+        "lfm2",
+        "edge",
+        "llama.cpp",
+        "gguf"
+      ],
+      "base_model": [
+        "LiquidAI/LFM2.5-350M"
+      ]
+    },
+    "gguf": {
+      "total": 354483968,
+      "architecture": "lfm2",
+      "context_length": 128000,
+      "chat_template": "{{- bos_token -}}\n{%- set keep_past_thinking = keep_past_thinking | default(false) -%}\n{%- set ns = namespace(system_prompt=\"\") -%}\n{%- if messages[0][\"role\"] == \"system\" -%}\n    {%- set sys_content = messages[0][\"content\"] -%}\n    {%- if sys_content is not string -%}\n        {%- for item in sys_content -%}\n            {%- if item[\"type\"] == \"text\" -%}\n                {%- set ns.system_prompt = ns.system_prompt + item[\"text\"] -%}\n            {%- endif -%}\n        {%- endfor -%}\n    {%- else -%}\n        {%- set ns.system_prompt = sys_content -%}\n    {%- endif -%}\n    {%- set messages = messages[1:] -%}\n{%- endif -%}\n{%- if tools -%}\n    {%- set ns.system_prompt = ns.system_prompt + (\"\\n\" if ns.system_prompt else \"\") + \"List of tools: [\" -%}\n    {%- for tool in tools -%}\n        {%- if tool is not string -%}\n            {%- set tool = tool | tojson -%}\n        {%- endif -%}\n        {%- set ns.system_prompt = ns.system_prompt + tool -%}\n        {%- if not loop.last -%}\n            {%- set ns.system_prompt = ns.system_prompt + \", \" -%}\n        {%- endif -%}\n    {%- endfor -%}\n    {%- set ns.system_prompt = ns.system_prompt + \"]\" -%}\n{%- endif -%}\n{%- if ns.system_prompt -%}\n    {{- \"<|im_start|>system\\n\" + ns.system_prompt + \"<|im_end|>\\n\" -}}\n{%- endif -%}\n{%- set ns.last_assistant_index = -1 -%}\n{%- for message in messages -%}\n    {%- if message[\"role\"] == \"assistant\" -%}\n        {%- set ns.last_assistant_index = loop.index0 -%}\n    {%- endif -%}\n{%- endfor -%}\n{%- for message in messages -%}\n    {{- \"<|im_start|>\" + message[\"role\"] + \"\\n\" -}}\n    {%- set content = message[\"content\"] -%}\n    {%- if content is not string -%}\n        {%- set ns.content = \"\" -%}\n        {%- for item in content -%}\n            {%- if item[\"type\"] == \"image\" -%}\n                {%- set ns.content = ns.content + \"<image>\" -%}\n            {%- elif item[\"type\"] == \"text\" -%}\n                {%- set ns.content = ns.content + item[\"text\"] -%}\n            {%- else -%}\n                {%- set ns.content = ns.content + item | tojson -%}\n            {%- endif -%}\n        {%- endfor -%}\n        {%- set content = ns.content -%}\n    {%- endif -%}\n    {%- if message[\"role\"] == \"assistant\" and not keep_past_thinking and loop.index0 != ns.last_assistant_index -%}\n        {%- if \"</think>\" in content -%}\n            {%- set content = content.split(\"</think>\")[-1] | trim -%}\n        {%- endif -%}\n    {%- endif -%}\n    {{- content + \"<|im_end|>\\n\" -}}\n{%- endfor -%}\n{%- if add_generation_prompt -%}\n    {{- \"<|im_start|>assistant\\n\" -}}\n{%- endif -%}",
+      "bos_token": "<|startoftext|>",
+      "eos_token": "<|im_end|>",
+      "totalFileSize": 711485152
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "e8a2bda7961270dd2bba1fd505dbf7d27a1b590a",
+        "size": 1990
+      },
+      {
+        "rfilename": "LFM2.5-350M-BF16.gguf",
+        "blobId": "dea5bb326fbf5a31493c342df677d1e5bd16bc5c",
+        "size": 711485152,
+        "lfs": {
+          "sha256": "8da576155e67ae093f49e4ebf638c025a04c0d28d5ec42bd28617ca18a52539d",
+          "size": 711485152,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-350M-F16.gguf",
+        "blobId": "9fe7bd04f2bee811e6a7e055a00c5bcec7ab7f98",
+        "size": 711485152,
+        "lfs": {
+          "sha256": "18e2f6b61045bed8c3e8575c01fa7898b2df5ae884964322dcf49e5d12f6eb79",
+          "size": 711485152,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-350M-Q4_0.gguf",
+        "blobId": "ac0fa5b48712836834f86d94462f4a756fc2603a",
+        "size": 219309792,
+        "lfs": {
+          "sha256": "85e32858daafad55b7bcd6b97a1343ee0661188e8036f9862d14d6b563142f50",
+          "size": 219309792,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-350M-Q4_K_M.gguf",
+        "blobId": "bdbc79b3f36ce3828f89fd15557da48bce324128",
+        "size": 229312224,
+        "lfs": {
+          "sha256": "7e6f72643caafc9a68256686638c4d7916f2cec76d1df478d4c3ddcd95a6aed4",
+          "size": 229312224,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-350M-Q5_K_M.gguf",
+        "blobId": "cca75c3baffacaebb9e50514e25e9fc3fda5be5c",
+        "size": 260376288,
+        "lfs": {
+          "sha256": "e8985a31d95fab69e894216ce1712b57a55f1561093ec7cf408b781834eb8435",
+          "size": 260376288,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-350M-Q6_K.gguf",
+        "blobId": "4378d68d8bd5134233d6f1b2722c73c4a3c29a34",
+        "size": 293381856,
+        "lfs": {
+          "sha256": "3ed48149a87dd9a0b04688780828854fc0c607d8c241af2b1100045e0d6b45c7",
+          "size": 293381856,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-350M-Q8_0.gguf",
+        "blobId": "03b4e3159538185977f75bc7806c3a1076e64b5a",
+        "size": 379217632,
+        "lfs": {
+          "sha256": "be036a757295e550098b85e13f6af2735d0fa73b41e1156a40c7d8e8e32a5766",
+          "size": 379217632,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-350M-QAD-Q4_0.gguf",
+        "blobId": "2acf9261ca12dac80f61386de9bb379f73ebe76e",
+        "size": 219312832,
+        "lfs": {
+          "sha256": "3d10b6ab8fc91a919534b9558e266255aca0bbc7f6d015963599aa9e74e05b1d",
+          "size": 219312832,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LICENSE",
+        "blobId": "d24c9208b10e63d317589bc8d6fc34967c3068d3",
+        "size": 10596
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "149171d2f49ff842e962973b8238b56266b8375a",
+        "size": 3277
+      },
+      {
+        "rfilename": "leap/Q4_0.json",
+        "blobId": "3155d7691d5717d55d979b37afad66d351e2f1c4",
+        "size": 302
+      },
+      {
+        "rfilename": "leap/Q4_K_M.json",
+        "blobId": "7491eb5df3224361f1635583ca7044bf0b534ad8",
+        "size": 304
+      },
+      {
+        "rfilename": "leap/Q5_K_M.json",
+        "blobId": "be228925c60d9762afbeef91ca855f3b4545fb04",
+        "size": 304
+      },
+      {
+        "rfilename": "leap/Q8_0.json",
+        "blobId": "072ec9e591db4bb85df8778fe6651264d4f68185",
+        "size": 302
+      },
+      {
+        "rfilename": "qad/LICENSE",
+        "blobId": "d24c9208b10e63d317589bc8d6fc34967c3068d3",
+        "size": 10596
+      },
+      {
+        "rfilename": "qad/README.md",
+        "blobId": "be3c0c3f4c6b3316a0df37594e5ee0def3ca7635",
+        "size": 3098
+      },
+      {
+        "rfilename": "qad/chat_template.jinja",
+        "blobId": "4bba41b1eea86b9f3725ca30a89bb4656e17e25a",
+        "size": 5487
+      },
+      {
+        "rfilename": "qad/config.json",
+        "blobId": "9f7ce76145bb32ecb7b32f78180a78de72eec9bb",
+        "size": 1308
+      },
+      {
+        "rfilename": "qad/generation_config.json",
+        "blobId": "ccb4c027399f74601d15f8a8cc6e176552f02f9f",
+        "size": 134
+      },
+      {
+        "rfilename": "qad/model.safetensors",
+        "blobId": "207af9b2b582d317f39d073330166534f39c036c",
+        "size": 1417952352,
+        "lfs": {
+          "sha256": "1d90518482c4ec204bebb4820bbaee4f8a38c5a6df72256f86bcd21fe52ad079",
+          "size": 1417952352,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "qad/provenance.json",
+        "blobId": "7d9a0c1f4e0eb47b936a2b6befaaa3c3f4fa93d8",
+        "size": 936
+      },
+      {
+        "rfilename": "qad/tokenizer.json",
+        "blobId": "2e27bba0b0505b2b2124fa9225c9b5dda7531474",
+        "size": 4733389
+      },
+      {
+        "rfilename": "qad/tokenizer_config.json",
+        "blobId": "93b7f2e1afe24967fd35fc777b33a231a4511c2e",
+        "size": 490
+      }
+    ],
+    "spaces": [
+      "Luigi/Live-Radio-Karaoke",
+      "dinely523/aidiot-proj",
+      "matt-ritchey/test-chat"
+    ],
+    "createdAt": "2026-03-25T02:45:48.000Z",
+    "usedStorage": 7762821920
+  },
+  "ibm-granite/granite-4.0-350m-GGUF": {
+    "_id": "68fa48b540a34ae4f767cb20",
+    "id": "ibm-granite/granite-4.0-350m-GGUF",
+    "private": false,
+    "library_name": "transformers",
+    "tags": [
+      "transformers",
+      "gguf",
+      "language",
+      "granite-4.0",
+      "base_model:ibm-granite/granite-4.0-350m",
+      "base_model:quantized:ibm-granite/granite-4.0-350m",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "downloads": 5344,
+    "likes": 10,
+    "modelId": "ibm-granite/granite-4.0-350m-GGUF",
+    "author": "ibm-granite",
+    "sha": "b8208a86a58427e1739265318028eb5895b74bf2",
+    "lastModified": "2026-04-23T19:38:13.000Z",
+    "gated": false,
+    "disabled": false,
+    "model-index": null,
+    "config": {},
+    "cardData": {
+      "license": "apache-2.0",
+      "library_name": "transformers",
+      "tags": [
+        "language",
+        "granite-4.0",
+        "gguf"
+      ],
+      "base_model": [
+        "ibm-granite/granite-4.0-350m"
+      ]
+    },
+    "transformersInfo": {
+      "auto_model": "AutoModel"
+    },
+    "gguf": {
+      "total": 352379904,
+      "architecture": "granite",
+      "context_length": 32768,
+      "chat_template": "{%- set tools_system_message_prefix = 'You are a helpful assistant with access to the following tools. You may call one or more tools to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>'  %}\n{%- set tools_system_message_suffix = '\\n</tools>\\n\\nFor each tool call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call>. If a tool does not exist in the provided list of tools, notify the user that you do not have the ability to fulfill the request.' %}\n{%- set documents_system_message_prefix = 'You are a helpful assistant with access to the following documents. You may use one or more documents to assist with the user query.\\n\\nYou are given a list of documents within <documents></documents> XML tags:\\n<documents>' %}\n{%- set documents_system_message_suffix = '\\n</documents>\\n\\nWrite the response to the user\\'s input by strictly aligning with the facts in the provided documents. If the information needed to answer the question is not available in the documents, inform the user that the question cannot be answered based on the available data.' %}\n{%- set g4_default_system_message = 'You are a helpful assistant. Please ensure responses are professional, accurate, and safe.' %}\n{%- if available_tools is defined and available_tools %}\n    {%- set tools = available_tools %}\n{%- endif %}\n{%- set ns = namespace(tools_system_message=tools_system_message_prefix,\n                       documents_system_message=documents_system_message_prefix,\n                       default_system_message=g4_default_system_message,\n                       system_message=''\n                       ) %}\n{%- if tools %}\n    {%- for tool in tools %}\n        {%- set ns.tools_system_message = ns.tools_system_message + '\\n' + (tool | tojson) %}\n    {%- endfor %}\n    {%- set ns.tools_system_message = ns.tools_system_message + tools_system_message_suffix %}\n{%- else %}\n    {%- set ns.tools_system_message = '' %}\n{%- endif %}\n{%- if documents %}\n    {%- for document in documents %}\n        {%- set ns.documents_system_message = ns.documents_system_message + '\\n' + (document | tojson) %}\n    {%- endfor %}\n    {%- set ns.documents_system_message = ns.documents_system_message + documents_system_message_suffix %}\n{%- else %}\n    {%- set ns.documents_system_message = '' %}\n{%- endif %}\n{%- if messages[0].role == 'system' %}\n    {%- if messages[0].content is string %}\n        {%- set ns.system_message = messages[0].content %}\n    {%- elif messages[0].content is iterable %}\n        {%- for entry in messages[0].content %}\n            {%- if entry.type== 'text' %}\n                {%- if ns.system_message != '' %}\n                    {%- set ns.system_message = ns.system_message + '\\n' %}\n                {%- endif %}\n                {%- set ns.system_message = ns.system_message + entry.text %}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {%- if tools and documents %}\n        {%- set ns.system_message = ns.system_message + '\\n\\n' +  ns.tools_system_message + '\\n\\n' + ns.documents_system_message %}\n    {%- elif tools %}\n        {%- set ns.system_message = ns.system_message + '\\n\\n' + ns.tools_system_message %}\n    {%- elif documents %}\n        {%- set ns.system_message = ns.system_message + '\\n\\n' + ns.documents_system_message %}\n    {%- endif %}\n{%- else %}\n    {%- if tools and documents %}\n        {%- set ns.system_message = ns.tools_system_message + '\\n\\n' + ns.documents_system_message  %}\n    {%- elif tools %}\n        {%- set ns.system_message = ns.tools_system_message %}\n    {%- elif documents %}\n        {%- set ns.system_message = ns.documents_system_message %}\n    {%- endif %}\n{%- endif %}\n{%- if ns.system_message %}\n    {{- '<|start_of_role|>system<|end_of_role|>' + ns.system_message + '<|end_of_text|>\\n' }}\n{%- else %}\n    {{- '<|start_of_role|>system<|end_of_role|>' + ns.default_system_message + '<|end_of_text|>\\n' }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = namespace(val='') %}\n    {%- if message.content is string %}\n        {%- set content.val = message.content %}\n    {%- else %}\n        {%- if message.content is iterable %}\n            {%- for entry in message.content %}\n                {%- if entry.type== 'text' %}\n                    {%- if content.val != '' %}\n                        {%- set content.val = content.val + '\\n' %}\n                    {%- endif %}\n                    {%- set content.val = content.val + entry.text %}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n    {%- endif %}\n    {%- if (message.role == 'user') or (message.role == 'system' and not loop.first) %}\n        {{- '<|start_of_role|>' + message.role + '<|end_of_role|>' + content.val + '<|end_of_text|>\\n' }}\n    {%- elif message.role == 'assistant' %}\n        {{- '<|start_of_role|>' + message.role + '<|end_of_role|>' + content.val }}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content.val) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|end_of_text|>\\n' }}\n    {%- elif message.role == 'tool' %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != 'tool') %}\n            {{- '<|start_of_role|>user<|end_of_role|>' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content.val }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != 'tool') %}\n            {{- '<|end_of_text|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|start_of_role|>assistant<|end_of_role|>' }}\n{%- endif %}",
+      "bos_token": "<|end_of_text|>",
+      "eos_token": "<|end_of_text|>",
+      "totalFileSize": 708439456
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "4728ed99aa421654a0e51aaa31562d192360a83e",
+        "size": 2540
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "ec9f856075e313ecfa80b75bafb509d3a5f45d04",
+        "size": 426
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q2_K.gguf",
+        "blobId": "5bfafaeafd909a2e90b2f04c51bffd041392e888",
+        "size": 180645280,
+        "lfs": {
+          "sha256": "7d5a88bb3933e961a719799e7912688c5f500773985bddef72ccc358f8d54630",
+          "size": 180645280,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q3_K_L.gguf",
+        "blobId": "865d6bb34a1fbf5a32310872aa7d15fc8c9f6514",
+        "size": 219925920,
+        "lfs": {
+          "sha256": "1f00d58f4f75723d42ddf46fdb19b1f7b5bc339f679a48b5985b631e25b57183",
+          "size": 219925920,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q3_K_M.gguf",
+        "blobId": "991f1d9c338e8cc76a2ff45e2b15c26e4796b9ec",
+        "size": 208326048,
+        "lfs": {
+          "sha256": "7dbc8ba725b328c500ac819b2dc84b0f1cffe02b9bc096716082cbcef6f0589b",
+          "size": 208326048,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q3_K_S.gguf",
+        "blobId": "c08246c8a5493f52d6f88fe335d81941b7e5b70e",
+        "size": 195325344,
+        "lfs": {
+          "sha256": "904ac3cd214794748435a851a48666dc3cae8e50dda9d1c51674c311f1b7c801",
+          "size": 195325344,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q4_0.gguf",
+        "blobId": "5229d8aaedad16accb069fa219cfe9bd7af4a379",
+        "size": 228470176,
+        "lfs": {
+          "sha256": "a9db4c0ab23bb3c676f5fea5521d7a9301c577834a1cabf3430ab826fb68195a",
+          "size": 228470176,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q4_1.gguf",
+        "blobId": "f75f70fdc7f512d92fad3b5318c6fd9f71a94d77",
+        "size": 244067744,
+        "lfs": {
+          "sha256": "11cc8dc13761418256b17aec69894ca489148dd13e7435bb6ac24ec502337692",
+          "size": 244067744,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q4_K_M.gguf",
+        "blobId": "70f092bd480866797f00a2a60de10a61aa4d1ae2",
+        "size": 236985760,
+        "lfs": {
+          "sha256": "771c588a49607f274a2bba3185733607ebe6f74b996ab90e2d6bee0d98bcec52",
+          "size": 236985760,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q4_K_S.gguf",
+        "blobId": "9db7de4d9975e807cb7af0598f53318d3ac6be08",
+        "size": 229387680,
+        "lfs": {
+          "sha256": "efb4323f3586628336ad50a852dffe341dbc0d285ec609619c0ed031ae2dedd4",
+          "size": 229387680,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q5_0.gguf",
+        "blobId": "437f4b3d8c39814a0531a4c4889b5b6276f8a42c",
+        "size": 259665312,
+        "lfs": {
+          "sha256": "ea75cbd46ca86d359e3c5a402ef23d332b9b3e5b5007124c64716aab5655713f",
+          "size": 259665312,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q5_1.gguf",
+        "blobId": "7c3889503932c96264a49ea88e2d52661e82fb91",
+        "size": 275262880,
+        "lfs": {
+          "sha256": "52149a9dadc3760e627762eaa288992afde1fb941dc123636cb327b4e1148d42",
+          "size": 275262880,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q5_K_M.gguf",
+        "blobId": "fc0d44c1ff1bb6dfd8d5b2bdb900e9ad6269f1a6",
+        "size": 264052128,
+        "lfs": {
+          "sha256": "4beb551386f90e782c38f5d20e5bb6096e393eb83d6654503868b5b5f967aa2d",
+          "size": 264052128,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q5_K_S.gguf",
+        "blobId": "31f6f2c922a700db2464ed5f586d1ced541e628a",
+        "size": 259665312,
+        "lfs": {
+          "sha256": "3efa121d1021b6b92ddee400530ed3a58dd4fb0e3647c3996df40488333ef7b0",
+          "size": 259665312,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q6_K.gguf",
+        "blobId": "5d01166c6855f8c5cb1c487d5d2df0274ef72a3c",
+        "size": 292810144,
+        "lfs": {
+          "sha256": "c6ece437ba9f0cfbd7a3311b3ff667f96d2931e7668eb874896672af9b893781",
+          "size": 292810144,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-Q8_0.gguf",
+        "blobId": "cc6c2ff1c77f1130e4f9b0cc06575182642b77b1",
+        "size": 378138016,
+        "lfs": {
+          "sha256": "9595dafb4ed15aa02512c8ea26188744192a6f09530eae0a2747bd3ada96cd36",
+          "size": 378138016,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "granite-4.0-350m-bf16.gguf",
+        "blobId": "56e830ed3aba27c0d4375b1dc222b7e50b45d6e7",
+        "size": 708439456,
+        "lfs": {
+          "sha256": "431e956cac90a7e4d36a9b37bb086c413491c598bb51f90ada8e0c75d0219645",
+          "size": 708439456,
+          "pointerSize": 134
+        }
+      }
+    ],
+    "spaces": [],
+    "createdAt": "2025-10-23T15:24:37.000Z",
+    "usedStorage": 4889606656
+  },
+  "ggml-org/functiongemma-270m-it-GGUF": {
+    "_id": "69442d64307f9531f19aa7b6",
+    "id": "ggml-org/functiongemma-270m-it-GGUF",
+    "private": false,
+    "pipeline_tag": "text-generation",
+    "library_name": "transformers",
+    "tags": [
+      "transformers",
+      "gguf",
+      "gemma3",
+      "gemma",
+      "google",
+      "functiongemma",
+      "llama-cpp",
+      "gguf-my-repo",
+      "text-generation",
+      "base_model:google/functiongemma-270m-it",
+      "base_model:quantized:google/functiongemma-270m-it",
+      "license:gemma",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "downloads": 1505,
+    "likes": 6,
+    "modelId": "ggml-org/functiongemma-270m-it-GGUF",
+    "author": "ggml-org",
+    "sha": "2566ce14aedfc14fdd0de955ba67346425e67126",
+    "lastModified": "2025-12-18T17:06:00.000Z",
+    "gated": false,
+    "disabled": false,
+    "widgetData": [
+      {
+        "text": "Hi, what can you help me with?"
+      },
+      {
+        "text": "What is 84 * 3 / 2?"
+      },
+      {
+        "text": "Tell me an interesting fact about the universe!"
+      },
+      {
+        "text": "Explain quantum computing in simple terms."
+      }
+    ],
+    "model-index": null,
+    "config": {},
+    "cardData": {
+      "license": "gemma",
+      "tags": [
+        "gemma3",
+        "gemma",
+        "google",
+        "functiongemma",
+        "llama-cpp",
+        "gguf-my-repo"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "extra_gated_heading": "Access Gemma on Hugging Face",
+      "extra_gated_prompt": "To access FunctionGemma on Hugging Face, you\u2019re required to review and agree to Google\u2019s usage license. To do this, please ensure you\u2019re logged in to Hugging Face and click below. Requests are processed immediately.",
+      "extra_gated_button_content": "Acknowledge license",
+      "base_model": "google/functiongemma-270m-it"
+    },
+    "transformersInfo": {
+      "auto_model": "AutoModel"
+    },
+    "gguf": {
+      "total": 268098176,
+      "architecture": "gemma3",
+      "context_length": 32768,
+      "chat_template": "{%- macro format_parameters(properties, required) -%}\n    {%- set standard_keys = ['description', 'type', 'properties', 'required', 'nullable'] -%}\n    {%- set ns = namespace(found_first=false) -%}\n    {%- for key, value in properties | dictsort -%}\n        {%- if key not in standard_keys -%}\n            {%- if ns.found_first %},{% endif -%}\n            {%- set ns.found_first = true -%}\n            {{- key }}:{description:<escape>{{ value['description'] }}<escape>\n            {%- if value['type'] | upper == 'STRING' -%}\n                {%- if value['enum'] -%}\n                    ,enum:{{ format_argument(value['enum']) }}\n                {%- endif -%}\n            {%- elif value['type'] | upper == 'OBJECT' -%}\n                ,properties:{\n                {%- if value['properties'] is defined and value['properties'] is mapping -%}\n                    {{- format_parameters(value['properties'], value['required'] | default([])) -}}\n                {%- elif value is mapping -%}\n                    {{- format_parameters(value, value['required'] | default([])) -}}\n                {%- endif -%}\n                }\n                {%- if value['required'] -%}\n                    ,required:[\n                    {%- for item in value['required'] | default([]) -%}\n                        <escape>{{- item -}}<escape>\n                        {%- if not loop.last %},{% endif -%}\n                    {%- endfor -%}\n                    ]\n                {%- endif -%}\n            {%- elif value['type'] | upper == 'ARRAY' -%}\n                {%- if value['items'] is mapping and value['items'] -%}\n                    ,items:{\n                    {%- set ns_items = namespace(found_first=false) -%}\n                    {%- for item_key, item_value in value['items'] | dictsort -%}\n                        {%- if item_value is not none -%}\n                            {%- if ns_items.found_first %},{% endif -%}\n                            {%- set ns_items.found_first = true -%}\n                            {%- if item_key == 'properties' -%}\n                                properties:{\n                                {%- if item_value is mapping -%}\n                                    {{- format_parameters(item_value, value['items']['required'] | default([])) -}}\n                                {%- endif -%}\n                                }\n                            {%- elif item_key == 'required' -%}\n                                required:[\n                                {%- for req_item in item_value -%}\n                                    <escape>{{- req_item -}}<escape>\n                                    {%- if not loop.last %},{% endif -%}\n                                {%- endfor -%}\n                                ]\n                            {%- elif item_key == 'type' -%}\n                                {%- if item_value is string -%}\n                                    type:{{ format_argument(item_value | upper) }}\n                                {%- else -%}\n                                    type:{{ format_argument(item_value | map('upper') | list) }}\n                                {%- endif -%}\n                            {%- else -%}\n                                {{ item_key }}:{{ format_argument(item_value) }}\n                            {%- endif -%}\n                        {%- endif -%}\n                    {%- endfor -%}\n                    }\n                {%- endif -%}\n            {%- endif -%}\n            ,type:<escape>{{ value['type'] | upper }}<escape>}\n        {%- endif -%}\n    {%- endfor -%}\n{%- endmacro -%}\n{% macro format_function_declaration(tool_data) -%}\ndeclaration:{{- tool_data['function']['name'] -}}\n{description:<escape>{{- tool_data['function']['description'] -}}<escape>\n{%- set params = tool_data['function']['parameters'] -%}\n{%- if params -%}\n    ,parameters:{\n    {%- if params['properties'] -%}\n        properties:{ {{- format_parameters(params['properties'], params['required']) -}} },\n    {%- endif -%}\n    {%- if params['required'] -%}\n        required:[\n        {%- for item in params['required'] -%}\n            <escape>{{- item -}}<escape>\n            {{- ',' if not loop.last -}}\n        {%- endfor -%}\n        ],\n    {%- endif -%}\n    {%- if params['type'] -%}\n        type:<escape>{{- params['type'] | upper -}}<escape>}\n    {%- endif -%}\n{%- endif -%}\n}\n{%- endmacro -%}\n{% macro format_argument(argument, escape_keys=True) -%}\n{%- if argument is string -%}\n    {{- '<escape>' + argument + '<escape>' -}}\n{%- elif argument is boolean -%}\n    {%- if argument -%}\n        {{- 'true' -}}\n    {%- else -%}\n        {{- 'false' -}}\n    {%- endif -%}\n{%- elif argument is mapping -%}\n    {{- '{' -}}\n    {%- set ns = namespace(found_first=false) -%}\n    {%- for key, value in argument | dictsort -%}\n        {%- if ns.found_first %},{% endif -%}\n        {%- set ns.found_first = true -%}\n        {%- if escape_keys -%}\n            {{- '<escape>' + key + '<escape>' -}}\n        {%- else -%}\n            {{- key -}}\n        {%- endif -%}\n        :{{- format_argument(value, escape_keys=escape_keys) -}}\n    {%- endfor -%}\n    {{- '}' -}}\n{%- elif argument is sequence -%}\n    {{- '[' -}}\n    {%- for item in argument -%}\n        {{- format_argument(item, escape_keys=escape_keys) -}}\n        {%- if not loop.last %},{% endif -%}\n    {%- endfor -%}\n    {{- ']' -}}\n{%- else -%}\n    {{- argument -}}\n{%- endif -%}\n{%- endmacro -%}\n{{ bos_token }}\n{%- set ns = namespace(prev_message_type=None) -%}\n{#- Tool Declarations -#}\n{%- set loop_messages = messages -%}\n{%- if tools or messages[0]['role'] == 'system' or messages[0]['role'] == 'developer' -%}\n    {{- '<start_of_turn>developer\\n' -}}\n    {%- if messages[0]['role'] == 'system' or messages[0]['role'] == 'developer' -%}\n        {%- if messages[0]['content'] is string -%}\n            {{- messages[0]['content'] | trim -}}\n        {%- elif messages[0]['content'] is sequence -%}\n            {%- for item in messages[0]['content'] -%}\n                {%- if item['type'] == 'text' -%}\n                    {{- item['text'] | trim -}}\n                {%- endif -%}\n            {%- endfor -%}\n        {%- endif -%}\n        {%- set loop_messages = messages[1:] -%}\n    {%- endif -%}\n    {%- if tools -%}\n        {%- for tool in tools %}\n            {{- '<start_function_declaration>' -}}\n            {{- format_function_declaration(tool) | trim }}\n            {{- '<end_function_declaration>' -}}\n        {%- endfor %}\n    {%- endif -%}\n    {{- '<end_of_turn>\\n' }}\n{%- endif %}\n{#- Loop through messages. -#}\n{%- for message in loop_messages -%}\n    {%- if (message['role'] == 'assistant') -%}\n        {#- Rename \"assistant\" to \"model\". -#}\n        {%- set role = \"model\" -%}\n    {%- else -%}\n        {%- set role = message['role'] -%}\n    {%- endif -%}\n    {%- if role != 'tool' -%}\n        {%- if ns.prev_message_type != 'tool_response' -%}\n            {{- '<start_of_turn>' + role + '\\n' }}\n        {%- endif -%}\n        {%- set ns.prev_message_type = None -%}\n        {%- if 'content' in message and message['content'] is not none -%}\n            {%- if message['content'] is string -%}\n                {{ message['content'] | trim }}\n            {%- elif message['content'] is sequence -%}\n                {%- for item in message['content'] -%}\n                    {%- if item['type'] == 'image' -%}\n                        {{ '<start_of_image>' }}\n                    {%- elif item['type'] == 'text' -%}\n                        {{ item['text'] | trim }}\n                    {%- endif -%}\n                {%- endfor -%}\n            {%- else -%}\n                {{ raise_exception(\"Invalid content type in user/assistant message\") }}\n            {%- endif -%}\n            {%- set ns.prev_message_type = 'content' -%}\n        {%- endif -%}\n        {%- if 'tool_calls' in message and message['tool_calls'] and message['tool_calls'] is iterable -%}\n            {#- Tool Calls -#}\n            {%- for tool_call in message['tool_calls'] -%}\n                {% set function = tool_call['function'] %}\n                {{-  '<start_function_call>call:' + function['name'] + '{' -}}\n                {%- if 'arguments' in function -%}\n                    {%- if function['arguments'] is mapping -%}\n                        {%- set ns = namespace(found_first=false) -%}\n                        {%- for key, value in function['arguments'] | dictsort -%}\n                            {%- if ns.found_first %},{% endif -%}\n                            {%- set ns.found_first = true -%}\n                            {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                        {%- endfor -%}\n                    {%- elif function['arguments'] is string -%}\n                        {# This handles string-JSON, just in case #}\n                    {{ function['arguments'] }}\n                    {%- endif %}\n                {%- endif -%}\n                {{- '}<end_function_call>' -}}\n            {%- endfor -%}\n            {%- if loop.last -%}\n                {{ '<start_function_response>' }}\n            {%- endif -%}\n            {%- set ns.prev_message_type = 'tool_call' -%}\n        {%- endif -%}\n    {%- else -%}\n        {#- Tool Responses -#}\n        {%- if 'content' in message and message['content'] -%}\n            {%- if message['content'] is mapping -%}\n                {%- if 'name' in message['content'] and 'response' in message['content'] -%}\n                    {{ '<start_function_response>response:' + message['content']['name'] | trim + '{' }}\n                    {%- set response_ns = namespace(found_first=false) -%}\n                    {%- for key, value in message['content']['response'] | dictsort -%}\n                        {%- if response_ns.found_first %},{% endif -%}\n                        {%- set response_ns.found_first = true -%}\n                        {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                    {%- endfor -%}\n                    {{- '}<end_function_response>' -}}\n                {%- elif 'name' in message -%}\n                    {{ '<start_function_response>response:' + message['name'] | trim + '{' }}\n                    {%- set response_ns = namespace(found_first=false) -%}\n                    {%- for key, value in message['content'] | dictsort -%}\n                        {%- if response_ns.found_first %},{% endif -%}\n                        {%- set response_ns.found_first = true -%}\n                        {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                    {%- endfor -%}\n                    {{- '}<end_function_response>' -}}\n                {%- else -%}\n                    {{ raise_exception(\"Invalid tool response mapping: must contain 'name' and 'response' keys, or 'name' must be in the message.\") }}\n                {%- endif -%}\n            {%- elif message['content'] is string -%}\n                {%- if 'name' in message -%}\n                     {{ '<start_function_response>response:' + message['name'] | trim + '{value:' + format_argument(message['content'], escape_keys=False) + '}<end_function_response>' }}\n                {%- else -%}\n                     {{ raise_exception(\"Invalid tool response: 'name' must be provided.\") }}\n                {%- endif -%}\n            {%- elif message['content'] is sequence -%}\n                {%- for item in message['content'] -%}\n                    {%- if item is mapping -%}\n                        {%- if 'name' in item and 'response' in item -%}\n                            {{ '<start_function_response>response:' + item['name'] | trim + '{' }}\n                            {%- set response_ns = namespace(found_first=false) -%}\n                            {%- for key, value in item['response'] | dictsort -%}\n                                {%- if response_ns.found_first %},{% endif -%}\n                                {%- set response_ns.found_first = true -%}\n                                {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                            {%- endfor -%}\n                            {{- '}<end_function_response>' -}}\n                        {%- elif 'name' in message -%}\n                            {{ '<start_function_response>response:' + message['name'] | trim + '{' }}\n                            {%- set response_ns = namespace(found_first=false) -%}\n                            {%- for key, value in item | dictsort -%}\n                                {%- if response_ns.found_first %},{% endif -%}\n                                {%- set response_ns.found_first = true -%}\n                                {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                            {%- endfor -%}\n                            {{- '}<end_function_response>' -}}\n                        {%- else -%}\n                            {{ raise_exception(\"Invalid tool response mapping: must contain 'name' and 'response' keys, or 'name' must be in the message.\") }}\n                        {%- endif -%}\n                    {%- else -%}\n                        {{ raise_exception(\"Invalid tool response message: multiple responses must all be mappings\") }}\n                    {%- endif -%}\n                {%- endfor -%}\n            {%- else -%}\n                {{ raise_exception(\"Invalid content type in tool message: must be mapping, sequence of mappings, or string.\") }}\n            {%- endif -%}\n        {%- endif -%}\n        {%- set ns.prev_message_type = 'tool_response' -%}\n    {%- endif -%}\n    {%- if ns.prev_message_type not in ['tool_call', 'tool_response'] -%}\n        {{ '<end_of_turn>\\n' }}\n    {%- endif -%}\n{%- endfor -%}\n{%- if add_generation_prompt -%}\n    {%- if ns.prev_message_type != 'tool_response' -%}\n        {{- '<start_of_turn>model\\n' -}}\n    {%- endif -%}\n{%- endif -%}\n",
+      "bos_token": "<bos>",
+      "eos_token": "<eos>",
+      "totalFileSize": 542847392
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "e5c29f1d43ef1ca1d8413b63fee2504aea1e8b1f",
+        "size": 1655
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "a74b9ad44fc7a81e84488714c7143dfb49daa4c0",
+        "size": 846
+      },
+      {
+        "rfilename": "functiongemma-270m-it-bf16.gguf",
+        "blobId": "35a17ad93fdb1023a3b90fd4ed158bd9574f65b9",
+        "size": 542847392,
+        "lfs": {
+          "sha256": "44090e534ddb3cfc683b696f2825b4056f413ad1e7963d69bd5196d5b3ae7ee6",
+          "size": 542847392,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "functiongemma-270m-it-q8_0.gguf",
+        "blobId": "cfdac90409b96c8c4a0fcfd74153d08ebb348b77",
+        "size": 291557792,
+        "lfs": {
+          "sha256": "83940d4dd9676710856f43523bed096164a595a96f6b34771610a03937de5270",
+          "size": 291557792,
+          "pointerSize": 134
+        }
+      }
+    ],
+    "spaces": [],
+    "createdAt": "2025-12-18T16:35:48.000Z",
+    "usedStorage": 1125949152
+  },
+  "google/functiongemma-270m-it": {
+    "_id": "68e6a06b7e7373e89865cab6",
+    "id": "google/functiongemma-270m-it",
+    "private": false,
+    "pipeline_tag": "text-generation",
+    "library_name": "transformers",
+    "tags": [
+      "transformers",
+      "safetensors",
+      "gemma3_text",
+      "text-generation",
+      "gemma3",
+      "gemma",
+      "google",
+      "functiongemma",
+      "conversational",
+      "license:gemma",
+      "text-generation-inference",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "downloads": 15278,
+    "likes": 1127,
+    "modelId": "google/functiongemma-270m-it",
+    "author": "google",
+    "sha": "39eccb091651513a5dfb56892d3714c1b5b8276c",
+    "lastModified": "2026-01-14T09:33:54.000Z",
+    "gated": "manual",
+    "disabled": false,
+    "widgetData": [
+      {
+        "text": "Hi, what can you help me with?"
+      },
+      {
+        "text": "What is 84 * 3 / 2?"
+      },
+      {
+        "text": "Tell me an interesting fact about the universe!"
+      },
+      {
+        "text": "Explain quantum computing in simple terms."
+      }
+    ],
+    "model-index": null,
+    "config": {
+      "architectures": [
+        "Gemma3ForCausalLM"
+      ],
+      "model_type": "gemma3_text",
+      "tokenizer_config": {
+        "use_default_system_prompt": false,
+        "bos_token": "<bos>",
+        "eos_token": "<eos>",
+        "unk_token": "<unk>",
+        "pad_token": "<pad>"
+      },
+      "chat_template_jinja": "{%- macro format_parameters(properties, required) -%}\n    {%- set standard_keys = ['description', 'type', 'properties', 'required', 'nullable'] -%}\n    {%- set ns = namespace(found_first=false) -%}\n    {%- for key, value in properties | dictsort -%}\n        {%- if key not in standard_keys -%}\n            {%- if ns.found_first %},{% endif -%}\n            {%- set ns.found_first = true -%}\n            {{- key }}:{description:<escape>{{ value['description'] }}<escape>\n            {%- if value['type'] | upper == 'STRING' -%}\n                {%- if value['enum'] -%}\n                    ,enum:{{ format_argument(value['enum']) }}\n                {%- endif -%}\n            {%- elif value['type'] | upper == 'OBJECT' -%}\n                ,properties:{\n                {%- if value['properties'] is defined and value['properties'] is mapping -%}\n                    {{- format_parameters(value['properties'], value['required'] | default([])) -}}\n                {%- elif value is mapping -%}\n                    {{- format_parameters(value, value['required'] | default([])) -}}\n                {%- endif -%}\n                }\n                {%- if value['required'] -%}\n                    ,required:[\n                    {%- for item in value['required'] | default([]) -%}\n                        <escape>{{- item -}}<escape>\n                        {%- if not loop.last %},{% endif -%}\n                    {%- endfor -%}\n                    ]\n                {%- endif -%}\n            {%- elif value['type'] | upper == 'ARRAY' -%}\n                {%- if value['items'] is mapping and value['items'] -%}\n                    ,items:{\n                    {%- set ns_items = namespace(found_first=false) -%}\n                    {%- for item_key, item_value in value['items'] | dictsort -%}\n                        {%- if item_value is not none -%}\n                            {%- if ns_items.found_first %},{% endif -%}\n                            {%- set ns_items.found_first = true -%}\n                            {%- if item_key == 'properties' -%}\n                                properties:{\n                                {%- if item_value is mapping -%}\n                                    {{- format_parameters(item_value, value['items']['required'] | default([])) -}}\n                                {%- endif -%}\n                                }\n                            {%- elif item_key == 'required' -%}\n                                required:[\n                                {%- for req_item in item_value -%}\n                                    <escape>{{- req_item -}}<escape>\n                                    {%- if not loop.last %},{% endif -%}\n                                {%- endfor -%}\n                                ]\n                            {%- elif item_key == 'type' -%}\n                                {%- if item_value is string -%}\n                                    type:{{ format_argument(item_value | upper) }}\n                                {%- else -%}\n                                    type:{{ format_argument(item_value | map('upper') | list) }}\n                                {%- endif -%}\n                            {%- else -%}\n                                {{ item_key }}:{{ format_argument(item_value) }}\n                            {%- endif -%}\n                        {%- endif -%}\n                    {%- endfor -%}\n                    }\n                {%- endif -%}\n            {%- endif -%}\n            ,type:<escape>{{ value['type'] | upper }}<escape>}\n        {%- endif -%}\n    {%- endfor -%}\n{%- endmacro -%}\n{% macro format_function_declaration(tool_data) -%}\ndeclaration:{{- tool_data['function']['name'] -}}\n{description:<escape>{{- tool_data['function']['description'] -}}<escape>\n{%- set params = tool_data['function']['parameters'] -%}\n{%- if params -%}\n    ,parameters:{\n    {%- if params['properties'] -%}\n        properties:{ {{- format_parameters(params['properties'], params['required']) -}} },\n    {%- endif -%}\n    {%- if params['required'] -%}\n        required:[\n        {%- for item in params['required'] -%}\n            <escape>{{- item -}}<escape>\n            {{- ',' if not loop.last -}}\n        {%- endfor -%}\n        ],\n    {%- endif -%}\n    {%- if params['type'] -%}\n        type:<escape>{{- params['type'] | upper -}}<escape>}\n    {%- endif -%}\n{%- endif -%}\n}\n{%- endmacro -%}\n{% macro format_argument(argument, escape_keys=True) -%}\n{%- if argument is string -%}\n    {{- '<escape>' + argument + '<escape>' -}}\n{%- elif argument is boolean -%}\n    {%- if argument -%}\n        {{- 'true' -}}\n    {%- else -%}\n        {{- 'false' -}}\n    {%- endif -%}\n{%- elif argument is mapping -%}\n    {{- '{' -}}\n    {%- set ns = namespace(found_first=false) -%}\n    {%- for key, value in argument | dictsort -%}\n        {%- if ns.found_first %},{% endif -%}\n        {%- set ns.found_first = true -%}\n        {%- if escape_keys -%}\n            {{- '<escape>' + key + '<escape>' -}}\n        {%- else -%}\n            {{- key -}}\n        {%- endif -%}\n        :{{- format_argument(value, escape_keys=escape_keys) -}}\n    {%- endfor -%}\n    {{- '}' -}}\n{%- elif argument is sequence -%}\n    {{- '[' -}}\n    {%- for item in argument -%}\n        {{- format_argument(item, escape_keys=escape_keys) -}}\n        {%- if not loop.last %},{% endif -%}\n    {%- endfor -%}\n    {{- ']' -}}\n{%- else -%}\n    {{- argument -}}\n{%- endif -%}\n{%- endmacro -%}\n{{ bos_token }}\n{%- set ns = namespace(prev_message_type=None) -%}\n{#- Tool Declarations -#}\n{%- set loop_messages = messages -%}\n{%- if tools or messages[0]['role'] == 'system' or messages[0]['role'] == 'developer' -%}\n    {{- '<start_of_turn>developer\\n' -}}\n    {%- if messages[0]['role'] == 'system' or messages[0]['role'] == 'developer' -%}\n        {%- if messages[0]['content'] is string -%}\n            {{- messages[0]['content'] | trim -}}\n        {%- elif messages[0]['content'] is sequence -%}\n            {%- for item in messages[0]['content'] -%}\n                {%- if item['type'] == 'text' -%}\n                    {{- item['text'] | trim -}}\n                {%- endif -%}\n            {%- endfor -%}\n        {%- endif -%}\n        {%- set loop_messages = messages[1:] -%}\n    {%- endif -%}\n    {%- if tools -%}\n        {%- for tool in tools %}\n            {{- '<start_function_declaration>' -}}\n            {{- format_function_declaration(tool) | trim }}\n            {{- '<end_function_declaration>' -}}\n        {%- endfor %}\n    {%- endif -%}\n    {{- '<end_of_turn>\\n' }}\n{%- endif %}\n{#- Loop through messages. -#}\n{%- for message in loop_messages -%}\n    {%- if (message['role'] == 'assistant') -%}\n        {#- Rename \"assistant\" to \"model\". -#}\n        {%- set role = \"model\" -%}\n    {%- else -%}\n        {%- set role = message['role'] -%}\n    {%- endif -%}\n    {%- if role != 'tool' -%}\n        {%- if ns.prev_message_type != 'tool_response' -%}\n            {{- '<start_of_turn>' + role + '\\n' }}\n        {%- endif -%}\n        {%- set ns.prev_message_type = None -%}\n        {%- if 'content' in message and message['content'] is not none -%}\n            {%- if message['content'] is string -%}\n                {{ message['content'] | trim }}\n            {%- elif message['content'] is sequence -%}\n                {%- for item in message['content'] -%}\n                    {%- if item['type'] == 'image' -%}\n                        {{ '<start_of_image>' }}\n                    {%- elif item['type'] == 'text' -%}\n                        {{ item['text'] | trim }}\n                    {%- endif -%}\n                {%- endfor -%}\n            {%- else -%}\n                {{ raise_exception(\"Invalid content type in user/assistant message\") }}\n            {%- endif -%}\n            {%- set ns.prev_message_type = 'content' -%}\n        {%- endif -%}\n        {%- if 'tool_calls' in message and message['tool_calls'] and message['tool_calls'] is iterable -%}\n            {#- Tool Calls -#}\n            {%- for tool_call in message['tool_calls'] -%}\n                {% set function = tool_call['function'] %}\n                {{-  '<start_function_call>call:' + function['name'] + '{' -}}\n                {%- if 'arguments' in function -%}\n                    {%- if function['arguments'] is mapping -%}\n                        {%- set ns = namespace(found_first=false) -%}\n                        {%- for key, value in function['arguments'] | dictsort -%}\n                            {%- if ns.found_first %},{% endif -%}\n                            {%- set ns.found_first = true -%}\n                            {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                        {%- endfor -%}\n                    {%- elif function['arguments'] is string -%}\n                        {# This handles string-JSON, just in case #}\n                    {{ function['arguments'] }}\n                    {%- endif %}\n                {%- endif -%}\n                {{- '}<end_function_call>' -}}\n            {%- endfor -%}\n            {%- if loop.last -%}\n                {{ '<start_function_response>' }}\n            {%- endif -%}\n            {%- set ns.prev_message_type = 'tool_call' -%}\n        {%- endif -%}\n    {%- else -%}\n        {#- Tool Responses -#}\n        {%- if 'content' in message and message['content'] -%}\n            {%- if message['content'] is mapping -%}\n                {%- if 'name' in message['content'] and 'response' in message['content'] -%}\n                    {{ '<start_function_response>response:' + message['content']['name'] | trim + '{' }}\n                    {%- set response_ns = namespace(found_first=false) -%}\n                    {%- for key, value in message['content']['response'] | dictsort -%}\n                        {%- if response_ns.found_first %},{% endif -%}\n                        {%- set response_ns.found_first = true -%}\n                        {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                    {%- endfor -%}\n                    {{- '}<end_function_response>' -}}\n                {%- elif 'name' in message -%}\n                    {{ '<start_function_response>response:' + message['name'] | trim + '{' }}\n                    {%- set response_ns = namespace(found_first=false) -%}\n                    {%- for key, value in message['content'] | dictsort -%}\n                        {%- if response_ns.found_first %},{% endif -%}\n                        {%- set response_ns.found_first = true -%}\n                        {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                    {%- endfor -%}\n                    {{- '}<end_function_response>' -}}\n                {%- else -%}\n                    {{ raise_exception(\"Invalid tool response mapping: must contain 'name' and 'response' keys, or 'name' must be in the message.\") }}\n                {%- endif -%}\n            {%- elif message['content'] is string -%}\n                {%- if 'name' in message -%}\n                     {{ '<start_function_response>response:' + message['name'] | trim + '{value:' + format_argument(message['content'], escape_keys=False) + '}<end_function_response>' }}\n                {%- else -%}\n                     {{ raise_exception(\"Invalid tool response: 'name' must be provided.\") }}\n                {%- endif -%}\n            {%- elif message['content'] is sequence -%}\n                {%- for item in message['content'] -%}\n                    {%- if item is mapping -%}\n                        {%- if 'name' in item and 'response' in item -%}\n                            {{ '<start_function_response>response:' + item['name'] | trim + '{' }}\n                            {%- set response_ns = namespace(found_first=false) -%}\n                            {%- for key, value in item['response'] | dictsort -%}\n                                {%- if response_ns.found_first %},{% endif -%}\n                                {%- set response_ns.found_first = true -%}\n                                {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                            {%- endfor -%}\n                            {{- '}<end_function_response>' -}}\n                        {%- elif 'name' in message -%}\n                            {{ '<start_function_response>response:' + message['name'] | trim + '{' }}\n                            {%- set response_ns = namespace(found_first=false) -%}\n                            {%- for key, value in item | dictsort -%}\n                                {%- if response_ns.found_first %},{% endif -%}\n                                {%- set response_ns.found_first = true -%}\n                                {{- key -}}:{{- format_argument(value, escape_keys=False) -}}\n                            {%- endfor -%}\n                            {{- '}<end_function_response>' -}}\n                        {%- else -%}\n                            {{ raise_exception(\"Invalid tool response mapping: must contain 'name' and 'response' keys, or 'name' must be in the message.\") }}\n                        {%- endif -%}\n                    {%- else -%}\n                        {{ raise_exception(\"Invalid tool response message: multiple responses must all be mappings\") }}\n                    {%- endif -%}\n                {%- endfor -%}\n            {%- else -%}\n                {{ raise_exception(\"Invalid content type in tool message: must be mapping, sequence of mappings, or string.\") }}\n            {%- endif -%}\n        {%- endif -%}\n        {%- set ns.prev_message_type = 'tool_response' -%}\n    {%- endif -%}\n    {%- if ns.prev_message_type not in ['tool_call', 'tool_response'] -%}\n        {{ '<end_of_turn>\\n' }}\n    {%- endif -%}\n{%- endfor -%}\n{%- if add_generation_prompt -%}\n    {%- if ns.prev_message_type != 'tool_response' -%}\n        {{- '<start_of_turn>model\\n' -}}\n    {%- endif -%}\n{%- endif -%}\n"
+    },
+    "cardData": {
+      "license": "gemma",
+      "tags": [
+        "gemma3",
+        "gemma",
+        "google",
+        "functiongemma"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "extra_gated_heading": "Access Gemma on Hugging Face",
+      "extra_gated_prompt": "To access FunctionGemma on Hugging Face, you\u2019re required to review and agree to Google\u2019s usage license. To do this, please ensure you\u2019re logged in to Hugging Face and click below. Requests are processed immediately.",
+      "extra_gated_button_content": "Acknowledge license"
+    },
+    "transformersInfo": {
+      "auto_model": "AutoModelForCausalLM",
+      "pipeline_tag": "text-generation",
+      "processor": "AutoTokenizer"
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "0583c96d2d97dcf53a802ce55735e7790bbfe7ea",
+        "size": 1627
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "72ce881cdc51eb45142becec441e0ee5569e805b",
+        "size": 21177
+      },
+      {
+        "rfilename": "added_tokens.json",
+        "blobId": "437e9a3fe8f4403712d9619114135bf082cfa019",
+        "size": 63
+      },
+      {
+        "rfilename": "chat_template.jinja",
+        "blobId": "16294794d96bfe26bbf2da97af27ced085fd1683",
+        "size": 13792
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "9b30cc9183805f56d4cf824e9f274e26756d08db",
+        "size": 1323
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "556c26e435024b2fd4a4164cd900efa2e492b637",
+        "size": 176
+      },
+      {
+        "rfilename": "model.safetensors",
+        "blobId": "f3c74dd4d98022da107952a8125618b2a04187bb",
+        "size": 536223056,
+        "lfs": {
+          "sha256": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b",
+          "size": 536223056,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "special_tokens_map.json",
+        "blobId": "bd5c7b5291da3a99a68c0c7c474787d8a2c28fbc",
+        "size": 706
+      },
+      {
+        "rfilename": "tiny_garden.litertlm",
+        "blobId": "975bebf7b02df690f06be99096be653d8e8d55a7",
+        "size": 288440320,
+        "lfs": {
+          "sha256": "c0b243c22553d4cb8451eade37710199b33b9002c58752efc0094e0fed5ad1c2",
+          "size": 288440320,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "fd07abe4f8efbd33351457a0e7135e426046cc10",
+        "size": 33384901,
+        "lfs": {
+          "sha256": "cab06510581429a52484f103c9df074578506a025c40db1197d3625041566ca7",
+          "size": 33384901,
+          "pointerSize": 133
+        }
+      },
+      {
+        "rfilename": "tokenizer.model",
+        "blobId": "15e833a16e885acc5397accf48546fae88a4c24b",
+        "size": 4689144,
+        "lfs": {
+          "sha256": "aa009fcbc3589a9904d30d04834094fea4653c2ac6d2de2cd1262d4f7a50ceb3",
+          "size": 4689144,
+          "pointerSize": 132
+        }
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "aef12a52b37d488d88facf74387ada566cb8371b",
+        "size": 1155716
+      }
+    ],
+    "spaces": [
+      "webml-community/FunctionGemma-Physics-Playground",
+      "google/functiongemma-tuning-lab",
+      "triflix/brainfuncall",
+      "ovinduG/gemmafunctionC",
+      "ZENLLC/FunctionGemma-Physics-Playground",
+      "AI4U2/peakmind-os",
+      "seawolf2357/FunctionGemma-Physics-Playground",
+      "Tsuchiya1025/FunctionGemma-Physics-Playground",
+      "GA-Res/FunctionGemma-Physics-Playground",
+      "Sachin21112004/FunctionGemma-Test",
+      "KGNINJA/FunctionGemmabotdemo",
+      "KGNINJA/FunctionGemmabotdemo-docker",
+      "Jensin/FunctionGemma-Physics-Playground",
+      "HexQuant/FunctionGemma-Physics-Playground",
+      "VinayHajare/Physics-Playground",
+      "jabalarami/my-function-gemma",
+      "crittiksglobal/vertexelite-1",
+      "lucaspetti/function-gemma",
+      "webgpu/FunctionGemma-Physics-Playground",
+      "ysharma/dummy_gemma270",
+      "natbutter/functiongemma-tuning-lab",
+      "drdata/FunctionGemma-Physics-Playground",
+      "eyalnof123/functiongemma-trainer",
+      "talha970/functiongemma-tuning-lab",
+      "jaymart7/my-functiongemma-tuning-lab",
+      "rlkit/train-mobile-controller-llm",
+      "manxaneletso/Chat",
+      "manxaneletso/CHat_Dev_Space",
+      "tahmid109/functiongemma-tuning-lab",
+      "manxaneletso/Chat-Main",
+      "axewbotx/functiongemma-tuning-lab"
+    ],
+    "createdAt": "2025-10-08T17:33:31.000Z",
+    "safetensors": {
+      "parameters": {
+        "BF16": 268098176
+      },
+      "total": 268098176
+    },
+    "usedStorage": 862737421
+  },
+  "LiquidAI/LFM2.5-350M": {
+    "_id": "69cb67e5f3cfb18ea6f442e1",
+    "id": "LiquidAI/LFM2.5-350M",
+    "private": false,
+    "pipeline_tag": "text-generation",
+    "library_name": "transformers",
+    "tags": [
+      "transformers",
+      "safetensors",
+      "lfm2",
+      "text-generation",
+      "liquid",
+      "lfm2.5",
+      "edge",
+      "conversational",
+      "en",
+      "ar",
+      "zh",
+      "fr",
+      "de",
+      "ja",
+      "ko",
+      "es",
+      "pt",
+      "arxiv:2511.23404",
+      "base_model:LiquidAI/LFM2.5-350M-Base",
+      "base_model:finetune:LiquidAI/LFM2.5-350M-Base",
+      "license:other",
+      "eval-results",
+      "endpoints_compatible",
+      "deploy:azure",
+      "region:us"
+    ],
+    "downloads": 161773,
+    "likes": 443,
+    "modelId": "LiquidAI/LFM2.5-350M",
+    "author": "LiquidAI",
+    "sha": "9921cd4d82c0e3986887aa4b376f9446729ef8a3",
+    "lastModified": "2026-11-03T18:09:20.000Z",
+    "gated": false,
+    "disabled": false,
+    "widgetData": [
+      {
+        "text": "Hi, what can you help me with?"
+      },
+      {
+        "text": "What is 84 * 3 / 2?"
+      },
+      {
+        "text": "Tell me an interesting fact about the universe!"
+      },
+      {
+        "text": "Explain quantum computing in simple terms."
+      }
+    ],
+    "model-index": null,
+    "config": {
+      "architectures": [
+        "Lfm2ForCausalLM"
+      ],
+      "model_type": "lfm2",
+      "tokenizer_config": {
+        "use_default_system_prompt": false,
+        "bos_token": "<|startoftext|>",
+        "eos_token": "<|im_end|>",
+        "pad_token": "<|pad|>"
+      },
+      "chat_template_jinja": "{{- bos_token -}}\n{%- set preserve_thinking = preserve_thinking | default(keep_past_thinking | default(false)) -%}\n\n{%- macro format_arg_value(arg_value) -%}\n    {%- if arg_value is string -%}\n        {{- \"'\" + (arg_value | replace(\"\\\\\", \"\\\\\\\\\") | replace(\"'\", \"\\\\'\") | replace(\"\\n\", \"\\\\n\") | replace(\"\\r\", \"\\\\r\")) + \"'\" -}}\n    {%- elif arg_value is mapping or arg_value is iterable -%}\n        {{- arg_value | tojson -}}\n    {%- else -%}\n        {{- arg_value | string -}}\n    {%- endif -%}\n{%- endmacro -%}\n\n{%- macro parse_content(content) -%}\n    {%- if content is string -%}\n        {{- content -}}\n    {%- elif content is mapping -%}\n        {{- content | tojson -}}\n    {%- elif content is iterable -%}\n        {%- set _ns = namespace(result=\"\") -%}\n        {%- for item in content -%}\n            {%- if item is string -%}\n                {%- set _ns.result = _ns.result + item -%}\n            {%- elif item is mapping and item.get(\"type\") == \"image\" -%}\n                {%- set _ns.result = _ns.result + \"<image>\" -%}\n            {%- elif item is mapping and item.get(\"type\") == \"text\" -%}\n                {%- set _ns.result = _ns.result + ((item.get(\"text\") or \"\") | string) -%}\n            {%- else -%}\n                {%- set _ns.result = _ns.result + (item | tojson) -%}\n            {%- endif -%}\n        {%- endfor -%}\n        {{- _ns.result -}}\n    {%- endif -%}\n{%- endmacro -%}\n\n{%- macro render_tool_calls(tool_calls) -%}\n    {%- set tool_calls_ns = namespace(tool_calls=[]) -%}\n    {%- for tool_call in tool_calls -%}\n        {%- set func = tool_call[\"function\"] if \"function\" in tool_call else tool_call -%}\n        {%- set func_name = func[\"name\"] -%}\n        {%- set func_args = func.get(\"arguments\") -%}\n        {%- set args_ns = namespace(arg_strings=[]) -%}\n        {%- if func_args is mapping -%}\n            {%- for arg_name, arg_value in func_args.items() -%}\n                {%- set args_ns.arg_strings = args_ns.arg_strings + [arg_name + \"=\" + format_arg_value(arg_value)] -%}\n            {%- endfor -%}\n        {%- elif func_args is string and (func_args | trim) not in [\"\", \"{}\", \"null\"] -%}\n            {{- raise_exception(\"Tool call arguments must be a mapping, got a JSON-encoded string: parse arguments with json.loads() before applying the chat template\") -}}\n        {%- endif -%}\n        {%- set tool_calls_ns.tool_calls = tool_calls_ns.tool_calls + [func_name + \"(\" + (args_ns.arg_strings | join(\", \")) + \")\"] -%}\n    {%- endfor -%}\n    {{- \"<|tool_call_start|>[\" + (tool_calls_ns.tool_calls | join(\", \")) + \"]<|tool_call_end|>\" -}}\n{%- endmacro -%}\n\n{%- set ns = namespace(system_prompt=\"\", last_assistant_index=-1) -%}\n{%- if messages and messages[0][\"role\"] == \"system\" -%}\n    {%- if messages[0].get(\"content\") -%}\n        {%- set ns.system_prompt = parse_content(messages[0][\"content\"]) -%}\n    {%- endif -%}\n    {%- set messages = messages[1:] -%}\n{%- endif -%}\n{%- if tools -%}\n    {%- set ns.system_prompt = ns.system_prompt + (\"\\n\" if ns.system_prompt else \"\") + \"List of tools: [\" -%}\n    {%- for tool in tools -%}\n        {%- if tool is not string -%}\n            {%- set tool = tool | tojson -%}\n        {%- endif -%}\n        {%- set ns.system_prompt = ns.system_prompt + tool -%}\n        {%- if not loop.last -%}\n            {%- set ns.system_prompt = ns.system_prompt + \", \" -%}\n        {%- endif -%}\n    {%- endfor -%}\n    {%- set ns.system_prompt = ns.system_prompt + \"]\" -%}\n{%- endif -%}\n{%- if ns.system_prompt -%}\n    {{- \"<|im_start|>system\\n\" + ns.system_prompt + \"<|im_end|>\\n\" -}}\n{%- endif -%}\n{%- for message in messages -%}\n    {%- if message[\"role\"] == \"assistant\" -%}\n        {%- set ns.last_assistant_index = loop.index0 -%}\n    {%- endif -%}\n{%- endfor -%}\n{%- for message in messages -%}\n    {{- \"<|im_start|>\" + message.role + \"\\n\" -}}\n    {%- if message.role == \"assistant\" -%}\n        {%- generation -%}\n        {%- set keep_thinking = preserve_thinking or loop.index0 == ns.last_assistant_index -%}\n        {%- set thinking = message.thinking or message.reasoning or message.reasoning_content -%}\n        {%- set thinking = thinking if thinking is string else \"\" -%}\n        {%- if thinking and keep_thinking -%}\n            {{- \"<think>\" + thinking + \"</think>\" -}}\n        {%- endif -%}\n        {%- set _cfm_tag = \"CONTINUE_FINAL_MESSAGE_TAG \" -%}\n        {%- set _has_cfm = false -%}\n        {%- set content = \"\" -%}\n        {%- if message.get(\"content\") -%}\n            {%- set content = parse_content(message.content) -%}\n        {%- endif -%}\n        {%- if not keep_thinking and \"</think>\" in content -%}\n            {%- set content = content.split(\"</think>\")[-1] | trim -%}\n        {%- endif -%}\n        {%- if content.endswith(_cfm_tag) -%}\n            {%- set _has_cfm = true -%}\n            {%- set _trunc_len = (content | length) - (_cfm_tag | length) -%}\n            {%- set content = content[:_trunc_len] -%}\n        {%- endif -%}\n        {{- content -}}\n        {%- if message.tool_calls -%}\n            {{- render_tool_calls(message.tool_calls) -}}\n        {%- endif -%}\n        {%- if _has_cfm -%}\n            {{- _cfm_tag -}}\n        {%- endif -%}\n        {{- \"<|im_end|>\\n\" -}}\n        {%- endgeneration -%}\n    {%- else %}\n        {%- if message.get(\"content\") -%}\n            {{- parse_content(message[\"content\"]) -}}\n        {%- endif -%}\n        {{- \"<|im_end|>\\n\" -}}\n    {%- endif %}\n{%- endfor -%}\n{%- if add_generation_prompt -%}\n    {{- \"<|im_start|>assistant\\n\" -}}\n{%- endif -%}\n"
+    },
+    "cardData": {
+      "library_name": "transformers",
+      "license": "other",
+      "license_name": "lfm1.0",
+      "license_link": "LICENSE",
+      "language": [
+        "en",
+        "ar",
+        "zh",
+        "fr",
+        "de",
+        "ja",
+        "ko",
+        "es",
+        "pt"
+      ],
+      "pipeline_tag": "text-generation",
+      "tags": [
+        "liquid",
+        "lfm2.5",
+        "edge"
+      ],
+      "base_model": "LiquidAI/LFM2.5-350M-Base"
+    },
+    "transformersInfo": {
+      "auto_model": "AutoModelForCausalLM",
+      "pipeline_tag": "text-generation",
+      "processor": "AutoTokenizer"
+    },
+    "siblings": [
+      {
+        "rfilename": ".eval_results/LFM2.5-350M.yaml",
+        "blobId": "bf3b1925067f6d3d420781428d61b005a710b0db",
+        "size": 232
+      },
+      {
+        "rfilename": ".eval_results/LiquidAI-LFM2.5-350M.yaml",
+        "blobId": "6c0be5c57043b644a455fd0e290362fe8d143aa8",
+        "size": 479
+      },
+      {
+        "rfilename": ".eval_results/gpqa_diamond.yaml",
+        "blobId": "632274d95f293fa178e3a1683aca8e7e4a7b46a9",
+        "size": 198
+      },
+      {
+        "rfilename": ".eval_results/ifbench.yaml",
+        "blobId": "e88c718b56527e7fdb290bcbb9fa936273e0a739",
+        "size": 194
+      },
+      {
+        "rfilename": ".eval_results/mmlu_pro.yaml",
+        "blobId": "57b4a8963b1572480cb2d0cd795b21c8f3ccabca",
+        "size": 202
+      },
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+        "size": 1519
+      },
+      {
+        "rfilename": "LICENSE",
+        "blobId": "25e731c697c4fe4c52ee654cedf7106a827748d2",
+        "size": 10574
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "1d377d386bc6e690899c3531ad7121567b0d6ccf",
+        "size": 14508
+      },
+      {
+        "rfilename": "chat_template.jinja",
+        "blobId": "4bba41b1eea86b9f3725ca30a89bb4656e17e25a",
+        "size": 5487
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "9d07848aac929912fbfd24f93ea18d7cd9281728",
+        "size": 1281
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "ccb4c027399f74601d15f8a8cc6e176552f02f9f",
+        "size": 134
+      },
+      {
+        "rfilename": "model.safetensors",
+        "blobId": "3455b2485885f53ca459be4d6f97227bb0e19a5d",
+        "size": 708984464,
+        "lfs": {
+          "sha256": "1c9c77a4471a7f590f85240f74ed1fc26df7fbde88c3006724e2f93ca993ea4e",
+          "size": 708984464,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "2e27bba0b0505b2b2124fa9225c9b5dda7531474",
+        "size": 4733389
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "12830994a198f53f17c9040af5856e446482d244",
+        "size": 595
+      }
+    ],
+    "spaces": [
+      "webml-community/lfm2.5-webgpu-summarizer",
+      "geocine/MiniMax-H3-Prompt-Enhancer",
+      "AlekseyCalvin/SLM_Bistro",
+      "stanley-00/slm-testing",
+      "FlameF0X/lfm2",
+      "FlameF0X/SLM-Playground",
+      "geocine/MiniMax-H3-Prompt-Enhancer-2.6B",
+      "Carnot-EBM/hallucination-detector",
+      "Specialgfhdhdh/continual-lfm",
+      "franckverrot/lev",
+      "tusman/cap-6640-assignment-4",
+      "ushort/uncensored",
+      "SrhKsn/lfm2-mentalchat-demo",
+      "kazutab/mindmap-studio",
+      "ukung/slm-testing",
+      "KoarAI/LFM-Trainer-Studio",
+      "Tarekt/Test_ai",
+      "HateTM/MiniMax-H3-Prompt-Enhancer",
+      "ebrahimi9005/MiniMax-H3-Prompt-Enhancer",
+      "AlekseyCalvin/SLM_Bistro_Lab",
+      "Mnemosyne-OS/mnemosyne-avatar"
+    ],
+    "createdAt": "2026-03-31T06:21:25.000Z",
+    "safetensors": {
+      "parameters": {
+        "BF16": 354483968
+      },
+      "total": 354483968
+    },
+    "usedStorage": 708984464
+  },
+  "LiquidAI/LFM2.5-Encoder-230M-GGUF": {
+    "_id": "6a68d98b428f9d1d2895cf8b",
+    "id": "LiquidAI/LFM2.5-Encoder-230M-GGUF",
+    "private": false,
+    "pipeline_tag": "fill-mask",
+    "tags": [
+      "gguf",
+      "liquid",
+      "lfm2",
+      "lfm2.5",
+      "bidirectional",
+      "masked-lm",
+      "encoder",
+      "llama.cpp",
+      "fill-mask",
+      "en",
+      "de",
+      "es",
+      "fr",
+      "it",
+      "nl",
+      "pl",
+      "pt",
+      "ar",
+      "hi",
+      "ja",
+      "ru",
+      "tr",
+      "vi",
+      "zh",
+      "base_model:LiquidAI/LFM2.5-Encoder-230M",
+      "base_model:quantized:LiquidAI/LFM2.5-Encoder-230M",
+      "license:other",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "downloads": 528,
+    "likes": 8,
+    "modelId": "LiquidAI/LFM2.5-Encoder-230M-GGUF",
+    "author": "LiquidAI",
+    "sha": "bb26e78c7164b386028928ebfcecebcc42467689",
+    "lastModified": "2026-10-02T16:31:10.000Z",
+    "gated": false,
+    "disabled": false,
+    "widgetData": [
+      {
+        "text": "Paris is the <mask> of France."
+      },
+      {
+        "text": "The goal of life is <mask>."
+      }
+    ],
+    "model-index": null,
+    "config": {},
+    "cardData": {
+      "language": [
+        "en",
+        "de",
+        "es",
+        "fr",
+        "it",
+        "nl",
+        "pl",
+        "pt",
+        "ar",
+        "hi",
+        "ja",
+        "ru",
+        "tr",
+        "vi",
+        "zh"
+      ],
+      "tags": [
+        "liquid",
+        "lfm2",
+        "lfm2.5",
+        "bidirectional",
+        "masked-lm",
+        "encoder",
+        "llama.cpp",
+        "gguf"
+      ],
+      "pipeline_tag": "fill-mask",
+      "license": "other",
+      "license_name": "lfm1.0",
+      "license_link": "LICENSE",
+      "base_model": [
+        "LiquidAI/LFM2.5-Encoder-230M"
+      ]
+    },
+    "gguf": {
+      "total": 229693184,
+      "architecture": "lfm2",
+      "context_length": 128000,
+      "causal": false,
+      "chat_template": "{{- bos_token -}}\n{%- set keep_past_thinking = keep_past_thinking | default(false) -%}\n{%- set ns = namespace(system_prompt=\"\") -%}\n{%- if messages[0][\"role\"] == \"system\" -%}\n    {%- set sys_content = messages[0][\"content\"] -%}\n    {%- if sys_content is not string -%}\n        {%- for item in sys_content -%}\n            {%- if item[\"type\"] == \"text\" -%}\n                {%- set ns.system_prompt = ns.system_prompt + item[\"text\"] -%}\n            {%- endif -%}\n        {%- endfor -%}\n    {%- else -%}\n        {%- set ns.system_prompt = sys_content -%}\n    {%- endif -%}\n    {%- set messages = messages[1:] -%}\n{%- endif -%}\n{%- if tools -%}\n    {%- set ns.system_prompt = ns.system_prompt + (\"\\n\" if ns.system_prompt else \"\") + \"List of tools: [\" -%}\n    {%- for tool in tools -%}\n        {%- if tool is not string -%}\n            {%- set tool = tool | tojson -%}\n        {%- endif -%}\n        {%- set ns.system_prompt = ns.system_prompt + tool -%}\n        {%- if not loop.last -%}\n            {%- set ns.system_prompt = ns.system_prompt + \", \" -%}\n        {%- endif -%}\n    {%- endfor -%}\n    {%- set ns.system_prompt = ns.system_prompt + \"]\" -%}\n{%- endif -%}\n{%- if ns.system_prompt -%}\n    {{- \"<|im_start|>system\\n\" + ns.system_prompt + \"<|im_end|>\\n\" -}}\n{%- endif -%}\n{%- set ns.last_assistant_index = -1 -%}\n{%- for message in messages -%}\n    {%- if message[\"role\"] == \"assistant\" -%}\n        {%- set ns.last_assistant_index = loop.index0 -%}\n    {%- endif -%}\n{%- endfor -%}\n{%- for message in messages -%}\n    {{- \"<|im_start|>\" + message[\"role\"] + \"\\n\" -}}\n    {%- set content = message[\"content\"] -%}\n    {%- if content is not string -%}\n        {%- set ns.content = \"\" -%}\n        {%- for item in content -%}\n            {%- if item[\"type\"] == \"image\" -%}\n                {%- set ns.content = ns.content + \"<image>\" -%}\n            {%- elif item[\"type\"] == \"text\" -%}\n                {%- set ns.content = ns.content + item[\"text\"] -%}\n            {%- else -%}\n                {%- set ns.content = ns.content + item | tojson -%}\n            {%- endif -%}\n        {%- endfor -%}\n        {%- set content = ns.content -%}\n    {%- endif -%}\n    {%- if message[\"role\"] == \"assistant\" and not keep_past_thinking and loop.index0 != ns.last_assistant_index -%}\n        {%- if \"</think>\" in content -%}\n            {%- set content = content.split(\"</think>\")[-1] | trim -%}\n        {%- endif -%}\n    {%- endif -%}\n    {{- content + \"<|im_end|>\\n\" -}}\n{%- endfor -%}\n{%- if add_generation_prompt -%}\n    {{- \"<|im_start|>assistant\\n\" -}}\n{%- endif -%}",
+      "bos_token": "<|startoftext|>",
+      "eos_token": "<|im_end|>",
+      "totalFileSize": 461882368
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "755007da11097f168e6dab8e1304309194ac66a3",
+        "size": 1716
+      },
+      {
+        "rfilename": "LFM2.5-Encoder-230M-F16.gguf",
+        "blobId": "a9fd192c036673cdf4e979b751332576cae443cb",
+        "size": 461882368,
+        "lfs": {
+          "sha256": "f097dbdb27c565b6f08cdbbfeb5d674ad7c205cfd1d8362f5415e243b2ec2e93",
+          "size": 461882368,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-Encoder-230M-Q4_0.gguf",
+        "blobId": "f42a6f45b8436af93a53403b47f50ef08917ce03",
+        "size": 149079040,
+        "lfs": {
+          "sha256": "6c2a549f375b56cf9b22b8c7173df9c5b5a23b274316a7a70addecaea3963fcc",
+          "size": 149079040,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LFM2.5-Encoder-230M-Q8_0.gguf",
+        "blobId": "8cdb9ecf94428d0cb4a94241c86a0f112c480f42",
+        "size": 246596608,
+        "lfs": {
+          "sha256": "790d3fb0d97712e7c43bb446484e8b3935c0a3c471db23c7a45cfbcb165a36a4",
+          "size": 246596608,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "LICENSE",
+        "blobId": "25e731c697c4fe4c52ee654cedf7106a827748d2",
+        "size": 10574
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "4de36d2ef9c42b9b0df010d6c8d04752b3276797",
+        "size": 2862
+      },
+      {
+        "rfilename": "fill-mask.py",
+        "blobId": "5fb4c12c51a36114d6c8fd815862e5ec27b62d62",
+        "size": 2151
+      }
+    ],
+    "spaces": [],
+    "createdAt": "2026-07-28T16:32:11.000Z",
+    "usedStorage": 1715115936
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "_id": "6839f6805792b2d88bc3142e",
+  "id": "katanemo/Arch-Router-1.5B.gguf",
+  "private": false,
+  "pipeline_tag": "text-generation",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "gguf",
+    "text-generation",
+    "en",
+    "arxiv:2506.16655",
+    "base_model:Qwen/Qwen2.5-1.5B-Instruct",
+    "base_model:quantized:Qwen/Qwen2.5-1.5B-Instruct",
+    "license:other",
+    "endpoints_compatible",
+    "region:us",
+    "conversational"
+  ],
+  "downloads": 1177,
+  "likes": 15,
+  "modelId": "katanemo/Arch-Router-1.5B.gguf",
+  "author": "katanemo",
+  "sha": "bd9b1caf68e4b53aa9eee3ee949208f18a053c86",
+  "lastModified": "2026-04-02T13:02:45.000Z",
+  "gated": false,
+  "disabled": false,
+  "widgetData": [
+    {
+      "text": "Hi, what can you help me with?"
+    },
+    {
+      "text": "What is 84 * 3 / 2?"
+    },
+    {
+      "text": "Tell me an interesting fact about the universe!"
+    },
+    {
+      "text": "Explain quantum computing in simple terms."
+    }
+  ],
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "base_model": [
+      "Qwen/Qwen2.5-1.5B-Instruct"
+    ],
+    "language": [
+      "en"
+    ],
+    "library_name": "transformers",
+    "license": "other",
+    "license_name": "katanemo-research",
+    "license_link": "https://huggingface.co/katanemo/Arch-Router-1.5B.gguf/blob/main/LICENSE",
+    "pipeline_tag": "text-generation"
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModel"
+  },
+  "gguf": {
+    "total": 1543714304,
+    "architecture": "qwen2",
+    "context_length": 32768,
+    "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+    "bos_token": "<|endoftext|>",
+    "eos_token": "<|im_end|>",
+    "totalFileSize": 676304320
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "c8b2aff59755c99061218a807ddb40511c3df639",
+      "size": 2153
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q2_K.gguf",
+      "blobId": "6e6dcf58886c6f8bda7ede932b0d92a61a25250e",
+      "size": 676304320,
+      "lfs": {
+        "sha256": "cd68f063804bc3a18cfbc6af2e46686c98ae96cbcbae3d861149f0676a40bbf6",
+        "size": 676304320,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q3_K_L.gguf",
+      "blobId": "ec2371fa1d0b46b8fd5a5412911e1f3499cc40ac",
+      "size": 880162240,
+      "lfs": {
+        "sha256": "07cd34508d7b91660b291f2feb76edba02a99c2f74204326fa0e3ddcb6b9cf1f",
+        "size": 880162240,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q3_K_M.gguf",
+      "blobId": "b9d2990ca4073584b2c01f22fb415ab6d696a202",
+      "size": 824178112,
+      "lfs": {
+        "sha256": "8870132d79e824dd2039edf4fcd145243b1af4ba72cc6b856930d45c6f5289d6",
+        "size": 824178112,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q3_K_S.gguf",
+      "blobId": "c46e65b5b42de46f4929d94d86d402aed721e61d",
+      "size": 760944064,
+      "lfs": {
+        "sha256": "9cd467cf2de36d0c8cd35b91e9a8a8ce5bfb8678125c274ef233e706d52ee083",
+        "size": 760944064,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q4_K_M.gguf",
+      "blobId": "d8e9bf3227f68f6b68b36e5ba519fb09dca867a9",
+      "size": 986047936,
+      "lfs": {
+        "sha256": "b55666691f14089cf4422b443431e2b783033d99dce6c7df147565192b4deb76",
+        "size": 986047936,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q4_K_S.gguf",
+      "blobId": "9b5fccbd1f5760388ac16b3495eb29b233e811eb",
+      "size": 940312000,
+      "lfs": {
+        "sha256": "a135240351dfeb50555a6e779b25d1d1e9917ecd8ee499ca94457d24eadce13b",
+        "size": 940312000,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q5_K_M.gguf",
+      "blobId": "9aa7450002b92a76933755ef2135dbaedc19a83d",
+      "size": 1125049792,
+      "lfs": {
+        "sha256": "866fd984ec7a4e59449f34f7d2fbf160875281733b0c7d313213de9b95f43245",
+        "size": 1125049792,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B-Q5_K_S.gguf",
+      "blobId": "9e6760bbc96bc12b81462f6b7d45b692428542fd",
+      "size": 1098728896,
+      "lfs": {
+        "sha256": "6fb3f313139f00b54deb2823d99de8cb4809357b4a81fc367d56ee171e607798",
+        "size": 1098728896,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Arch-Router-1.5B.gguf",
+      "blobId": "71f6e51a37ebf4720f99e3b7321f368e9fc32939",
+      "size": 3093668800,
+      "lfs": {
+        "sha256": "ece850eba74acbf864baddccfd78278ae2178c8460e15c3b60dbf1ac73dbeee8",
+        "size": 3093668800,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "Arch-Router-Q6_K.gguf",
+      "blobId": "199b826bdcc0d1e52af6e017e3f12385f6bc87b5",
+      "size": 1272739264,
+      "lfs": {
+        "sha256": "29c06d7ade24db29c11996f15bbc6333e401b8ddad8669d310846c1b2267aff1",
+        "size": 1272739264,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "LICENSE",
+      "blobId": "874a66a79d5ec7e4d063b49fe0a56584f89700a4",
+      "size": 7733
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "892b94c1fd09812e0b3f02466ffdf4a7d22e0730",
+      "size": 7122
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2025-05-30T18:18:40.000Z",
+  "usedStorage": 11658135424
+}

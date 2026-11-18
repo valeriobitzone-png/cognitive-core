@@ -1,0 +1,9 @@
+START profile-smoke
+END profile-smoke 0
+START lfm12-v1-dev
+END lfm12-v1-dev 0
+DEV_SCREEN lfm12 4 /16; no test-based tuning
+START arch-native-dev
+END arch-native-dev 0
+DEV_SCREEN arch 7 /16; no test-based tuning
+COMPLETE

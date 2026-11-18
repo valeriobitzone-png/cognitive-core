@@ -1,0 +1,7 @@
+{
+  "sha256": "0ece1a0a19a01dda6530a83a77dc7a88f237f4d181ca3ffad982601a23dd1fa1",
+  "python_files_compared": 60,
+  "isolated_smoke": "wheel archive/advisor/cache/reflex OK",
+  "python": "3.11.15",
+  "external_dependencies": false
+}

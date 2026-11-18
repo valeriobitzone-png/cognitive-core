@@ -1,0 +1,13 @@
+{
+  "runtime_files_unchanged_after_deploy": true,
+  "baseline_files": 147,
+  "intended_source_changes": 7,
+  "protected_files": 13,
+  "original_dataset_files_unchanged": true,
+  "original_rizzo_weights_unchanged": true,
+  "runner_status": "32703 01-22:26:06 /opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Volumes/AMBRO/projects/CognitiveCore/realtest/deepen/local-runner/runner.py --loop",
+  "paid_api_calls": 0,
+  "production_model_enabled": false,
+  "post_install_targeted_tests_passed": 95,
+  "originals_never_rolled_back": true
+}

@@ -1,0 +1,16 @@
+{
+  "wheel": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/unificazione-2026-11-10/dist/worldcore_cognitive_layer-1.4.0rc3-py3-none-any.whl",
+  "sha256": "9e1a4c3512e08997c01e7c99e2687656a6ddabb7636720986e432407ccd5f390",
+  "source_files_compared": 57,
+  "mismatches": [],
+  "isolated_smoke": {
+    "greeting": true,
+    "bridge": true,
+    "restart": true,
+    "cycle": true,
+    "portable": true,
+    "rollback": true,
+    "paid_calls": 0
+  },
+  "optional_dependencies": false
+}

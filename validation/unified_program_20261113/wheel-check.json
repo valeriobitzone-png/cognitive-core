@@ -1,0 +1,15 @@
+{
+  "wheel": "worldcore_cognitive_layer-1.4.0rc3-py3-none-any.whl",
+  "sha256": "f035f8bdcdd5c0737c1841df1ef725a45f2e90699762403c0b49b94e124dfbc1",
+  "modules_compared": 68,
+  "isolated_smokes": [
+    {
+      "python": "Python 3.11.15",
+      "result": "unified program, model-off greeting, real cognitive cycle and stop OK"
+    },
+    {
+      "python": "Python 3.12.13",
+      "result": "unified program, model-off greeting, real cognitive cycle and stop OK"
+    }
+  ]
+}

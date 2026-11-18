@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "python3 -m worldcore.claude_hook", "timeout": 10 }] }],
+    "PostToolUse": [{ "matcher": "*", "hooks": [{ "type": "command", "command": "python3 -m worldcore.claude_hook", "timeout": 10 }] }],
+    "PostToolUseFailure": [{ "matcher": "*", "hooks": [{ "type": "command", "command": "python3 -m worldcore.claude_hook", "timeout": 10 }] }]
+  }
+}

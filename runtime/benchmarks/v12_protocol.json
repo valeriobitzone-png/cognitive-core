@@ -1,0 +1,17 @@
+{
+  "protocol": "v12-filesystem-observed-forward",
+  "seed": 90211,
+  "drift_rule": "Wilson 95% upper bound below target coverage after at least 10 resolved forecasts, last 20 per action",
+  "training_observations": 300,
+  "forward_observations": 80,
+  "shift_observations": 30,
+  "coverage_target": 0.8,
+  "split": "60% fit / 20% calibration / 20% validation in temporal order",
+  "action": "append_noise64",
+  "noise": "uniform integer bytes in [56,72], omitted from predictor",
+  "in_distribution_size": "multiples of 64 in [0,640]",
+  "shift": "append 200 bytes instead of training distribution; fresh family from same frozen training data, separate ledger",
+  "ood_timing": "before forward outcomes or drift gates",
+  "ood": "query sizes -1 and 10000000; never execute those queries",
+  "limitations": "Real OS file effects in controlled temporary workload; not a real-user longitudinal benchmark or a universal world model. No tuning on forward outcomes."
+}

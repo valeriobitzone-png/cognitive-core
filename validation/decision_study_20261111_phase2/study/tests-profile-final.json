@@ -1,0 +1,2765 @@
+{
+  "passed": 48,
+  "total": 50,
+  "failed": [
+    "test_v08.py",
+    "test_v09.py"
+  ],
+  "complete": true,
+  "runner": "disk-log-process-watchdog-v12",
+  "tests": [
+    {
+      "outcome": "timeout",
+      "exit_code": null,
+      "output": "",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/00_watchdog_selftest.log",
+      "output_bytes": 0,
+      "duration_seconds": 0.305,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "watchdog_selftest",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "............                                                             [100%]\n12 passed in 0.21s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/01_test_adaptation.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.493,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_adaptation.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....                                                                     [100%]\n4 passed in 0.19s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/02_test_anticipation_enrich_v14.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.377,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_anticipation_enrich_v14.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...................                                                      [100%]\n19 passed in 0.49s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/03_test_audit_regressions.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.702,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_audit_regressions.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.01s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/04_test_audit_v09.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.213,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_audit_v09.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...............                                                          [100%]\n15 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/05_test_calibrated_v12.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.32,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_calibrated_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..                                                                       [100%]\n2 passed in 0.08s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/06_test_claude_hook_v11.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.233,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_claude_hook_v11.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "........................                                                 [100%]\n24 passed in 0.73s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/07_test_cognitive_drive.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.916,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_drive.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".......................                                                  [100%]\n23 passed in 0.31s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/08_test_cognitive_integration.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.5,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_integration.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......................                                                   [100%]\n22 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/09_test_cognitive_original.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.322,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_original.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.26s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/10_test_cognitive_recovery.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.496,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_recovery.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..................                                                       [100%]\n18 passed in 1.97s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/11_test_cognitive_transport.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 2.201,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_cognitive_transport.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..........                                                               [100%]\n10 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/12_test_dynamics_holdout_v14.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.318,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_dynamics_holdout_v14.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....................................................                     [100%]\n52 passed in 2.07s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/13_test_engine.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 2.3,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_engine.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....                                                                     [100%]\n4 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/14_test_ensemble.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.287,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_ensemble.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.53s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/15_test_evaluation.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.72,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_evaluation.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".........                                                                [100%]\n9 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/16_test_functional_self.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.348,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_functional_self.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "............                                                             [100%]\n12 passed in 1.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/17_test_hardening.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.333,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hardening.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..                                                                       [100%]\n2 passed in 0.11s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/18_test_hermes.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.303,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hermes.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...........                                                              [100%]\n11 passed in 0.04s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/19_test_hermes_certificate.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.295,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hermes_certificate.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.14s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/20_test_hermes_parity_v09.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.351,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_hermes_parity_v09.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...............                                                          [100%]\n15 passed in 0.02s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/21_test_host_certificate.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.231,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_host_certificate.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".....                                                                    [100%]\n5 passed in 0.38s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/22_test_initialization_v12.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.608,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_initialization_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "........................................                                 [100%]\n40 passed in 0.25s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/23_test_intelligence.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.443,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_intelligence.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "........                                                                 [100%]\n8 passed in 0.22s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/24_test_knowledge.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.405,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_knowledge.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "................                                                         [100%]\n16 passed in 1.20s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/25_test_learning.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.377,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_learning.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...................................                                      [100%]\n35 passed in 1.13s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/26_test_local_advisor.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.311,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_local_advisor.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.08s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/27_test_mcp_mock.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.2,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_mcp_mock.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.78s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/28_test_mcp_real_v12.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 1.032,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_mcp_real_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "......                                                                   [100%]\n6 passed in 0.10s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/29_test_next_event_v14.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.235,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_next_event_v14.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "................................                                         [100%]\n32 passed in 1.48s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/30_test_operational_cycle.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.632,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_operational_cycle.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...........                                                              [100%]\n11 passed in 0.95s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/31_test_runner_v12.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.114,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_runner_v12.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "................                                                         [100%]\n16 passed in 0.11s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/32_test_simulated_workspaces.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.263,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_simulated_workspaces.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "..                                                                       [100%]\n2 passed in 0.07s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/33_test_storage_permissions.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.231,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_storage_permissions.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".....................                                                    [100%]\n21 passed in 0.16s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/34_test_v06.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.282,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v06.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".........................                                                [100%]\n25 passed in 0.16s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/35_test_v07.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.292,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v07.py",
+      "passed": true
+    },
+    {
+      "outcome": "failed",
+      "exit_code": 1,
+      "output": "......F.                                                                 [100%]\n=================================== FAILURES ===================================\n__________________ test_macro_artifact_equivalent_to_sklearn ___________________\n\n    def test_macro_artifact_equivalent_to_sklearn():\n        import sys\n        sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'benchmarks'))\n        import v08_macro_gdp as bench\n        from worldcore.macro_gdp import predict_next_gdp,FEATURE_NAMES\n        from sklearn.pipeline import make_pipeline\n        from sklearn.preprocessing import StandardScaler\n        from sklearn.linear_model import Ridge\n        x,y,*_=bench.dataset()\n        years=bench.dataset()[-1]\n        model=make_pipeline(StandardScaler(),Ridge(alpha=.1));model.fit(x[years<=1995],y[years<=1995])\n        artifact=Path(__file__).resolve().parents[1]/'training-artifacts/v08_macro_gdp_model.json'\n        for row in x[-8:]:\n            data={k:float(v) for k,v in zip(FEATURE_NAMES,row)}\n>           p=predict_next_gdp(data,artifact)['predicted_next_real_gdp']\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_v08.py:105: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nsrc/worldcore/macro_gdp.py:12: in predict_next_gdp\n    model_json=json.loads(Path(model_json).read_text())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py:1027: in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/runtime/training-artifacts/v08_macro_gdp_model.json')\nmode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/runtime/training-artifacts/v08_macro_gdp_model.json'\n\n/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py:1013: FileNotFoundError\n=========================== short test summary info ============================\nFAILED tests/test_v08.py::test_macro_artifact_equivalent_to_sklearn - FileNot...\n1 failed, 7 passed in 1.76s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/36_test_v08.py.log",
+      "output_bytes": 2978,
+      "duration_seconds": 2.091,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v08.py",
+      "passed": false
+    },
+    {
+      "outcome": "failed",
+      "exit_code": 1,
+      "output": "........F..                                                              [100%]\n=================================== FAILURES ===================================\n__________________ test_market_case_does_not_claim_causation ___________________\n\n    def test_market_case_does_not_claim_causation():\n        path=ROOT/'training-artifacts'/'v09_real_news_market_case.json'\n>       case=json.loads(path.read_text())\n                        ^^^^^^^^^^^^^^^^\n\ntests/test_v09.py:78: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py:1027: in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/runtime/training-artifacts/v09_real_news_market_case.json')\nmode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/runtime/training-artifacts/v09_real_news_market_case.json'\n\n/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py:1013: FileNotFoundError\n=========================== short test summary info ============================\nFAILED tests/test_v09.py::test_market_case_does_not_claim_causation - FileNot...\n1 failed, 10 passed in 1.70s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/37_test_v09.py.log",
+      "output_bytes": 2142,
+      "duration_seconds": 2.073,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v09.py",
+      "passed": false
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "s..                                                                      [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_v10_browser.py:27: playwright not installed, browser evaluation unavailable\n2 passed, 1 skipped in 0.09s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/38_test_v10_browser.py.log",
+      "output_bytes": 289,
+      "duration_seconds": 0.239,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_browser.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "s                                                                        [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_v10_desktop.py:10: no Xvfb\n1 skipped in 0.06s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/39_test_v10_desktop.py.log",
+      "output_bytes": 230,
+      "duration_seconds": 0.175,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_desktop.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "....                                                                     [100%]\n4 passed in 0.16s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/40_test_v10_imports.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.343,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_imports.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.07s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/41_test_v10_native_tools.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.293,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_native_tools.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": ".......                                                                  [100%]\n7 passed in 0.15s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/42_test_v10_personal.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.329,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_personal.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...                                                                      [100%]\n3 passed in 0.41s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/43_test_v10_runner.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.546,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_v10_runner.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...                                                                      [100%]\n3 passed in 0.23s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/44_test_whatif_host_v11.py.log",
+      "output_bytes": 98,
+      "duration_seconds": 0.348,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_whatif_host_v11.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "............                                                             [100%]\n12 passed in 0.21s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/45_test_whatif_v11.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 0.38,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_whatif_v11.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "...........                                                              [100%]\n11 passed in 1.00s\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/46_test_worker_transport.py.log",
+      "output_bytes": 99,
+      "duration_seconds": 1.128,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "test_worker_transport.py",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "✔ OpenClaw exposes read-only WorldCore personal advice (78.73425ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 140.670041\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/47_openclaw.personal.test.mjs.log",
+      "output_bytes": 185,
+      "duration_seconds": 0.183,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "openclaw.personal.test.mjs",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "✔ OpenClaw native hook registration and context recall (92.320791ms)\n✔ OpenClaw observes metadata, never raw result (97.516375ms)\n✔ OpenClaw bridge fail-open for missing interpreter (2.547333ms)\n✔ OpenClaw concurrent requests are correlated and not interchanged (5.790792ms)\n✔ OpenClaw gateway_stop cleans persistent child and future startup works (65.344417ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 308.598291\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/48_openclaw.test.mjs.log",
+      "output_bytes": 487,
+      "duration_seconds": 0.346,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "openclaw.test.mjs",
+      "passed": true
+    },
+    {
+      "outcome": "passed",
+      "exit_code": 0,
+      "output": "✔ OpenCode V1 observes real bridge transaction, no secret args (96.168666ms)\n✔ OpenCode V2 registers event hook and records failure safely (21.799542ms)\n✔ Invalid tool names are rejected before subprocess execution (20.742958ms)\n✔ Failed interpreter does not block V2 host (24.439292ms)\n✔ V2 default entry is a loadable definition with lifecycle cleanup (0.149167ms)\n✔ V2 Code Mode error metadata is not reported as successful telemetry (40.509083ms)\nℹ tests 6\nℹ suites 0\nℹ pass 6\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 250.57525\n",
+      "log_path": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/tests-profile-final_logs/49_opencode.test.mjs.log",
+      "output_bytes": 577,
+      "duration_seconds": 0.316,
+      "diagnostics": [
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "PermissionError"
+        },
+        {
+          "diagnostics": "NoSuchProcess"
+        }
+      ],
+      "cleanup_errors": [],
+      "test": "opencode.test.mjs",
+      "passed": true
+    }
+  ]
+}

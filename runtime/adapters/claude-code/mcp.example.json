@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "worldcore": {
+      "type": "stdio", "command": "python3", "args": ["-m", "worldcore.mcp_server"],
+      "env": { "WORLDCORE_OWNER": "local", "WORLDCORE_SPACE": "default" }
+    }
+  }
+}

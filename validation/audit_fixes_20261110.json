@@ -1,0 +1,16 @@
+{
+  "status": "local-unpublished-working-tree",
+  "base_commit": "5f85b47aecd96a1f2215d0e32cccb63ebe6783d6",
+  "files": {
+    "src/cognitive_core/engine.py": "299a9784f2bf2e402c2dbf910af98f9b272bb48e2b0a212995d920f287d420df",
+    "src/cognitive_core/vault.py": "0cb87767463469705650839894524dd1b03aa069ccc90dc844a11f4adbc64025",
+    "src/cognitive_core/cli.py": "076b55771fbe6cb2f41f18420f77a60c791d91c8feb5aa26ad9b96a37b1b7224",
+    "src/cognitive_core/portable.py": "255c428fa2ae6967d2d887b932b505630446d7dd7c56bdb6774f8d4428cbdedb",
+    "tests/test_cognitive_original.py": "2ad4c2ffdaa2b224442586757d6ef7197fee397ca26677faa5ef5b793d75fbe2",
+    "tests/test_audit_regressions.py": "3aa2d48eaa507a0cc9f50cd752dfea733dbc45388a68ac21ac954b77c8176a74",
+    "docs/AUDIT_FIXES_20261110_IT.md": "2d8817863b78eba7125500fcf8891dde21dc2306e44a60b2c23b1840d98d0b07"
+  },
+  "wheel_sha256": "304fca555cdc8b08601b83cfd096aacac7bfe8ec6030cf9143b3078161087563",
+  "wheel": "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/dist/audit-20261110/worldcore_cognitive_layer-1.4.0rc3-py3-none-any.whl",
+  "backup": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/correzioni-2026-11-10/backup-ssd-originals"
+}

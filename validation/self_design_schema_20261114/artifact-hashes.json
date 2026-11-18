@@ -1,0 +1,12 @@
+{
+  "data-unchanged.json": "772ef67c7e827b445fc3346d776bd15c49e68596b6e60f3ee546224d624ff922",
+  "deployment.json": "c9178009dadd15bdbbd56d1ccda041a7b67673faf26873bce604b290ec4e5c8d",
+  "rollback.py": "bdafcfe030f01582866c00c0b622eb787209cd7c347249f25de77b06b42482f5",
+  "rollback-check.json": "e416578ab53d2b116ee1a0ed635527eefc049d7f409e037035126c2924c86936",
+  "wheel/worldcore_cognitive_layer-1.4.0rc4-py3-none-any.whl": "0f96b207cf3696dfa6dababc5277015802e061658f3147ca7ccbef52d5f46f00",
+  "before/runtime/pyproject.toml": "126bd0f866d275397bbe9a8a391c321e2282bb183d5b19f90a3ea6476ec17942",
+  "before/runtime/src/cognitive_core/models.py": "06cfbc7488deb524166dd7b1ed7128f4b6e4f45484c1d4d6cd0d83d7bb10166a",
+  "before/runtime/src/cognitive_core/__init__.py": "cb5dd22e90b2fbe96d61ac21b98f5739edc6fdd8aa3b9f666f964c0b718cfc91",
+  "before/runtime/src/cognitive_core/program.py": "46d47aef0640c86b064972d74749b9b88fc63debd64372ee3659810c3f706a07",
+  "before/runtime/src/worldcore/__init__.py": "6ff2e37b6d81b0ece0ed31e92fe7181e3fba2cd5104976e148e9e37ba83fcad1"
+}

@@ -1,0 +1,182 @@
+{
+  "lfm12-v1-dev.json": {
+    "model": "lfm12",
+    "protocol": "v1",
+    "split": "dev",
+    "correct": 4,
+    "n": 16,
+    "accuracy": 0.25,
+    "wilson95": [
+      0.10182067491213048,
+      0.49498316535508774
+    ],
+    "macro_f1": 0.06666666666666667,
+    "invalid": 0,
+    "valid_policy_violations": 0,
+    "p50_seconds": 2.708727416480542,
+    "mean_seconds": 2.764146268244076,
+    "p95_seconds": 3.2835962919925805,
+    "peak_child_rss_bytes": 2028552192,
+    "threshold25of34_met": null
+  },
+  "rizzo4-v1-dev.json": {
+    "model": "rizzo4",
+    "protocol": "v1",
+    "split": "dev",
+    "correct": 15,
+    "n": 16,
+    "accuracy": 0.9375,
+    "wilson95": [
+      0.7167126242970107,
+      0.9888806552353576
+    ],
+    "macro_f1": 0.9481481481481482,
+    "invalid": 0,
+    "valid_policy_violations": 0,
+    "p50_seconds": 12.6547868130001,
+    "mean_seconds": 12.610879612127974,
+    "p95_seconds": 13.351307084027212,
+    "peak_child_rss_bytes": 5501812736,
+    "threshold25of34_met": null
+  },
+  "rizzo4-typed-dev.json": {
+    "model": "rizzo4",
+    "protocol": "typed",
+    "split": "dev",
+    "correct": 13,
+    "n": 16,
+    "accuracy": 0.8125,
+    "wilson95": [
+      0.5699111903802586,
+      0.9340840092857187
+    ],
+    "macro_f1": 0.8132275132275132,
+    "invalid": 1,
+    "valid_policy_violations": 0,
+    "p50_seconds": 21.73081806251139,
+    "mean_seconds": 23.57120080718778,
+    "p95_seconds": 30.085784041002626,
+    "peak_child_rss_bytes": 5526552576,
+    "threshold25of34_met": null
+  },
+  "rizzo17-typed-dev.json": {
+    "model": "rizzo17",
+    "protocol": "typed",
+    "split": "dev",
+    "correct": 10,
+    "n": 16,
+    "accuracy": 0.625,
+    "wilson95": [
+      0.38641040545502714,
+      0.8151876744113636
+    ],
+    "macro_f1": 0.5168350168350168,
+    "invalid": 0,
+    "valid_policy_violations": 0,
+    "p50_seconds": 6.558359895978356,
+    "mean_seconds": 6.42426599218561,
+    "p95_seconds": 9.265143958997214,
+    "peak_child_rss_bytes": 3832807424,
+    "threshold25of34_met": null
+  },
+  "rizzo4-v1-test.json": {
+    "model": "rizzo4",
+    "protocol": "v1",
+    "split": "test",
+    "correct": 29,
+    "n": 34,
+    "accuracy": 0.8529411764705882,
+    "wilson95": [
+      0.6987194350454783,
+      0.9355055855521753
+    ],
+    "macro_f1": 0.8572390572390572,
+    "invalid": 0,
+    "valid_policy_violations": 1,
+    "p50_seconds": 12.859216854005354,
+    "mean_seconds": 13.189875286790672,
+    "p95_seconds": 16.070475124986842,
+    "peak_child_rss_bytes": 5569019904,
+    "threshold25of34_met": true
+  },
+  "lfm12-v2-dev.json": {
+    "model": "lfm12",
+    "protocol": "v2",
+    "split": "dev",
+    "correct": 4,
+    "n": 16,
+    "accuracy": 0.25,
+    "wilson95": [
+      0.10182067491213048,
+      0.49498316535508774
+    ],
+    "macro_f1": 0.1976190476190476,
+    "invalid": 0,
+    "valid_policy_violations": 3,
+    "p50_seconds": 3.3137801455013687,
+    "mean_seconds": 3.4038473957461974,
+    "p95_seconds": 4.086780707992148,
+    "peak_child_rss_bytes": 2068480000,
+    "threshold25of34_met": null
+  },
+  "arch-native-dev.json": {
+    "model": "arch",
+    "protocol": "native",
+    "split": "dev",
+    "correct": 7,
+    "n": 16,
+    "accuracy": 0.4375,
+    "wilson95": [
+      0.23098652405492354,
+      0.6682144360118811
+    ],
+    "macro_f1": 0.4666666666666666,
+    "invalid": 0,
+    "valid_policy_violations": 2,
+    "p50_seconds": 7.037026603982667,
+    "mean_seconds": 7.042854466060817,
+    "p95_seconds": 7.6817225409904495,
+    "peak_child_rss_bytes": 2235957248,
+    "threshold25of34_met": null
+  },
+  "rizzo4-v1-fresh.json": {
+    "model": "rizzo4",
+    "protocol": "v1",
+    "split": "fresh",
+    "correct": 38,
+    "n": 48,
+    "accuracy": 0.7916666666666666,
+    "wilson95": [
+      0.6574109872738206,
+      0.882697270420944
+    ],
+    "macro_f1": 0.7836433718786661,
+    "invalid": 0,
+    "valid_policy_violations": 1,
+    "p50_seconds": 13.196770791502786,
+    "mean_seconds": 13.734713957436421,
+    "p95_seconds": 16.358114625007147,
+    "peak_child_rss_bytes": 5570150400,
+    "threshold25of34_met": null
+  },
+  "rizzo17-v1-dev.json": {
+    "model": "rizzo17",
+    "protocol": "v1",
+    "split": "dev",
+    "correct": 6,
+    "n": 16,
+    "accuracy": 0.375,
+    "wilson95": [
+      0.18481232558863633,
+      0.6135895945449727
+    ],
+    "macro_f1": 0.24074074074074073,
+    "invalid": 0,
+    "valid_policy_violations": 0,
+    "p50_seconds": 3.028477667015977,
+    "mean_seconds": 3.1168388410660555,
+    "p95_seconds": 4.396192124986555,
+    "peak_child_rss_bytes": 3810574336,
+    "threshold25of34_met": null
+  }
+}

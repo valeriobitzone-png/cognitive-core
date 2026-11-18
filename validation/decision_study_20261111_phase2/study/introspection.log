@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/introspection_probe.py", line 22, in <module>
+    hook.vector=None;_,yes=forward('The diagnostic concept is capability unavailable.');_,no=forward('The diagnostic concept is capability available.')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/ricerca-decisionale-fase2-20261111/introspection_probe.py", line 21, in forward
+    logits=model(mx.array([prompt]))[0,-1,mx.array(ids)];probs=mx.softmax(logits.astype(mx.float32));mx.eval(probs,hook.captured);return probs.tolist(),hook.captured[0].astype(mx.float32)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/rapid-mlx/0.10.1/libexec/lib/python3.12/site-packages/mlx_lm/models/lfm2.py", line 295, in __call__
+    out = self.model(inputs, cache, input_embeddings)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/rapid-mlx/0.10.1/libexec/lib/python3.12/site-packages/mlx_lm/models/lfm2.py", line 276, in __call__
+    mask = attn_mask if layer.is_attention_layer else conv_mask
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/rapid-mlx/0.10.1/libexec/lib/python3.12/site-packages/mlx/nn/layers/base.py", line 103, in __getattr__
+    super(Module, self).__getattribute__(key)
+AttributeError: 'Hook' object has no attribute 'is_attention_layer'

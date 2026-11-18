@@ -1,0 +1,9 @@
+{
+  "repo": "ggml-org/Qwen3.5-0.8B-GGUF",
+  "revision": "807dfd9a6fadbf703207aac3bfb0b2b3040d077c",
+  "filename": "Qwen3.5-0.8B-Q8_0.gguf",
+  "bytes": 833592096,
+  "sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+  "license": "apache-2.0",
+  "source_card": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "session_end",
+  "title": "Preparazione stampa 3D",
+  "text": "Abbiamo analizzato un oggetto da stampare e rimangono dubbi sul filamento.",
+  "open_questions": [
+    "Quali sono le specifiche tecniche del filamento adatto alla mia stampante?",
+    "Quali problemi potrebbero essere causati dall'umidità del filamento?"
+  ],
+  "importance": 0.8,
+  "reason": "Domande rimaste aperte alla fine della sessione"
+}

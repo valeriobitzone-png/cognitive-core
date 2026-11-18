@@ -1,0 +1,180 @@
+{
+  "_id": "6839f5f732331eaf76cdafd7",
+  "id": "katanemo/Arch-Router-1.5B",
+  "private": false,
+  "pipeline_tag": "text-generation",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "safetensors",
+    "qwen2",
+    "text-generation",
+    "routing",
+    "preference",
+    "arxiv:2506.16655",
+    "llm",
+    "conversational",
+    "en",
+    "base_model:Qwen/Qwen2.5-1.5B-Instruct",
+    "base_model:finetune:Qwen/Qwen2.5-1.5B-Instruct",
+    "license:other",
+    "text-generation-inference",
+    "endpoints_compatible",
+    "region:us"
+  ],
+  "downloads": 5618,
+  "likes": 284,
+  "modelId": "katanemo/Arch-Router-1.5B",
+  "author": "katanemo",
+  "sha": "5b156890a91b1035a86f82faf1a651debf309009",
+  "lastModified": "2026-04-02T13:02:43.000Z",
+  "gated": false,
+  "disabled": false,
+  "widgetData": [
+    {
+      "text": "Hi, what can you help me with?"
+    },
+    {
+      "text": "What is 84 * 3 / 2?"
+    },
+    {
+      "text": "Tell me an interesting fact about the universe!"
+    },
+    {
+      "text": "Explain quantum computing in simple terms."
+    }
+  ],
+  "model-index": null,
+  "config": {
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ],
+    "model_type": "qwen2",
+    "tokenizer_config": {
+      "bos_token": null,
+      "eos_token": "<|im_end|>",
+      "unk_token": null,
+      "pad_token": "<|endoftext|>",
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n"
+    }
+  },
+  "cardData": {
+    "base_model": [
+      "Qwen/Qwen2.5-1.5B-Instruct"
+    ],
+    "language": [
+      "en"
+    ],
+    "library_name": "transformers",
+    "license": "other",
+    "license_name": "katanemo-research",
+    "license_link": "https://huggingface.co/katanemo/Arch-Router-1.5B/blob/main/LICENSE",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "routing",
+      "preference",
+      "arxiv:2506.16655",
+      "llm"
+    ],
+    "paper": "https://arxiv.org/abs/2506.16655"
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModelForCausalLM",
+    "pipeline_tag": "text-generation",
+    "processor": "AutoTokenizer"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+      "size": 1570
+    },
+    {
+      "rfilename": "LICENSE",
+      "blobId": "874a66a79d5ec7e4d063b49fe0a56584f89700a4",
+      "size": 7733
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "85cfb0f86062d62d34c76160eac66855d4d4fb00",
+      "size": 7135
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "40aa776c42d7218fa34db2bc8798e1a735159dbc",
+      "size": 683
+    },
+    {
+      "rfilename": "generation_config.json",
+      "blobId": "676d263ba4b8835e0d1c53f899a2645043e2e9df",
+      "size": 242
+    },
+    {
+      "rfilename": "merges.txt",
+      "blobId": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "size": 1671853
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "339a56821d14bd1bc8b01936d61a53f2f5a63e68",
+      "size": 3087466808,
+      "lfs": {
+        "sha256": "9395579ce8f703f1812ff56215b5fb8a421dd11040c357c0b371b55ea922e5c9",
+        "size": 3087466808,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "51ebb3ba93988c73bbd83a3c163a14343fbc5b06",
+      "size": 11421896,
+      "lfs": {
+        "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+        "size": 11421896,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "313b5e62422827bf223d8496a159b279c555ac7c",
+      "size": 7362
+    },
+    {
+      "rfilename": "vocab.json",
+      "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "size": 2776833
+    }
+  ],
+  "spaces": [
+    "build-small-hackathon/multi-agent-lab",
+    "Huggingansuman/red_teaming_env",
+    "tejasashinde/archRouter_simulator",
+    "IsaiahJ04/katanemo-Arch-Router-1.5B",
+    "Lhane/katanemo-Arch-Router-1.5B-2",
+    "venjp/unit2_llamaindex",
+    "jaimegalanmartinez/f1_faq_engine",
+    "Shukinoy/wiz-demo-v2",
+    "Shukinoy/wiz-demo-live",
+    "Mika110587/du13",
+    "Shukinoy/wiz-hf-inference-ui",
+    "kingwar1/AGENT-GAIA",
+    "hiwa27/WALAM",
+    "gabrielaz25/generador-preguntas",
+    "osorin/gradio_vdp",
+    "sameer81/edusafe-env",
+    "Kolaps27/UI-layout-optimizer",
+    "skrigel/acc-alt-text",
+    "bhotta/career_conversation_usinglocalhubmodal",
+    "MarkProMaster229/arch_autoreg",
+    "prajvalitha/CODLE_AI",
+    "tommytracx/thoxroute"
+  ],
+  "createdAt": "2025-05-30T18:16:23.000Z",
+  "safetensors": {
+    "parameters": {
+      "F16": 1543714304
+    },
+    "total": 1543714304
+  },
+  "usedStorage": 3098888704
+}

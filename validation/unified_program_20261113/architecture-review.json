@@ -1,0 +1,16 @@
+{
+  "schema_version": "ecc.agent-architecture-audit.report.v1",
+  "scope": {"target_name": "Unified Cognitive Core program", "entrypoints": ["Python core.run", "CLI run/console", "JSONL cognitive_run", "loopback POST /v1/run"], "model_stack": ["optional one-shot GGUF", "optional host-managed loopback server"]},
+  "executive_verdict": {"overall_health": "bounded_local_release_candidate", "primary_failure_mode": "untrusted observations or model output must not become authority", "most_urgent_fix": "enforced request schema, scope and authority gates implemented"},
+  "findings": [
+    {"severity": "high", "title": "Source/model text becoming instructions", "status": "addressed", "mechanism": "Model output is returned as unverified text; no tool-dispatch or automatic memory admission; imported content remains data.", "evidence_refs": ["runtime/src/cognitive_core/models.py", "runtime/src/cognitive_core/program.py"]},
+    {"severity": "high", "title": "Context or grants surviving outside authorized scope", "status": "addressed", "mechanism": "Owner binding, source/domain/context TTL, ephemeral sessions and recipe adoption; no grants restored by export.", "evidence_refs": ["runtime/src/cognitive_core/program.py", "runtime/src/cognitive_core/skills.py", "runtime/tests/test_unified_program.py"]},
+    {"severity": "high", "title": "Concurrent local model loading", "status": "addressed_with_scope_limit", "mechanism": "Expiring atomic lease in the existing Vault; one generation per home/namespace. No OS-wide memory quota is claimed.", "evidence_refs": ["runtime/src/cognitive_core/models.py"]},
+    {"severity": "high", "title": "Disk admission could prevent stop", "status": "addressed", "mechanism": "Volatile emergency stop is immediate even if metadata persistence fails; result exposes persisted=false.", "evidence_refs": ["runtime/src/cognitive_core/program.py", "runtime/tests/test_unified_program.py"]},
+    {"severity": "medium", "title": "External local-server lifecycle", "status": "explicit_limit", "mechanism": "The Core cannot unload or cancel work inside a host-managed HTTP server. Default is disabled; GGUF one-shot is owned and terminated by the Core."},
+    {"severity": "medium", "title": "Observations are not universal secret redaction", "status": "explicit_limit", "mechanism": "Typed scalar limits, rejected private observations, recognized sensitive keys and no automatic disclosure to LLMs. Trusted host must minimize raw data."}
+  ],
+  "hidden_llm_repair_loops": 0,
+  "automatic_tool_calls_from_model": 0,
+  "production_database_migrations_executed": 0
+}

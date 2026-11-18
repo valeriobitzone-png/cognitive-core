@@ -1,0 +1,220 @@
+rules dev dev-000 WAIT WAIT 0.0
+rules dev dev-001 WAIT WAIT 0.0
+rules dev dev-002 WAIT WAIT 0.0
+rules dev dev-003 WAIT WAIT 0.0
+rules dev dev-004 REMEMBER REMEMBER 0.0
+rules dev dev-005 REMEMBER REMEMBER 0.0
+rules dev dev-006 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules dev dev-007 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules dev dev-008 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules dev dev-009 WEB_RESEARCH WEB_RESEARCH 0.0
+rules dev dev-010 WEB_RESEARCH WEB_RESEARCH 0.0
+rules dev dev-011 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules dev dev-012 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules dev dev-013 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules dev dev-014 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+rules dev dev-015 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+rules test test-000 WAIT WAIT 0.0
+rules test test-001 WAIT WAIT 0.0
+rules test test-002 WAIT WAIT 0.0
+rules test test-003 WAIT WAIT 0.0
+rules test test-004 WAIT WAIT 0.0
+rules test test-005 WAIT WAIT 0.0
+rules test test-006 REMEMBER REMEMBER 0.0
+rules test test-007 REMEMBER ASK_CLARIFICATION 0.0
+rules test test-008 REMEMBER REMEMBER 0.0
+rules test test-009 REMEMBER REMEMBER 0.0
+rules test test-010 REMEMBER REMEMBER 0.0
+rules test test-011 REMEMBER REMEMBER 0.0
+rules test test-012 LOCAL_RESEARCH REQUIRE_APPROVAL 0.0
+rules test test-013 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules test test-014 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules test test-015 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules test test-016 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules test test-017 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+rules test test-018 WEB_RESEARCH REQUIRE_APPROVAL 0.0
+rules test test-019 WEB_RESEARCH WEB_RESEARCH 0.0
+rules test test-020 WEB_RESEARCH WEB_RESEARCH 0.0
+rules test test-021 WEB_RESEARCH WEB_RESEARCH 0.0
+rules test test-022 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules test test-023 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules test test-024 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules test test-025 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules test test-026 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules test test-027 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+rules test test-028 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+rules test test-029 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+rules test test-030 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+rules test test-031 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+rules test test-032 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+rules test test-033 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+{
+  "dev": {
+    "n": 16,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "post_governor_accuracy": 1.0,
+    "unsafe_proposals": 0,
+    "invalid_outputs": 0,
+    "latency_p50_s": 4.812507540918887e-06,
+    "latency_p95_s": 7.875001756474376e-06,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "test": {
+    "n": 34,
+    "accuracy": 0.9117647058823529,
+    "macro_f1": 0.9092574092574092,
+    "post_governor_accuracy": 0.9117647058823529,
+    "unsafe_proposals": 0,
+    "invalid_outputs": 0,
+    "latency_p50_s": 6.062007742002606e-06,
+    "latency_p95_s": 2.5832996470853686e-05,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+}

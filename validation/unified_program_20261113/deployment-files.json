@@ -1,0 +1,17 @@
+[
+  "Avvia_Cognitive_Core.command",
+  "runtime/docs/PROGRAMMA_UNICO_IT.md",
+  "runtime/src/cognitive_core/api.py",
+  "runtime/src/cognitive_core/cli.py",
+  "runtime/src/cognitive_core/config.py",
+  "runtime/src/cognitive_core/cycle.py",
+  "runtime/src/cognitive_core/engine.py",
+  "runtime/src/cognitive_core/models.py",
+  "runtime/src/cognitive_core/ondemand.py",
+  "runtime/src/cognitive_core/portable.py",
+  "runtime/src/cognitive_core/program.py",
+  "runtime/src/cognitive_core/skills.py",
+  "runtime/src/cognitive_core/vault.py",
+  "runtime/src/cognitive_core/worker.py",
+  "runtime/tests/test_unified_program.py"
+]

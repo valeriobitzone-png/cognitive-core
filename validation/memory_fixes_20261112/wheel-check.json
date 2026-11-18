@@ -1,0 +1,15 @@
+{
+  "wheel": "/Users/ambrogio/Documents/ChatGPT/COGNITIVE CORE/correzioni-audit-20261112/wheel/worldcore_cognitive_layer-1.4.0rc3-py3-none-any.whl",
+  "sha256": "c1f19e9ca3ef20b27ff9a2e7ace018f5f6eaff3f1fc498481b9e17aa011eea52",
+  "modules_compared": 65,
+  "isolated_smokes": [
+    {
+      "python": "Python 3.11.15",
+      "result": "temporal memory, unified retrieval, suppression, portable roundtrip OK"
+    },
+    {
+      "python": "Python 3.12.13",
+      "result": "temporal memory, unified retrieval, suppression, portable roundtrip OK"
+    }
+  ]
+}

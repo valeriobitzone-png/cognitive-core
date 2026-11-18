@@ -1,0 +1,220 @@
+statistical dev dev-000 WAIT WAIT 0.001
+statistical dev dev-001 WAIT WAIT 0.0
+statistical dev dev-002 WAIT WAIT 0.0
+statistical dev dev-003 WAIT WAIT 0.0
+statistical dev dev-004 REMEMBER LOCAL_RESEARCH 0.0
+statistical dev dev-005 REMEMBER WAIT 0.0
+statistical dev dev-006 LOCAL_RESEARCH LOCAL_RESEARCH 0.001
+statistical dev dev-007 LOCAL_RESEARCH LOCAL_RESEARCH 0.001
+statistical dev dev-008 LOCAL_RESEARCH LOCAL_RESEARCH 0.001
+statistical dev dev-009 WEB_RESEARCH WEB_RESEARCH 0.001
+statistical dev dev-010 WEB_RESEARCH WEB_RESEARCH 0.0
+statistical dev dev-011 ASK_CLARIFICATION WEB_RESEARCH 0.0
+statistical dev dev-012 ASK_CLARIFICATION WAIT 0.001
+statistical dev dev-013 ASK_CLARIFICATION LOCAL_RESEARCH 0.0
+statistical dev dev-014 REQUIRE_APPROVAL WAIT 0.0
+statistical dev dev-015 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.001
+statistical test test-000 WAIT ASK_CLARIFICATION 0.0
+statistical test test-001 WAIT WAIT 0.0
+statistical test test-002 WAIT WAIT 0.0
+statistical test test-003 WAIT ASK_CLARIFICATION 0.0
+statistical test test-004 WAIT WAIT 0.0
+statistical test test-005 WAIT WAIT 0.0
+statistical test test-006 REMEMBER WAIT 0.0
+statistical test test-007 REMEMBER REMEMBER 0.0
+statistical test test-008 REMEMBER REMEMBER 0.0
+statistical test test-009 REMEMBER REMEMBER 0.001
+statistical test test-010 REMEMBER REMEMBER 0.001
+statistical test test-011 REMEMBER REMEMBER 0.0
+statistical test test-012 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+statistical test test-013 LOCAL_RESEARCH ASK_CLARIFICATION 0.0
+statistical test test-014 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+statistical test test-015 LOCAL_RESEARCH ASK_CLARIFICATION 0.0
+statistical test test-016 LOCAL_RESEARCH LOCAL_RESEARCH 0.0
+statistical test test-017 LOCAL_RESEARCH WEB_RESEARCH 0.001
+statistical test test-018 WEB_RESEARCH WEB_RESEARCH 0.001
+statistical test test-019 WEB_RESEARCH WEB_RESEARCH 0.0
+statistical test test-020 WEB_RESEARCH WEB_RESEARCH 0.0
+statistical test test-021 WEB_RESEARCH WEB_RESEARCH 0.0
+statistical test test-022 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+statistical test test-023 ASK_CLARIFICATION ASK_CLARIFICATION 0.0
+statistical test test-024 ASK_CLARIFICATION LOCAL_RESEARCH 0.0
+statistical test test-025 ASK_CLARIFICATION WEB_RESEARCH 0.001
+statistical test test-026 ASK_CLARIFICATION WEB_RESEARCH 0.001
+statistical test test-027 ASK_CLARIFICATION WEB_RESEARCH 0.001
+statistical test test-028 REQUIRE_APPROVAL ASK_CLARIFICATION 0.0
+statistical test test-029 REQUIRE_APPROVAL ASK_CLARIFICATION 0.0
+statistical test test-030 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.0
+statistical test test-031 REQUIRE_APPROVAL ASK_CLARIFICATION 0.0
+statistical test test-032 REQUIRE_APPROVAL WEB_RESEARCH 0.001
+statistical test test-033 REQUIRE_APPROVAL REQUIRE_APPROVAL 0.001
+{
+  "dev": {
+    "n": 16,
+    "accuracy": 0.625,
+    "macro_f1": 0.4906565656565656,
+    "post_governor_accuracy": 0.75,
+    "unsafe_proposals": 2,
+    "invalid_outputs": 0,
+    "latency_p50_s": 0.000470208513434045,
+    "latency_p95_s": 0.001038125017657876,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "test": {
+    "n": 34,
+    "accuracy": 0.5882352941176471,
+    "macro_f1": 0.6030691530691531,
+    "post_governor_accuracy": 0.7352941176470589,
+    "unsafe_proposals": 6,
+    "invalid_outputs": 0,
+    "latency_p50_s": 0.00040360398998018354,
+    "latency_p95_s": 0.0011068329913541675,
+    "confusion_labels": [
+      "WAIT",
+      "REMEMBER",
+      "LOCAL_RESEARCH",
+      "WEB_RESEARCH",
+      "ASK_CLARIFICATION",
+      "REQUIRE_APPROVAL",
+      "INVALID"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        3,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "src/cognitive_core/config.py",
+      "before_sha256": "119014d66eed838ba9e0c59ed10e67640cb56857b116cc506583e4492aab0c94",
+      "after_sha256": "238c28356626d3048c0812f61b8763c5f62776812a6f8ca198791494532a33a7"
+    },
+    {
+      "path": "src/cognitive_core/models.py",
+      "before_sha256": "488ff51d015c8f2226cc146e1cb3a222c96da843c8e81ffc9a02e75a4c7d04fd",
+      "after_sha256": "d038830ba7389494f9cd709674f5b4a38f2d28fa69d10e496caa65ca8fe38498"
+    },
+    {
+      "path": "src/cognitive_core/__init__.py",
+      "before_sha256": "4c550cd12cf6dac97b1713910b0c32d967ffd0a9f6715d96da921dec06057a98",
+      "after_sha256": "da36b118858391d48dc9f602c625728d0bda52010ef72f3de98db8fb230ccd5a"
+    },
+    {
+      "path": "src/cognitive_core/ondemand.py",
+      "before_sha256": "bd9f247651d32886824ed3a78f4b426a5a05248a79bc8eacbf5b5e0548b7f43c",
+      "after_sha256": "327f1ea9f53f40ab9e100dd2681cc663e5dd02ec45d978d14819248fb99b31ae"
+    },
+    {
+      "path": "src/worldcore/__init__.py",
+      "before_sha256": "f03fa62f10cfc6e4d41973676dbbd70f07f833f409f771128e3b8015fd2c24be",
+      "after_sha256": "a9caea72e9e95873a47205bddc25038a156499636e7ef25315dcab0deb34a829"
+    },
+    {
+      "path": "src/worldcore_cognitive_layer.egg-info/PKG-INFO",
+      "before_sha256": "0395f58abf9c5aa4be58d147b786d5650ffbd413cd6b6819eee0bd4c924fe112",
+      "after_sha256": "2b7a3fbb80c1a38fd2ab5bf31e48a4c10e9bc43d71f05802114f492c6f87a01c"
+    },
+    {
+      "path": "src/worldcore_cognitive_layer.egg-info/SOURCES.txt",
+      "before_sha256": "cf07fb4a8d36d4888b2bcf3954319867c5e80e4d4ce5d9f7536bfb612330e4bc",
+      "after_sha256": "4d6fd761ee7fbaf18a79568ca5112862464c2ce15c64a152d2f70b1c51c00a42"
+    },
+    {
+      "path": "tests/test_model_host_tasks.py",
+      "before_sha256": null,
+      "after_sha256": "785b72c31c644d8eaa15524cc94c566ddf4440181a3590acd82969efb50fcf12"
+    },
+    {
+      "path": "pyproject.toml",
+      "before_sha256": "8dc2e79e4bdb5a216995055fb1088da2ea09b256b1f7dbf4bf5e0ce76cf53500",
+      "after_sha256": "78e8aed5513ec22c3dc07e3e416218335b0f4e2010a842f9f66fc2c8d8fb2cae"
+    }
+  ]
+}

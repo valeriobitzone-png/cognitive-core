@@ -1,0 +1,7 @@
+{
+  "kind": "research_requested",
+  "title": "Documentazione Python",
+  "question": "Come funziona il modulo sqlite3 di Python?",
+  "seed_urls": ["https://docs.python.org/3/library/sqlite3.html"],
+  "importance": 0.8
+}

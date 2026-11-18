@@ -1,0 +1,184 @@
+{
+  "epistemic": "SIMULATED",
+  "runs": [
+    {
+      "seed": 0,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.2477096966091612,
+        "C_self_state": 0.17429138321995463,
+        "C_external_same_information": 0.17429138321995463,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.17429138321995463
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 1,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.2403628792385485,
+        "C_self_state": 0.15532879818594106,
+        "C_external_same_information": 0.15532879818594106,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.15532879818594106
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 2,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.26213563355145747,
+        "C_self_state": 0.159297052154195,
+        "C_external_same_information": 0.159297052154195,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.159297052154195
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 3,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.2504238548483046,
+        "C_self_state": 0.11901927437641724,
+        "C_external_same_information": 0.11901927437641724,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.11901927437641724
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 4,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.2535990481856038,
+        "C_self_state": 0.12290249433106576,
+        "C_external_same_information": 0.12290249433106576,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.12290249433106576
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 5,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.2549970255800119,
+        "C_self_state": 0.13636621315192743,
+        "C_external_same_information": 0.13636621315192743,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.13636621315192743
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 6,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.23889054134443785,
+        "C_self_state": 0.14180839002267573,
+        "C_external_same_information": 0.14180839002267573,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.14180839002267573
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 7,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.2376189767995241,
+        "C_self_state": 0.18596938775510208,
+        "C_external_same_information": 0.18596938775510208,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.18596938775510208
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 8,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.24876561570493755,
+        "C_self_state": 0.13755668934240362,
+        "C_external_same_information": 0.13755668934240362,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.13755668934240362
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    },
+    {
+      "seed": 9,
+      "train_n": 80,
+      "holdout_n": 80,
+      "mean_brier": {
+        "B_memory_only": 0.23117192147531232,
+        "C_self_state": 0.1489512471655329,
+        "C_external_same_information": 0.1489512471655329,
+        "C_ablated_state": 0.25,
+        "C_irrelevant_perturbation": 0.1489512471655329
+      },
+      "removed_tool_admitted": false,
+      "observed_history_contaminated": false
+    }
+  ],
+  "mean_brier": {
+    "B_memory_only": 0.24656751933372992,
+    "C_self_state": 0.14814909297052153,
+    "C_external_same_information": 0.14814909297052153,
+    "C_ablated_state": 0.25,
+    "C_irrelevant_perturbation": 0.14814909297052153
+  },
+  "interpretation": "State-conditioned forecasts beat a pooled history in this constructed task; equal-information external observer matches exactly. No privileged introspection or consciousness claim.",
+  "limits": "Synthetic stationary binary outcomes; two runtime versions; operational execution only, not semantic correctness; not a real-world calibration certificate.",
+  "paired_seed_differences": {
+    "B_memory_only": {
+      "mean_difference": -0.09841842636320838,
+      "seed_bootstrap95": [
+        -0.11315847335364841,
+        -0.08232560540575541
+      ]
+    },
+    "C_external_same_information": {
+      "mean_difference": 0.0,
+      "seed_bootstrap95": [
+        0.0,
+        0.0
+      ]
+    },
+    "C_ablated_state": {
+      "mean_difference": -0.10185090702947845,
+      "seed_bootstrap95": [
+        -0.11443657879818595,
+        -0.08903443877551022
+      ]
+    },
+    "C_irrelevant_perturbation": {
+      "mean_difference": 0.0,
+      "seed_bootstrap95": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+}

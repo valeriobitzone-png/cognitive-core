@@ -1,0 +1,62 @@
+[
+  {
+    "path": "runtime/src/cognitive_core/cli.py",
+    "before": "076b55771fbe6cb2f41f18420f77a60c791d91c8feb5aa26ad9b96a37b1b7224",
+    "after": "535a0b5ed622c6849cd6aae4fd10e3cb32b3aa4fb5cdf8231bf418ca821cd6e3"
+  },
+  {
+    "path": "runtime/src/cognitive_core/config.py",
+    "before": "e4f5ebbe60334c73c29c72d20d4e8e0fc5aed07fba1708187acb125fcfefaa40",
+    "after": "29d05c8439e96016a1d2eb7876a5177f9386c05e80370ea8ecb26bcc74251d94"
+  },
+  {
+    "path": "runtime/src/cognitive_core/cycle.py",
+    "before": null,
+    "after": "2e6e514d6ff8108e22c3d76cf213c71c011327814b12dd104f9b1070bdb96018"
+  },
+  {
+    "path": "runtime/src/cognitive_core/drive.py",
+    "before": "fda35aabb084f2babcded98437127e2a150eec3826adf99aeddd4ddf74c567f2",
+    "after": "d8ed06707f68086d52a941757724f3a501ae370249dd0de18ec5f7aa5c726a0a"
+  },
+  {
+    "path": "runtime/src/cognitive_core/engine.py",
+    "before": "299a9784f2bf2e402c2dbf910af98f9b272bb48e2b0a212995d920f287d420df",
+    "after": "525ea1a25ff9444378052d0b7f10499aacf70a2fc85f5a1ecf52d318326143dd"
+  },
+  {
+    "path": "runtime/src/cognitive_core/experimental.py",
+    "before": null,
+    "after": "3892fb7a4464c0679e8a70109bad6730657e0fdb93d2ecea0f0a66d43f250f52"
+  },
+  {
+    "path": "runtime/src/cognitive_core/portable.py",
+    "before": "255c428fa2ae6967d2d887b932b505630446d7dd7c56bdb6774f8d4428cbdedb",
+    "after": "ec122c7d7f1ddc63e53f495aea36e65c7ddade5021b656df24bb9c15e5e314fe"
+  },
+  {
+    "path": "runtime/src/cognitive_core/research.py",
+    "before": "b57de8865c1d35e8286c7ea2fbaaf298157a291af99fe56020fb35392da12e43",
+    "after": "f3e1caad8c128136413ba950b2fd1db32377b4b29ab9a2f506d7c5f471e51c1b"
+  },
+  {
+    "path": "runtime/src/cognitive_core/vault.py",
+    "before": "0cb87767463469705650839894524dd1b03aa069ccc90dc844a11f4adbc64025",
+    "after": "f042c29ac554fcfeb958b59666c37bab89e3005e64756695ec996320bbc5dfa9"
+  },
+  {
+    "path": "runtime/src/cognitive_core/worker.py",
+    "before": "bece7981f96650408978ff42ed0e6cb1927a1d9abc8da21cb22fd524e839667a",
+    "after": "75056f2bb370d230a63b562bac92bbc38f78b6495da1f938dffdafb4527f6afc"
+  },
+  {
+    "path": "runtime/tests/test_operational_cycle.py",
+    "before": null,
+    "after": "2ef80c442f152210ef360e41463955f723821da2fc4143bcdfbac02676df92c4"
+  },
+  {
+    "path": "runtime/docs/OPERATIONAL_LOOP_IT.md",
+    "before": null,
+    "after": "97dcb0a11cba79c152f569332032e837fb3ca69a93892fe8be31130a9f5db38a"
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "id": "it1",
+      "expected": "Il progetto è sospeso. Non avviare nuove ricerche.",
+      "actual": "Il progetto è sospeso, non avviare nuove ricerche.",
+      "word_errors": 0,
+      "reference_words": 8,
+      "wer": 0.0,
+      "seconds": 5.009502999979304,
+      "exit_code": 0,
+      "audio_sha256": "21e277faf9cf806bd382032b0840ed5e988e53ee3dc96fd7148864e63a89b4de",
+      "epistemic": "OBSERVED transcription of synthetic TTS, content untrusted"
+    },
+    {
+      "id": "it2",
+      "expected": "Consulta soltanto le note locali. La rete non è autorizzata.",
+      "actual": "La rite non è autorizzata.",
+      "word_errors": 6,
+      "reference_words": 10,
+      "wer": 0.6,
+      "seconds": 4.465468625014182,
+      "exit_code": 0,
+      "audio_sha256": "9ef14d3bc99b656500e09002c2c0f0655c1c6482c7ecd0f5197c9587a0ebca27",
+      "epistemic": "OBSERVED transcription of synthetic TTS, content untrusted"
+    },
+    {
+      "id": "it3",
+      "expected": "Prima di inviare il documento chiedi la mia approvazione.",
+      "actual": "prima di inviare il documento chiedi la mia approvazione.",
+      "word_errors": 0,
+      "reference_words": 9,
+      "wer": 0.0,
+      "seconds": 4.489231625018874,
+      "exit_code": 0,
+      "audio_sha256": "31981fdb23a67433fa5ef9e5818d987386b6fff37fa60f08d268c1f398bc7020",
+      "epistemic": "OBSERVED transcription of synthetic TTS, content untrusted"
+    },
+    {
+      "id": "en1",
+      "expected": "Use the local archive and do not access the network.",
+      "actual": "Use the local archive and do not access the network.",
+      "word_errors": 0,
+      "reference_words": 10,
+      "wer": 0.0,
+      "seconds": 4.575894125009654,
+      "exit_code": 0,
+      "audio_sha256": "38243401003d91591057e1b9318448748d05e64e4a5398cf7485158b411769b9",
+      "epistemic": "OBSERVED transcription of synthetic TTS, content untrusted"
+    },
+    {
+      "id": "en2",
+      "expected": "The project is paused. Wait for a new instruction.",
+      "actual": "The project is paused. Wait for a new instruction.",
+      "word_errors": 0,
+      "reference_words": 9,
+      "wer": 0.0,
+      "seconds": 4.49742679198971,
+      "exit_code": 0,
+      "audio_sha256": "971cf1147c309d52267b10cc0e1bea008cecd103ccc8e115946addf528f78625",
+      "epistemic": "OBSERVED transcription of synthetic TTS, content untrusted"
+    },
+    {
+      "id": "en3",
+      "expected": "Ask for approval before publishing the report.",
+      "actual": "Ask for approval before publishing the report.",
+      "word_errors": 0,
+      "reference_words": 7,
+      "wer": 0.0,
+      "seconds": 4.366249915998196,
+      "exit_code": 0,
+      "audio_sha256": "5bc838c86165ffb3e306411ae2120d80f5163f998d26e2841e29c6431dd47470",
+      "epistemic": "OBSERVED transcription of synthetic TTS, content untrusted"
+    }
+  ],
+  "aggregate_wer": 0.11320754716981132,
+  "original_weights_unchanged": true,
+  "weights_sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b",
+  "network_calls": 0,
+  "microphone_access": false,
+  "resident_processes_started": false,
+  "peak_child_rss_bytes": 757383168,
+  "limits": "Synthetic speech only, two installed voices, no human speaker/noisy audio benchmark or dialog latency certificate. TTS and ASR run offline and terminate."
+}

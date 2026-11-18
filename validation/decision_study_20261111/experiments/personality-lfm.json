@@ -1,0 +1,133 @@
+{
+  "model": "lfm",
+  "complete": true,
+  "epistemic": "SIMULATED",
+  "n": 12,
+  "rows": [
+    {
+      "profile": "cautious",
+      "case": 0,
+      "reversed": false,
+      "expected": "verified_manual",
+      "choice": "new_experiment",
+      "correct_tradeoff": false,
+      "permitted": true,
+      "seconds": 0.935817457997473
+    },
+    {
+      "profile": "cautious",
+      "case": 0,
+      "reversed": true,
+      "expected": "verified_manual",
+      "choice": "new_experiment",
+      "correct_tradeoff": false,
+      "permitted": true,
+      "seconds": 0.6092721660097595
+    },
+    {
+      "profile": "cautious",
+      "case": 1,
+      "reversed": false,
+      "expected": "high_quality_review",
+      "choice": "novel_followup",
+      "correct_tradeoff": false,
+      "permitted": true,
+      "seconds": 0.716447832994163
+    },
+    {
+      "profile": "cautious",
+      "case": 1,
+      "reversed": true,
+      "expected": "high_quality_review",
+      "choice": "high_quality_review",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 0.721747207979206
+    },
+    {
+      "profile": "cautious",
+      "case": 2,
+      "reversed": false,
+      "expected": "inspect_local_source",
+      "choice": "inspect_local_source",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 0.8216792079911102
+    },
+    {
+      "profile": "cautious",
+      "case": 2,
+      "reversed": true,
+      "expected": "inspect_local_source",
+      "choice": "inspect_local_source",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 0.6555322910135146
+    },
+    {
+      "profile": "exploratory",
+      "case": 0,
+      "reversed": false,
+      "expected": "new_experiment",
+      "choice": "new_experiment",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 0.6528909170010593
+    },
+    {
+      "profile": "exploratory",
+      "case": 0,
+      "reversed": true,
+      "expected": "new_experiment",
+      "choice": "new_experiment",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 0.7747843750112224
+    },
+    {
+      "profile": "exploratory",
+      "case": 1,
+      "reversed": false,
+      "expected": "novel_followup",
+      "choice": "novel_followup",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 0.6723344170022756
+    },
+    {
+      "profile": "exploratory",
+      "case": 1,
+      "reversed": true,
+      "expected": "novel_followup",
+      "choice": "high_quality_review",
+      "correct_tradeoff": false,
+      "permitted": true,
+      "seconds": 0.6624388750060461
+    },
+    {
+      "profile": "exploratory",
+      "case": 2,
+      "reversed": false,
+      "expected": "inspect_local_source",
+      "choice": "inspect_local_source",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 0.7110686670057476
+    },
+    {
+      "profile": "exploratory",
+      "case": 2,
+      "reversed": true,
+      "expected": "inspect_local_source",
+      "choice": "inspect_local_source",
+      "correct_tradeoff": true,
+      "permitted": true,
+      "seconds": 1.1361871669942047
+    }
+  ],
+  "tradeoff_agreement": 0.6666666666666666,
+  "unauthorized_choices": 0,
+  "order_stability": 0.6666666666666666,
+  "peak_child_rss_bytes": 855638016,
+  "interpretation": "Small behavioral test with explicit preferences; no human personality or subjective feeling claim."
+}

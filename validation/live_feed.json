@@ -1,0 +1,79 @@
+{
+  "test": "actual public source, Drive \u2192 queue \u2192 fetch \u2192 ledger \u2192 WHAT IF reconciliation",
+  "candidate": {
+    "stimulus_id": "stimulus_d33071e2c50b4b93",
+    "opportunity_id": "opportunity_79930998a64b4c03",
+    "duplicate": false,
+    "decision": "SUGGEST",
+    "assessment": {
+      "context_matches": [
+        {
+          "project_id": "core",
+          "project_title": "Cognitive Core",
+          "matched_keywords": [
+            "decoder",
+            "json",
+            "python"
+          ],
+          "priority": 0.5
+        }
+      ],
+      "memory_refs": [],
+      "novelty": 1,
+      "source_prior": 0.5,
+      "source_prior_calibrated": false,
+      "confidence": null,
+      "ranking_basis": "lexical_relevance * source_prior * project_importance",
+      "source_content": "untrusted"
+    },
+    "model_calls": 0,
+    "web_requests": 0,
+    "action_executed": false
+  },
+  "prepared": {
+    "status": "prepared",
+    "jobs": [
+      {
+        "opportunity_id": "opportunity_79930998a64b4c03",
+        "job_id": "job_2da3af4aaf1549b7"
+      }
+    ],
+    "action_executed": false,
+    "web_requests": 0
+  },
+  "research": {
+    "status": "done",
+    "job_id": "job_2da3af4aaf1549b7",
+    "sources": [
+      "doc_858efad7f3ec491e"
+    ],
+    "images_discovered": 1,
+    "errors": [],
+    "verified_claims": 0
+  },
+  "documents": [
+    {
+      "id": "doc_858efad7f3ec491e",
+      "url": "https://docs.python.org/3/library/json.html",
+      "sha256": "0f14408408420b8924a1623e61705e754d0c7d7e9414d0acdbef5a2e56ef5edb",
+      "characters": 27405,
+      "kind": "web_untrusted"
+    }
+  ],
+  "requests_reserved": 2,
+  "world_state_unchanged": true,
+  "experiences": 1,
+  "human_usefulness_feedback": "pending; not inferred by test",
+  "private_accounts_used": false,
+  "model_calls": 0,
+  "whatif_verification": {
+    "status": "verified",
+    "run_id": "fa2bb086efd04ecfb3db8dd57fd983a9",
+    "source": "host_verified",
+    "absolute_errors": {
+      "requests_left": 0
+    },
+    "causal_conclusion": false,
+    "note": "Observed outcome is not proof of alternative unrealized futures"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "history": [
+    [
+      "wikidata",
+      "https://www.wikidata.org/wiki/Wikidata:Data_access",
+      "CC0 historical entity/event metadata"
+    ]
+  ],
+  "news": [
+    [
+      "GDELT DOC",
+      "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "News index metadata/links; article copyrights not transferred"
+    ]
+  ],
+  "science": [
+    [
+      "OpenAlex",
+      "https://help.openalex.org/api/",
+      "CC0 work metadata"
+    ],
+    [
+      "Crossref",
+      "https://www.crossref.org/documentation/retrieve-metadata/",
+      "Metadata broadly reusable; abstracts excluded"
+    ]
+  ],
+  "medicine": [
+    [
+      "NCBI E-utilities",
+      "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+      "PubMed bibliographic records; individual abstracts may be restricted"
+    ]
+  ],
+  "economics": [
+    [
+      "World Bank Data",
+      "https://datacatalog.worldbank.org/public-licenses",
+      "Per-dataset licenses must be checked"
+    ]
+  ],
+  "geospatial": [
+    [
+      "OpenStreetMap",
+      "https://www.openstreetmap.org/copyright",
+      "ODbL; database and attribution conditions"
+    ]
+  ]
+}

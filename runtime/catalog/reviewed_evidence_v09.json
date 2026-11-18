@@ -1,0 +1,964 @@
+{
+  "as_of": "2026-10-30",
+  "records": [
+    {
+      "repo": "sailing-lab/sira",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "url": "https://github.com/sailing-lab/sira/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "pyproject.toml",
+          "sha": "eb3630c07aa8bcdcaa701c3edc56f746b5c09e47",
+          "url": "https://github.com/sailing-lab/sira/blob/main/pyproject.toml"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "Cveinnt/kepler",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "d200e3420deaf83839ba6c79fcf52ad79b6a284f",
+          "url": "https://github.com/Cveinnt/kepler/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "harness/ws_tools/commit.py",
+          "sha": "077c8af9ca1335d4d92860b0162dbcab88296188",
+          "url": "https://github.com/Cveinnt/kepler/blob/main/harness/ws_tools/commit.py"
+        },
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "sha": "bfde051d510a67f7f37532fccdbc39932835b404",
+          "url": "https://github.com/Cveinnt/kepler/blob/main/.github/workflows/ci.yml"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "getzep/graphiti",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "5feb0d9d299a1107adfa8331306b13cc0eff2d78",
+          "url": "https://github.com/getzep/graphiti/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "graphiti_core/graphiti.py",
+          "sha": "bd46a19e5f9ee129fb20df43dced053416c7e9f4",
+          "url": "https://github.com/getzep/graphiti/blob/main/graphiti_core/graphiti.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "langchain-ai/langgraph",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "fc0602feecdd6748623c852ab534e1ca612673c7",
+          "url": "https://github.com/langchain-ai/langgraph/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "libs/langgraph/langgraph/graph/state.py",
+          "sha": "9a87f16fa91a794b2e9be09352c1cb03ae89a90d",
+          "url": "https://github.com/langchain-ai/langgraph/blob/main/libs/langgraph/langgraph/graph/state.py"
+        },
+        "tests": {
+          "path": "libs/langgraph/tests/test_pregel.py",
+          "sha": "0079b2a577be9bb6c8734c9a20472d9f2ef97eba",
+          "url": "https://github.com/langchain-ai/langgraph/blob/main/libs/langgraph/tests/test_pregel.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "pydantic/pydantic-ai",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "1bf1f55e6d1736b499ded961ec6b94bfebb17aec",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "pydantic_ai_slim/pydantic_ai/agent/abstract.py",
+          "sha": "343781240096a78abc5ce2fdf2a1af00829bf519",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/pydantic_ai_slim/pydantic_ai/agent/abstract.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "tests": {
+          "path": "tests/test_agent.py",
+          "sha": "1058eae300beb303b9bed0b7710f67a0d211f55f",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/tests/test_agent.py"
+        },
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "sha": "66dd7d6a650e197797d12730e790d6b89fcd8e64",
+          "url": "https://github.com/pydantic/pydantic-ai/blob/main/.github/workflows/ci.yml"
+        }
+      },
+      "screen_status": "source_screened_not_approved",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "letta-ai/letta",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "f75c3422907f55d71685ae59afdc28498cde5a40",
+          "url": "https://github.com/letta-ai/letta/blob/main/LICENSE"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "license_detected": "GPL-3.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "9cecc1d4669ee8af2ca727a5d8cde10cd8b2d7cc",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/LICENSE"
+        },
+        "source": {
+          "path": "freqtrade/freqtradebot.py",
+          "sha": "1087e90854d4b3233e05f23c9b80098538626b57",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/freqtrade/freqtradebot.py"
+        },
+        "tests": {
+          "path": "tests/test_main.py",
+          "sha": "0551def2d6bf9019a09966f9e2661e1ea16385ae",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/tests/test_main.py"
+        },
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "sha": "1becb2ae7dacfc8c5f608508c2f762756cc72d16",
+          "url": "https://github.com/freqtrade/freqtrade/blob/develop/.github/workflows/ci.yml"
+        }
+      },
+      "screen_status": "copyleft_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "polakowo/vectorbt",
+      "license_detected": "Apache-2.0-with-Commons-Clause",
+      "evidence": {
+        "license": {
+          "path": "LICENSE.md",
+          "sha": "1ecf7675862c3caede8c26bed7150c6c41036d45",
+          "url": "https://github.com/polakowo/vectorbt/blob/master/LICENSE.md"
+        },
+        "source": {
+          "path": "vectorbt/portfolio/base.py",
+          "sha": "3cca3df3e097109c42f1294f852134f8476aadf5",
+          "url": "https://github.com/polakowo/vectorbt/blob/master/vectorbt/portfolio/base.py"
+        }
+      },
+      "screen_status": "restricted_license_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "gboeing/osmnx",
+      "license_detected": "UNKNOWN_LICENSE",
+      "evidence": {
+        "source": {
+          "path": "osmnx/graph.py",
+          "sha": "3233e85983999bd8348757b8ac690455c5b3bc4e",
+          "url": "https://github.com/gboeing/osmnx/blob/main/osmnx/graph.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "geopandas/geopandas",
+      "license_detected": "BSD-3-Clause",
+      "evidence": {
+        "license": {
+          "path": "LICENSE.txt",
+          "sha": "028603be2080134aa4817ed691fec3f449ffa609",
+          "url": "https://github.com/geopandas/geopandas/blob/main/LICENSE.txt",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "Project-MONAI/MONAI",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "url": "https://github.com/Project-MONAI/MONAI/blob/dev/LICENSE"
+        },
+        "source": {
+          "path": "monai/networks/nets/unet.py",
+          "sha": "a4995ef7018f0d37f9c7d7bd23ad3c4db177daac",
+          "url": "https://github.com/Project-MONAI/MONAI/blob/dev/monai/networks/nets/unet.py"
+        },
+        "tests": {
+          "path": "tests/integration/test_integration_unet_2d.py",
+          "sha": "706b0e0afbcc5af15d6f3f11c8746f7fcd5d6630",
+          "url": "https://github.com/Project-MONAI/MONAI/blob/dev/tests/integration/test_integration_unet_2d.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "psychopy/psychopy",
+      "license_detected": "GPL-3.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+          "url": "https://github.com/psychopy/psychopy/blob/dev/LICENSE"
+        },
+        "source": {
+          "path": "psychopy/visual/window.py",
+          "sha": "c601a6a4d8ffe575a3db7b793a397640b5c794c2",
+          "url": "https://github.com/psychopy/psychopy/blob/dev/psychopy/visual/window.py"
+        }
+      },
+      "screen_status": "copyleft_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "mne-tools/mne-python",
+      "license_detected": "BSD-3-Clause",
+      "evidence": {
+        "license": {
+          "path": "LICENSE.txt",
+          "sha": "8e4a81bec1eb1d1c38bef305216fae3323a3ffbf",
+          "url": "https://github.com/mne-tools/mne-python/blob/main/LICENSE.txt",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "huggingface/transformers",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "68b7d66c97d66c58de883ed0c451af2b3183e6f3",
+          "url": "https://github.com/huggingface/transformers/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "src/transformers/models/bert/modeling_bert.py",
+          "sha": "ec4bb968fe0cc232bd83e78303594e31abcc6f71",
+          "url": "https://github.com/huggingface/transformers/blob/main/src/transformers/models/bert/modeling_bert.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "scikit-learn/scikit-learn",
+      "license_detected": "BSD-3-Clause",
+      "evidence": {
+        "license": {
+          "path": "COPYING",
+          "sha": "3d7ee432c15b685eaa654b6abe8f8e3ea8126a8d",
+          "url": "https://github.com/scikit-learn/scikit-learn/blob/main/COPYING",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "gitroomhq/postiz-app",
+      "license_detected": "AGPL-3.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "24fd22792bf887200be9e1388c7b9d4782c6b3b2",
+          "url": "https://github.com/gitroomhq/postiz-app/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "apps/backend/src/main.ts",
+          "sha": "7f5523bde2575ffc4aca41f24fef37052cbe0209",
+          "url": "https://github.com/gitroomhq/postiz-app/blob/main/apps/backend/src/main.ts"
+        },
+        "ci": {
+          "path": ".github/workflows/build.yml",
+          "sha": "4738b6307920bff7ce3442345ac959e098f08fa9",
+          "url": "https://github.com/gitroomhq/postiz-app/blob/main/.github/workflows/build.yml"
+        }
+      },
+      "screen_status": "copyleft_manual_review",
+      "source_review_scope": "Selected file(s) and small excerpt, NOT full code review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "danijar/dreamerv3",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "80bb3c8ed0c268d898f1eb4c42350e7417a94e53",
+          "url": "https://github.com/danijar/dreamerv3/blob/main/LICENSE",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "source": {
+          "path": "dreamerv3/agent.py",
+          "sha": "0cada34bbd87e6c3002522db244d1fb2c8896fb1",
+          "url": "https://github.com/danijar/dreamerv3/blob/main/dreamerv3/agent.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "tests": {
+          "path": "embodied/perf/test_driver.py",
+          "sha": "3c90dd212bbdf2e03b0c4804329529a09f336b53",
+          "url": "https://github.com/danijar/dreamerv3/blob/main/embodied/perf/test_driver.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "modelcontextprotocol/python-sdk",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "3d48435454b105021b4f777c11b6b07d8d2ffea3",
+          "url": "https://github.com/modelcontextprotocol/python-sdk/blob/main/LICENSE"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "opencv/opencv",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "url": "https://github.com/opencv/opencv/blob/main/LICENSE",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "source": {
+          "path": "modules/core/src/matrix.cpp",
+          "sha": "da63dc8e9a1ce0a0bfa609cb33e7cf4fc10f1b32",
+          "url": "https://github.com/opencv/opencv/blob/main/modules/core/src/matrix.cpp",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "tests": {
+          "path": "modules/core/test/test_mat.cpp",
+          "sha": "7c6731a265875139370ed6ee2cc95b2e604acfa5",
+          "url": "https://github.com/opencv/opencv/blob/main/modules/core/test/test_mat.cpp",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "microsoft/qlib",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "9e841e7a26e4eb057b24511e7b92d42b257a80e5",
+          "url": "https://github.com/microsoft/qlib/blob/main/LICENSE",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "source": {
+          "path": "qlib/contrib/model/pytorch_lstm.py",
+          "sha": "3ba09097acd33bcab38a5b611c36fc0250c2b3a5",
+          "url": "https://github.com/microsoft/qlib/blob/main/qlib/contrib/model/pytorch_lstm.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "FreeCAD/FreeCAD",
+      "license_detected": "LGPL-2.1",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "bc0390e98c98f2ad3ab7decdb82b4d57d7f850d4",
+          "url": "https://github.com/FreeCAD/FreeCAD/blob/main/LICENSE",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "source": {
+          "path": "src/App/Document.cpp",
+          "sha": "9b2c53055d56e4f8ce1137ad85cfbc4bd2afb4c8",
+          "url": "https://github.com/FreeCAD/FreeCAD/blob/main/src/App/Document.cpp",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "tests": {
+          "path": "src/Mod/CAM/CAMTests/TestPostProcessor.py",
+          "sha": "1f435c18de823d12b031216715df06e4610891db",
+          "url": "https://github.com/FreeCAD/FreeCAD/blob/main/src/Mod/CAM/CAMTests/TestPostProcessor.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "openscad/openscad",
+      "license_detected": "NOT_VERIFIED",
+      "evidence": {},
+      "screen_status": "not_verified",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "n8n-io/n8n",
+      "license_detected": "NOT_VERIFIED",
+      "evidence": {
+        "source": {
+          "path": "packages/cli/src/commands/start.ts",
+          "sha": "9bc307dce3ad1062dd20f46eb1bd44ae64e8dfab",
+          "url": "https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "AI4Finance-Foundation/FinRL",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "cbeb60a100b33079b5c90102fb89b4f9f229437c",
+          "url": "https://github.com/AI4Finance-Foundation/FinRL/blob/main/LICENSE",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "source": {
+          "path": "finrl/agents/stablebaselines3/models.py",
+          "sha": "49ddbeae5242af27623243688b259d657feaf3a8",
+          "url": "https://github.com/AI4Finance-Foundation/FinRL/blob/main/finrl/agents/stablebaselines3/models.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "huggingface/lerobot",
+      "license_detected": "Apache-2.0",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "93baf0c18936131979fdda6a38536cbcef0efccb",
+          "url": "https://github.com/huggingface/lerobot/blob/main/LICENSE",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "source": {
+          "path": "src/lerobot/robots/robot.py",
+          "sha": "fa61ce9cee79f3593eb2980a0742e56b9eb3b180",
+          "url": "https://github.com/huggingface/lerobot/blob/main/src/lerobot/robots/robot.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "py-why/dowhy",
+      "license_detected": "MIT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "4c2f3418f06a299577362f7738e26662c2211849de6b527e9",
+          "url": "https://github.com/py-why/dowhy/blob/main/LICENSE",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "source": {
+          "path": "dowhy/causal_model.py",
+          "sha": "daa59dbf876995cd649dcfba74afaa1de6b527e9",
+          "url": "https://github.com/py-why/dowhy/blob/main/dowhy/causal_model.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "tests": {
+          "path": "tests/causal_estimators/test_linear_regression_estimator.py",
+          "sha": "751a7726015a18ec1d61aa4d7151ee2375c84c05",
+          "url": "https://github.com/py-why/dowhy/blob/main/tests/causal_estimators/test_linear_regression_estimator.py",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        },
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "sha": "d9322d8daca20aa35573675c47762443ab57da52",
+          "url": "https://github.com/py-why/dowhy/blob/main/.github/workflows/ci.yml",
+          "note": "Verified via GitHub connected read in current session; URL branch may differ; use sha for reproducibility"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected files only; no full code or dependency security review",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "used_to_train_weights": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "blender/blender",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "source": {
+          "path": "source/blender/blenkernel/intern/mesh.cc",
+          "sha": "6b33855e97b1bc98e0290f2e60cefc4f7a717101",
+          "url": "https://github.com/blender/blender/blob/main/source/blender/blenkernel/intern/mesh.cc"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "godotengine/godot",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "source": {
+          "path": "scene/main/node.cpp",
+          "sha": "72ddfb5a50f4bdbb95fcd7475fc0c003c8713ba6",
+          "url": "https://github.com/godotengine/godot/blob/main/scene/main/node.cpp"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "bambulab/BambuStudio",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "dba13ed2ddf783ee8118c6a581dbf75305f816a3",
+          "url": "https://github.com/bambulab/BambuStudio/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "src/libslic3r/Print.cpp",
+          "sha": "7f8c455c56b0f62cc8b1b52eaf7777555ede1757",
+          "url": "https://github.com/bambulab/BambuStudio/blob/main/src/libslic3r/Print.cpp"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "prusa3d/PrusaSlicer",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "70eec1ee036bb3d375349df21457cb1d149731d5",
+          "url": "https://github.com/prusa3d/PrusaSlicer/blob/main/LICENSE"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "OrcaSlicer/OrcaSlicer",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "source": {
+          "path": "src/libslic3r/Print.cpp",
+          "sha": "953cb5f8f5d7322c83c10ce92c5e450d856e9bcc",
+          "url": "https://github.com/OrcaSlicer/OrcaSlicer/blob/main/src/libslic3r/Print.cpp"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "Ultimaker/Cura",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "07b1d92c0e9e07904bdf81c332b69a7df54bf127",
+          "url": "https://github.com/Ultimaker/Cura/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "cura/CuraApplication.py",
+          "sha": "de18384a5a73de20c5fdd67eab1f31f7be62b358",
+          "url": "https://github.com/Ultimaker/Cura/blob/main/cura/CuraApplication.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "alicevision/Meshroom",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "source": {
+          "path": "meshroom/core/graph.py",
+          "sha": "fd19ed2bd54ff5321bd3c4db8aa3cb01d706e0ce",
+          "url": "https://github.com/alicevision/Meshroom/blob/main/meshroom/core/graph.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "mikedh/trimesh",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "source": {
+          "path": "trimesh/base.py",
+          "sha": "1afdcbae8aeffdc09d991e3693547a0c6f08217a",
+          "url": "https://github.com/mikedh/trimesh/blob/main/trimesh/base.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "browser-use/browser-use",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "1ea3836ce58a4cd32c90c0b4f4e736d840d23780",
+          "url": "https://github.com/browser-use/browser-use/blob/main/LICENSE"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "deepset-ai/haystack",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "6fb66d8d5fa55912ee80f4fdab94cab99140c448",
+          "url": "https://github.com/deepset-ai/haystack/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "haystack/core/pipeline/pipeline.py",
+          "sha": "f31705081ad05b2022c2add4a7b9d1d399c07c68",
+          "url": "https://github.com/deepset-ai/haystack/blob/main/haystack/core/pipeline/pipeline.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "agentscope-ai/agentscope",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "2f2f2f25ea6019e5a51213c4e8a4df0c67a6ea2a",
+          "url": "https://github.com/agentscope-ai/agentscope/blob/main/LICENSE"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "openMVG/openMVG",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "14e2f777f6c395e7e04ab4aa306bbcc4b0c1120e",
+          "url": "https://github.com/openMVG/openMVG/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "src/openMVG/sfm/sfm_data.hpp",
+          "sha": "c8f302393954615db6429353728df71513244286",
+          "url": "https://github.com/openMVG/openMVG/blob/main/src/openMVG/sfm/sfm_data.hpp"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "nerfstudio-project/nerfstudio",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "ee561dfbe4221ad290556ceca885affdd2281dbe",
+          "url": "https://github.com/nerfstudio-project/nerfstudio/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "nerfstudio/models/nerfacto.py",
+          "sha": "bfccfd87974486ed93ec9762970c8be8e893e85b",
+          "url": "https://github.com/nerfstudio-project/nerfstudio/blob/main/nerfstudio/models/nerfacto.py"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    },
+    {
+      "repo": "MarlinFirmware/Marlin",
+      "license_detected": "UNDETERMINED_FROM_SHORT_EXCERPT",
+      "evidence": {
+        "license": {
+          "path": "LICENSE",
+          "sha": "6c0e10f3b80256332e24868cd9e6a727bc8d9708",
+          "url": "https://github.com/MarlinFirmware/Marlin/blob/main/LICENSE"
+        },
+        "source": {
+          "path": "Marlin/src/MarlinCore.cpp",
+          "sha": "dbe68cd13cb8e9e57bca08cde81a249cb906801b",
+          "url": "https://github.com/MarlinFirmware/Marlin/blob/main/Marlin/src/MarlinCore.cpp"
+        }
+      },
+      "screen_status": "incomplete_source_quality_review",
+      "source_review_scope": "Selected file excerpt only",
+      "tests_executed": false,
+      "security_audit_complete": false,
+      "license_reuse_cleared": false,
+      "autonomous_code_execution_allowed": false,
+      "status": "quarantine_source_review_only"
+    }
+  ],
+  "warning": "26 sampled repositories, two of those lack verified license/source; NO full audit or auto integration",
+  "complete_code_review": false,
+  "notes": [
+    "Sha hashes are blob references; content excerpt checked; not whole repository review",
+    "CI and test file presence is not evidence of passing CI",
+    "No source allowed for automatic install/retraining"
+  ],
+  "review_count": 40,
+  "with_direct_evidence": 39,
+  "approved": 0,
+  "all_246_audited": false
+}

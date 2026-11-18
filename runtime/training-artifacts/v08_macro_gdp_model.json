@@ -1,0 +1,47 @@
+{
+  "model_id": "macro_gdp_ridge_1959_1995_v08",
+  "trained_through": 1995,
+  "feature_names": [
+    "current_real_gdp",
+    "last_quarter_delta",
+    "prior_quarter_delta",
+    "unemployment",
+    "inflation",
+    "real_interest",
+    "treasury_bill_rate",
+    "consumption_log_growth"
+  ],
+  "mean": [
+    5665.250797202798,
+    44.31172027972028,
+    44.30405594405593,
+    6.155244755244755,
+    4.631118881118881,
+    1.4999999999999996,
+    6.131328671328671,
+    0.008708305213045121
+  ],
+  "scale": [
+    1814.0055649712924,
+    49.48663539119763,
+    49.48373367045878,
+    1.506335261193818,
+    3.3249415799894586,
+    2.634192595345038,
+    2.7460606846141524,
+    0.007431152557171902
+  ],
+  "coef": [
+    1820.7952737201729,
+    1.1045805308644063,
+    7.20041647580864,
+    12.169041240877101,
+    -3.8209800592574803,
+    -4.827293579005649,
+    -7.643762125476801,
+    16.204659700156455
+  ],
+  "intercept": 5710.095538461539,
+  "license_notice": "statsmodels macrodata public; check underlying publication attribution before redistribution",
+  "training_provenance": "statsmodels.datasets.macrodata, split years <=1995"
+}

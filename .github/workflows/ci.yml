@@ -1,0 +1,50 @@
+name: Runtime validation
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.14']
+    defaults:
+      run:
+        working-directory: runtime
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install '.[test,mcp,benchmark]' build
+      - name: Bounded regression suite
+        run: python -B scripts/run_bounded_pytests.py --selftest --timeout 90 --total-timeout 480 --output /tmp/test-report.json
+        timeout-minutes: 10
+      - name: Synthetic intelligence feed contract
+        run: python -B scripts/benchmark_intelligence_feed.py --output /tmp/feed-benchmark.json
+      - name: Build installable artifacts
+        run: python -m build
+      - name: Smoke test wheel without optional dependencies
+        run: |
+          python -m venv /tmp/runtime-clean
+          /tmp/runtime-clean/bin/python -m pip install --no-index --no-deps dist/*.whl
+          /tmp/runtime-clean/bin/python scripts/validate_unified.py --output /tmp/clean-smoke.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 'validation-${{ matrix.python }}'
+          path: |
+            /tmp/test-report.json
+            /tmp/test-report_logs/
+            /tmp/feed-benchmark.json
+            /tmp/clean-smoke.json
+            runtime/dist/

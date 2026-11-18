@@ -1,0 +1,42 @@
+{
+  "C": {
+    "successes": 15,
+    "success_per_cost": 0.45454545454545453,
+    "cost_units": 33,
+    "diagnostic_questions": 3,
+    "skills_acquired": 3,
+    "seconds": 0.03954553359653801
+  },
+  "D": {
+    "successes": 21,
+    "success_per_cost": 0.6363636363636364,
+    "cost_units": 33,
+    "diagnostic_questions": 3,
+    "skills_acquired": 3,
+    "seconds": 0.03455450040055439
+  },
+  "D_no_progress": {
+    "successes": 18.4,
+    "success_per_cost": 0.6814814814814815,
+    "cost_units": 26.4,
+    "diagnostic_questions": 0.8,
+    "skills_acquired": 0.8,
+    "seconds": 0.02525336680118926
+  },
+  "D_no_cost": {
+    "successes": 14,
+    "success_per_cost": 0.4666666666666667,
+    "cost_units": 30,
+    "diagnostic_questions": 2,
+    "skills_acquired": 2,
+    "seconds": 0.030835083196870984
+  },
+  "D_adaptive_gain": {
+    "successes": 20.6,
+    "success_per_cost": 0.6242424242424243,
+    "cost_units": 33,
+    "diagnostic_questions": 3,
+    "skills_acquired": 3,
+    "seconds": 0.033958708203863354
+  }
+}

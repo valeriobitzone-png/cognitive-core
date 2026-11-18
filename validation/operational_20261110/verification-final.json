@@ -1,0 +1,23 @@
+{
+  "protected_files_checked": 726,
+  "expected_modified_existing_files": [
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/cli.py",
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/config.py",
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/drive.py",
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/engine.py",
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/portable.py",
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/research.py",
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/vault.py",
+    "/Volumes/AMBRO/projects/CognitiveCore/cognitive-core/runtime/src/cognitive_core/worker.py"
+  ],
+  "unexpected_changes": [],
+  "deployed_files_verified": 12,
+  "python_passed": 510,
+  "python_skipped": 2,
+  "node_passed": 12,
+  "source_data_and_original_databases_unchanged": true,
+  "wheel_smoke_python_versions": [
+    "3.11",
+    "3.12"
+  ]
+}

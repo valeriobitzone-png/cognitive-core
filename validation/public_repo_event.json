@@ -1,0 +1,90 @@
+{
+  "source": "actual public repository commit",
+  "event": {
+    "source_kind": "github",
+    "source_ref": "https://github.com/valeriobitzone-png/cognitive-core/commit/446b616dd43e387aa2c2ee333e6ee78dca31e7e2",
+    "occurred_at": "2026-11-08T13:41:02+01:00",
+    "title": "Cognitive Core v0.1: aggiornamento descrittivo di idea e architettura",
+    "summary": "Public repository commit observed through Git; the checked-out main README documents the v0.1 prototype."
+  },
+  "result": {
+    "stimulus_id": "stimulus_696bb4359f2b44cb",
+    "opportunity_id": "opportunity_5897f14e63724041",
+    "duplicate": false,
+    "decision": "SUGGEST",
+    "assessment": {
+      "context_matches": [
+        {
+          "project_id": "core",
+          "project_title": "Cognitive Core",
+          "matched_keywords": [
+            "cognitive",
+            "core"
+          ],
+          "priority": 0.333333
+        }
+      ],
+      "memory_refs": [],
+      "novelty": 1,
+      "source_prior": 0.5,
+      "source_prior_calibrated": false,
+      "confidence": null,
+      "ranking_basis": "lexical_relevance * source_prior * project_importance",
+      "source_content": "untrusted"
+    },
+    "model_calls": 0,
+    "web_requests": 0,
+    "action_executed": false
+  },
+  "briefing": {
+    "as_of": "2026-11-08T14:25:58.514371+00:00",
+    "window_hours": 24,
+    "items": [
+      {
+        "id": "opportunity_5897f14e63724041",
+        "project_id": "core",
+        "hypothesis": "Evaluate whether Cognitive Core v0.1: aggiornamento descrittivo di idea e architettura is useful for Cognitive Core",
+        "priority": 0.333333,
+        "whatif_run_id": null,
+        "stimulus_id": "stimulus_696bb4359f2b44cb",
+        "title": "Cognitive Core v0.1: aggiornamento descrittivo di idea e architettura",
+        "occurred_at": "2026-11-08T12:41:02.000000+00:00",
+        "received_at": "2026-11-08T14:25:58.513957+00:00",
+        "assessment": {
+          "context_matches": [
+            {
+              "project_id": "core",
+              "project_title": "Cognitive Core",
+              "matched_keywords": [
+                "cognitive",
+                "core"
+              ],
+              "priority": 0.333333
+            }
+          ],
+          "memory_refs": [],
+          "novelty": 1,
+          "source_prior": 0.5,
+          "source_prior_calibrated": false,
+          "confidence": null,
+          "ranking_basis": "lexical_relevance * source_prior * project_importance",
+          "source_content": "untrusted"
+        },
+        "status_at_time": "open",
+        "confidence": null,
+        "sources": [
+          {
+            "source_kind": "github",
+            "source_ref": "https://github.com/valeriobitzone-png/cognitive-core/commit/446b616dd43e387aa2c2ee333e6ee78dca31e7e2"
+          }
+        ]
+      }
+    ],
+    "action_executed": false,
+    "ranking_basis": "heuristic_priority_not_probability",
+    "model_calls": 0
+  },
+  "model_calls": 0,
+  "network_in_drive": false,
+  "finding_status": "candidate relevance only; no independent usefulness judgement"
+}

@@ -1,0 +1,13 @@
+{
+  "candidate": "Rizzo Flow 4B Q4_K_M",
+  "weights_basename": "spark-x2.5-4b-rizzo-flow-lora-q4_k_m.gguf",
+  "weights_sha256": "79de5cb8dbfd1a1f5cb3037252251594352841fe5e3dc1ae8cead053010fcd54",
+  "runtime_overrides": {
+    "enable_local_model": false,
+    "local_model_jinja": true,
+    "max_model_file_bytes": 3000000000,
+    "model_timeout_seconds": 30,
+    "max_cycle_seconds": 35
+  },
+  "scope": "Optional one-shot relevance advice. Six-action benchmark is a separate experiment. No authority or web budget extension."
+}

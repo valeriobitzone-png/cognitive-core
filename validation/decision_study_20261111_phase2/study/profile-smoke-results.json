@@ -1,0 +1,113 @@
+{
+  "elapsed_seconds": 21.971893917012494,
+  "result": {
+    "decision": {
+      "action": "PREPARE_SILENTLY",
+      "priority": 0.75,
+      "rationale": "unverified local relevance classification",
+      "requires_approval": false,
+      "model_used": true
+    },
+    "model_calls": 1,
+    "source_facts_modified": 0,
+    "action_executed": false,
+    "sources": [
+      {
+        "id": "12dce82cf943c767cff4d86068b1fc38bda3ecd7cc21d3cd7fa2c19cc77b9867",
+        "title": "hypothesis lab:realtest/data/ensemble/HYPOTHESIS_QUEUE.json#queue/0",
+        "excerpt": "{\"distance\": 1.0, \"from_cycle\": 31, \"hypothesis\": \"[ipotesi da c31] neve/ghiaccio e altri test clima-lessico solo su fonti a elicitazione uniforme (dizionari, WALS/Grambank) e con modello filogenetico; CLICS4 solo con effetti fissi di fonte + grappoli di famiglia\", \"ling_culture_bonus\": 0.2, \"novelt",
+        "source_url": "lab:realtest/data/ensemble/HYPOTHESIS_QUEUE.json#queue/0",
+        "kind": "lab_hypothesis",
+        "epistemic": "INFERRED",
+        "source_sha256": "2017b79fa8d06535fb46ae531f8a369d2f8edc05a09b65fa9309b0b99bebf24e",
+        "batch_id": "0bc65684fdea88b5f3fedd5c1cd8ec629da9d38e8ed3408583894699d5bc12d7",
+        "verified": false
+      },
+      {
+        "id": "75452450d61cd1c6d6db238446c0612acff8beb0f9b9fa0682162c25249d2372",
+        "title": "hypothesis lab:realtest/data/ensemble/HYPOTHESIS_QUEUE.json#queue/1",
+        "excerpt": "{\"distance\": 1.0, \"from_cycle\": 33, \"hypothesis\": \"[WHATIF c33, in coda] E se i nomi di strade più usate (OSM) sono più corti delle secondarie?\", \"ling_culture_bonus\": 0.2, \"novelty\": 1.0, \"score\": 3.3, \"source\": \"TOPO_toponyms\", \"target\": \"LING_numerals\", \"verifiability\": 1.0}",
+        "source_url": "lab:realtest/data/ensemble/HYPOTHESIS_QUEUE.json#queue/1",
+        "kind": "lab_hypothesis",
+        "epistemic": "INFERRED",
+        "source_sha256": "367a1904935b6333640877007f92372c557513506c16e37cf1a6e8b708bf0fd1",
+        "batch_id": "0bc65684fdea88b5f3fedd5c1cd8ec629da9d38e8ed3408583894699d5bc12d7",
+        "verified": false
+      },
+      {
+        "id": "5134f414c1f2763d89d90941bb2c0970695a5a5b69062bd4eccfd0d2fc2c9ed1",
+        "title": "hypothesis lab:realtest/data/ensemble/HYPOTHESIS_QUEUE.json#queue/2",
+        "excerpt": "{\"distance\": 1.0, \"from_cycle\": 33, \"hypothesis\": \"[WHATIF c33, in coda] E se nelle edizioni piccole di Wikipedia (meno parlanti) il legame frequenza-lunghezza è più debole (meno uso)?\", \"ling_culture_bonus\": 0.2, \"novelty\": 1.0, \"score\": 3.3, \"source\": \"ETHNOBIO_species_names\", \"target\": \"LING_wiki",
+        "source_url": "lab:realtest/data/ensemble/HYPOTHESIS_QUEUE.json#queue/2",
+        "kind": "lab_hypothesis",
+        "epistemic": "INFERRED",
+        "source_sha256": "97fe66a38ad60155309b12222db4a08963fdcdd61e9a54ee9b460a113b108eb5",
+        "batch_id": "0bc65684fdea88b5f3fedd5c1cd8ec629da9d38e8ed3408583894699d5bc12d7",
+        "verified": false
+      }
+    ],
+    "status": "classified",
+    "model_identity": {
+      "file": "/Volumes/AMBRO/models/rizzo-flow/rizzo-flow/spark-x2.5-4b-rizzo-flow-lora-q4_k_m.gguf",
+      "bytes": 2600224416,
+      "mtime_ns": 1792999827040745876,
+      "binary": "/opt/homebrew/bin/llama-completion",
+      "tokens": 64,
+      "timeout": 30,
+      "jinja": true,
+      "policy": "local-advice-v5"
+    },
+    "epistemic": "INFERRED",
+    "self_forecast": {
+      "id": "65c52aa71069474895eebca3192285ba",
+      "capability": "local_inference",
+      "context": "archive_relevance",
+      "runtime_key": "6592ffa93d35870908d03bf394d935c68aa89af3c7e2ca298353ea724ec04dee",
+      "epistemic": "INFERRED",
+      "evidence_origin": "OBSERVED",
+      "snapshot": {
+        "model_configured": true,
+        "model_file_ready": true,
+        "binary_ready": true,
+        "archive_readable": true,
+        "local_inference_available": true,
+        "source": "filesystem_and_host_configuration",
+        "epistemic": "OBSERVED",
+        "warning": "Prerequisites observed, not proof of inference or semantic accuracy."
+      },
+      "admitted": true,
+      "probability": null,
+      "estimate_for_scoring": 0.5,
+      "samples": 0,
+      "successes": 0,
+      "interval_95": [
+        0.0,
+        1.0
+      ],
+      "status": "insufficient_history",
+      "calibrated": false,
+      "target": "validated_local_inference_execution",
+      "semantic_accuracy": "not_measured",
+      "question": null
+    },
+    "self_outcome": {
+      "successful": true,
+      "actor": "self",
+      "evidence_ref": "schema_validated_process_result:6c4a79041770219aaf5273a2065393db3a64798b52e4f778c7130355df092ebe",
+      "observed_at": 1794406996.0796008,
+      "epistemic": "OBSERVED",
+      "semantic_truth_verified": false,
+      "brier": 0.25
+    },
+    "strategy": "local_model_advice"
+  },
+  "cache_no_new_calls": true,
+  "archive_unchanged": true,
+  "inference_processes": 1,
+  "remaining_processes": 0,
+  "peak_child_rss_bytes": 5422661632,
+  "network_calls": 0,
+  "paid_calls": 0,
+  "production_model_enabled": false,
+  "note": "Real one-shot integration smoke; relevance schema, not the six-action routing accuracy benchmark."
+}

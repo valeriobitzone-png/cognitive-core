@@ -1,0 +1,7 @@
+{
+  "protocol": "single_function_native_format_smoke",
+  "output": "\n<start_function_call>call:get_current_weather{location:<escape>Tokyo<escape>}<end_function_call><start_function_response>call:get_current_weather{location:<escape>Tokyo<escape>}<end_function_call><start_function_response>call:get_current_weather{location:<escape>Tokyo<escape>}<end_function_call><start_function_response>call:get_current_weather{location:<escape>Tokyo<escape>}\n\n",
+  "contains_expected_function": true,
+  "tool_executed": false,
+  "network_calls": 0
+}

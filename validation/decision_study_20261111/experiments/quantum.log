@@ -1,0 +1,32 @@
+{
+  "projective_2d": {
+    "quantum_2params": 1.1039791006252888,
+    "classical_equivalent_2params": 1.1039791006252888,
+    "classical_dynamic_3params": 1.1046011044773256,
+    "classical_static_2params": 1.333746317082252,
+    "q_minus_dynamic_seed_bootstrap95": [
+      -0.0022201768790566746,
+      0.000798410639188194
+    ]
+  },
+  "classical_dynamic": {
+    "quantum_2params": 1.0308463163956358,
+    "classical_equivalent_2params": 1.0308463163956358,
+    "classical_dynamic_3params": 1.0280858425698152,
+    "classical_static_2params": 1.3645303046971242,
+    "q_minus_dynamic_seed_bootstrap95": [
+      -0.001576366843885984,
+      0.0073747969691824854
+    ]
+  },
+  "independent": {
+    "quantum_2params": 1.6659913979015204,
+    "classical_equivalent_2params": 1.6659913979015204,
+    "classical_dynamic_3params": 1.3971282401737888,
+    "classical_static_2params": 1.3927193357886412,
+    "q_minus_dynamic_seed_bootstrap95": [
+      0.2602023982254816,
+      0.27904397291340577
+    ]
+  }
+}

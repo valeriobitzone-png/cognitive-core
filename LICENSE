@@ -2,3 +2,5 @@ Copyright (c) 2026 Valerio Falzone. Tutti i diritti riservati. All rights reserv
 
 Nessuna parte di questo repository può essere copiata, modificata, distribuita o utilizzata senza il permesso scritto dell'autore.
 No part of this repository may be copied, modified, distributed or used without the author's written permission.
+
+Eccezione di ambito: i componenti in runtime/ conservano le proprie licenze originali Apache-2.0 e MIT, dettagliate in LICENSING.md. La dichiarazione sopra riguarda la documentazione originale.
