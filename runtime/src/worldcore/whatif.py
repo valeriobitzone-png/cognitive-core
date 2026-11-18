@@ -28,7 +28,7 @@ class WhatIfMixin:
         ''')
 
     def compare_futures(self, owner, question, scenarios, *, space='default', objectives=None,
-                        failure_conditions=None, persist=True):
+                        failure_conditions=None, persist=True, state=None):
         """Compare 2..8 futures, without tool execution or automatic decisions.
 
         Scenarios: {id, kind:'state'|'world', actions:[...], environment?, before?, family?}.
@@ -52,7 +52,9 @@ class WhatIfMixin:
             if not isinstance(rule,dict) or not isinstance(rule.get('key'),str) or rule.get('op') not in ('>','>=','<','<=','==','!=') or not _number(rule.get('threshold')):
                 raise WorldCoreError('invalid failure threshold')
         ids=set(); items=[]
-        base_state=self.state(owner,space=space)
+        if state is not None and (not isinstance(state,dict) or len(state)>200):
+            raise WorldCoreError('state must be a bounded object')
+        base_state=self.state(owner,space=space) if state is None else json.loads(_json(state))
         for entry in scenarios:
             if not isinstance(entry,dict):raise WorldCoreError('invalid scenario')
             sid=_valid_atom(entry.get('id'),'scenario id')
@@ -63,7 +65,7 @@ class WhatIfMixin:
             if kind=='state':
                 if not isinstance(actions,list) or len(actions)>8:
                     raise WorldCoreError('state scenario allows <=8 operations')
-                prediction=self.simulate(owner,actions,space=space)
+                prediction=self.simulate(owner,actions,space=space,state=None if state is None else base_state)
                 resulting=prediction['predicted']
                 status='simulated'
                 evidence={'type':'operator_assumptions','mode':'deterministic_rules',

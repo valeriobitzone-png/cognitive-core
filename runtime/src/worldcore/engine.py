@@ -520,10 +520,11 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
     def state(self, owner: str, *, space: str="default") -> dict[str,Any]:
         return {r["state_key"]:json.loads(r["value"]) for r in self.db.execute("SELECT state_key,value FROM state WHERE owner=? AND space=?",(_check_id(owner),_check_id(space)))}
 
-    def simulate(self, owner: str, actions: list[dict], *, space: str="default") -> dict:
-        """Deterministic counterfactuals only. Never mutates reality or executes tools."""
+    def simulate(self, owner: str, actions: list[dict], *, space: str="default", state: dict | None=None) -> dict:
+        """Deterministic counterfactuals only. Never mutates reality or executes tools.
+        state: optional starting state supplied by the caller (what-if on declared numbers); default = the stored state."""
         if not isinstance(actions,list) or len(actions)>30: raise WorldCoreError("1..30 actions required")
-        current=self.state(owner,space=space)
+        current=self.state(owner,space=space) if state is None else json.loads(_json(state))
         simulated=json.loads(_json(current))
         trace=[]
         for action in actions:
@@ -580,6 +581,14 @@ class WorldCore(AdaptationMixin, WhatIfMixin, BrowserLearningMixin, PersonalPlan
             brier=(p-float(observed))**2
             self.db.execute("UPDATE forecasts SET status='resolved',observed=?,resolved_at=?,brier=? WHERE owner=? AND space=? AND id=? AND status='pending'",(_json(observed),utcnow(),brier,_check_id(owner),_check_id(space),_check_id(forecast_id)))
         return self.get_forecast(owner,forecast_id,space=space)
+
+    def list_forecasts(self, owner: str, *, space: str="default", status: str | None=None, limit: int=50) -> list[dict]:
+        """Forecasts of an owner/space, newest due date first for pending ones. status: pending|resolved|None."""
+        if status not in (None,"pending","resolved"): raise WorldCoreError("status must be pending or resolved")
+        if type(limit)!=int or not 1<=limit<=200: raise WorldCoreError("invalid limit")
+        q="SELECT id FROM forecasts WHERE owner=? AND space=?"+(" AND status=?" if status else "")+" ORDER BY due_at ASC LIMIT ?"
+        args=[_check_id(owner),_check_id(space)]+([status] if status else [])+[limit]
+        return [self.get_forecast(owner,r["id"],space=space) for r in self.db.execute(q,args).fetchall()]
 
     def forecast_stats(self, owner: str, *, space: str="default") -> dict:
         r=self.db.execute("SELECT COUNT(*) AS n,AVG(brier) AS mean_brier FROM forecasts WHERE owner=? AND space=? AND status='resolved'",(_check_id(owner),_check_id(space))).fetchone()
