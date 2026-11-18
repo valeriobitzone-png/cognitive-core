@@ -132,6 +132,61 @@ def _load(row):
     return dict(row) if row is not None else None
 
 
+class _Rows:
+    """Righe già lette mentre si teneva il lucchetto, con l'interfaccia di un cursore (fetchone, fetchall, iterazione, rowcount, lastrowid)."""
+
+    def __init__(self, cur, rows):
+        self._rows, self._i = rows, 0
+        self.rowcount, self.lastrowid, self.description = cur.rowcount, cur.lastrowid, cur.description
+
+    def fetchone(self):
+        if self._i >= len(self._rows):
+            return None
+        self._i += 1
+        return self._rows[self._i - 1]
+
+    def fetchmany(self, size=1):
+        out = self._rows[self._i : self._i + size]
+        self._i += len(out)
+        return out
+
+    def fetchall(self):
+        out = self._rows[self._i :]
+        self._i = len(self._rows)
+        return out
+
+    def __iter__(self):
+        return iter(self.fetchall())
+
+
+class _LockedDB:
+    """Una sola connessione SQLite è condivisa da tutti i thread dell'host. Senza lucchetto, due richieste insieme (una lettura mentre altri scrive)
+    davano sqlite3.InterfaceError «bad parameter or other API misuse». Ogni istruzione gira, e le sue righe vengono lette, sotto il lucchetto rientrante
+    del motore: le transazioni (_transaction, _snapshot) lo tengono già e restano valide."""
+
+    _LOCKED = frozenset({"executemany", "executescript", "commit", "rollback", "backup", "close", "create_function", "interrupt"})
+
+    def __init__(self, conn, lock):
+        object.__setattr__(self, "_conn", conn)
+        object.__setattr__(self, "_lock", lock)
+
+    def execute(self, sql, params=()):
+        with self._lock:
+            cur = self._conn.execute(sql, params)
+            return cur if cur.description is None else _Rows(cur, cur.fetchall())
+
+    def __getattr__(self, name):
+        attr = getattr(self._conn, name)
+        if name not in self._LOCKED:
+            return attr
+
+        def call(*a, **k):
+            with self._lock:
+                return attr(*a, **k)
+
+        return call
+
+
 class WorldCore(
     AdaptationMixin,
     WhatIfMixin,
@@ -169,9 +224,10 @@ class WorldCore(
                 if not p.parent.is_dir():
                     raise
             self.path = str(p)
-        self.db = sqlite3.connect(self.path, check_same_thread=False, isolation_level=None, timeout=10)
-        self.db.row_factory = sqlite3.Row
         self.lock = threading.RLock()
+        raw = sqlite3.connect(self.path, check_same_thread=False, isolation_level=None, timeout=10)
+        raw.row_factory = sqlite3.Row
+        self.db = _LockedDB(raw, self.lock)
         self.db.execute("PRAGMA foreign_keys=ON")
         self.db.execute("PRAGMA busy_timeout=10000")
         deadline = time.monotonic() + 15
