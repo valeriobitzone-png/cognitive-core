@@ -42,6 +42,10 @@ from .whatif import WhatIfMixin
 from .adaptation import AdaptationMixin
 
 
+# Versione dello schema SQLite del Core (schema_meta.schema_version). Cresce quando una modifica non è retrocompatibile.
+CORE_SCHEMA_VERSION = 1
+
+
 class WorldCoreError(ValueError):
     """Invalid operation or data."""
 
@@ -176,6 +180,7 @@ class WorldCore(
                 if self.path != ":memory:":
                     self.db.execute("PRAGMA journal_mode=WAL")
                 self._init_schema()
+                self._check_schema_version()
                 break
             except sqlite3.OperationalError as exc:
                 if "locked" not in str(exc).lower() or time.monotonic() >= deadline:
@@ -219,6 +224,18 @@ class WorldCore(
                 yield
             finally:
                 self.db.execute("ROLLBACK")
+
+    def _check_schema_version(self):
+        """Il database porta la versione dello schema in schema_meta. Uno scritto da una versione più recente non si apre: si rischierebbe di corromperlo."""
+        row = self.db.execute("SELECT value FROM schema_meta WHERE key='schema_version'").fetchone()
+        if row is None:
+            self.db.execute("INSERT OR IGNORE INTO schema_meta(key,value) VALUES('schema_version',?)", (str(CORE_SCHEMA_VERSION),))
+        elif int(row[0]) > CORE_SCHEMA_VERSION:
+            raise WorldCoreError(f"database schema {row[0]} is newer than this engine supports ({CORE_SCHEMA_VERSION})")
+
+    def schema_version(self) -> int:
+        row = self.db.execute("SELECT value FROM schema_meta WHERE key='schema_version'").fetchone()
+        return int(row[0]) if row else 0
 
     def _init_schema(self):
         self.db.executescript("""
