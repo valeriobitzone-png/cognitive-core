@@ -1,4 +1,5 @@
 """Explicit, fail-closed runtime settings."""
+
 from dataclasses import dataclass, field
 from pathlib import Path
 import math
@@ -53,40 +54,41 @@ class Settings:
 
     def __post_init__(self):
         self.home = Path(self.home)
-        if not isinstance(self.local_model_device,str) or not re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]{0,31}',self.local_model_device):
+        if not isinstance(self.local_model_device, str) or not re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]{0,31}', self.local_model_device):
             raise ValueError('invalid local device identifier')
-        if type(self.local_model_gpu_layers) is not int or not 0<=self.local_model_gpu_layers<=99:
+        if type(self.local_model_gpu_layers) is not int or not 0 <= self.local_model_gpu_layers <= 99:
             raise ValueError('GPU layers must be 0..99')
-        if type(self.local_model_threads) is not int or not 1<=self.local_model_threads<=8:
+        if type(self.local_model_threads) is not int or not 1 <= self.local_model_threads <= 8:
             raise ValueError('model threads must be 1..8')
-        if type(self.autonomous_model_opt_in) is not bool:raise ValueError('model opt-in must be boolean')
-        if type(self.max_generation_tokens) is not int or not 1<=self.max_generation_tokens<=2048:raise ValueError('generation tokens must be 1..2048')
-        if self.curiosity_policy not in ("legacy","observe","information_only"):
+        if type(self.autonomous_model_opt_in) is not bool:
+            raise ValueError('model opt-in must be boolean')
+        if type(self.max_generation_tokens) is not int or not 1 <= self.max_generation_tokens <= 2048:
+            raise ValueError('generation tokens must be 1..2048')
+        if self.curiosity_policy not in ("legacy", "observe", "information_only"):
             raise ValueError("invalid curiosity policy")
-        if type(self.max_curiosity_units_per_day) is not int or not 0<=self.max_curiosity_units_per_day<=1000:
+        if type(self.max_curiosity_units_per_day) is not int or not 0 <= self.max_curiosity_units_per_day <= 1000:
             raise ValueError("curiosity units must be 0..1000")
         if type(self.local_model_jinja) is not bool:
             raise ValueError("model template choice must be boolean")
-        if type(self.max_model_file_bytes) is not int or not 1<=self.max_model_file_bytes<=4_000_000_000:
+        if type(self.max_model_file_bytes) is not int or not 1 <= self.max_model_file_bytes <= 4_000_000_000:
             raise ValueError("model file budget must be 1..4GB")
-        if type(self.max_model_calls_per_day) is not int or not 0<=self.max_model_calls_per_day<=100:
+        if type(self.max_model_calls_per_day) is not int or not 0 <= self.max_model_calls_per_day <= 100:
             raise ValueError('model calls must be 0..100 per day')
-        if type(self.max_model_tokens) is not int or not 32<=self.max_model_tokens<=128:
+        if type(self.max_model_tokens) is not int or not 32 <= self.max_model_tokens <= 128:
             raise ValueError('model output must be 32..128 tokens')
-        for value in (self.local_model_gguf,self.local_model_binary,self.local_decision_state):
-            if not isinstance(value,str) or '\x00' in value:
+        for value in (self.local_model_gguf, self.local_model_binary, self.local_decision_state):
+            if not isinstance(value, str) or '\x00' in value:
                 raise ValueError('invalid local model path')
-        if self.execution_mode not in ('interactive','autonomous'):
+        if self.execution_mode not in ('interactive', 'autonomous'):
             raise ValueError('invalid execution authority')
         if type(self.autonomous_web_opt_in) is not bool:
             raise ValueError('autonomous web opt-in must be boolean')
-        for name in ('max_runtime_disk_bytes','max_import_bytes','max_import_files',
-                     'max_import_records','max_cycle_sources','max_cycle_ticks_per_day'):
-            if type(getattr(self,name)) is not int or getattr(self,name)<1:
-                raise ValueError('invalid '+name)
-        if self.max_cycle_sources>20:
+        for name in ('max_runtime_disk_bytes', 'max_import_bytes', 'max_import_files', 'max_import_records', 'max_cycle_sources', 'max_cycle_ticks_per_day'):
+            if type(getattr(self, name)) is not int or getattr(self, name) < 1:
+                raise ValueError('invalid ' + name)
+        if self.max_cycle_sources > 20:
             raise ValueError('cycle source limit exceeds 20')
-        if type(self.max_cycle_seconds) not in (int,float) or not math.isfinite(self.max_cycle_seconds) or not 0<self.max_cycle_seconds<=60:
+        if type(self.max_cycle_seconds) not in (int, float) or not math.isfinite(self.max_cycle_seconds) or not 0 < self.max_cycle_seconds <= 60:
             raise ValueError('invalid cycle time budget')
         if not self.namespace or len(self.namespace) > 80:
             raise ValueError("invalid namespace")

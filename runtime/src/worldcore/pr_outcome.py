@@ -3,6 +3,7 @@
 Observational only. Temporal holdout by createdAt. Baselines: majority class and
 Markov-not-applicable → use label-prior majority and size-bin majority.
 """
+
 from __future__ import annotations
 import math
 import statistics
@@ -16,8 +17,7 @@ def _fit_binary(rows, keys, reg=0.05):
     X = [[1.0] + [float(r['features'][k]) for k in keys] for r in rows]
     y = [1.0 if r['merged'] else 0.0 for r in rows]
     n = len(keys) + 1
-    gram = [[sum(X[i][a] * X[i][b] for i in range(len(X))) + (reg if a == b else 0.0)
-             for b in range(n)] for a in range(n)]
+    gram = [[sum(X[i][a] * X[i][b] for i in range(len(X))) + (reg if a == b else 0.0) for b in range(n)] for a in range(n)]
     rhs = [sum(X[i][a] * y[i] for i in range(len(X))) for a in range(n)]
     try:
         w = _solve(gram, rhs)
@@ -51,8 +51,7 @@ def _clean_prs(samples):
             continue
         if any(not isinstance(k, str) or not _finite(v) for k, v in feats.items()):
             continue
-        rows.append({'environment': env, 'merged': r['merged'], 'observed_at': at,
-                     'features': {k: float(v) for k, v in feats.items()}})
+        rows.append({'environment': env, 'merged': r['merged'], 'observed_at': at, 'features': {k: float(v) for k, v in feats.items()}})
     return rows
 
 
@@ -116,12 +115,20 @@ def train_pr_merge(samples, *, min_train=40, min_holdout=20, min_environments=3,
     gain_maj = acc - maj_acc
     gain_bin = acc - bin_acc
     accepted = gain_maj >= 0.02 and gain_bin >= 0.02
-    model.update({**meta, 'heldout_count': len(test), 'accuracy': acc,
-                  'majority_accuracy': maj_acc, 'sizebin_accuracy': bin_acc,
-                  'gain_vs_majority': gain_maj, 'gain_vs_sizebin': gain_bin,
-                  'majority_class': maj, 'positive_rate_train': statistics.fmean(1.0 if r['merged'] else 0.0 for r in train)})
-    return {'status': 'validated' if accepted else 'rejected_no_baseline_gain', 'model': model,
-            'n': len(rows), 'environments': len(envs), 'note': 'PR merge scores are observational'}
+    model.update(
+        {
+            **meta,
+            'heldout_count': len(test),
+            'accuracy': acc,
+            'majority_accuracy': maj_acc,
+            'sizebin_accuracy': bin_acc,
+            'gain_vs_majority': gain_maj,
+            'gain_vs_sizebin': gain_bin,
+            'majority_class': maj,
+            'positive_rate_train': statistics.fmean(1.0 if r['merged'] else 0.0 for r in train),
+        }
+    )
+    return {'status': 'validated' if accepted else 'rejected_no_baseline_gain', 'model': model, 'n': len(rows), 'environments': len(envs), 'note': 'PR merge scores are observational'}
 
 
 def train_pr_merge_per_environment(samples, *, min_train=30, min_holdout=15):
@@ -132,9 +139,12 @@ def train_pr_merge_per_environment(samples, *, min_train=30, min_holdout=15):
     out = {}
     for env, erows in sorted(by.items()):
         res = train_pr_merge(
-            [{'environment': env, 'merged': r['merged'], 'observed_at': r['observed_at'],
-              'features': r['features'], 'source': 'observed', 'resolved': True} for r in erows],
-            min_train=min_train, min_holdout=min_holdout, min_environments=1, holdout_mode='temporal')
+            [{'environment': env, 'merged': r['merged'], 'observed_at': r['observed_at'], 'features': r['features'], 'source': 'observed', 'resolved': True} for r in erows],
+            min_train=min_train,
+            min_holdout=min_holdout,
+            min_environments=1,
+            holdout_mode='temporal',
+        )
         out[env] = res
     return {'environments': out, 'n': len(rows)}
 
@@ -144,6 +154,4 @@ def export_pr_merge_weights(model_bundle):
     if model_bundle.get('status') != 'validated':
         raise ValueError('only validated models export')
     m = model_bundle['model']
-    return {'kind': 'pr_merge_ridge_v1', 'keys': m['keys'], 'weights': m['weights'],
-            'threshold': 0.5, 'holdout_accuracy': m.get('accuracy'),
-            'train_size': m.get('train_size')}
+    return {'kind': 'pr_merge_ridge_v1', 'keys': m['keys'], 'weights': m['weights'], 'threshold': 0.5, 'holdout_accuracy': m.get('accuracy'), 'train_size': m.get('train_size')}

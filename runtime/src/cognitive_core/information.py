@@ -1,6 +1,7 @@
 """Finite Bernoulli information model adapted from the user-supplied curiosity v0.1.
 Operational probabilities, not truth of arbitrary claims. No tools or LLMs.
 """
+
 from dataclasses import dataclass, field
 import math
 import statistics
@@ -38,21 +39,20 @@ class Belief:
     def posterior(self, outcome: int) -> list[float]:
         if type(outcome) is not int or outcome not in (0, 1):
             raise ValueError('Binary integer outcome required')
-        unnormalized = [w * (p if outcome else 1-p)
-                        for w, p in zip(self.weights, self.grid)]
+        unnormalized = [w * (p if outcome else 1 - p) for w, p in zip(self.weights, self.grid)]
         total = sum(unnormalized)
         return [w / total for w in unnormalized]
 
     @property
     def information_gain(self) -> float:
         p = self.mean
-        expected = p * entropy(self.posterior(1)) + (1-p) * entropy(self.posterior(0))
+        expected = p * entropy(self.posterior(1)) + (1 - p) * entropy(self.posterior(0))
         return max(0.0, entropy(self.weights) - expected)
 
     @property
     def surprise_baseline(self) -> float:
         # Predictive entropy remains high even after learning a fair coin.
-        return entropy([self.mean, 1-self.mean])
+        return entropy([self.mean, 1 - self.mean])
 
     @property
     def conservative_progress(self) -> float:
@@ -72,5 +72,3 @@ class Belief:
         if progress is not None:
             self.progress.append(progress)
             self.progress = self.progress[-12:]
-
-

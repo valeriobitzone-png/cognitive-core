@@ -5,6 +5,7 @@ current action and numeric context. Pure-Python one-vs-rest ridge scoring.
 Validates on temporal or per-environment holdout against majority and Markov-1
 baselines. No automatic execution; observational only.
 """
+
 from __future__ import annotations
 import math
 import statistics
@@ -31,8 +32,7 @@ def _fit_ovr(rows, action_list, numeric_keys, reg=0.05):
     for target in action_list:
         y = [1.0 if r['next_action'] == target else 0.0 for r in rows]
         # gram = X^T X + reg I ; b = X^T y
-        gram = [[sum(X[i][a] * X[i][b] for i in range(len(X))) + (reg if a == b else 0.0)
-                 for b in range(n_feat)] for a in range(n_feat)]
+        gram = [[sum(X[i][a] * X[i][b] for i in range(len(X))) + (reg if a == b else 0.0) for b in range(n_feat)] for a in range(n_feat)]
         rhs = [sum(X[i][a] * y[i] for i in range(len(X))) for a in range(n_feat)]
         try:
             weights = _solve(gram, rhs)
@@ -40,8 +40,7 @@ def _fit_ovr(rows, action_list, numeric_keys, reg=0.05):
             weights = [0.0] * n_feat
             weights[0] = statistics.fmean(y) if y else 0.0
         models[target] = weights
-    return {'action_list': action_list, 'numeric_keys': numeric_keys, 'weights': models,
-            'train_size': len(rows)}
+    return {'action_list': action_list, 'numeric_keys': numeric_keys, 'weights': models, 'train_size': len(rows)}
 
 
 def _predict_action(model, row):
@@ -102,20 +101,21 @@ def _clean_transitions(samples, *, require_time=False):
             continue
         if any(not isinstance(k, str) or len(k) > 40 or not _finite(v) for k, v in feats.items()):
             continue
-        by_env[env].append({'environment': env, 'action': action, 'observed_at': at,
-                            'features': {k: float(v) for k, v in feats.items()}})
+        by_env[env].append({'environment': env, 'action': action, 'observed_at': at, 'features': {k: float(v) for k, v in feats.items()}})
     transitions = []
     for env, rows in by_env.items():
         rows = sorted(rows, key=lambda x: (x['observed_at'] is None, x['observed_at'] or 0.0, x['action']))
         for i in range(len(rows) - 1):
             cur, nxt = rows[i], rows[i + 1]
-            transitions.append({
-                'environment': env,
-                'action': cur['action'],
-                'next_action': nxt['action'],
-                'observed_at': cur['observed_at'],
-                'features': cur['features'],
-            })
+            transitions.append(
+                {
+                    'environment': env,
+                    'action': cur['action'],
+                    'next_action': nxt['action'],
+                    'observed_at': cur['observed_at'],
+                    'features': cur['features'],
+                }
+            )
     return transitions
 
 
@@ -131,8 +131,7 @@ def _temporal_split(rows, min_train, min_holdout):
     return ordered[:cut], ordered[cut:]
 
 
-def train_next_event(samples, *, min_train=50, min_holdout=20, min_environments=3,
-                     holdout_mode='temporal', scope='shared'):
+def train_next_event(samples, *, min_train=50, min_holdout=20, min_environments=3, holdout_mode='temporal', scope='shared'):
     """Train next-action predictor.
 
     holdout_mode: 'temporal' (default) or 'environment' (hold out last alphabetical env).
@@ -150,25 +149,26 @@ def train_next_event(samples, *, min_train=50, min_holdout=20, min_environments=
     transitions = _clean_transitions(samples, require_time=(holdout_mode == 'temporal'))
     envs = sorted({t['environment'] for t in transitions})
     if len(envs) < min_environments:
-        return {'status': 'abstain', 'reason': 'need_independent_environments',
-                'environments': len(envs), 'count_transitions': len(transitions)}
+        return {'status': 'abstain', 'reason': 'need_independent_environments', 'environments': len(envs), 'count_transitions': len(transitions)}
 
     if holdout_mode == 'environment':
         held = envs[-1]
         train = [t for t in transitions if t['environment'] != held]
         test = [t for t in transitions if t['environment'] == held]
         if len(train) < min_train or len(test) < min_holdout:
-            return {'status': 'abstain', 'reason': 'insufficient_disjoint_train_test',
-                    'train': len(train), 'test': len(test), 'holdout_environment': held}
+            return {'status': 'abstain', 'reason': 'insufficient_disjoint_train_test', 'train': len(train), 'test': len(test), 'holdout_environment': held}
         holdout_meta = {'holdout_mode': 'environment', 'holdout_environment': held}
     else:
         train, test = _temporal_split(transitions, min_train, min_holdout)
         if train is None:
-            return {'status': 'abstain', 'reason': 'insufficient_temporal_train_test',
-                    'n': len(transitions)}
-        holdout_meta = {'holdout_mode': 'temporal',
-                        'train_from': train[0]['observed_at'], 'train_to': train[-1]['observed_at'],
-                        'holdout_from': test[0]['observed_at'], 'holdout_to': test[-1]['observed_at']}
+            return {'status': 'abstain', 'reason': 'insufficient_temporal_train_test', 'n': len(transitions)}
+        holdout_meta = {
+            'holdout_mode': 'temporal',
+            'train_from': train[0]['observed_at'],
+            'train_to': train[-1]['observed_at'],
+            'holdout_from': test[0]['observed_at'],
+            'holdout_to': test[-1]['observed_at'],
+        }
 
     # Align feature keys present in both splits
     key_sets = [set(r['features']) for r in train]
@@ -196,10 +196,18 @@ def train_next_event(samples, *, min_train=50, min_holdout=20, min_environments=
     gain_markov = acc - markov_acc
     # Accept if beats BOTH baselines by ≥ 2 percentage points (anticipation must be real)
     accepted = gain_maj >= 0.02 and gain_markov >= 0.02
-    model.update({**holdout_meta, 'heldout_count': len(test),
-                  'accuracy': acc, 'majority_accuracy': maj_acc, 'markov_accuracy': markov_acc,
-                  'gain_vs_majority': gain_maj, 'gain_vs_markov': gain_markov,
-                  'majority_class': maj})
+    model.update(
+        {
+            **holdout_meta,
+            'heldout_count': len(test),
+            'accuracy': acc,
+            'majority_accuracy': maj_acc,
+            'markov_accuracy': markov_acc,
+            'gain_vs_majority': gain_maj,
+            'gain_vs_markov': gain_markov,
+            'majority_class': maj,
+        }
+    )
     return {
         'status': 'validated' if accepted else 'rejected_no_baseline_gain',
         'model': model,
@@ -246,19 +254,26 @@ def train_next_event_per_environment(samples, *, min_train=50, min_holdout=20):
         gain_maj = acc - maj_acc
         gain_markov = acc - markov_acc
         accepted = gain_maj >= 0.02 and gain_markov >= 0.02
-        model.update({'holdout_mode': 'temporal', 'holdout_environment': env,
-                      'heldout_count': len(test), 'accuracy': acc,
-                      'majority_accuracy': maj_acc, 'markov_accuracy': markov_acc,
-                      'gain_vs_majority': gain_maj, 'gain_vs_markov': gain_markov,
-                      'majority_class': maj})
+        model.update(
+            {
+                'holdout_mode': 'temporal',
+                'holdout_environment': env,
+                'heldout_count': len(test),
+                'accuracy': acc,
+                'majority_accuracy': maj_acc,
+                'markov_accuracy': markov_acc,
+                'gain_vs_majority': gain_maj,
+                'gain_vs_markov': gain_markov,
+                'majority_class': maj,
+            }
+        )
         results[env] = {
             'status': 'validated' if accepted else 'rejected_no_baseline_gain',
             'model': model,
             'count_transitions': len(rows),
             'note': 'Per-environment next-event model',
         }
-    return {'environments': results, 'count_transitions': len(transitions),
-            'validation': 'per_environment_temporal_holdout'}
+    return {'environments': results, 'count_transitions': len(transitions), 'validation': 'per_environment_temporal_holdout'}
 
 
 def predict_next_event(model_bundle, action, features):
@@ -276,43 +291,35 @@ def predict_next_event(model_bundle, action, features):
         feats[k] = float(features[k])
     row = {'action': action, 'features': feats}
     pred, scores = _predict_action(model, row)
-    return {'status': 'predicted', 'next_action': pred, 'scores': scores,
-            'holdout_accuracy': model.get('accuracy'),
-            'requires_confirmation': True}
+    return {'status': 'predicted', 'next_action': pred, 'scores': scores, 'holdout_accuracy': model.get('accuracy'), 'requires_confirmation': True}
 
 
 class NextEventMixin:
     """Persist next-event models alongside learned dynamics."""
 
-    def train_next_event_model(self, owner, family, samples, *, space='default',
-                               min_train=50, min_holdout=20, min_environments=3,
-                               holdout_mode='temporal'):
+    def train_next_event_model(self, owner, family, samples, *, space='default', min_train=50, min_holdout=20, min_environments=3, holdout_mode='temporal'):
         import json
         from datetime import datetime, timezone
+
         owner, space, family = [_valid_atom(x, 'identifier') for x in (owner, space, family)]
-        result = train_next_event(samples, min_train=min_train, min_holdout=min_holdout,
-                                  min_environments=min_environments, holdout_mode=holdout_mode)
+        result = train_next_event(samples, min_train=min_train, min_holdout=min_holdout, min_environments=min_environments, holdout_mode=holdout_mode)
         if result.get('status') != 'validated':
             return {'status': 'rejected', 'validation': result}
         stamp = datetime.now(timezone.utc).isoformat()
         fam = _valid_atom(f'{family}__nextevent', 'identifier')
         with self._transaction():
-            row = self.db.execute(
-                'SELECT COALESCE(MAX(version),0) v FROM learned_dynamics WHERE owner=? AND space=? AND family=?',
-                (owner, space, fam)).fetchone()
+            row = self.db.execute('SELECT COALESCE(MAX(version),0) v FROM learned_dynamics WHERE owner=? AND space=? AND family=?', (owner, space, fam)).fetchone()
             v = row['v'] + 1
-            self.db.execute('INSERT INTO learned_dynamics VALUES (?,?,?,?,?,?)',
-                            (owner, space, fam, v, json.dumps(result, sort_keys=True, allow_nan=False), stamp))
+            self.db.execute('INSERT INTO learned_dynamics VALUES (?,?,?,?,?,?)', (owner, space, fam, v, json.dumps(result, sort_keys=True, allow_nan=False), stamp))
         return {'status': 'trained', 'version': v, 'validation': result}
 
     def predict_next_event_model(self, owner, family, action, features, *, space='default'):
         import json
+
         owner, space, family = [_valid_atom(x, 'identifier') for x in (owner, space, family)]
         fam = _valid_atom(f'{family}__nextevent', 'identifier')
         with self.lock:
-            row = self.db.execute(
-                'SELECT version, model_json FROM learned_dynamics WHERE owner=? AND space=? AND family=? ORDER BY version DESC LIMIT 1',
-                (owner, space, fam)).fetchone()
+            row = self.db.execute('SELECT version, model_json FROM learned_dynamics WHERE owner=? AND space=? AND family=? ORDER BY version DESC LIMIT 1', (owner, space, fam)).fetchone()
         if not row:
             return {'status': 'abstain', 'reason': 'no_trained_model'}
         bundle = json.loads(row['model_json'])
