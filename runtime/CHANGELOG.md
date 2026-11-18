@@ -1,3 +1,14 @@
+# 1.5.0 — Cuore v2 (ramo pa/cuore-v2 unito a main)
+
+Il Core diventa l'autorità canonica del Personal Agent. Note complete: `RELEASE_NOTES_1.5_IT.md`.
+
+- Richiamo in italiano (parole vuote, ricerca per radice) e richiamo per significato opzionale con embedder fornito dall'host.
+- Riflesso decisionale sui messaggi: segnali dichiarati per impegni, scadenze, problemi, opportunità e azioni esterne (sempre con approvazione).
+- `WorldCore.facts(prefisso)`, attività programmate con orario, ricorrenza e lease, WHAT IF su stato fornito dal chiamante, elenco previsioni.
+- Versione dello schema in `schema_meta`; un database scritto da un motore più nuovo non si apre.
+- Una connessione SQLite condivisa tra thread resa sicura: ogni istruzione e la lettura delle sue righe sotto il lucchetto del motore.
+- Moduli toccati riscritti in forma leggibile (una istruzione per riga).
+
 # 1.4.0rc3 — Durable research recovery
 
 Preserves checkpoints when policy blocks recovery, freezes discovered source

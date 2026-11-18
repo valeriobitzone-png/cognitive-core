@@ -2,5 +2,5 @@
 
 from .engine import WorldCore, WorldCoreError
 
-__version__ = '1.4.0rc5'
+__version__ = '1.5.0'
 __all__ = ['WorldCore', 'WorldCoreError']
